@@ -4,7 +4,7 @@
 
 {% block body %}
 <div class="example-wrapper zone">
-    <h1>Gérer les réalisations de la section Portfolio</h1>
+    <h1>Gérer les {{ app.user.portfolio | length }} réalisations de la section Portfolio</h1>
     <table class="table striped">
         <thead>
             <tr>
