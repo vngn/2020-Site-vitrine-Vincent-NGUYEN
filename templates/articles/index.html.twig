@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}La section Articles{% endblock %}
+
+{% block body %}
+<div class="example-wrapper zone">
+    <h1>Articles</h1>
+
+</div>
+{% for article in articles %}
+<article class="mh-menu site">
+    <h2>{{ article.title }}</h2>
+    <div class="metadata">Ecrit le {{ article.createdAt | date('d/m/Y')}} à {{ article.createdAt | date('H:i')}}
+        dans la catégorie {{ article.categories }}</div>
+    <div class="content">
+        <img src="{{ article.image }}" alt="">
+        <br />
+        {{ article.content | raw}}
+        <br />
+    </div>
+</article>
+
+<div class="btn-site">
+    <button type="submit" class="btn shadow-1 rounded-1 green dark-2">
+        <a href="{{ path('articles_show', {'id': article.id}) }}">Lire la suite / {{ article.articleComment | length }} commentaire(s)</a>
+    </button>
+</div>
+{% endfor %}
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

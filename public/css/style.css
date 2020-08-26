@@ -1,0 +1,289 @@
+/* DOCUMENT INFORMATION
+    - Document: Site Vincent NGUYEN
+    - Version : 1.0.1 du 01/08/2020
+    - Auteur: Vincent NGUYEN- 01/08/2020
+*/
+/* COLORS
+    - default body text     black
+    - h1                    black
+    - h2                    black
+    - h3                    black
+    - h4                    black
+    - p                     black
+    - icon                  black            
+    - border:               $border      
+*/
+/* FONTS
+    - Default:              ''
+*/
+/* CSS DIRECTORY
+    0.  GLOBAL
+            - bases SASS
+
+    1. PAGE ACCUEIL / NEWS
+
+    2. PAGE PORTFOLIO
+
+    3. PAGE ARTICLES
+
+    4. PAGE BLOG
+
+    5. PAGE A PROPOS
+
+    6. PAGE CONTACT
+
+    7. PAGE CATEGORIES
+
+    8. PAGE USERS
+
+    9 PAGE MAJ
+
+    X. FOOTER
+*/
+/* ============================== CSS RESET ============================== */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/* ============================== 0. GLOBAL ============================== */
+/* bases SASS */
+.example-wrapper {
+  margin: 2em auto;
+  width: 84%;
+  font: 18px/1.5 sans-serif;
+}
+
+.example-wrapper code {
+  background: #F5F5F5;
+  padding: 2px 6px;
+}
+
+/* fin SASS */
+body {
+  background: #fff;
+  font-weight: 400;
+  font-size: 15px;
+  color: #3a2127;
+  overflow-y: scroll;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  padding: 0;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0;
+}
+
+/* ============================== 0. PAGES ============================== */
+/* barre de navigation horizontale */
+.zone-nav {
+  border: 2px solid goldenrod;
+  background-color: white;
+}
+
+/* barre de navigation verticale */
+.sidenav {
+  border: 2px solid goldenrod;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 220px;
+}
+
+.sidenav-trigger {
+  opacity: 0.4;
+  -webkit-transition: 5s;
+  transition: 5s;
+}
+
+.sidenav-trigger:hover {
+  opacity: 1;
+  -webkit-transition: 5s;
+  transition: 5s;
+}
+
+.sidenav-menu {
+  position: fixed;
+  left: 0;
+  top: 19.7em;
+}
+
+.sidenav-portfolio {
+  position: fixed;
+  left: 0;
+  top: 22.2em;
+}
+
+.sidenav-articles {
+  position: fixed;
+  left: 0;
+  top: 24.7em;
+}
+
+.sidenav-blog {
+  position: fixed;
+  left: 0;
+  top: 27.2em;
+}
+
+.sidenav-apropos {
+  position: fixed;
+  left: 0;
+  top: 29.7em;
+}
+
+.sidenav-contact {
+  position: fixed;
+  left: 0;
+  top: 32.2em;
+}
+
+.bg00 {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+}
+
+.zone {
+  border: 2px solid goldenrod;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.mh-menu {
+  border: 2px solid goldenrod;
+  background-color: white;
+  border-radius: 5px;
+  width: 84%;
+  height: 450px;
+  margin: 10px auto;
+  padding: 0;
+  position: relative;
+}
+
+.mh-menu ul {
+  list-style: inside;
+}
+
+.mh-menu li a {
+  border-radius: 2px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.symfony :hover a {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.pdo:hover a {
+  display: none;
+}
+
+.php:hover a {
+  display: none;
+}
+
+.html:hover a {
+  display: none;
+}
+
+.mh-menu li a span {
+  display: block;
+}
+
+.mh-menu li a span:first-child {
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.mh-menu li a span:nth-child(2) {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.site {
+  opacity: 0.9925;
+}
+
+.site li iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  background-color: white;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.site-home li iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  background-color: white;
+}
+
+.site li:hover iframe {
+  left: 0px;
+  top: 0px;
+  opacity: 1;
+}
+
+.btn-site {
+  width: 84%;
+  margin: 10px auto 40px;
+  text-align: center;
+}
+
+/* ============================== x. FOOTER ============================== */
+/*# sourceMappingURL=style.css.map */

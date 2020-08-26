@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper zone">
+    <h1>Accueil et News</h1>
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success" role="alert">{{ message }}</div>
+        {% endfor %}
+</div>
+
+<ul class="mh-menu site-home">
+    <li>
+        <iframe src="/portfolio" class="site-iframe"></iframe>
+    </li>
+</ul>
+<div class="btn-site">
+    <button type="submit" class="btn shadow-1 rounded-1 green dark-2"><a href="/portfolio">Page Portfolio ici</a></button>
+</div>
+
+<ul class="mh-menu site-home">
+    <li>
+        <iframe src="/articles" class="site-iframe"></iframe>
+    </li>
+</ul>
+<div class="btn-site">
+    <button type="submit" class="btn shadow-1 rounded-1 green dark-2"><a href="/articles">Page Articles ici</a></button>
+</div>
+
+<ul class="mh-menu site-home">
+    <li>
+        <iframe src="/blog" class="site-iframe"></iframe>
+    </li>
+</ul>
+<div class="btn-site">
+    <button type="submit" class="btn shadow-1 rounded-1 green dark-2"><a href="/blog">Page Blog ici</a></button>
+</div>
+
+<ul class="mh-menu site-home">
+    <li>
+        <iframe src="/about" class="site-iframe"></iframe>
+    </li>
+</ul>
+<div class="btn-site">
+    <button type="submit" class="btn shadow-1 rounded-1 green dark-2"><a href="/about">Page A propos ici</a></button>
+</div>
+
+<ul class="mh-menu site-home">
+    <li>
+        <iframe src="/contact" class="site-iframe"></iframe>
+    </li>
+</ul>
+<div class="btn-site">
+    <button type="submit" class="btn shadow-1 rounded-1 green dark-2"><a href="/contact">Page Contact ici</a></button>
+</div>
+{% endblock %}

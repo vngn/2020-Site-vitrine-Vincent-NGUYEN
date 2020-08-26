@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}La section Blog{% endblock %}
+
+{% block body %}
+<div class="example-wrapper zone">
+    <h1>Blog</h1>
+</div>
+
+{% for articleBlog in blog %}
+<ul class="mh-menu site">
+    <li><a href="">
+            <span>{{ articleBlog.createdAt | date ('d/m/Y à H:i') }}</span>
+            <span>{{ articleBlog.title }}</span>
+            <span>{{ articleBlog.categories }}</span>
+            <span>{{ articleBlog.content | raw }}</span>
+        </a>
+    </li>
+</ul>
+<div class="btn-site">
+    <button type="submit" class="btn shadow-1 rounded-1 green dark-2">
+        <a href="{{ path('blog_show', {'id': articleBlog.id}) }}">Lire la suite / {{ articleBlog.blogComment | length }}
+            commentaire(s)</a>
+    </button>
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

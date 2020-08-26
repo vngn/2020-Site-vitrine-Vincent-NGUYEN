@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil de {{ app.user.firstname }} {{ app.user.name }} !{% endblock %}
+
+{% block body %}
+<div class="grix xs4 container example-wrapper zone">
+    {% for message in app.flashes('message') %}
+    <div class="col-xs4">
+        <div class="p-3 my-2 rounded-2 success">{{ message }}</div>
+    </div>
+    {% endfor %}
+
+    <div class="col-xs4">
+        <h1>Profil de {{ app.user.firstname }} {{ app.user.name }}</h1>
+    </div>
+    <div class="col-xs1">Nom :</div>
+    <div class="col-xs3">{{ app.user.name }}</div>
+    <div class="col-xs1">Prénom :</div>
+    <div class="col-xs3">{{ app.user.firstname }}</div>
+    <div class="col-xs1">Email :</div>
+    <div class="col-xs3">{{ app.user.email }}</div>
+    <div class="col-xs4">
+        <a href="{{ path('users_profil_edit') }}" class="btn shadow-1 rounded-1 blue">Modifier le profil</a>
+        <a href="{{ path('users_pass_edit') }}" class="btn shadow-1 rounded-1 blue">Modifier le mot de passe</a>
+    </div>
+</div>
+
+<div class="example-wrapper zone">
+    <h1>{{ app.user.articles | length }} message(s) dans Articles</h1>
+    <table class="table striped">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Catégorie</th>
+                <th>Contenu</th>
+                <th>date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in app.user.articles %}
+            <tr>
+                <td>{{ article.title }}</td>
+                <td>{{ article.categories }}</td>
+                <td>{{ article.content | raw }}</td>
+                <td>{{ article.createdAt | date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="example-wrapper zone">
+    <h1>{{ app.user.blog| length }} message(s) dans Blog</h1>
+    <table class="table striped">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Catégorie</th>
+                <th>Contenu</th>
+                <th>date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in app.user.blog %}
+            <tr>
+                <td>{{ article.title }}</td>
+                <td>{{ article.categories }}</td>
+                <td>{{ article.content | raw }}</td>
+                <td>{{ article.createdAt | date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="example-wrapper zone">
+    <h1>{{ app.user.portfolio | length }} message(s) dans Portfolio</h1>
+    <table class="table striped">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Catégorie</th>
+                <th>Contenu</th>
+                <th>date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in app.user.portfolio %}
+            <tr>
+                <td>{{ article.title }}</td>
+                <td>{{ article.categories }}</td>
+                <td>{{ article.content | raw }}</td>
+                <td>{{ article.createdAt | date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

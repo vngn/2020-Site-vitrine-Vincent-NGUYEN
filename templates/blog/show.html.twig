@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article du blog en détail{% endblock %}
+
+{% block body %}
+<div class="example-wrapper zone">
+    <h1>Article du blog en détail</h1>
+</div>
+
+<article class="mh-menu site">
+    <h2>{{ blog.title }}</h2>
+    <div class="metadata">Ecrit le {{ blog.createdAt | date('d/m/Y')}} à {{ blog.createdAt | date('H:i')}}
+        dans la catégorie {{ blog.categories }}</div>
+    <div class="content">
+        {# <img src="{{ blog.image }}" alt=""> #}
+        <br />
+        {{ blog.content | raw}}
+        <br />
+    </div>
+</article>
+
+<section id="commentaires">
+    <h1 class="example-wrapper zone">{{ blog.blogComment | length }} commentaire(s) :</h1>
+    {% for blogComment in blog.blogComment %}
+    <div class="comment example-wrapper zone">
+        <div class="row">
+            <div class="col-3">
+                {{blogComment.author}} (<small>{{blogComment.createdAt | date ('d/m/Y à H:i')}}</small>)
+            </div>
+            <div class="col">
+                {{blogComment.content | raw}}
+            </div>
+        </div>
+    </div>
+    {%  endfor %}
+
+    <div class="comment example-wrapper zone">
+
+        {{ form_start(blogCommentForm) }}
+        {{ form_row(blogCommentForm.author, {'attr': {'placeholder': "Votre nom"}}) }}
+        {{ form_row(blogCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
+
+        <div class="btn-site">
+            <button type="submit" class="btn shadow-1 rounded-1 green dark-2">Ajouter un commentaire</button>
+            {{ form_end(blogCommentForm) }}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

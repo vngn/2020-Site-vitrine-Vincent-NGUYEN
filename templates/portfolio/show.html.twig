@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article du portfolio en détail{% endblock %}
+
+{% block body %}
+<div class="example-wrapper zone">
+    <h1>Article du portfolio en détail</h1>
+</div>
+
+<article class="mh-menu site">
+    <h2>{{ portfolio.title }}</h2>
+    <div class="metadata">Ecrit le {{ portfolio.createdAt | date('d/m/Y')}} à {{ portfolio.createdAt | date('H:i')}}
+        dans la catégorie {{ portfolio.categories }}</div>
+    <div class="content">
+        {# <img src="{{ portfolio.image }}" alt=""> #}
+        <br />
+        {{ portfolio.content | raw}}
+        <br />
+    </div>
+</article>
+
+<section id="commentaires">
+    <h1 class="example-wrapper zone">{{ portfolio.portfolioComment | length }} commentaire(s) :</h1>
+    {% for portfolioComment in portfolio.portfolioComment %}
+    <div class="comment example-wrapper zone">
+        <div class="row">
+            <div class="col-3">
+                {{portfolioComment.author}} (<small>{{portfolioComment.createdAt | date ('d/m/Y à H:i')}}</small>)
+            </div>
+            <div class="col">
+                {{portfolioComment.content | raw}}
+            </div>
+        </div>
+    </div>
+    {%  endfor %}
+    <div class="comment example-wrapper zone">
+
+        {{ form_start(portfolioCommentForm) }}
+        {{ form_row(portfolioCommentForm.author, {'attr': {'placeholder': "Votre nom"}}) }}
+        {{ form_row(portfolioCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
+        
+        <div class="btn-site">
+            <button type="submit" class="btn shadow-1 rounded-1 green dark-2">Ajouter un commentaire</button>
+            {{ form_end(portfolioCommentForm) }}
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}
