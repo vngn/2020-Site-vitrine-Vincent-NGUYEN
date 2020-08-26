@@ -122,14 +122,14 @@ a {
 
 .sidenav-trigger {
   opacity: 0.4;
-  -webkit-transition: 5s;
-  transition: 5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .sidenav-trigger:hover {
   opacity: 1;
-  -webkit-transition: 5s;
-  transition: 5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .sidenav-menu {
