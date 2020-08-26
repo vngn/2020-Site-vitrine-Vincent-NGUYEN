@@ -30,13 +30,15 @@
     <table class="table striped">
         <thead>
             <tr>
-                <th>Contenu</th>
+                <th>Titre de l'article</th>
+                <th>Contenu du commentaire</th>
                 <th>date</th>
             </tr>
         </thead>
         <tbody>
             {% for articleComment in app.user.articlesComments %}
             <tr>
+                <td>{{ articleComment.article.title }}</td>
                 <td>{{ articleComment.content | raw }}</td>
                 <td>{{ articleComment.createdAt | date }}</td>
             </tr>
@@ -50,13 +52,15 @@
     <table class="table striped">
         <thead>
             <tr>
-                <th>Contenu</th>
+                <th>Titre de l'article</th>
+                <th>Contenu du commentaire</th>
                 <th>date</th>
             </tr>
         </thead>
         <tbody>
             {% for articleComment in app.user.blogComments %}
             <tr>
+                <td>{{ articleComment.article.title }}</td>
                 <td>{{ articleComment.content | raw }}</td>
                 <td>{{ articleComment.createdAt | date }}</td>
             </tr>
@@ -70,13 +74,15 @@
     <table class="table striped">
         <thead>
             <tr>
-                <th>Contenu</th>
+                <th>Titre de l'article</th>
+                <th>Contenu du commentaire</th>
                 <th>date</th>
             </tr>
         </thead>
         <tbody>
             {% for productionComment in app.user.portfolioComments %}
             <tr>
+                <td>{{ productionComment.article.title }}</td>
                 <td>{{ productionComment.content | raw }}</td>
                 <td>{{ productionComment.createdAt | date }}</td>
             </tr>
