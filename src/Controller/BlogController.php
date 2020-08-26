@@ -25,6 +25,7 @@ class BlogController extends AbstractController
             'blog' => $blogRepo->findAll()
         ]);
     }
+
     /**
      * @Route("/manage", name="blog_manage")
      */
@@ -34,26 +35,33 @@ class BlogController extends AbstractController
             'blog' => $blogRepo->findAll()
         ]);
     }
+
     /**
      * @Route("/add", name="blog_add")
      */
     public function add(Request $request)
     {
         $blog = new Blog;
+
         $form = $this->createForm(BlogType::class, $blog);
+
         $form->handleRequest($request);
+
         if ($form->isSubmitted() && $form->isValid()) {
             $blog->setUsers($this->getUser());
             $blog->setActive(false);
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($blog);
             $em->flush();
+
             return $this->redirectToRoute('users');
         }
         return $this->render('/blog/add.html.twig', [
             'form' => $form->createView(),
         ]);
     }
+
     /**
      * @Route("/activate/{id}", name="blog_activate")
      */
@@ -65,6 +73,7 @@ class BlogController extends AbstractController
         $em->flush();
         return new Response("true");
     }
+    
     /**
      * @Route("/delete/{id}", name="blog_delete")
      */

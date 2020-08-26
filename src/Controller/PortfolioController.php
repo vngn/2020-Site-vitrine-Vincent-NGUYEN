@@ -31,6 +31,16 @@ class PortfolioController extends AbstractController
     }
 
     /**
+     * @Route("/manage", name="portfolio_manage")
+     */
+    public function manage(PortfolioRepository $portfolioRepo)
+    {
+        return $this->render('portfolio/manage.html.twig', [
+            'portfolio' => $portfolioRepo->findAll()
+        ]);
+    }
+
+    /**
      * @Route("/add", name="portfolio_add")
      */
     public function add(Request $request)
@@ -55,6 +65,30 @@ class PortfolioController extends AbstractController
         return $this->render('portfolio/add.html.twig', [
             'form' => $form->createView(),
         ]);
+    }
+
+    /**
+     * @Route("/activate/{id}", name="portfolio_activate")
+     */
+    public function activate(Portfolio $portfolio)
+    {
+        $portfolio->setActive(($portfolio->getActive())?false:true);
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($portfolio);
+        $em->flush();
+        return new Response("true");
+    }
+
+    /**
+     * @Route("/delete/{id}", name="portfolio_delete")
+     */
+    public function delete(Portfolio $portfolio)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($portfolio);
+        $em->flush();
+        $this->addFlash('message', 'Réalisation supprimée avec succès');
+        return $this->redirectToRoute('portfolio_manage');
     }
 
     /**

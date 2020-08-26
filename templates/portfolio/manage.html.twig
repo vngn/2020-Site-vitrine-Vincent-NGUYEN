@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gérer les réalisations de la section Portfolio{% endblock %}
+
+{% block body %}
+<div class="example-wrapper zone">
+    <h1>Gérer les réalisations de la section Portfolio</h1>
+    <table class="table striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Titre</th>
+                {# <th>catégorie</th> #}
+                <th>Date</th>
+                <th>Active</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for portfolio in portfolio %}
+            <tr>
+                <td>{{ portfolio.id }}</td>
+                <td>{{ portfolio.title }}</td>
+                {# <td>{{ portfolio.categories }}</td> #}
+                <td>{{ portfolio.createdAt | date }}</td>
+                <td>
+                    <label class="form-switch mt-2">
+                        <input type="checkbox" {{ (portfolio.active) ? 'checked' : '' }} data-id="{{ portfolio.id }}" />
+                        <span class="slider"></span>
+                    </label>
+                </td>
+                <td>
+                    <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
+                        data-id="{{ portfolio.id }}" data-titre="{{ portfolio.title }}">Supprimer</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
+        <div class="modal-header">Supprimer un article</div>
+        <div class="divider"></div>
+        <div class="modal-content">
+
+        </div>
+        <div class="divider"></div>
+        <div class="modal-footer">
+            <a href="" class="btn red">valider</a>
+            <button data-target="modal-delete"
+                class="ml-auto btn shadow-1 rounded-1 small primary modal-trigger">Fermer</button>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block javascripts %}
+    <script>
+        window.onload = () => {
+            let modal = new Axentix.Modal('#modal-delete');
+            let activer = document.querySelectorAll("[type=checkbox]")
+            for (let bouton of activer) {
+                bouton.addEventListener("click", function () {
+                    let xmlhttp = new XMLHttpRequest;
+
+                    xmlhttp.open("get", `/portfolio/activate/${this.dataset.id}`)
+                    xmlhttp.send()
+                })
+            }
+            let supprimer = document.querySelectorAll(".modal-trigger")
+            for (let bouton of supprimer) {
+                bouton.addEventListener("click", function () {
+                    document.querySelector(".modal-footer a").href = `/portfolio/delete/${this.dataset.id}`
+                    document.querySelector(".modal-content").innerText =
+                        `Êtes-vous sûr(e) de vouloir supprimer l'article "${this.dataset.titre}"`
+                })
+            }
+            // raffraichir la page 0.5s après le changement de valeur du bouton active
+            $('.form-switch').click(function () {
+                setTimeout(function () {
+                    window.location.reload();
+                }, 500);
+            });
+        }
+    </script>
+</div>
+{% endblock %}
