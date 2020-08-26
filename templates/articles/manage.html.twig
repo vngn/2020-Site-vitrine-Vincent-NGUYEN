@@ -72,6 +72,13 @@
                         `Êtes-vous sûr(e) de vouloir supprimer l'article "${this.dataset.titre}"`
                 })
             }
+
+            // raffraichir la page 0.5s après le changement de valeur du bouton active
+            $('.form-switch').click(function () {
+                setTimeout(function () {
+                    window.location.reload();
+                }, 500);
+            });
         }
     </script>
 </div>
