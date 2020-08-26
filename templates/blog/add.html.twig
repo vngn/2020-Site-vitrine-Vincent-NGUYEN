@@ -1,10 +1,11 @@
-article blog'base.html.twig' %}
+{% extends 'base.html.twig' %}
 
-{% block title %}Ajouter un article blog{% endblock %}
+{% block title %}Ajouter un article{% endblock %}
 
 {% block body %}
 <div class="example-wrapper zone">
-<h1>Ajouter un article blog</h1>
-    {{ form(form) }}
+<h1>Ajouter un article</h1>
+    
+{{ form(form) }}
 </div>
-{% endblock %}  
+{% endblock %}    

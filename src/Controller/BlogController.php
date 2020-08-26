@@ -43,14 +43,14 @@ class BlogController extends AbstractController
         $form = $this->createForm(BlogType::class, $blog);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            // $blog->setUsers($this->getUser());
+            $blog->setUsers($this->getUser());
             $blog->setActive(false);
             $em = $this->getDoctrine()->getManager();
             $em->persist($blog);
             $em->flush();
             return $this->redirectToRoute('users');
         }
-        return $this->render('/articles/add.html.twig', [
+        return $this->render('/blog/add.html.twig', [
             'form' => $form->createView(),
         ]);
     }

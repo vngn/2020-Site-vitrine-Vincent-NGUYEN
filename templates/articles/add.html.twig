@@ -6,21 +6,6 @@
 <div class="example-wrapper zone">
 <h1>Ajouter un article</h1>
     
-{{ form_start(articlesCommentForm) }}
-
-{{ form_row(articlesCommentForm.title, {'attr': {'placeholder': "Titre de l'article"}}) }}
-{{ form_row(articlesCommentForm.category) }}
-{{ form_row(articlesCommentForm.content, {'attr': {'placeholder': "Contenu de l'article"}}) }}
-{{ form_row(articlesCommentForm.image, {'attr': {'placeholder': "URL de l'image"}}) }}
-
-<button type="submit" class="btn btn-success">
-    {# {% if editMode %} #}
-    {# enregistrer les modifications #}
-    {# {% else %} #}
-    Ajouter l'article
-    {# {% endif %} #}
-</button>
-
-{{ form_end(articlesCommentForm) }}
+{{ form(form) }}
 </div>
 {% endblock %}  

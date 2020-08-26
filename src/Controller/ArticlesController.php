@@ -52,7 +52,7 @@ class ArticlesController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            // $article->setUsers($this->getUser());
+            $article->setUsers($this->getUser());
             $article->setActive(false);
 
             $em = $this->getDoctrine()->getManager();
