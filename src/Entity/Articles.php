@@ -65,7 +65,7 @@ class Articles
 
     /**
      * @ORM\ManyToOne(targetEntity=Users::class, inversedBy="articles")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $users;
 
