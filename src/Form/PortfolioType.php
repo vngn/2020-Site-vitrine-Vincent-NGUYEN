@@ -19,7 +19,6 @@ class PortfolioType extends AbstractType
             ->add('title')
             ->add('content', CKEditorType::class)
             ->add('image')
-            ->add('active')
             ->add('categories', EntityType::class, [
                 'class' => Categories::class,
             ])
