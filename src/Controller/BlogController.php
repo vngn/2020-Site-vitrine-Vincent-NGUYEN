@@ -74,7 +74,7 @@ class BlogController extends AbstractController
         $em->remove($blog);
         $em->flush();
         $this->addFlash('message', 'Article supprimé avec succès');
-        return $this->redirectToRoute('blog_home');
+        return $this->redirectToRoute('blog_manage');
     }
 
     /**

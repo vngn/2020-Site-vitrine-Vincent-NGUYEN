@@ -65,8 +65,8 @@
                 xmlhttp.send()
             })
         }
-        let delete = document.querySelectorAll(".modal.trigger")
-        for (let bouton of delete) {
+        let supprimer = document.querySelectorAll(".modal-trigger")
+        for (let bouton of supprimer) {
             bouton.addEventListener("click", function () {
                 document.querySelector(".modal-footer a").href = `/blog/delete/${this.dataset.id}`
                 document.querySelector(".modal-content").innerText = `Êtes-vous sûr(e) de vouloir supprimer l'article "${this.dataset.titre}"`

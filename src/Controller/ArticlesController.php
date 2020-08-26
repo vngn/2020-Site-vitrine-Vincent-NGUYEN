@@ -91,7 +91,7 @@ class ArticlesController extends AbstractController
         $em->flush();
 
         $this->addFlash('message', 'Article supprimé avec succès');
-        return $this->redirectToRoute('articles_home');
+        return $this->redirectToRoute('articles_manage');
     }
 
     /**

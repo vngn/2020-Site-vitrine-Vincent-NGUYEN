@@ -4,75 +4,75 @@
 
 {% block body %}
 <div class="example-wrapper example-wrapper zone">
-<h1>Gérer les articles de la section Articles</h1>
-<table class="table striped">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Titre</th>
-            {# <th>catégorie</th> #}
-            <th>Date</th>
-            <th>Active</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for article in articles %}
-        <tr>
-            <td>{{ article.id }}</td>
-            <td>{{ article.title }}</td>
-            {# <td>{{ article.categories }}</td> #}
-            <td>{{ article.createdAt | date }}</td>
-            <td>
-                <label class="form-switch mt-2">
-                    <input type="checkbox" {{ (article.active) ? 'checked' : '' }} data-id="{{ article.id }}" />
-                    <span class="slider"></span>
-                </label>
-            </td>
-            <td>
-                <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
-                    data-id="{{ article.id }}" data-titre="{{ article.title }}">Supprimer</a>
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
-<div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
-    <div class="modal-header">Supprimer un article</div>
-    <div class="divider"></div>
-    <div class="modal-content">
-
+    <h1>Gérer les articles de la section Articles</h1>
+    <table class="table striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Titre</th>
+                {# <th>catégorie</th> #}
+                <th>Date</th>
+                <th>Active</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in articles %}
+            <tr>
+                <td>{{ article.id }}</td>
+                <td>{{ article.title }}</td>
+                {# <td>{{ article.categories }}</td> #}
+                <td>{{ article.createdAt | date }}</td>
+                <td>
+                    <label class="form-switch mt-2">
+                        <input type="checkbox" {{ (article.active) ? 'checked' : '' }} data-id="{{ article.id }}" />
+                        <span class="slider"></span>
+                    </label>
+                </td>
+                <td>
+                    <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
+                        data-id="{{ article.id }}" data-titre="{{ article.title }}">Supprimer</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
+        <div class="modal-header">Supprimer un article</div>
+        <div class="divider"></div>
+        <div class="modal-content">
+        </div>
+        <div class="divider"></div>
+        <div class="modal-footer">
+            <a href="" class="btn red">valider</a>
+            <button data-target="modal-delete"
+                class="ml-auto btn shadow-1 rounded-1 small primary modal-trigger">Fermer</button>
+        </div>
     </div>
-    <div class="divider"></div>
-    <div class="modal-footer">
-        <a href="" class="btn red">valider</a>
-        <button data-target="modal-delete"
-            class="ml-auto btn shadow-1 rounded-1 small primary modal-trigger">Fermer</button>
-    </div>
-</div>
-{% endblock %}
+    {% endblock %}
 
-{% block javascripts %}
-<script>
-    window.onload = () => {
-        let modal = new Axentix.Modal('#modal-delete');
-        let activer = document.querySelectorAll("[type=checkbox]")
-        for (let bouton of activer) {
-            bouton.addEventListener("click", function () {
-                let xmlhttp = new XMLHttpRequest;
+    {% block javascripts %}
+    <script>
+        window.onload = () => {
+            let modal = new Axentix.Modal('#modal-delete');
+            let activer = document.querySelectorAll("[type=checkbox]")
+            for (let bouton of activer) {
+                bouton.addEventListener("click", function () {
+                    let xmlhttp = new XMLHttpRequest;
 
-                xmlhttp.open("get", `/articles/activate/${this.dataset.id}`)
-                xmlhttp.send()
-            })
+                    xmlhttp.open("get", `/articles/activate/${this.dataset.id}`)
+                    xmlhttp.send()
+                })
+            }
+            let supprimer = document.querySelectorAll(".modal-trigger")
+            for (let bouton of supprimer) {
+                bouton.addEventListener("click", function () {
+                    document.querySelector(".modal-footer a").href = `/articles/delete/${this.dataset.id}`
+                    document.querySelector(".modal-content").innerText =
+                        `Êtes-vous sûr(e) de vouloir supprimer l'article "${this.dataset.titre}"`
+                })
+            }
         }
-        let delete = document.querySelectorAll(".modal.trigger")
-        for (let bouton of delete) {
-            bouton.addEventListener("click", function () {
-                document.querySelector(".modal-footer a").href = `/articles/delete/${this.dataset.id}`
-                document.querySelector(".modal-content").innerText = `Êtes-vous sûr(e) de vouloir supprimer l'article "${this.dataset.titre}"`
-            })
-        }
-    }
-</script>
+    </script>
 </div>
 {% endblock %}
