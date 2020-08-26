@@ -78,6 +78,21 @@ class Users implements UserInterface
      */
     private $portfolios;
 
+    /**
+     * @ORM\OneToMany(targetEntity=ArticlesComment::class, mappedBy="users")
+     */
+    private $articlesComments;
+
+    /**
+     * @ORM\OneToMany(targetEntity=BlogComment::class, mappedBy="users")
+     */
+    private $blogComments;
+
+    /**
+     * @ORM\OneToMany(targetEntity=PortfolioComment::class, mappedBy="users")
+     */
+    private $portfolioComments;
+
     public function __construct()
     {
         $this->articles = new ArrayCollection();
@@ -85,6 +100,9 @@ class Users implements UserInterface
         $this->portfolio = new ArrayCollection();
         $this->blogs = new ArrayCollection();
         $this->portfolios = new ArrayCollection();
+        $this->articlesComments = new ArrayCollection();
+        $this->blogComments = new ArrayCollection();
+        $this->portfolioComments = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -368,4 +386,97 @@ class Users implements UserInterface
 
     //     return $this;
     // }
+
+    /**
+     * @return Collection|ArticlesComment[]
+     */
+    public function getArticlesComments(): Collection
+    {
+        return $this->articlesComments;
+    }
+
+    public function addArticlesComment(ArticlesComment $articlesComment): self
+    {
+        if (!$this->articlesComments->contains($articlesComment)) {
+            $this->articlesComments[] = $articlesComment;
+            $articlesComment->setUsers($this);
+        }
+
+        return $this;
+    }
+
+    public function removeArticlesComment(ArticlesComment $articlesComment): self
+    {
+        if ($this->articlesComments->contains($articlesComment)) {
+            $this->articlesComments->removeElement($articlesComment);
+            // set the owning side to null (unless already changed)
+            if ($articlesComment->getUsers() === $this) {
+                $articlesComment->setUsers(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|BlogComment[]
+     */
+    public function getBlogComments(): Collection
+    {
+        return $this->blogComments;
+    }
+
+    public function addBlogComment(BlogComment $blogComment): self
+    {
+        if (!$this->blogComments->contains($blogComment)) {
+            $this->blogComments[] = $blogComment;
+            $blogComment->setUsers($this);
+        }
+
+        return $this;
+    }
+
+    public function removeBlogComment(BlogComment $blogComment): self
+    {
+        if ($this->blogComments->contains($blogComment)) {
+            $this->blogComments->removeElement($blogComment);
+            // set the owning side to null (unless already changed)
+            if ($blogComment->getUsers() === $this) {
+                $blogComment->setUsers(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|PortfolioComment[]
+     */
+    public function getPortfolioComments(): Collection
+    {
+        return $this->portfolioComments;
+    }
+
+    public function addPortfolioComment(PortfolioComment $portfolioComment): self
+    {
+        if (!$this->portfolioComments->contains($portfolioComment)) {
+            $this->portfolioComments[] = $portfolioComment;
+            $portfolioComment->setUsers($this);
+        }
+
+        return $this;
+    }
+
+    public function removePortfolioComment(PortfolioComment $portfolioComment): self
+    {
+        if ($this->portfolioComments->contains($portfolioComment)) {
+            $this->portfolioComments->removeElement($portfolioComment);
+            // set the owning side to null (unless already changed)
+            if ($portfolioComment->getUsers() === $this) {
+                $portfolioComment->setUsers(null);
+            }
+        }
+
+        return $this;
+    }
 }

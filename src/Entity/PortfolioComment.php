@@ -38,6 +38,11 @@ class PortfolioComment
      */
     private $article;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Users::class, inversedBy="portfolioComments")
+     */
+    private $users;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -87,6 +92,18 @@ class PortfolioComment
     public function setArticle(?Portfolio $article): self
     {
         $this->article = $article;
+
+        return $this;
+    }
+
+    public function getUsers(): ?Users
+    {
+        return $this->users;
+    }
+
+    public function setUsers(?Users $users): self
+    {
+        $this->users = $users;
 
         return $this;
     }

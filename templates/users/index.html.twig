@@ -26,23 +26,19 @@
 </div>
 
 <div class="example-wrapper zone">
-    <h1>{{ app.user.articles | length }} article(s) dans la section Articles</h1>
+    <h1>{{ app.user.articlesComments | length }} article(s) dans la section Articles</h1>
     <table class="table striped">
         <thead>
             <tr>
-                <th>Titre</th>
-                <th>Catégorie</th>
                 <th>Contenu</th>
                 <th>date</th>
             </tr>
         </thead>
         <tbody>
-            {% for article in app.user.articles %}
+            {% for articleComment in app.user.articlesComments %}
             <tr>
-                <td>{{ article.title }}</td>
-                <td>{{ article.categories }}</td>
-                <td>{{ article.content | raw }}</td>
-                <td>{{ article.createdAt | date }}</td>
+                <td>{{ articleComment.content | raw }}</td>
+                <td>{{ articleComment.createdAt | date }}</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -50,23 +46,19 @@
 </div>
 
 <div class="example-wrapper zone">
-    <h1>{{ app.user.blog| length }} articles(s) dans section Blog</h1>
+    <h1>{{ app.user.blogComments | length }} articles(s) dans section Blog</h1>
     <table class="table striped">
         <thead>
             <tr>
-                <th>Titre</th>
-                <th>Catégorie</th>
                 <th>Contenu</th>
                 <th>date</th>
             </tr>
         </thead>
         <tbody>
-            {% for article in app.user.blog %}
+            {% for articleComment in app.user.blogComments %}
             <tr>
-                <td>{{ article.title }}</td>
-                <td>{{ article.categories }}</td>
-                <td>{{ article.content | raw }}</td>
-                <td>{{ article.createdAt | date }}</td>
+                <td>{{ articleComment.content | raw }}</td>
+                <td>{{ articleComment.createdAt | date }}</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -74,23 +66,19 @@
 </div>
 
 <div class="example-wrapper zone">
-    <h1>{{ app.user.portfolio | length }} réalisation(s) dans la section Portfolio</h1>
+    <h1>{{ app.user.portfolioComments | length }} réalisation(s) dans la section Portfolio</h1>
     <table class="table striped">
         <thead>
             <tr>
-                <th>Titre</th>
-                <th>Catégorie</th>
                 <th>Contenu</th>
                 <th>date</th>
             </tr>
         </thead>
         <tbody>
-            {% for article in app.user.portfolio %}
+            {% for productionComment in app.user.portfolioComments %}
             <tr>
-                <td>{{ article.title }}</td>
-                <td>{{ article.categories }}</td>
-                <td>{{ article.content | raw }}</td>
-                <td>{{ article.createdAt | date }}</td>
+                <td>{{ productionComment.content | raw }}</td>
+                <td>{{ productionComment.createdAt | date }}</td>
             </tr>
             {% endfor %}
         </tbody>
