@@ -42,14 +42,14 @@ class PortfolioController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            // $portfolio->setUsers($this->getUser());
+            $portfolio->setUsers($this->getUser());
             $portfolio->setActive(false);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($portfolio);
             $em->flush();
 
-            return $this->redirectToRoute('users');
+            return $this->redirectToRoute('portfolio_index');
         }
 
         return $this->render('portfolio/add.html.twig', [

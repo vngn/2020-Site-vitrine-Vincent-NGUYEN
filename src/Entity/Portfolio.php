@@ -25,7 +25,7 @@ class Portfolio
     private $title;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $slug;
 
@@ -40,7 +40,7 @@ class Portfolio
     private $image;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $createdAt;
 
@@ -62,7 +62,7 @@ class Portfolio
 
     /**
      * @ORM\ManyToOne(targetEntity=Users::class, inversedBy="portfolios")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $users;
 
