@@ -1,0 +1,369 @@
+01 août 2020 
+
+connexion à "wamp"
+création du dossier "Demo"
+"composer create-project symfony/website-skeleton Demo"
+"composer update"
+    - "yes"
+"php bin/console make:controller"
+    - "HomeController" 
+suppression du "home" de la route "/home"
+
+
+
+modification du fichier ".env"
+    -remplacement de la ligne DATABASE par : DATABASE_URL=mysql://root:''@127.0.0.1:3308/Demo
+création de la base de données par "php bin/console doctrine:database:create"
+
+
+
+création de la table "Blog"
+"php bin/console make:entity"
+    - "Blog"
+        - "blogTitle, string, 255, no"
+        - "blogContent, text, no"
+        - "blogType, string, 255, no"
+        - "createdAt, datetime, no"
+    - ""
+"php bin/console make:migration"
+"php bin/console doctrine:migrations:migrate"
+    - "yes" 
+
+création de la table "blogComment"
+"php bin/console make:entity"
+    - "BlogComment"
+        - "blogCommentContent, text, no"
+        - "createdAt, datetime, no"
+        - ""
+"php bin/console make:migration"
+"php bin/console doctrine:migrations:migrate"
+    - "yes"      
+
+création de la table "News"
+"php bin/console make:entity"
+    - "News"
+        - "newsTitle, string, 255, no"
+        - "newsContent, text, no"
+        - "newsImage, string, 255, no"
+        - "createdAt, datetime, no"
+        - ""
+"php bin/console make:migration"
+"php bin/console doctrine:migrations:migrate"
+    - "yes"
+
+création de la table "NewsComment"
+"php bin/console make:entity"
+    - "NewsComment"
+        - "newsCommentContent, text, no"
+        - "createdAt, datetime, no"
+        - ""
+"php bin/console make:migration"
+"php bin/console doctrine:migrations:migrate"
+    - "yes"
+        
+création de la table "Production"
+"php bin/console make:entity"
+    - "Production"
+        - "productionTitle, string, 255, no"
+        - "productionType, string, 255, no"
+        - "productionInterest, string, 255, no"
+        - "productionContent, text, no"
+        - "productionImage, string, 255, no"
+        - "productionLink, string, 255, no" 
+        - "createdAt, datetime, no"
+    - ""
+"php bin/console make:migration"
+"php bin/console doctrine:migrations:migrate"
+    - "yes"   
+
+création de la table "ProductionComment"
+"php bin/console make:entity"
+    - "ProductionComment"
+        - "productionCommentContent, text, no"
+        - "createdAt, datetime, no"
+        - ""
+"php bin/console make:migration"
+"php bin/console doctrine:migrations:migrate"
+    - "yes"    
+
+création de la table "TechnicalArticle"
+"php bin/console make:entity"
+    - "TechnicalArticle"
+        - "technicalArticleTitle, string, 255, no"
+        - "technicalArticleContent, text, no"
+        - "technicalArticleLink, string, 255, no"
+        - "createdAt, datetime, no"
+    - ""
+"php bin/console make:migration"
+"php bin/console doctrine:migrations:migrate"
+    - "yes" 
+
+création de la table "TechnicalArticleComment"
+"php bin/console make:entity"
+    - "TechnicalArticleComment"
+        - "technicalArticleCommentContent, text, no"
+        - "createdAt, datetime, no"
+        - ""
+"php bin/console make:migration"
+"php bin/console doctrine:migrations:migrate"
+    - "yes   
+
+création de la table "User"
+"php bin/console make:entity"
+    - "User"
+        - "userRole, string, 255, no"
+        - "userPseudo, string, 255, no"
+        - "userEmail, string, 255, no"
+        - "userPassword, string, 255, no"
+        - "createdAt, datetime, no"
+    - ""
+"php bin/console make:migration"
+"php bin/console doctrine:migrations:migrate"
+    - "yes"    
+
+
+
+création de la table "Contact"
+"php bin/console make:entity"
+    - "Contact"
+        - "contactFirstname, string, 255, no"
+        - "contactLastname, string, 255, no"
+        - "contactType, string, 255, no"
+        - "contactSociety, string, 255, yes"
+        - "contactFunction, string, 255, yes"
+        - "contactEmail, string, 255, no"
+        - "contactPhone, integer, 10, yes"
+        - "contactSubject, string, 255, no"
+        - "contactMessage, text, no"
+        - "createdAt, datetime, no"
+    - ""
+"php bin/console make:migration"
+"php bin/console doctrine:migrations:migrate"
+    - "yes"  
+
+création de la table "Update"
+"php bin/console make:entity"
+    - "Update"
+        - "updateContent, text, no"
+        - "createdAt, datetime, no"
+    - ""
+"php bin/console make:migration"
+"php bin/console doctrine:migrations:migrate"
+    - "yes" 
+
+création de la table "Profile"
+"php bin/console make:entity"
+    - "Profile"
+        - "profileTitle, string, 255, no"
+        - "profileContent, text, no"
+        - "createdAt, datetime, no"
+    - ""
+"php bin/console make:migration"
+"php bin/console doctrine:migrations:migrate"
+    - "yes"   
+
+création de la table "Skill"
+"php bin/console make:entity"
+    - "Skill"
+        - "skillName, string, 255, no"
+        - "skillDetail, text, no"
+        - "skillVarious, text, yes"
+    - ""
+"php bin/console make:migration"
+"php bin/console doctrine:migrations:migrate"
+    - "yes" 
+
+création de la table "ProfessionnalTraining"
+"php bin/console make:entity"
+    - "ProfessionnalTraining"
+        - "ProfessionnalTrainingYear, integer, no"
+        - "ProfessionnalTrainingLevel, string, 255, no"
+        - "ProfessionnalTrainingName, string, 255, no"
+        - "ProfessionnalTrainingSchool, string, 255, no"
+    - ""
+"php bin/console make:migration"
+"php bin/console doctrine:migrations:migrate"
+    - "yes" 
+
+création de la table "ProfessionnalExperience"
+"php bin/console make:entity"
+    - "ProfessionnalExperience"
+        - "ProfessionnalExperiencePeriod, string, 255, no"
+        - "ProfessionnalExperienceFunction, string, 255, no"
+        - "ProfessionnalExperienceCompanyName, string, 255, no"
+        - "ProfessionnalExperienceVarious, text, yes"
+    - ""
+"php bin/console make:migration"
+"php bin/console doctrine:migrations:migrate"
+    - "yes"  
+
+
+php bin/console make:crud pour :
+    - Blog
+    - BlogComment
+    - Contact
+    - News
+    - NewsComment
+    - Production
+    - ProductionComment
+    - ProfessionnalExperience
+    - ProfessionnalTraining
+    - Profile
+    - Skill
+    - TechnicalArticle
+    - TechnicalArticleComment
+    - Update
+    - User
+
+création de la navbar, avec les liens actifs, dans base.html.twig
+traduction des fichiers "delete_form.html.twig"
+traduction des fichiers "form.html.twig"
+traduction des fichiers "edit.html.twig"
+traduction des fichiers "index.html.twig"
+traduction des fichiers "new.html.twig"
+traduction des fichiers "show.html.twig"
+
+insertion de contenu pour premier test
+    
+
+02 août 2020 
+création dossier css, fichier css & scss
+récupération css du CVsite
+création des fichiers "images, "js" & "uploads" 
+récupération des images du CVsite
+refonte de la première navbar pour claquer celle du CVsite
+ajout de la propriété "author" aux tables de commentaires
+(relation entre les tables et leurs commentaires respectifs)
+mise en place d'un background-image dans le fichier base.html.twig
+
+03 août 2020 
+
+travail sur l'affichage des productions
+modification du message : "portfolio" remplace "productions"
+refonte de la page "portfolio"
+recherche pour autres types de présentation de menu
+
+04 août 2020 
+
+travail sur l'affichage des productions
+
+05 août 2020 
+
+travail sur l'affichage des productions
+ajustement du visuel des boutons et des fonds de blocks
+travail sur la mise en place des login/logout
+
+06 août 2020 
+
+ajout des boutons "Accéder à la page du site" & "Commentaire(s)"
+retrait du lien sur le block de texte qui disparaît au survol
+travail sur les problèmes de connexion
+travail sur l'accès aux commentaires
+*** reboot complet du site ***
+
+13 août 2020 
+voir tuto BG
+
+14 août 2020 
+voir tuto BG
+adaptation
+recherche de résolution d'un problme avec elfinder
+
+15 août 2020 
+définition d'une nouvelle navbar
+adaptation de la navbar "" pour le site
+mise en place des fichiers scss
+    
+16 août 2020 
+adaptation de la navbar "" pour le site
+finalisation de la mise en place de na navbar, résolution de bug d'affichage (dimensions incorrectes)
+travail sur la page d'accueil et accueil users 
+création de la page blog (templates, form, controller...)
+test d'affichage et de fonctionnement avec les messages articles et blog
+mise en forme et couleurs des différents boutons
+travail sur les liens de la navbar (home, articles et blog)
+
+17 août 2020 
+mise en place d'une sidebar sur le profil lambda
+refonte du footer pour rappel de la navbar
+travail sur la présentation des pages
+
+18 août 2020
+mise en place du menu vertical au niveau de la sidebar
+mise en place des pages pour visiteurs non connectés
+création de l'entity portfolio
+création et mise en page de la page portfolio pour visiteurs non connectés
+création et mise en page de la page portfolio admin
+
+19 août 2020
+création de l'entity contact
+création de l'entity about
+création et mise en page de la page articles pour visiteurs non connectés   
+création et mise en page de la page blog pour visiteurs non connectés 
+établissement d'une liste des reste à faire  
+création du cadre du formulaire contact
+mise en place d'une video en bg
+
+20 août 2020
+mise en forme de la page d'accueil
+début d'intégration du contenu des la page portfolio
+création du formulaire portfolio
+refonte des fichiers controller et templates
+suppression des dossiers et fichiers controller et templates doublons
+
+21 août 2020
+tests de navigation et de fonctionnement
+récupération du bg video, avec code promo istock : EEZY15 & PIXABAY20  
+conversion du format initial .mov en mp4 sur site en ligne wondershare uniconverter
+rétablissement des liens navbar et sidebar
+optimisation du fichier style.scss 
+fusion des fichiers scss de la navbar et changement du nom (default & components = navbar) + optimisation sass
+
+22 août 2020
+mise en place add et form portfolio
+données des zones portofolio remplies par la bdd 
+création des boutons articles et blog
+
+23 août 2020
+mise en forme des affichages de date
+nettoyage des controlleurs
+création des pages show pour articles et blog
+
+24 août 2020
+correction des problèmes suivants :
+- liens navbar et sidebar
+- comportement footer identique à navbar
+- height ok en responsive
+- affichage des id page show de articles et blog
+- affichage et animation de la nav-footer
+
+25 août 2020
+correction des problèmes suivants :
+- lien categories/add fonctionne de nouveau
+- compteurs users rétablis suite erreur de suppression dans nettoyage fichiers entity 
+création de la table articlesComment
+mise en place des commentaires dans controlleur et show de articles, blog et portfolio
+uniformation de ckeditor
+commentaires articles ok
+btn commentaires articles ok
+
+
+
+
+
+définir les couleurs de la navbar
+harmoniser les couleurs de la nav bar avec les border
+paramétrer l'affichage des zones articles et blog
+rendre fonctionnel le formulaire contact
+mettre en place la page à propos
+paramétrer le contenu de la zone portfolio
+paramétrer la sidebar en responsive
+uniformiser les formulaires
+intégrer condition d'affichage si active ou non
+
+
+
+php bin/console cache:clear      
+
+
+                    
