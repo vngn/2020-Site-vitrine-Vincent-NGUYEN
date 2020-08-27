@@ -24,295 +24,325 @@
 </head>
 
 <body>
+
     <body class="layout with-sidenav bg00" style="background-image: url('{{asset('images/bg00.jpg')}}')">
-    <!-- Bootstrap Background Vidéo-->
-    {# <video id="video" autoplay="true" loop muted>
+        <!-- Bootstrap Background Vidéo-->
+        {# <video id="video" autoplay="true" loop muted>
         <source src="{{asset('bgvideo/background-video.mp4')}}" type="video/mp4" />
     </video> #}
 
-    <header class="container-fluid main clearfix">
-        <nav id="menu" class="nav nav-head">
-            <ul>
-                <li>
-                    <a href="{{ path('app_home') }}">
-                        <span class="icon">
-                            <i aria-hidden="true" class="icon-home"></i>
-                        </span>
-                        <span>Accueil</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ path('portfolio_index') }}">
-                        <span class="icon">
-                            <i aria-hidden="true" class="icon-portfolio"></i>
-                        </span>
-                        <span>Portfolio</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ path('articles_index') }}">
-                        <span class="icon">
-                            <i aria-hidden="true" class="icon-services"></i>
-                        </span>
-                        <span>Articles</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ path('blog_index') }}">
-                        <span class="icon">
-                            <i aria-hidden="true" class="icon-blog"></i>
-                        </span>
-                        <span>Blog</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ path('about_index') }}">
-                        <span class="icon">
-                            <i aria-hidden="true" class="icon-team"></i>
-                        </span>
-                        <span>A propos</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ path('contact_index') }}">
-                        <span class="icon">
-                            <i aria-hidden="true" class="icon-contact"></i>
-                        </span>
-                        <span>Contact</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+        <header class="container-fluid main clearfix">
+            <nav id="menu" class="nav nav-head">
+                <ul>
+                    <li>
+                        <a href="{{ path('app_home') }}">
+                            <span class="icon">
+                                <i aria-hidden="true" class="icon-home"></i>
+                            </span>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('portfolio_index') }}">
+                            <span class="icon">
+                                <i aria-hidden="true" class="icon-portfolio"></i>
+                            </span>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('articles_index') }}">
+                            <span class="icon">
+                                <i aria-hidden="true" class="icon-services"></i>
+                            </span>
+                            <span>Articles</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('blog_index') }}">
+                            <span class="icon">
+                                <i aria-hidden="true" class="icon-blog"></i>
+                            </span>
+                            <span>Blog</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('about_index') }}">
+                            <span class="icon">
+                                <i aria-hidden="true" class="icon-team"></i>
+                            </span>
+                            <span>A propos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('contact_index') }}">
+                            <span class="icon">
+                                <i aria-hidden="true" class="icon-contact"></i>
+                            </span>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-    {# menu latéral pour accès menu général #}
+        {# menu latéral admin #}
 
-    <div id="menu-sidenav" data-ax="sidenav" class="sidenav large white">
-        <div class="sidenav-header">
-            <button data-target="menu-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-            <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
+        <div id="admin-sidenav" data-ax="sidenav" class="sidenav large white">
+            <div class="sidenav-header">
+                <button data-target="admin-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
+            </div>
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <hr />
+            <a href="{{ path('portfolio_add') }}" class="sidenav-link">Ajout dans la page Portfolio</a>
+            <a href="{{ path('articles_add') }}" class="sidenav-link">Ajout dans la page Articles</a>
+            <a href="{{ path('blog_add') }}" class="sidenav-link">Ajout dans la page Blog</a>
+            <hr />
+            <a href="{{ path('portfolio_manage') }}" class="sidenav-link">Gestion de la page Portfolio</a>
+            <a href="{{ path('articles_manage') }}" class="sidenav-link">Gestion de la page Articles</a>
+            <a href="{{ path('blog_manage') }}" class="sidenav-link">Gestion de la page Blog</a>
+            <hr />
+            <a href="#" class="sidenav-link">Gestion des Utilisateurs</a>
         </div>
-        <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <a href="{{ path('portfolio_index') }}" class="sidenav-link">Potfolio</a>
-        <a href="{{ path('articles_index') }}" class="sidenav-link">Articles</a>
-        <a href="{{ path('blog_index') }}" class="sidenav-link">Blog</a>
-        <a href="{{ path('about_index') }}" class="sidenav-link">A propos</a>
-        <a href="{{ path('contact_index') }}" class="sidenav-link">Contact</a>
-    </div>
 
-    {# bouton latéral pour accès menu portfolio #}
+        {# menu latéral général #}
 
-    <div id="portfolio-sidenav" data-ax="sidenav" class="sidenav large white">
-        <div class="sidenav-header">
-            <button data-target="portfolio-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-            <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
+        <div id="menu-sidenav" data-ax="sidenav" class="sidenav large white">
+            <div class="sidenav-header">
+                <button data-target="menu-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
+            </div>
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <a href="{{ path('portfolio_index') }}" class="sidenav-link">Potfolio</a>
+            <a href="{{ path('articles_index') }}" class="sidenav-link">Articles</a>
+            <a href="{{ path('blog_index') }}" class="sidenav-link">Blog</a>
+            <a href="{{ path('about_index') }}" class="sidenav-link">A propos</a>
+            <a href="{{ path('contact_index') }}" class="sidenav-link">Contact</a>
         </div>
-        <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <a href="#" class="sidenav-link">Symfony</a>
-        <a href="#" class="sidenav-link">PHP/SQL</a>
-        <a href="#" class="sidenav-link">HTML/CSS</a>
-        <a href="#" class="sidenav-link">Autres</a>
-    </div>
 
-    {# bouton latéral pour accès menu articles #}
+        {# menu latéral portfolio #}
 
-    <div id="articles-sidenav" data-ax="sidenav" class="sidenav large white">
-        <div class="sidenav-header">
-            <button data-target="articles-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-            <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
+        <div id="portfolio-sidenav" data-ax="sidenav" class="sidenav large white">
+            <div class="sidenav-header">
+                <button data-target="portfolio-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
+            </div>
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <a href="#" class="sidenav-link">Symfony</a>
+            <a href="#" class="sidenav-link">PHP/SQL</a>
+            <a href="#" class="sidenav-link">HTML/CSS</a>
+            <a href="#" class="sidenav-link">Autres</a>
         </div>
-        <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <a href="#" class="sidenav-link">Techniques</a>
-        <a href="#" class="sidenav-link">Tutoriels</a>
-        <a href="#" class="sidenav-link">Codes</a>
-        <a href="#" class="sidenav-link">Autres</a>
-    </div>
 
-    {# menu latéral pour accès menu blog #}
+        {# menu latéral articles #}
 
-    <div id="blog-sidenav" data-ax="sidenav" class="sidenav large white">
-        <div class="sidenav-header">
-            <button data-target="blog-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-            <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
+        <div id="articles-sidenav" data-ax="sidenav" class="sidenav large white">
+            <div class="sidenav-header">
+                <button data-target="articles-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
+            </div>
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <a href="#" class="sidenav-link">Techniques</a>
+            <a href="#" class="sidenav-link">Tutoriels</a>
+            <a href="#" class="sidenav-link">Codes</a>
+            <a href="#" class="sidenav-link">Autres</a>
         </div>
-        <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <a href="#" class="sidenav-link">Professionnel</a>
-        <a href="#" class="sidenav-link">Loisir</a>
-    </div>
 
-    {# bouton latéral pour accès menu a propos #}
+        {# menu latéral blog #}
 
-    <div id="apropos-sidenav" data-ax="sidenav" class="sidenav large white">
-        <div class="sidenav-header">
-            <button data-target="apropos-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-            <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
+        <div id="blog-sidenav" data-ax="sidenav" class="sidenav large white">
+            <div class="sidenav-header">
+                <button data-target="blog-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
+            </div>
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <a href="#" class="sidenav-link">Professionnel</a>
+            <a href="#" class="sidenav-link">Loisir</a>
         </div>
-        <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <a href="#" class="sidenav-link">Mes compétences</a>
-        <a href="#" class="sidenav-link">Mon expérience</a>
-        <a href="#" class="sidenav-link">Ma formation</a>
-        <a href="#" class="sidenav-link">Mon profil</a>
-    </div>
 
-    {# bouton latéral pour accès menu contact #}
+        {# menu latéral a propos #}
 
-    <div id="contact-sidenav" data-ax="sidenav" class="sidenav large white">
-        <div class="sidenav-header">
-            <button data-target="contact-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-            <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
+        <div id="apropos-sidenav" data-ax="sidenav" class="sidenav large white">
+            <div class="sidenav-header">
+                <button data-target="apropos-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
+            </div>
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <a href="#" class="sidenav-link">Mes compétences</a>
+            <a href="#" class="sidenav-link">Mon expérience</a>
+            <a href="#" class="sidenav-link">Ma formation</a>
+            <a href="#" class="sidenav-link">Mon profil</a>
         </div>
-        <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <a href="#" class="sidenav-link">Coordonnées</a>
-        <a href="#" class="sidenav-link">Formulaire de contact</a>
-        <a href="#" class="sidenav-link">Autres</a>
-    </div>
 
-    <main>
-    
-        {# bouton latéral pour accès menu général #}
+        {# menu latéral contact #}
 
-        <button data-target="menu-sidenav" class="btn rounded-1 press orange dark-1 sidenav-trigger sidenav-menu">
-            <span class="icon">
-                <i aria-hidden="true" class="icon-home"></i>
-            </span>
-        </button>
+        <div id="contact-sidenav" data-ax="sidenav" class="sidenav large white">
+            <div class="sidenav-header">
+                <button data-target="contact-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
+            </div>
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <a href="#" class="sidenav-link">Coordonnées</a>
+            <a href="#" class="sidenav-link">Formulaire de contact</a>
+            <a href="#" class="sidenav-link">Autres</a>
+        </div>
 
-        {# bouton latéral pour accès menu portfolio #}
+        <main>
 
-        <button data-target="portfolio-sidenav"
-            class="btn rounded-1 press orange light-1 sidenav-trigger sidenav-portfolio">
-            <span class="icon">
-                <i aria-hidden="true" class="icon-portfolio"></i>
-            </span>
-        </button>
+            {# bouton latéral pour accès menu admin #}
 
-        {# bouton latéral pour accès menu articles #}
+            <button data-target="admin-sidenav" class="btn rounded-1 press white sidenav-trigger sidenav-admin">
+                <span class="text">
+                    <p>Admin</p>
+                </span>
+            </button>
 
-        <button data-target="articles-sidenav"
-            class="btn rounded-1 press blue light-1 sidenav-trigger sidenav-articles">
-            <span class="icon">
-                <i aria-hidden="true" class="icon-services"></i>
-            </span>
-        </button>
+            {# bouton latéral pour accès menu général #}
 
-        {# bouton latéral pour accès menu blog #}
+            <button data-target="menu-sidenav" class="btn rounded-1 press orange dark-1 sidenav-trigger sidenav-menu">
+                <span class="icon">
+                    <i aria-hidden="true" class="icon-home"></i>
+                </span>
+            </button>
 
-        <button data-target="blog-sidenav" class="btn rounded-1 press blue dark-1 sidenav-trigger sidenav-blog">
-            <span class="icon">
-                <i aria-hidden="true" class="icon-blog"></i>
-            </span>
-        </button>
+            {# bouton latéral pour accès menu portfolio #}
 
-        {# bouton latéral pour accès menu apropos #}
+            <button data-target="portfolio-sidenav"
+                class="btn rounded-1 press orange light-1 sidenav-trigger sidenav-portfolio">
+                <span class="icon">
+                    <i aria-hidden="true" class="icon-portfolio"></i>
+                </span>
+            </button>
 
-        <button data-target="apropos-sidenav"
-            class="btn rounded-1 press airforce dark-1 sidenav-trigger sidenav-apropos">
-            <span class="icon">
-                <i aria-hidden="true" class="icon-team"></i>
-            </span>
-        </button>
+            {# bouton latéral pour accès menu articles #}
 
-        {# bouton latéral pour accès menu contact #}
+            <button data-target="articles-sidenav"
+                class="btn rounded-1 press blue light-1 sidenav-trigger sidenav-articles">
+                <span class="icon">
+                    <i aria-hidden="true" class="icon-services"></i>
+                </span>
+            </button>
 
-        <button data-target="contact-sidenav"
-            class="btn rounded-1 press airforce dark-5 sidenav-trigger sidenav-contact">
-            <span class="icon">
-                <i aria-hidden="true" class="icon-contact"></i>
-            </span>
-        </button>
+            {# bouton latéral pour accès menu blog #}
 
-        <div class="container-fluid">{% block body %}{% endblock %}</div>
-    </main>
+            <button data-target="blog-sidenav" class="btn rounded-1 press blue dark-1 sidenav-trigger sidenav-blog">
+                <span class="icon">
+                    <i aria-hidden="true" class="icon-blog"></i>
+                </span>
+            </button>
 
-    <footer class="container-fluid">
-        <nav class="nav nav-footer">
-            <ul>
-                <li>
-                <a href="/">
-                    <span>Site réalisé par Vincent NGUYEN</span>
-                    </a>
-                </li>
-                <li>
-                <a href="/">
-                    <span>Créé le 01 août 2020</span>
-                    </a>
-                </li>
-                <li>
-                <a href="/">
-                    <span>Actualisation régulière</span>
-                    </a>
-                </li>
-                <li>
-                <a href="/">
-                    <span>Dernière Maj : 2 août 2020</span>
-                    </a>
-                </li>
-                <li>
-                <a href="/">
-                    <span>Voir les Maj : Ici</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/">
-                    <span>RGPD and Co</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </footer>
+            {# bouton latéral pour accès menu apropos #}
 
-<!-- ============================== xx. SCRIPTS POUR BOOTSTRAP BACKGROUND VIDEO ============================== -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+            <button data-target="apropos-sidenav"
+                class="btn rounded-1 press airforce dark-1 sidenav-trigger sidenav-apropos">
+                <span class="icon">
+                    <i aria-hidden="true" class="icon-team"></i>
+                </span>
+            </button>
 
-    <!-- ============================== xx. SCRIPTS POUR AXENTIS ============================== -->
+            {# bouton latéral pour accès menu contact #}
 
-    <script src="https://cdn.jsdelivr.net/npm/axentix@1.0.0-beta.0/dist/js/axentix.min.js"></script>
+            <button data-target="contact-sidenav"
+                class="btn rounded-1 press airforce dark-5 sidenav-trigger sidenav-contact">
+                <span class="icon">
+                    <i aria-hidden="true" class="icon-contact"></i>
+                </span>
+            </button>
 
-    <!-- ============================== xx. SCRIPTS POUR RETINA BOOTSTRAP ============================== -->
+            <div class="container-fluid">{% block body %}{% endblock %}</div>
+        </main>
 
-    <script>
-        //  The function to change the class
-        var changeClass = function (r, className1, className2) {
-            var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
-            if (regex.test(r.className)) {
-                r.className = r.className.replace(regex, ' ' + className2 + ' ');
-            } else {
-                r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"), ' ' +
-                    className1 + ' ');
+        <footer class="container-fluid">
+            <nav class="nav nav-footer">
+                <ul>
+                    <li>
+                        <a href="/">
+                            <span>Site réalisé par Vincent NGUYEN</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <span>Créé le 01 août 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <span>Actualisation régulière</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <span>Dernière Maj : 2 août 2020</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <span>Voir les Maj : Ici</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <span>RGPD and Co</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+
+        <!-- ============================== xx. SCRIPTS POUR BOOTSTRAP BACKGROUND VIDEO ============================== -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- ============================== xx. SCRIPTS POUR AXENTIS ============================== -->
+
+        <script src="https://cdn.jsdelivr.net/npm/axentix@1.0.0-beta.0/dist/js/axentix.min.js"></script>
+
+        <!-- ============================== xx. SCRIPTS POUR RETINA BOOTSTRAP ============================== -->
+
+        <script>
+            //  The function to change the class
+            var changeClass = function (r, className1, className2) {
+                var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+                if (regex.test(r.className)) {
+                    r.className = r.className.replace(regex, ' ' + className2 + ' ');
+                } else {
+                    r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"), ' ' +
+                        className1 + ' ');
+                }
+                return r.className;
+            };
+
+            //  Creating our button in JS for smaller screens
+            var menuElements = document.getElementById('menu');
+            menuElements.insertAdjacentHTML('afterBegin',
+                '<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>'
+            );
+
+            //  Toggle the class on click to show / hide the menu
+            document.getElementById('menutoggle').onclick = function () {
+                changeClass(this, 'navtoogle active', 'navtoogle');
             }
-            return r.className;
-        };
 
-        //  Creating our button in JS for smaller screens
-        var menuElements = document.getElementById('menu');
-        menuElements.insertAdjacentHTML('afterBegin',
-            '<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>'
-        );
+            // http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+            document.onclick = function (e) {
+                var mobileButton = document.getElementById('menutoggle'),
+                    buttonStyle = mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(
+                        mobileButton, null).display;
 
-        //  Toggle the class on click to show / hide the menu
-        document.getElementById('menutoggle').onclick = function () {
-            changeClass(this, 'navtoogle active', 'navtoogle');
-        }
-
-        // http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
-        document.onclick = function (e) {
-            var mobileButton = document.getElementById('menutoggle'),
-                buttonStyle = mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(
-                    mobileButton, null).display;
-
-            if (buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' +
-                    mobileButton.className + ' ')) {
-                changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+                if (buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(
+                        ' ' +
+                        mobileButton.className + ' ')) {
+                    changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+                }
             }
-        }
-    </script>
+        </script>
 
 
-    {% block javascripts %}{% endblock %}
-    <script src="{{ asset('js/scripts.js') }}"></script>
-</body>
+        {% block javascripts %}{% endblock %}
+        <script src="{{ asset('js/scripts.js') }}"></script>
+    </body>
 
 </html>

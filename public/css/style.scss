@@ -230,34 +230,39 @@ a {
     }
 }
 
-.sidenav-menu {
+.sidenav-admin {
     @include button-sidebar-position;
-    top: 19.7em;
+    top: 19.5em;
 }
 
-.sidenav-portfolio {
+.sidenav-menu {
     @include button-sidebar-position;
     top: 22.2em;
 }
 
-.sidenav-articles {
+.sidenav-portfolio {
     @include button-sidebar-position;
     top: 24.7em;
 }
 
-.sidenav-blog {
+.sidenav-articles {
     @include button-sidebar-position;
     top: 27.2em;
 }
 
-.sidenav-apropos {
+.sidenav-blog {
     @include button-sidebar-position;
     top: 29.7em;
 }
 
-.sidenav-contact {
+.sidenav-apropos {
     @include button-sidebar-position;
     top: 32.2em;
+}
+
+.sidenav-contact {
+    @include button-sidebar-position;
+    top: 34.7em;
 }
 
 // body {

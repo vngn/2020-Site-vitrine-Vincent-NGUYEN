@@ -132,40 +132,46 @@ a {
   transition: 0.5s;
 }
 
-.sidenav-menu {
+.sidenav-admin {
   position: fixed;
   left: 0;
-  top: 19.7em;
+  top: 19.5em;
 }
 
-.sidenav-portfolio {
+.sidenav-menu {
   position: fixed;
   left: 0;
   top: 22.2em;
 }
 
-.sidenav-articles {
+.sidenav-portfolio {
   position: fixed;
   left: 0;
   top: 24.7em;
 }
 
-.sidenav-blog {
+.sidenav-articles {
   position: fixed;
   left: 0;
   top: 27.2em;
 }
 
-.sidenav-apropos {
+.sidenav-blog {
   position: fixed;
   left: 0;
   top: 29.7em;
 }
 
-.sidenav-contact {
+.sidenav-apropos {
   position: fixed;
   left: 0;
   top: 32.2em;
+}
+
+.sidenav-contact {
+  position: fixed;
+  left: 0;
+  top: 34.7em;
 }
 
 .bg00 {
