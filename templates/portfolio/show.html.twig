@@ -19,13 +19,25 @@
     </div>
 </article>
 
+<div class="comment example-wrapper zone">
+
+    {{ form_start(portfolioCommentForm) }}
+    {{ form_row(portfolioCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
+
+    <div class="btn-site">
+        <button type="submit" class="btn shadow-1 rounded-1 green dark-2">Ajouter un commentaire</button>
+        {{ form_end(portfolioCommentForm) }}
+    </div>
+</div>
+
 <section id="commentaires">
     <h1 class="example-wrapper zone">{{ portfolio.portfolioComment | length }} commentaire(s) :</h1>
     {% for portfolioComment in portfolio.portfolioComment %}
     <div class="comment example-wrapper zone">
         <div class="row">
             <div class="col-3">
-               {{ app.user.firstname }} {{ app.user.name }} (<small>{{portfolioComment.createdAt | date ('d/m/Y à H:i')}}</small>)
+                {{ app.user.firstname }} {{ app.user.name }}
+                (<small>{{portfolioComment.createdAt | date ('d/m/Y à H:i')}}</small>)
             </div>
             <div class="col">
                 {{portfolioComment.content | raw}}
@@ -33,17 +45,6 @@
         </div>
     </div>
     {%  endfor %}
-    <div class="comment example-wrapper zone">
-
-        {{ form_start(portfolioCommentForm) }}
-        {# {{ form_row(portfolioCommentForm.author, {'attr': {'placeholder': "Votre nom"}}) }} #}
-        {{ form_row(portfolioCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
-        
-        <div class="btn-site">
-            <button type="submit" class="btn shadow-1 rounded-1 green dark-2">Ajouter un commentaire</button>
-            {{ form_end(portfolioCommentForm) }}
-        </div>
-    </div>
 </section>
 
 

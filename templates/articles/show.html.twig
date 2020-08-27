@@ -19,13 +19,24 @@
     </div>
 </article>
 
+<div class="comment example-wrapper zone">
+    {{ form_start(articlesCommentForm) }}
+    {{ form_row(articlesCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
+
+    <div class="btn-site">
+        <button type="submit" class="btn shadow-1 rounded-1 green dark-2">Ajouter un commentaire</button>
+        {{ form_end(articlesCommentForm) }}
+    </div>
+</div>
+
 <section id="commentaires">
     <h1 class="example-wrapper zone">{{ articles.articleComment | length }} commentaire(s) :</h1>
     {% for articleComment in articles.articleComment %}
     <div class="comment example-wrapper zone">
         <div class="row">
             <div class="col-3">
-                {{ app.user.firstname }} {{ app.user.name }} (<small>{{articleComment.createdAt | date ('d/m/Y à H:i')}}</small>)
+                {{ app.user.firstname }} {{ app.user.name }}
+                (<small>{{articleComment.createdAt | date ('d/m/Y à H:i')}}</small>)
             </div>
             <div class="col">
                 {{articleComment.content | raw}}
@@ -34,16 +45,6 @@
     </div>
     {%  endfor %}
 
-    <div class="comment example-wrapper zone">
-        {{ form_start(articlesCommentForm) }}
-        {# {{ form_row(articlesCommentForm.author, {'attr': {'placeholder': "Votre nom"}}) }} #}
-        {{ form_row(articlesCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
-
-        <div class="btn-site">
-            <button type="submit" class="btn shadow-1 rounded-1 green dark-2">Ajouter un commentaire</button>
-            {{ form_end(articlesCommentForm) }}
-        </div>
-    </div>
 </section>
 
 {% endblock %}
