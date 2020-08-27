@@ -32,19 +32,20 @@
 
 <section id="commentaires">
     <h1 class="example-wrapper zone">{{ portfolio.portfolioComment | length }} commentaire(s) :</h1>
-    {% for portfolioComment in portfolio.portfolioComment %}
     <div class="comment example-wrapper zone">
+        {% for portfolioComment in portfolio.portfolioComment %}
         <div class="row">
             <div class="col-3">
-                {{ articleComment.users.firstname }} {{ articleComment.users.name }}
+                {{ portfolioComment.users.firstname }} {{ portfolioComment.users.name }}
                 (<small>{{portfolioComment.createdAt | date ('d/m/Y à H:i')}}</small>)
             </div>
             <div class="col">
                 {{portfolioComment.content | raw}}
             </div>
         </div>
+        <hr />
+        {%  endfor %}
     </div>
-    {%  endfor %}
 </section>
 
 

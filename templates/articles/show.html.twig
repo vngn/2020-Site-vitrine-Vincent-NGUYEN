@@ -31,8 +31,9 @@
 
 <section id="commentaires">
     <h1 class="example-wrapper zone">{{ articles.articleComment | length }} commentaire(s) :</h1>
-    {% for articleComment in articles.articleComment %}
     <div class="comment example-wrapper zone">
+        {% for articleComment in articles.articleComment %}
+
         <div class="row">
             <div class="col-3">
                 {{ articleComment.users.firstname }} {{ articleComment.users.name }}
@@ -42,8 +43,9 @@
                 {{articleComment.content | raw}}
             </div>
         </div>
+        <hr />
+        {%  endfor %}
     </div>
-    {%  endfor %}
 
 </section>
 

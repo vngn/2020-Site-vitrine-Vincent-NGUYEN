@@ -32,19 +32,21 @@
 
 <section id="commentaires">
     <h1 class="example-wrapper zone">{{ blog.blogComment | length }} commentaire(s) :</h1>
-    {% for blogComment in blog.blogComment %}
     <div class="comment example-wrapper zone">
+        {% for blogComment in blog.blogComment %}
         <div class="row">
             <div class="col-3">
-                {{ articleComment.users.firstname }} {{ articleComment.users.name }}
+                {{ blogComment.users.firstname }} {{ blogComment.users.name }}
                 (<small>{{blogComment.createdAt | date ('d/m/Y à H:i')}}</small>)
             </div>
             <div class="col">
                 {{blogComment.content | raw}}
             </div>
         </div>
+        <hr />
+        {%  endfor %}
+
     </div>
-    {%  endfor %}
 </section>
 
 {% endblock %}
