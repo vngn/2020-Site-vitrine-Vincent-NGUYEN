@@ -28,6 +28,7 @@ class CategoriesController extends AbstractController
 
     /**
      * @Route("/add", name="categories_add")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function add(Request $request)
     {
@@ -52,6 +53,7 @@ class CategoriesController extends AbstractController
 
     /**
      * @Route("/edit/{id}", name="categories_edit")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function edit(Categories $categorie, Request $request)
     {

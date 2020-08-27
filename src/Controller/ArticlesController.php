@@ -32,6 +32,7 @@ class ArticlesController extends AbstractController
 
     /**
      * @Route("/manage", name="articles_manage")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function manage(ArticlesRepository $articlesRepo)
     {
@@ -42,6 +43,7 @@ class ArticlesController extends AbstractController
 
     /**
      * @Route("/add", name="articles_add")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function add(Request $request)
     {
@@ -69,6 +71,7 @@ class ArticlesController extends AbstractController
 
     /**
      * @Route("/activate/{id}", name="articles_activate")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function activate(Articles $article)
     {
@@ -83,6 +86,7 @@ class ArticlesController extends AbstractController
 
     /**
      * @Route("/delete/{id}", name="articles_delete")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function delete(Articles $article)
     {

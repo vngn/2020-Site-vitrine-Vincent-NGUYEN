@@ -191,13 +191,14 @@
         <main>
 
             {# bouton latéral pour accès menu admin #}
-
+            {% if is_granted('ROLE_ADMIN') %}
             <button data-target="admin-sidenav" class="btn rounded-1 press white sidenav-trigger sidenav-admin">
                 <span class="text">
                     <p>Admin</p>
                 </span>
             </button>
-
+            {% endif %}
+            
             {# bouton latéral pour accès menu général #}
 
             <button data-target="menu-sidenav" class="btn rounded-1 press orange dark-1 sidenav-trigger sidenav-menu">

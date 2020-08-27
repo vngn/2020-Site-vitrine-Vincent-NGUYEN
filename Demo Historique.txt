@@ -361,6 +361,9 @@ paramétrer la sidebar en responsive
 uniformiser les formulaires
 intégrer condition d'affichage si active ou non
 
+pot de miel
+
+
 
 
 php bin/console cache:clear      

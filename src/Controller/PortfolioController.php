@@ -32,6 +32,7 @@ class PortfolioController extends AbstractController
 
     /**
      * @Route("/manage", name="portfolio_manage")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function manage(PortfolioRepository $portfolioRepo)
     {
@@ -42,6 +43,7 @@ class PortfolioController extends AbstractController
 
     /**
      * @Route("/add", name="portfolio_add")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function add(Request $request)
     {
@@ -69,6 +71,7 @@ class PortfolioController extends AbstractController
 
     /**
      * @Route("/activate/{id}", name="portfolio_activate")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function activate(Portfolio $portfolio)
     {
@@ -81,6 +84,7 @@ class PortfolioController extends AbstractController
 
     /**
      * @Route("/delete/{id}", name="portfolio_delete")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function delete(Portfolio $portfolio)
     {

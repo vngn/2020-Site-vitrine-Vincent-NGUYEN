@@ -28,6 +28,7 @@ class BlogController extends AbstractController
 
     /**
      * @Route("/manage", name="blog_manage")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function manage(BlogRepository $blogRepo)
     {
@@ -38,6 +39,7 @@ class BlogController extends AbstractController
 
     /**
      * @Route("/add", name="blog_add")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function add(Request $request)
     {
@@ -64,6 +66,7 @@ class BlogController extends AbstractController
 
     /**
      * @Route("/activate/{id}", name="blog_activate")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function activate(Blog $blog)
     {
@@ -76,6 +79,7 @@ class BlogController extends AbstractController
     
     /**
      * @Route("/delete/{id}", name="blog_delete")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function delete(Blog $blog)
     {
