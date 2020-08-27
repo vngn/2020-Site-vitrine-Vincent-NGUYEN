@@ -107,8 +107,8 @@ class ArticlesController extends AbstractController
         
         if($form->isSubmitted() && $form->isValid()) {
                 $articlesComment->setCreatedAt(new \DateTime())
-                        ->setArticle($articles);
-                        
+                        ->setArticle($articles)
+                        ->setUsers($this->getUser());
                 $manager->persist($articlesComment);
                 $manager->flush();
                 

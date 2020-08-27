@@ -99,8 +99,8 @@ class BlogController extends AbstractController
         
         if($form->isSubmitted() && $form->isValid()) {
                 $blogComment->setCreatedAt(new \DateTime())
-                        ->setArticle($blog);
-                        
+                        ->setArticle($blog)
+                        ->setUsers($this->getUser());
                 $manager->persist($blogComment);
                 $manager->flush();
                 

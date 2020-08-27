@@ -104,8 +104,8 @@ class PortfolioController extends AbstractController
         
         if($form->isSubmitted() && $form->isValid()) {
                 $portfolioComment->setCreatedAt(new \DateTime())
-                        ->setArticle($portfolio);
-                        
+                        ->setArticle($portfolio)
+                        ->setUsers($this->getUser());
                 $manager->persist($portfolioComment);
                 $manager->flush();
                 
