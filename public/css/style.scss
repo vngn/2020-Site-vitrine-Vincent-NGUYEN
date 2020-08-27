@@ -235,6 +235,16 @@ a {
     top: 19.5em;
 }
 
+.sidenav-registered {
+    @include button-sidebar-position;
+    top: 19.5em;
+}
+
+.sidenav-visitor {
+    @include button-sidebar-position;
+    top: 19.5em;
+}
+
 .sidenav-menu {
     @include button-sidebar-position;
     top: 22.2em;

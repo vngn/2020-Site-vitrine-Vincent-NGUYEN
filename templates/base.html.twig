@@ -104,6 +104,34 @@
             <a href="{{ path('blog_manage') }}" class="sidenav-link">Gestion de la page Blog</a>
             <hr />
             <a href="{{ path('users') }}" class="sidenav-link">Gestion des Utilisateurs</a>
+            <a href="{{ path('users') }}" class="sidenav-link">Mon profil</a>
+            <a href="{{ path('app_logout') }}" class="sidenav-link">Se déconnecter</a>
+        </div>
+
+        {# menu latéral registered #}
+
+        <div id="registered-sidenav" data-ax="sidenav" class="sidenav large white">
+            <div class="sidenav-header">
+                <button data-target="registered-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
+            </div>
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <hr />
+            <a href="{{ path('users') }}" class="sidenav-link">Mon profil</a>
+            <a href="{{ path('app_logout') }}" class="sidenav-link">Se déconnecter</a>
+        </div>
+
+        {# menu latéral visitor #}
+
+        <div id="visitor-sidenav" data-ax="sidenav" class="sidenav large white">
+            <div class="sidenav-header">
+                <button data-target="visitor-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
+            </div>
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <hr />
+            <a href="{{ path('users') }}" class="sidenav-link">Se connecter</a>
+            <a href="{{ path('app_register') }}" class="sidenav-link">S'inscrire</a>
         </div>
 
         {# menu latéral général #}
@@ -197,8 +225,25 @@
                     <p>Admin</p>
                 </span>
             </button>
+
+            {% elseif is_granted('ROLE_USER') %}
+            {# bouton latéral pour accès menu registered #}
+            <button data-target="registered-sidenav"
+                class="btn rounded-1 press white sidenav-trigger sidenav-registered">
+                <span class="text">
+                    <p>Registered</p>
+                </span>
+            </button>
+
+            {% else %}
+            {# bouton latéral pour accès menu visitor #}
+            <button data-target="visitor-sidenav" class="btn rounded-1 press white sidenav-trigger sidenav-registered">
+                <span class="text">
+                    <p>Visitor</p>
+                </span>
+            </button>
             {% endif %}
-            
+
             {# bouton latéral pour accès menu général #}
 
             <button data-target="menu-sidenav" class="btn rounded-1 press orange dark-1 sidenav-trigger sidenav-menu">

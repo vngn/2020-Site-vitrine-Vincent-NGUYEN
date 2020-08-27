@@ -138,6 +138,18 @@ a {
   top: 19.5em;
 }
 
+.sidenav-registered {
+  position: fixed;
+  left: 0;
+  top: 19.5em;
+}
+
+.sidenav-visitor {
+  position: fixed;
+  left: 0;
+  top: 19.5em;
+}
+
 .sidenav-menu {
   position: fixed;
   left: 0;

@@ -11,7 +11,8 @@
 
         {% if app.user %}
         <div class="mb-3">
-            Vous êtes connecté(e) avec l'Email {{ app.user.username }}. <a href="{{ path('app_logout') }}" class="btn rounded-1 press amaranth dark-1">Déconnexion ici</a>
+            Vous êtes connecté(e) avec l'Email {{ app.user.username }}. <a href="{{ path('app_logout') }}"
+                class="btn rounded-1 press amaranth dark-1">Déconnexion ici</a>
         </div>
         {% endif %}
 
@@ -39,6 +40,7 @@
             Valider
         </button>
     </form>
-    <p><a href="{{ path('app_forgot_password_request') }}" class="btn rounded-1 press amaranth dark-1">Mot de passe oublié</a></p>
+    <p><a href="{{ path('app_forgot_password_request') }}" class="btn rounded-1 press amaranth dark-1">Mot de passe
+            oublié</a></p>
 </div>
 {% endblock %}
