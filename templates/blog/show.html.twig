@@ -25,7 +25,7 @@
     <div class="comment example-wrapper zone">
         <div class="row">
             <div class="col-3">
-                {{blogComment.author}} (<small>{{blogComment.createdAt | date ('d/m/Y à H:i')}}</small>)
+               {{ app.user.firstname }} {{ app.user.name }} (<small>{{blogComment.createdAt | date ('d/m/Y à H:i')}}</small>)
             </div>
             <div class="col">
                 {{blogComment.content | raw}}
@@ -37,7 +37,7 @@
     <div class="comment example-wrapper zone">
 
         {{ form_start(blogCommentForm) }}
-        {{ form_row(blogCommentForm.author, {'attr': {'placeholder': "Votre nom"}}) }}
+        {# {{ form_row(blogCommentForm.author, {'attr': {'placeholder': "Votre nom"}}) }} #}
         {{ form_row(blogCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
 
         <div class="btn-site">

@@ -12,7 +12,7 @@ class ArticlesCommentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('author')
+            // ->add('author')
             ->add('content')
         ;
     }

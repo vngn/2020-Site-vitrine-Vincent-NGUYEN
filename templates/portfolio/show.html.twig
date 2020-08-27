@@ -25,7 +25,7 @@
     <div class="comment example-wrapper zone">
         <div class="row">
             <div class="col-3">
-                {{portfolioComment.author}} (<small>{{portfolioComment.createdAt | date ('d/m/Y à H:i')}}</small>)
+               {{ app.user.firstname }} {{ app.user.name }} (<small>{{portfolioComment.createdAt | date ('d/m/Y à H:i')}}</small>)
             </div>
             <div class="col">
                 {{portfolioComment.content | raw}}
@@ -36,7 +36,7 @@
     <div class="comment example-wrapper zone">
 
         {{ form_start(portfolioCommentForm) }}
-        {{ form_row(portfolioCommentForm.author, {'attr': {'placeholder': "Votre nom"}}) }}
+        {# {{ form_row(portfolioCommentForm.author, {'attr': {'placeholder': "Votre nom"}}) }} #}
         {{ form_row(portfolioCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
         
         <div class="btn-site">
