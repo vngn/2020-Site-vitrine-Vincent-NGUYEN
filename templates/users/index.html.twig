@@ -26,7 +26,7 @@
 </div>
 
 <div class="example-wrapper zone">
-    <h1>{{ app.user.articlesComments | length }} article(s) dans la section Articles</h1>
+    <h1>{{ app.user.articlesComments | length }} commentaire(s) dans la section Articles</h1>
     <table class="table striped">
         <thead>
             <tr>
@@ -48,7 +48,7 @@
 </div>
 
 <div class="example-wrapper zone">
-    <h1>{{ app.user.blogComments | length }} articles(s) dans section Blog</h1>
+    <h1>{{ app.user.blogComments | length }} commentaire(s) dans section Blog</h1>
     <table class="table striped">
         <thead>
             <tr>
@@ -58,11 +58,11 @@
             </tr>
         </thead>
         <tbody>
-            {% for articleComment in app.user.blogComments %}
+            {% for blogComment in app.user.blogComments %}
             <tr>
-                <td>{{ articleComment.article.title }}</td>
-                <td>{{ articleComment.content | raw }}</td>
-                <td>{{ articleComment.createdAt | date }}</td>
+                <td>{{ blogComment.article.title }}</td>
+                <td>{{ blogComment.content | raw }}</td>
+                <td>{{ blogComment.createdAt | date }}</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -70,7 +70,7 @@
 </div>
 
 <div class="example-wrapper zone">
-    <h1>{{ app.user.portfolioComments | length }} réalisation(s) dans la section Portfolio</h1>
+    <h1>{{ app.user.portfolioComments | length }} commentaire(s) dans la section Portfolio</h1>
     <table class="table striped">
         <thead>
             <tr>
