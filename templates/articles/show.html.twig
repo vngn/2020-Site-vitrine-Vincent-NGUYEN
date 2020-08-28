@@ -3,11 +3,11 @@
 {% block title %}Article en détail{% endblock %}
 
 {% block body %}
-<div class="example-wrapper zone">
-    <h1>Article en détail</h1>
+<div class="example-wrapper articles-color">
+    <h1 class="articles-color">Article en détail</h1>
 </div>
 
-<article class="mh-menu site">
+<article class="mh-menu site articles-color">
     <h2>{{ articles.title }}</h2>
     <div class="metadata">Ecrit le {{ articles.createdAt | date('d/m/Y')}} à {{ articles.createdAt | date('H:i')}}
         dans la catégorie {{ articles.categories }}</div>
@@ -20,7 +20,7 @@
 </article>
 
 {% if is_granted('ROLE_USER') %}
-<div class="comment example-wrapper zone">
+<div class="comment example-wrapper articles-color">
     {{ form_start(articlesCommentForm) }}
     {{ form_row(articlesCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
 
@@ -75,8 +75,8 @@
 {% endif %}
 
 <section id="commentaires">
-    <h1 class="example-wrapper zone">{{ articles.articleComment | length }} commentaire(s) :</h1>
-    <div class="comment example-wrapper zone">
+    <h1 class="example-wrapper articles-color">{{ articles.articleComment | length }} commentaire(s) :</h1>
+    <div class="comment example-wrapper articles-color">
         {% for articleComment in articles.articleComment %}
 
         <div class="row">

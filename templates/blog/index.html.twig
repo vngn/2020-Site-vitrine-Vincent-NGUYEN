@@ -4,11 +4,11 @@
 
 {% block body %}
 <div class="example-wrapper zone">
-    <h1>Blog</h1>
+    <h1 class="blog-color">Blog</h1>
 </div>
 
 {% for articleBlog in blog %}
-<ul class="mh-menu site">
+<ul class="mh-menu site blog-color">
     <li><a href="">
             <span>{{ articleBlog.createdAt | date ('d/m/Y à H:i') }}</span>
             <span>{{ articleBlog.title }}</span>

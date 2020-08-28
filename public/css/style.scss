@@ -160,8 +160,44 @@ ul {
 }
 
 @mixin bgcolor-border {
-    border: 2px solid goldenrod;
+    border: 4px solid goldenrod;
     background-color: white;
+}
+
+@mixin bgcolor-border-home {
+    border: 4px solid rgb(208, 101, 3);
+    background-color: white;
+}
+
+@mixin bgcolor-border-portfolio {
+    border: 4px solid rgb(233, 147, 26);
+    background-color: white;
+}
+
+@mixin bgcolor-border-articles {
+    border: 4px solid rgb(22, 145, 190);
+    background-color: white;
+}
+
+@mixin bgcolor-border-blog {
+    border: 4px solid rgb(22, 107, 162);
+    background-color: white;
+}
+
+@mixin bgcolor-border-about {
+    border: 4px solid rgb(27, 54, 71);
+    background-color: white;
+}
+
+@mixin bgcolor-border-contact {
+    border: 4px solid rgb(21, 40, 54);
+    background-color: white;
+}
+
+@mixin zone {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 0;
 }
 
 @mixin button-sidebar-position {
@@ -172,7 +208,7 @@ ul {
 $font-family: 'acme',
 sans-serif;
 
-$border: 2px solid goldenrod;
+$border: 3px solid goldenrod;
 
 .example-wrapper {
     margin: 2em auto;
@@ -207,6 +243,37 @@ a {
 }
 
 /* ============================== 0. PAGES ============================== */
+
+/* harmonisation des couleurs entre la navbar, les h1 et les bordures */
+
+.zone {
+    @include zone;
+}
+
+.home-color {
+    @include bgcolor-border-home;
+}
+
+.portfolio-color {
+    @include bgcolor-border-portfolio;
+}
+
+.articles-color {
+    @include bgcolor-border-articles;
+}
+
+.blog-color {
+    @include bgcolor-border-blog;
+}
+
+.about-color {
+    @include bgcolor-border-about;
+}
+
+.contact-color {
+    @include bgcolor-border-contact;
+}
+
 /* barre de navigation horizontale */
 .zone-nav {
     @include bgcolor-border;
@@ -265,7 +332,7 @@ a {
     top: 29.7em;
 }
 
-.sidenav-apropos {
+.sidenav-about {
     @include button-sidebar-position;
     top: 32.2em;
 }
@@ -296,17 +363,9 @@ h1 {
 //         transition: 1s;
 //     }
 
-.zone {
-    @include bgcolor-border;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    padding: 0;
-}
-
 // /* ============================== 2. MES PRODUCTIONS ============================== */
 
 .mh-menu {
-    @include bgcolor-border;
     border-radius: 5px;
     width: 84%;
     height: 450px;

@@ -4,11 +4,11 @@
 
 {% block body %}
 <div class="example-wrapper zone">
-    <h1>Articles</h1>
+    <h1 class="articles-color">Articles</h1>
 
 </div>
 {% for article in articles %}
-<article class="mh-menu site">
+<article class="mh-menu site articles-color">
     <h2>{{ article.title }}</h2>
     <div class="metadata">Ecrit le {{ article.createdAt | date('d/m/Y')}} à {{ article.createdAt | date('H:i')}}
         dans la catégorie {{ article.categories }}</div>

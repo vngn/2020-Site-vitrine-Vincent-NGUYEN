@@ -4,7 +4,9 @@
 
 {% block body %}
 <div class="example-wrapper zone">
-    <h1>Gérer les {{ app.user.blog| length }} articles de la page Blog</h1>
+    <h1 class="blog-color">Gérer les {{ app.user.blog| length }} articles de la page Blog</h1>
+</div>
+<div class="example-wrapper zone blog-color">
     <table class="table striped">
         <thead>
             <tr>

@@ -4,8 +4,10 @@
 
 {% block body %}
 <div class="example-wrapper zone">
-<h1>Ajouter un article</h1>
-    
-{{ form(form) }}
+    <h1 class="blog-color">Ajouter un article</h1>
 </div>
-{% endblock %}    
+
+<div class="example-wrapper zone blog-color">
+    {{ form(form) }}
+</div>
+{% endblock %}

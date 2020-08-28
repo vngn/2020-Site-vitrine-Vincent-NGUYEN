@@ -4,10 +4,10 @@
 
 {% block body %}
 <div class="example-wrapper zone">
-    <h1>Article du portfolio en détail</h1>
+    <h1 class="portfolio-color">Article du portfolio en détail</h1>
 </div>
 
-<article class="mh-menu site">
+<article class="mh-menu site portfolio-color">
     <h2>{{ portfolio.title }}</h2>
     <div class="metadata">Ecrit le {{ portfolio.createdAt | date('d/m/Y')}} à {{ portfolio.createdAt | date('H:i')}}
         dans la catégorie {{ portfolio.categories }}</div>
@@ -42,7 +42,7 @@
 </div>
 
 {% if is_granted('ROLE_USER') %}
-<div class="comment example-wrapper zone">
+<div class="comment example-wrapper portfolio-color">
     {{ form_start(portfolioCommentForm) }}
     {{ form_row(portfolioCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
 
@@ -97,8 +97,8 @@
 {% endif %}
 
 <section id="commentaires">
-    <h1 class="example-wrapper zone">{{ portfolio.portfolioComment | length }} commentaire(s) :</h1>
-    <div class="comment example-wrapper zone">
+    <h1 class="example-wrapper portfolio-color">{{ portfolio.portfolioComment | length }} commentaire(s) :</h1>
+    <div class="comment example-wrapper portfolio-color">
         {% for portfolioComment in portfolio.portfolioComment %}
         <div class="row">
             <div class="col-3">

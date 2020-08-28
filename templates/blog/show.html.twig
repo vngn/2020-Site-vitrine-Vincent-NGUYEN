@@ -3,8 +3,8 @@
 {% block title %}Article du blog en détail{% endblock %}
 
 {% block body %}
-<div class="example-wrapper zone">
-    <h1>Article du blog en détail</h1>
+<div class="example-wrapper blog-color">
+    <h1 class="blog-color">Article du blog en détail</h1>
 </div>
 
 <article class="mh-menu site">
@@ -20,7 +20,7 @@
 </article>
 
 {% if is_granted('ROLE_USER') %}
-<div class="comment example-wrapper zone">
+<div class="comment example-wrapper blog-color">
     {{ form_start(blogCommentForm) }}
     {{ form_row(blogCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
 
@@ -75,8 +75,8 @@
 {% endif %}
 
 <section id="commentaires">
-    <h1 class="example-wrapper zone">{{ blog.blogComment | length }} commentaire(s) :</h1>
-    <div class="comment example-wrapper zone">
+    <h1 class="example-wrapper blog-color">{{ blog.blogComment | length }} commentaire(s) :</h1>
+    <div class="comment example-wrapper blog-color">
         {% for blogComment in blog.blogComment %}
         <div class="row">
             <div class="col-3">

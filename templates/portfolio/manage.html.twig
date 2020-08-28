@@ -4,7 +4,9 @@
 
 {% block body %}
 <div class="example-wrapper zone">
-    <h1>Gérer les {{ app.user.portfolio | length }} réalisations de la page Portfolio</h1>
+    <h1 class="portfolio-color">Gérer les {{ app.user.portfolio | length }} réalisations de la page Portfolio</h1>
+    </div>
+    <div class="example-wrapper zone portfolio-color">
     <table class="table striped">
         <thead>
             <tr>
