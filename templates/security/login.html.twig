@@ -33,14 +33,14 @@
             <label>
                 <input type="checkbox" name="_remember_me"> Remember me
             </label>
-        </div>
-    #}
-
+        </div> #}
+        
         <button class="btn shadow-1 rounded-1 green dark-2" type="submit">
             Valider
         </button>
+        <a href="{{ path('app_forgot_password_request') }}" class="btn rounded-1 press amaranth dark-1">Mot de passe
+            oublié</a>
+        <a href="{{ path('app_register') }}" class="btn rounded-1 press green dark-2">Créer un compte</a>
     </form>
-    <p><a href="{{ path('app_forgot_password_request') }}" class="btn rounded-1 press amaranth dark-1">Mot de passe
-            oublié</a></p>
 </div>
 {% endblock %}
