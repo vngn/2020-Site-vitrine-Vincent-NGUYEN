@@ -7,6 +7,9 @@
     <meta name="keywords" content="responsive menu, retina-ready, icon font, media queries, css3, transition, mobile" />
     <title>{% block title %}Welcome!{% endblock %}</title>
 
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/dc423ef783.js" crossorigin="anonymous"></script>
+
     <!-- Bootstrap Background Vidéo-->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ asset('bgvideo/css/style.css') }}" rel="stylesheet">
@@ -223,7 +226,7 @@
             {% if is_granted('ROLE_ADMIN') %}
             <button data-target="admin-sidenav" class="btn rounded-1 press white sidenav-trigger sidenav-admin">
                 <span class="text">
-                    <p>A</p>
+                    <i class="fas fa-user-cog"></i>
                 </span>
             </button>
 
@@ -232,15 +235,16 @@
             <button data-target="registered-sidenav"
                 class="btn rounded-1 press white sidenav-trigger sidenav-registered">
                 <span class="text">
-                    <p>U</p>
+                    <i class="fas fa-user-check"></i>
                 </span>
             </button>
 
             {% else %}
             {# bouton latéral pour accès menu visitor #}
-            <button data-target="visitor-sidenav" class="btn rounded-1 press white sidenav-trigger sidenav-registered">
+            <button data-target="visitor-sidenav"
+                class="btn rounded-1 press white sidenav-trigger sidenav-registered">
                 <span class="text">
-                    <p>?</p>
+                    <i class="fas fa-user-lock"></i>
                 </span>
             </button>
             {% endif %}
