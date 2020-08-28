@@ -351,10 +351,7 @@ btn commentaires articles ok
 
 
 
-définir les couleurs de la navbar
-harmoniser les couleurs de la nav bar avec les border
 paramétrer l'affichage des zones articles et blog
-rendre fonctionnel le formulaire contact
 mettre en place la page à propos
 paramétrer le contenu de la zone portfolio
 paramétrer la sidebar en responsive
