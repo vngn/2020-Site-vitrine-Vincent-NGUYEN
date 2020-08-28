@@ -213,7 +213,7 @@ ul {
 $font-family: 'acme',
 sans-serif;
 
-$border: 3px solid goldenrod;
+$border: 6px solid goldenrod;
 
 .example-wrapper {
     margin: 2em auto;
@@ -286,9 +286,39 @@ a {
 
 /* barres de navigation verticale */
 .sidenav {
-    border: $border;
     @include sidenav;
 }
+
+.sidenav-border-color-role {
+    border: 6px solid grey;
+}
+
+.sidenav-border-color-home {
+    border: 6px solid rgb(208, 101, 3);
+}
+
+.sidenav-border-color-portfolio {
+    border: 6px solid rgb(233, 147, 26);
+}
+
+.sidenav-border-color-articles {
+    border: 6px solid rgb(22, 145, 190);
+}
+
+.sidenav-border-color-blog {
+    border: 6px solid rgb(22, 107, 162);
+}
+
+.sidenav-border-color-about {
+    border: 6px solid rgb(27, 54, 71);
+}
+
+.sidenav-border-color-contact {
+    border: 6px solid rgb(21, 40, 54);
+}
+
+
+
 
 .sidenav-trigger {
 

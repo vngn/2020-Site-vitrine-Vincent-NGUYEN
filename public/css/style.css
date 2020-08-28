@@ -152,9 +152,36 @@ a {
 
 /* barres de navigation verticale */
 .sidenav {
-  border: 3px solid goldenrod;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 220px;
+}
+
+.sidenav-border-color-role {
+  border: 6px solid grey;
+}
+
+.sidenav-border-color-home {
+  border: 6px solid #d06503;
+}
+
+.sidenav-border-color-portfolio {
+  border: 6px solid #e9931a;
+}
+
+.sidenav-border-color-articles {
+  border: 6px solid #1691be;
+}
+
+.sidenav-border-color-blog {
+  border: 6px solid #166ba2;
+}
+
+.sidenav-border-color-about {
+  border: 6px solid #1b3647;
+}
+
+.sidenav-border-color-contact {
+  border: 6px solid #152836;
 }
 
 .sidenav-trigger {
