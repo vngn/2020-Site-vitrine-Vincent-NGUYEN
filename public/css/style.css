@@ -150,7 +150,7 @@ a {
   background-color: white;
 }
 
-/* barre de navigation verticale */
+/* barres de navigation verticale */
 .sidenav {
   border: 3px solid goldenrod;
   border-top-right-radius: 20px;
@@ -169,6 +169,7 @@ a {
   transition: 0.5s;
 }
 
+/* boutons de navigation verticale */
 .sidenav-admin {
   position: fixed;
   left: 0;

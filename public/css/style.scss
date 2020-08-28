@@ -205,6 +205,11 @@ ul {
     left: 0;
 }
 
+@mixin sidenav {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 220px;
+}
+
 $font-family: 'acme',
 sans-serif;
 
@@ -279,11 +284,10 @@ a {
     @include bgcolor-border;
 }
 
-/* barre de navigation verticale */
+/* barres de navigation verticale */
 .sidenav {
     border: $border;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 220px;
+    @include sidenav;
 }
 
 .sidenav-trigger {
@@ -296,6 +300,8 @@ a {
         transition: 0.5s;
     }
 }
+
+/* boutons de navigation verticale */
 
 .sidenav-admin {
     @include button-sidebar-position;
