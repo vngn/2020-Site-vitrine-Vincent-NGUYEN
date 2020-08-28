@@ -164,6 +164,11 @@ ul {
     background-color: white;
 }
 
+@mixin bgcolor-border-role {
+    border: 4px solid green;
+    background-color: white;
+}
+
 @mixin bgcolor-border-home {
     border: 4px solid rgb(208, 101, 3);
     background-color: white;
@@ -253,6 +258,10 @@ a {
 
 .zone {
     @include zone;
+}
+
+.role-color {
+    @include bgcolor-border-role;
 }
 
 .home-color {
