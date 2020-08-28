@@ -224,7 +224,7 @@
 
             {# bouton latéral pour accès menu admin #}
             {% if is_granted('ROLE_ADMIN') %}
-            <button data-target="admin-sidenav" class="btn rounded-1 press white sidenav-trigger sidenav-admin">
+            <button data-target="admin-sidenav" class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-admin">
                 <span class="text">
                     <i class="fas fa-user-cog"></i>
                 </span>
@@ -233,7 +233,7 @@
             {% elseif is_granted('ROLE_USER') %}
             {# bouton latéral pour accès menu registered #}
             <button data-target="registered-sidenav"
-                class="btn rounded-1 press white sidenav-trigger sidenav-registered">
+                class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-registered">
                 <span class="text">
                     <i class="fas fa-user-check"></i>
                 </span>
@@ -242,7 +242,7 @@
             {% else %}
             {# bouton latéral pour accès menu visitor #}
             <button data-target="visitor-sidenav"
-                class="btn rounded-1 press white sidenav-trigger sidenav-registered">
+                class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-registered">
                 <span class="text">
                     <i class="fas fa-user-lock"></i>
                 </span>
