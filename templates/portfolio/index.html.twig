@@ -12,6 +12,7 @@
 </div>
 
 {% for articlePortfolio in portfolio %}
+
 <ul class="mh-menu site">
     <li><a href="">
             <span>{{ articlePortfolio.createdAt | date ('d/m/Y') }}</span>
@@ -22,7 +23,7 @@
     </li>
 </ul>
 
-<div class="btn-site wrapper">
+<div class="btn-site wrapper-link-site">
     <a class="cta" href="https://symfony-store.developpeur-de-site-web.fr/" target="_blank">
         <span class="next-button">Page du site</span>
         <span class="next-button">
@@ -44,7 +45,7 @@
     </a>
 </div>
 
-<div class="btn-site wrapper">
+<div class="btn-site wrapper-more-site">
     <a class="cta" href="{{ path('portfolio_show', {'id': articlePortfolio.id}) }}">
         <span class="next-button">Lire la suite / {{ articlePortfolio.portfolioComment | length }}
             commentaire(s)</span>

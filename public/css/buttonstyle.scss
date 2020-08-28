@@ -1,8 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:900i');
 
 .wrapper {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper-link-site {
+    display: flex;
+    justify-content: left;
+    position: relative;
+    left: 20px;
+    bottom: 75px;
+}
+
+.wrapper-more-site {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 83px;
 }
 
 .cta {
@@ -18,7 +33,7 @@
 }
 
 .cta:focus {
-   outline: none; 
+    outline: none;
 }
 
 .cta:hover {
@@ -36,17 +51,17 @@
     margin-right: 45px;
 }
 
-  .next-button {
-    transform: skewX(15deg) 
-  }
+.next-button {
+    transform: skewX(15deg)
+}
 
-  .next-button:nth-child(2) {
+.next-button:nth-child(2) {
     width: 20px;
     margin-left: 30px;
     position: relative;
     top: 12%;
-  }
-  
+}
+
 /**************SVG****************/
 
 path.one {
@@ -79,9 +94,11 @@ path.two {
     0% {
         fill: white;
     }
+
     50% {
         fill: #FBC638;
     }
+
     100% {
         fill: white;
     }
