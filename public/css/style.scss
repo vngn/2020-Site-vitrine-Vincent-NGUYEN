@@ -142,7 +142,7 @@ ul {
     border-bottom-right-radius: 220px;
 }
 
-@mixin boxshadow-sidenav ($color) {
+@mixin sidenav-gradient ($color) {
     border: 4px solid $color;
     background: linear-gradient(white, $color 75%);
 }
@@ -274,35 +274,35 @@ a {
 }
 
 .sidenav-border-color-users {
-    @include boxshadow-sidenav(green);
+    @include sidenav-gradient(green);
 }
 
 .sidenav-border-color-visitors {
-    @include boxshadow-sidenav(red);
+    @include sidenav-gradient(red);
 }
 
 .sidenav-border-color-home {
-    @include boxshadow-sidenav(rgb(208, 101, 3));
+    @include sidenav-gradient(rgb(208, 101, 3));
 }
 
 .sidenav-border-color-portfolio {
-    @include boxshadow-sidenav(rgb(233, 147, 26));
+    @include sidenav-gradient(rgb(233, 147, 26));
 }
 
 .sidenav-border-color-articles {
-    @include boxshadow-sidenav(rgb(22, 145, 190));
+    @include sidenav-gradient(rgb(22, 145, 190));
 }
 
 .sidenav-border-color-blog {
-    @include boxshadow-sidenav(rgb(22, 107, 162));
+    @include sidenav-gradient(rgb(22, 107, 162));
 }
 
 .sidenav-border-color-about {
-    @include boxshadow-sidenav(rgb(27, 54, 71));
+    @include sidenav-gradient(rgb(27, 54, 71));
 }
 
 .sidenav-border-color-contact {
-    @include boxshadow-sidenav(rgb(21, 40, 54));
+    @include sidenav-gradient(rgb(21, 40, 54));
 }
 
 .sidenav-trigger {
@@ -365,9 +365,9 @@ a {
 
 /* icones des boutons de navigation verticale */
 
-// .icone-admin {
-//     color: green
-// }
+.icone-admin {
+    color: green
+}
 
 .bg00 {
     @include bg;

@@ -94,8 +94,9 @@
 
         <div id="admin-sidenav" data-ax="sidenav" class="sidenav-border-color-users sidenav large white">
             <div class="sidenav-header">
-                <button data-target="admin-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-                <i class="fas fa-user-cog"></i>
+                <button data-target="admin-sidenav" class="sidenav-trigger"><i
+                        class="fas fa-times"></i></button>
+                <a href="{{ path('users') }}" class="sidenav-link"><i class="fas fa-user-cog"></i></a>
             </div>
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <hr />
@@ -143,7 +144,7 @@
         <div id="menu-sidenav" data-ax="sidenav" class="sidenav-border-color-home sidenav large white">
             <div class="sidenav-header">
                 <button data-target="menu-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-                <i aria-hidden="true" class="icon-home"></i>
+                <a href="{{ path('app_home') }}" class="sidenav-link"><i class="icon-home"></i></a>
             </div>
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <a href="{{ path('portfolio_index') }}" class="sidenav-link">Portfolio</a>
@@ -158,7 +159,7 @@
         <div id="portfolio-sidenav" data-ax="sidenav" class="sidenav-border-color-portfolio sidenav large white">
             <div class="sidenav-header">
                 <button data-target="portfolio-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-                <i aria-hidden="true" class="icon-portfolio"></i>
+                <i class="icon-portfolio"></i>
             </div>
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <a href="#" class="sidenav-link">Symfony</a>
@@ -172,7 +173,7 @@
         <div id="articles-sidenav" data-ax="sidenav" class="sidenav-border-color-articles sidenav large white">
             <div class="sidenav-header">
                 <button data-target="articles-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-                <i aria-hidden="true" class="icon-services"></i>
+                <i class="icon-services"></i>
             </div>
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <a href="#" class="sidenav-link">Techniques</a>
@@ -186,7 +187,7 @@
         <div id="blog-sidenav" data-ax="sidenav" class="sidenav-border-color-blog sidenav large white">
             <div class="sidenav-header">
                 <button data-target="blog-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-                <i aria-hidden="true" class="icon-blog"></i>
+                <i class="icon-blog"></i>
             </div>
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <a href="#" class="sidenav-link">Professionnel</a>
@@ -198,7 +199,7 @@
         <div id="about-sidenav" data-ax="sidenav" class="sidenav-border-color-about sidenav large white">
             <div class="sidenav-header">
                 <button data-target="about-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-                <i aria-hidden="true" class="icon-team"></i>
+                <i class="icon-team"></i>
             </div>
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <a href="#" class="sidenav-link">Mes compétences</a>
@@ -212,7 +213,7 @@
         <div id="contact-sidenav" data-ax="sidenav" class="sidenav-border-color-contact sidenav large white">
             <div class="sidenav-header">
                 <button data-target="contact-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-                <i aria-hidden="true" class="icon-contact"></i>
+                <i class="icon-contact"></i>
             </div>
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <a href="#" class="sidenav-link">Coordonnées</a>
@@ -241,8 +242,7 @@
 
             {% else %}
             {# bouton latéral pour accès menu visitor #}
-            <button data-target="visitor-sidenav"
-                class="btn rounded-1 press red sidenav-trigger sidenav-registered">
+            <button data-target="visitor-sidenav" class="btn rounded-1 press red sidenav-trigger sidenav-registered">
                 <span class="text">
                     <i class="fas fa-user-lock"></i>
                 </span>
@@ -253,7 +253,7 @@
 
             <button data-target="menu-sidenav" class="btn rounded-1 press orange dark-2 sidenav-trigger sidenav-menu">
                 <span class="icon">
-                    <i aria-hidden="true" class="icon-home"></i>
+                    <i class="icon-home"></i>
                 </span>
             </button>
 
@@ -262,7 +262,7 @@
             <button data-target="portfolio-sidenav"
                 class="btn rounded-1 press orange sidenav-trigger sidenav-portfolio">
                 <span class="icon">
-                    <i aria-hidden="true" class="icon-portfolio"></i>
+                    <i class="icon-portfolio"></i>
                 </span>
             </button>
 
@@ -271,7 +271,7 @@
             <button data-target="articles-sidenav"
                 class="btn rounded-1 press blue light-1 sidenav-trigger sidenav-articles">
                 <span class="icon">
-                    <i aria-hidden="true" class="icon-services"></i>
+                    <i class="icon-services"></i>
                 </span>
             </button>
 
@@ -279,7 +279,7 @@
 
             <button data-target="blog-sidenav" class="btn rounded-1 press blue dark-2 sidenav-trigger sidenav-blog">
                 <span class="icon">
-                    <i aria-hidden="true" class="icon-blog"></i>
+                    <i class="icon-blog"></i>
                 </span>
             </button>
 
@@ -288,7 +288,7 @@
             <button data-target="about-sidenav"
                 class="btn rounded-1 press airforce dark-3 sidenav-trigger sidenav-about">
                 <span class="icon">
-                    <i aria-hidden="true" class="icon-team"></i>
+                    <i class="icon-team"></i>
                 </span>
             </button>
 
@@ -297,7 +297,7 @@
             <button data-target="contact-sidenav"
                 class="btn rounded-1 press airforce dark-5 sidenav-trigger sidenav-contact">
                 <span class="icon">
-                    <i aria-hidden="true" class="icon-contact"></i>
+                    <i class="icon-contact"></i>
                 </span>
             </button>
 
