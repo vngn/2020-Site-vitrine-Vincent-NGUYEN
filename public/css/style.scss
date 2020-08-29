@@ -217,7 +217,7 @@ ul {
 
 @mixin boxshadow-sidenav ($color) {
     border: 4px solid $color;
-    box-shadow: inset 0 -10em 7em $color, inset 0 0.5em 3em $color;
+    background: linear-gradient(white, $color 75%);
 }
 
 $font-family: 'acme',

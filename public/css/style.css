@@ -163,50 +163,50 @@ a {
 
 .sidenav-border-color-users {
   border: 4px solid green;
-  -webkit-box-shadow: inset 0 -10em 7em green, inset 0 0.5em 3em green;
-          box-shadow: inset 0 -10em 7em green, inset 0 0.5em 3em green;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, green));
+  background: linear-gradient(white, green 75%);
 }
 
 .sidenav-border-color-visitors {
   border: 4px solid red;
-  -webkit-box-shadow: inset 0 -10em 7em red, inset 0 0.5em 3em red;
-          box-shadow: inset 0 -10em 7em red, inset 0 0.5em 3em red;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, red));
+  background: linear-gradient(white, red 75%);
 }
 
 .sidenav-border-color-home {
   border: 4px solid #d06503;
-  -webkit-box-shadow: inset 0 -10em 7em #d06503, inset 0 0.5em 3em #d06503;
-          box-shadow: inset 0 -10em 7em #d06503, inset 0 0.5em 3em #d06503;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #d06503));
+  background: linear-gradient(white, #d06503 75%);
 }
 
 .sidenav-border-color-portfolio {
   border: 4px solid #e9931a;
-  -webkit-box-shadow: inset 0 -10em 7em #e9931a, inset 0 0.5em 3em #e9931a;
-          box-shadow: inset 0 -10em 7em #e9931a, inset 0 0.5em 3em #e9931a;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #e9931a));
+  background: linear-gradient(white, #e9931a 75%);
 }
 
 .sidenav-border-color-articles {
   border: 4px solid #1691be;
-  -webkit-box-shadow: inset 0 -10em 7em #1691be, inset 0 0.5em 3em #1691be;
-          box-shadow: inset 0 -10em 7em #1691be, inset 0 0.5em 3em #1691be;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #1691be));
+  background: linear-gradient(white, #1691be 75%);
 }
 
 .sidenav-border-color-blog {
   border: 4px solid #166ba2;
-  -webkit-box-shadow: inset 0 -10em 7em #166ba2, inset 0 0.5em 3em #166ba2;
-          box-shadow: inset 0 -10em 7em #166ba2, inset 0 0.5em 3em #166ba2;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #166ba2));
+  background: linear-gradient(white, #166ba2 75%);
 }
 
 .sidenav-border-color-about {
   border: 4px solid #1b3647;
-  -webkit-box-shadow: inset 0 -10em 7em #1b3647, inset 0 0.5em 3em #1b3647;
-          box-shadow: inset 0 -10em 7em #1b3647, inset 0 0.5em 3em #1b3647;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #1b3647));
+  background: linear-gradient(white, #1b3647 75%);
 }
 
 .sidenav-border-color-contact {
   border: 4px solid #152836;
-  -webkit-box-shadow: inset 0 -10em 7em #152836, inset 0 0.5em 3em #152836;
-          box-shadow: inset 0 -10em 7em #152836, inset 0 0.5em 3em #152836;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #152836));
+  background: linear-gradient(white, #152836 75%);
 }
 
 .sidenav-trigger {
