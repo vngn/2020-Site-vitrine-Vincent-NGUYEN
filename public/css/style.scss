@@ -264,11 +264,13 @@ a {
 }
 
 /* barre de navigation horizontale */
+
 .zone-nav {
     @include bgcolor-border;
 }
 
 /* barres de navigation verticale */
+
 .sidenav {
     @include sidenav;
 }
@@ -322,11 +324,6 @@ a {
     @include button-sidebar-position;
     top: 18em;
 }
-
-// .sidenav-menu-btn {
-//     position: absolute;
-//     top: 20em;
-// }
 
 .sidenav-registered {
     @include button-sidebar-position;
