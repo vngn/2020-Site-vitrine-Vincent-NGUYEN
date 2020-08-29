@@ -23,7 +23,7 @@
     {% block stylesheets %}{% endblock %}
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/buttonstyle.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/nextbuttonstyle.css') }}">
     <script src="{{ asset('js/modernizr.custom.js') }}"></script>
 </head>
 
@@ -96,8 +96,8 @@
             <div class="sidenav-header">
                 <button data-target="admin-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
             </div>
-            <a href="{{ path('users') }}" class="btn rounded-1 press green dark-4 sidenav-trigger">
-                <span class="text">
+            <a href="{{ path('users') }}" class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-menu-btn">
+                <span>
                     <i class="fas fa-user-cog"></i>
                 </span>
             </a>
@@ -124,7 +124,7 @@
                 <button data-target="registered-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
             </div>
             <a href="{{ path('users') }}" class="btn rounded-1 press green dark-4 sidenav-trigger">
-                <span class="text">
+                <span>
                     <i class="fas fa-user-check"></i>
                 </span>
             </a>
@@ -142,7 +142,7 @@
                 <button data-target="visitor-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
             </div>
             <a href="{{ path('users') }}" class="btn rounded-1 press red sidenav-trigger">
-                <span class="text">
+                <span>
                     <i class="fas fa-user-lock"></i>
                 </span>
             </a>
@@ -160,7 +160,7 @@
                 <button data-target="menu-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
             </div>
             <a href="{{ path('app_home') }}" class="btn rounded-1 press orange dark-2 sidenav-trigger">
-                <span class="text">
+                <span>
                     <i class="icon-home"></i>
                 </span>
             </a>
@@ -180,7 +180,7 @@
                 <button data-target="portfolio-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
             </div>
             <a href="{{ path('portfolio_index') }}" class="btn rounded-1 press orange sidenav-trigger">
-                <span class="text">
+                <span>
                     <i class="icon-portfolio"></i>
                 </span>
             </a>
@@ -199,7 +199,7 @@
                 <button data-target="articles-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
             </div>
            <a href="{{ path('articles_index') }}" class="btn rounded-1 press blue light-1 sidenav-trigger">
-                <span class="text">
+                <span>
                     <i class="icon-services"></i>
                 </span>
             </a>
@@ -218,7 +218,7 @@
                 <button data-target="blog-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
             </div>
            <a href="{{ path('blog_index') }}" class="btn rounded-1 press blue dark-2 sidenav-trigger">
-                <span class="text">
+                <span>
                     <i class="icon-blog"></i>
                 </span>
             </a>
@@ -235,7 +235,7 @@
                 <button data-target="about-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
             </div>
             <a href="{{ path('about_index') }}" class="btn rounded-1 press airforce dark-3 sidenav-trigger">
-                <span class="text">
+                <span>
                     <i class="icon-team"></i>
                 </span>
             </a>
@@ -254,7 +254,7 @@
                 <button data-target="contact-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
             </div>
             <a href="{{ path('contact_index') }}" class="btn rounded-1 press airforce dark-5 sidenav-trigger">
-                <span class="text">
+                <span>
                     <i class="icon-contact"></i>
                 </span>
             </a>
@@ -269,7 +269,7 @@
             {# bouton latéral pour accès menu admin #}
             {% if is_granted('ROLE_ADMIN') %}
             <button data-target="admin-sidenav" class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-admin">
-                <span class="text">
+                <span>
                     <i class="fas fa-user-cog"></i>
                 </span>
             </button>
@@ -278,7 +278,7 @@
             {# bouton latéral pour accès menu registered #}
             <button data-target="registered-sidenav"
                 class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-registered">
-                <span class="text">
+                <span>
                     <i class="fas fa-user-check"></i>
                 </span>
             </button>
@@ -286,7 +286,7 @@
             {% else %}
             {# bouton latéral pour accès menu visitor #}
             <button data-target="visitor-sidenav" class="btn rounded-1 press red sidenav-trigger sidenav-registered">
-                <span class="text">
+                <span>
                     <i class="fas fa-user-lock"></i>
                 </span>
             </button>
