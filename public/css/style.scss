@@ -220,6 +220,49 @@ ul {
     background: linear-gradient(white, $color 75%);
 }
 
+@mixin menu-form ($width) {
+    border-radius: 5px;
+    width: $width;
+    height: 450px;
+    margin: 10px auto;
+    padding: 0;
+    position: relative;
+
+    ul {
+        list-style: inside;
+    }
+
+    li a {
+        border-radius: 2px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 0 10px;
+        // position: relative;
+    }
+
+    li a span {
+        display: block;
+    }
+
+    li a span:first-child {
+        font-weight: 700;
+        font-size: 16px;
+        padding-top: 10px;
+    }
+
+    li a span:nth-child(2) {
+        font-weight: 400;
+        font-style: italic;
+        font-size: 28px;
+        -webkit-transition: color 0.2s linear;
+        -moz-transition: color 0.2s linear;
+        -o-transition: color 0.2s linear;
+        -ms-transition: color 0.2s linear;
+        transition: color 0.2s linear;
+    }
+}
+
 $font-family: 'acme',
 sans-serif;
 
@@ -335,9 +378,6 @@ a {
     @include boxshadow-sidenav(rgb(21, 40, 54));
 }
 
-
-
-
 .sidenav-trigger {
 
     opacity: 0.4;
@@ -396,10 +436,6 @@ a {
     top: 34.7em;
 }
 
-// body {
-//     background-image: url(../images/bg00.jpg);
-// }
-
 .bg00 {
     @include bg;
 }
@@ -420,25 +456,13 @@ h1 {
 // /* ============================== 2. MES PRODUCTIONS ============================== */
 
 .mh-menu {
-    border-radius: 5px;
+    @include menu-form;
     width: 84%;
-    height: 450px;
-    margin: 10px auto;
-    padding: 0;
-    position: relative;
+}
 
-    ul {
-        list-style: inside;
-    }
-
-    li a {
-        border-radius: 2px;
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding: 0 10px;
-        // position: relative;
-    }
+.production-menu {
+    @include menu-form;
+    width: 40%;
 }
 
 .symfony :hover a {
@@ -460,27 +484,6 @@ h1 {
 
 .html:hover a {
     display: none;
-}
-
-.mh-menu li a span {
-    display: block;
-}
-
-.mh-menu li a span:first-child {
-    font-weight: 700;
-    font-size: 16px;
-    padding-top: 10px;
-}
-
-.mh-menu li a span:nth-child(2) {
-    font-weight: 400;
-    font-style: italic;
-    font-size: 28px;
-    -webkit-transition: color 0.2s linear;
-    -moz-transition: color 0.2s linear;
-    -o-transition: color 0.2s linear;
-    -ms-transition: color 0.2s linear;
-    transition: color 0.2s linear;
 }
 
 .site {
