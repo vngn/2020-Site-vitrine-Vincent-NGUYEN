@@ -84,27 +84,11 @@ ul {
 
 /* ============================== SASS ============================== */
 
-// @mixin md6-rd1024 {
-//     @media all and (max-width: 1024px) {
-//         min-width: 99%;
-//     }
-// }
-
-// @mixin md4-rd1024 {
-//     @include md6-rd1024;
-//     max-height: 700px;
-// }
-
 @mixin bg {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-@mixin bgcolor-border {
-    border: 4px solid goldenrod;
-    background-color: white;
 }
 
 @mixin bgcolor-border-role {
@@ -378,6 +362,12 @@ a {
     @include button-sidebar-position;
     top: 34.7em;
 }
+
+/* icones des boutons de navigation verticale */
+
+// .icone-admin {
+//     color: green
+// }
 
 .bg00 {
     @include bg;
