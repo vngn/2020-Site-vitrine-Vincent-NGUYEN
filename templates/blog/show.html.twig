@@ -3,11 +3,11 @@
 {% block title %}Article du blog en détail{% endblock %}
 
 {% block body %}
-<div class="example-wrapper blog-color">
+<div class="example-wrapper">
     <h1 class="blog-color">Article du blog en détail</h1>
 </div>
 
-<article class="mh-menu site">
+<article class="mh-menu site blog-color">
     <h2>{{ blog.title }}</h2>
     <div class="metadata">Ecrit le {{ blog.createdAt | date('d/m/Y')}} à {{ blog.createdAt | date('H:i')}}
         dans la catégorie {{ blog.categories }}</div>
