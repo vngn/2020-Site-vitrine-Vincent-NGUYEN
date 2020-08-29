@@ -320,8 +320,13 @@ a {
 
 .sidenav-admin {
     @include button-sidebar-position;
-    top: 18em;
+    right: 18em;
 }
+
+// .sidenav-menu-admin {
+//     position: absolute;
+//     top: 20em;
+// }
 
 .sidenav-registered {
     @include button-sidebar-position;

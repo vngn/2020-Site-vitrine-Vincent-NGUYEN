@@ -94,10 +94,14 @@
 
         <div id="admin-sidenav" data-ax="sidenav" class="sidenav-border-color-users sidenav large white">
             <div class="sidenav-header">
-                <button data-target="admin-sidenav" class="sidenav-trigger"><i
-                        class="fas fa-times"></i></button>
-                <a href="{{ path('users') }}" class="sidenav-link"><i class="fas fa-user-cog"></i></a>
+                <button data-target="admin-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
             </div>
+            <a href="{{ path('users') }}" class="btn rounded-1 press green dark-4 sidenav-trigger">
+                <span class="text">
+                    <i class="fas fa-user-cog"></i>
+                </span>
+            </a>
+
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <hr />
             <a href="{{ path('portfolio_add') }}" class="sidenav-link">Ajout dans la page Portfolio</a>
@@ -118,8 +122,13 @@
         <div id="registered-sidenav" data-ax="sidenav" class="sidenav-border-color-users sidenav large white">
             <div class="sidenav-header">
                 <button data-target="registered-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-                <i class="fas fa-user-check"></i>
             </div>
+            <a href="{{ path('users') }}" class="btn rounded-1 press green dark-4 sidenav-trigger">
+                <span class="text">
+                    <i class="fas fa-user-check"></i>
+                </span>
+            </a>
+
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <hr />
             <a href="{{ path('users') }}" class="sidenav-link">Mon profil</a>
@@ -131,8 +140,13 @@
         <div id="visitor-sidenav" data-ax="sidenav" class="sidenav-border-color-visitors sidenav large white">
             <div class="sidenav-header">
                 <button data-target="visitor-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-                <i class="fas fa-user-lock"></i>
             </div>
+            <a href="{{ path('users') }}" class="btn rounded-1 press red sidenav-trigger">
+                <span class="text">
+                    <i class="fas fa-user-lock"></i>
+                </span>
+            </a>
+
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <hr />
             <a href="{{ path('users') }}" class="sidenav-link">Se connecter</a>
@@ -144,8 +158,13 @@
         <div id="menu-sidenav" data-ax="sidenav" class="sidenav-border-color-home sidenav large white">
             <div class="sidenav-header">
                 <button data-target="menu-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-                <a href="{{ path('app_home') }}" class="sidenav-link"><i class="icon-home"></i></a>
             </div>
+            <a href="{{ path('app_home') }}" class="btn rounded-1 press orange dark-2 sidenav-trigger">
+                <span class="text">
+                    <i class="icon-home"></i>
+                </span>
+            </a>
+
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <a href="{{ path('portfolio_index') }}" class="sidenav-link">Portfolio</a>
             <a href="{{ path('articles_index') }}" class="sidenav-link">Articles</a>
@@ -159,8 +178,13 @@
         <div id="portfolio-sidenav" data-ax="sidenav" class="sidenav-border-color-portfolio sidenav large white">
             <div class="sidenav-header">
                 <button data-target="portfolio-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-                <i class="icon-portfolio"></i>
             </div>
+            <a href="{{ path('portfolio_index') }}" class="btn rounded-1 press orange sidenav-trigger">
+                <span class="text">
+                    <i class="icon-portfolio"></i>
+                </span>
+            </a>
+
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <a href="#" class="sidenav-link">Symfony</a>
             <a href="#" class="sidenav-link">PHP/SQL</a>
@@ -173,8 +197,13 @@
         <div id="articles-sidenav" data-ax="sidenav" class="sidenav-border-color-articles sidenav large white">
             <div class="sidenav-header">
                 <button data-target="articles-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-                <i class="icon-services"></i>
             </div>
+           <a href="{{ path('articles_index') }}" class="btn rounded-1 press blue light-1 sidenav-trigger">
+                <span class="text">
+                    <i class="icon-services"></i>
+                </span>
+            </a>
+
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <a href="#" class="sidenav-link">Techniques</a>
             <a href="#" class="sidenav-link">Tutoriels</a>
@@ -187,8 +216,13 @@
         <div id="blog-sidenav" data-ax="sidenav" class="sidenav-border-color-blog sidenav large white">
             <div class="sidenav-header">
                 <button data-target="blog-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-                <i class="icon-blog"></i>
             </div>
+           <a href="{{ path('blog_index') }}" class="btn rounded-1 press blue dark-2 sidenav-trigger">
+                <span class="text">
+                    <i class="icon-blog"></i>
+                </span>
+            </a>
+
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <a href="#" class="sidenav-link">Professionnel</a>
             <a href="#" class="sidenav-link">Loisir</a>
@@ -199,8 +233,13 @@
         <div id="about-sidenav" data-ax="sidenav" class="sidenav-border-color-about sidenav large white">
             <div class="sidenav-header">
                 <button data-target="about-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-                <i class="icon-team"></i>
             </div>
+            <a href="{{ path('about_index') }}" class="btn rounded-1 press airforce dark-3 sidenav-trigger">
+                <span class="text">
+                    <i class="icon-team"></i>
+                </span>
+            </a>
+
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <a href="#" class="sidenav-link">Mes compétences</a>
             <a href="#" class="sidenav-link">Mon expérience</a>
@@ -213,8 +252,13 @@
         <div id="contact-sidenav" data-ax="sidenav" class="sidenav-border-color-contact sidenav large white">
             <div class="sidenav-header">
                 <button data-target="contact-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-                <i class="icon-contact"></i>
             </div>
+            <a href="{{ path('contact_index') }}" class="btn rounded-1 press airforce dark-5 sidenav-trigger">
+                <span class="text">
+                    <i class="icon-contact"></i>
+                </span>
+            </a>
+
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
             <a href="#" class="sidenav-link">Coordonnées</a>
             <a href="#" class="sidenav-link">Formulaire de contact</a>
@@ -222,7 +266,6 @@
         </div>
 
         <main>
-
             {# bouton latéral pour accès menu admin #}
             {% if is_granted('ROLE_ADMIN') %}
             <button data-target="admin-sidenav" class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-admin">
