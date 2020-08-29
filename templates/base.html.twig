@@ -92,7 +92,7 @@
 
         {# menu latéral admin #}
 
-        <div id="admin-sidenav" data-ax="sidenav" class="sidenav-border-color-role sidenav large white">
+        <div id="admin-sidenav" data-ax="sidenav" class="sidenav-border-color-users sidenav large white">
             <div class="sidenav-header">
                 <button data-target="admin-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
                 <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
@@ -114,7 +114,7 @@
 
         {# menu latéral registered #}
 
-        <div id="registered-sidenav" data-ax="sidenav" class="sidenav-border-color-role sidenav large white">
+        <div id="registered-sidenav" data-ax="sidenav" class="sidenav-border-color-users sidenav large white">
             <div class="sidenav-header">
                 <button data-target="registered-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
                 <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
@@ -127,7 +127,7 @@
 
         {# menu latéral visitor #}
 
-        <div id="visitor-sidenav" data-ax="sidenav" class="sidenav-border-color-role sidenav large white">
+        <div id="visitor-sidenav" data-ax="sidenav" class="sidenav-border-color-visitors sidenav large white">
             <div class="sidenav-header">
                 <button data-target="visitor-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
                 <img class="sidenav-logo dropshadow-1" src="your_img_path" alt="Logo" />
@@ -242,7 +242,7 @@
             {% else %}
             {# bouton latéral pour accès menu visitor #}
             <button data-target="visitor-sidenav"
-                class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-registered">
+                class="btn rounded-1 press red sidenav-trigger sidenav-registered">
                 <span class="text">
                     <i class="fas fa-user-lock"></i>
                 </span>

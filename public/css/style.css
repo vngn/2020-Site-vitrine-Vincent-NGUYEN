@@ -161,32 +161,52 @@ a {
   border-bottom-right-radius: 220px;
 }
 
-.sidenav-border-color-role {
+.sidenav-border-color-users {
   border: 6px solid green;
+  -webkit-box-shadow: inset -2em -15em 15em green;
+          box-shadow: inset -2em -15em 15em green;
+}
+
+.sidenav-border-color-visitors {
+  border: 6px solid red;
+  -webkit-box-shadow: inset -2em -15em 15em red;
+          box-shadow: inset -2em -15em 15em red;
 }
 
 .sidenav-border-color-home {
   border: 6px solid #d06503;
+  -webkit-box-shadow: inset -2em -15em 15em #d06503;
+          box-shadow: inset -2em -15em 15em #d06503;
 }
 
 .sidenav-border-color-portfolio {
   border: 6px solid #e9931a;
+  -webkit-box-shadow: inset -2em -15em 15em #e9931a;
+          box-shadow: inset -2em -15em 15em #e9931a;
 }
 
 .sidenav-border-color-articles {
   border: 6px solid #1691be;
+  -webkit-box-shadow: inset -2em -15em 15em #1691be;
+          box-shadow: inset -2em -15em 15em #1691be;
 }
 
 .sidenav-border-color-blog {
   border: 6px solid #166ba2;
+  -webkit-box-shadow: inset -2em -15em 15em #166ba2;
+          box-shadow: inset -2em -15em 15em #166ba2;
 }
 
 .sidenav-border-color-about {
   border: 6px solid #1b3647;
+  -webkit-box-shadow: inset -2em -15em 15em #1b3647;
+          box-shadow: inset -2em -15em 15em #1b3647;
 }
 
 .sidenav-border-color-contact {
   border: 6px solid #152836;
+  -webkit-box-shadow: inset -2em -15em 15em #152836;
+          box-shadow: inset -2em -15em 15em #152836;
 }
 
 .sidenav-trigger {
