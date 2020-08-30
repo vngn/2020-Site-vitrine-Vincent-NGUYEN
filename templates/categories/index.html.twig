@@ -4,30 +4,31 @@
 
 {% block body %}
 <div class="example-wrapper role-color">
-<h1>Gérer les catégories</h1>
-<a href="{{ path("categories_add") }}" class="btn shadow-1 rounded-1 blue">Ajouter une catégorie</a>
-<table class="table striped">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nom</th>
-            <th>Parent</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-    {% for categorie in categories %}
-        <tr>
-            <td>{{ categorie.id }}</td>
-            <td>{{ categorie.name }}</td>
-            <td>{{ categorie.parent }}</td>
-            <td>
-            <a href="{{ path("categories_edit", {id: categorie.id}) }}" class="btn shadow-1 rounded-1 blue">Modifier</a>
-            </td>
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
+    <h1>Gérer les catégories</h1>
+    <a href="{{ path("categories_add") }}" class="btn shadow-1 rounded-1 blue">Ajouter une catégorie</a>
+    <table class="table striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Parent</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for categorie in categories %}
+            <tr>
+                <td>{{ categorie.id }}</td>
+                <td>{{ categorie.name }}</td>
+                <td>{{ categorie.parent }}</td>
+                <td>
+                    <a href="{{ path("categories_edit", {id: categorie.id}) }}"
+                        class="btn shadow-1 rounded-1 blue">Modifier</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 
 {% endblock %}
