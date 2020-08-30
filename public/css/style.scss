@@ -107,7 +107,6 @@
 }
 
 @mixin menu-form ($width) {
-    border-radius: 5px;
     width: $width;
     margin: 10px auto;
     padding: 0;
@@ -118,7 +117,6 @@
     }
 
     li a {
-        border-radius: 2px;
         display: block;
         width: 100%;
         height: 100%;
@@ -213,8 +211,6 @@ ul {
 .contact-color {
     @include bgcolor-border-contact;
 }
-
-/* barre de navigation horizontale */
 
 /* barres de navigation verticale */
 
