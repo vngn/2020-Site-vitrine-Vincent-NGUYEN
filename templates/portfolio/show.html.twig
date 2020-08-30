@@ -50,15 +50,15 @@
     <h1 class="example-wrapper portfolio-color">{{ portfolio.portfolioComment | length }} commentaire(s) :</h1>
     <div class="comment example-wrapper portfolio-color">
         {% for portfolioComment in portfolio.portfolioComment %}
-        <div class="row">
-            <div class="col-3">
-                {{ portfolioComment.users.firstname }} {{ portfolioComment.users.name }}
-                (<small>{{portfolioComment.createdAt | date ('d/m/Y à H:i')}}</small>)
-            </div>
-            <div class="col">
-                {{portfolioComment.content | raw}}
-            </div>
-        </div>
+        <ul class="">
+            <li><a href="">
+                    <span>{{ portfolioComment.users.firstname }} {{ portfolioComment.users.name }}</span>
+                    <span>({{ portfolioComment.createdAt | date ('d/m/Y à H:i') }})</span>
+                    <br />
+                    <span>{{ portfolioComment.content | raw }}</span>
+                </a>
+            </li>
+        </ul>
         <hr />
         {%  endfor %}
     </div>

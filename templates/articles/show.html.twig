@@ -42,16 +42,15 @@
     <h1 class="example-wrapper articles-color">{{ articles.articleComment | length }} commentaire(s) :</h1>
     <div class="comment example-wrapper articles-color">
         {% for articleComment in articles.articleComment %}
-
-        <div class="row">
-            <div class="col-3">
-                {{ articleComment.users.firstname }} {{ articleComment.users.name }}
-                (<small>{{articleComment.createdAt | date ('d/m/Y à H:i')}}</small>)
-            </div>
-            <div class="col">
-                {{articleComment.content | raw}}
-            </div>
-        </div>
+        <ul class="">
+            <li><a href="">
+                    <span>{{ articleComment.users.firstname }} {{ articleComment.users.name }}</span>
+                    <span>({{articleComment.createdAt | date ('d/m/Y à H:i') }})</span>
+                    <br />
+                    <span>{{ articleComment.content | raw }}</span>
+                </a>
+            </li>
+        </ul>
         <hr />
         {%  endfor %}
     </div>
