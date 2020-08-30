@@ -21,7 +21,7 @@
 <div class="btn-site wrapper">
     <a class="cta" href="{{ path('blog_show', {'id': articleBlog.id}) }}">
         <span class="next-button">Lire la suite / {{ articleBlog.blogComment | length }} commentaire(s)</span>
-        {{ include('next-button.html.twig') }}
+        {{ include('includes/next-button.html.twig') }}
     </a>
 </div>
 {% endfor %}
