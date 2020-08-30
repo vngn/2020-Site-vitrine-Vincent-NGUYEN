@@ -365,6 +365,9 @@ border radius sur body
 liens survol et clic sujet dans comment
 activer fond video au survol
 
+btn sur menu sidenav impossible à gérer
+blocks impossible à redimensionner
+
 
 
 
