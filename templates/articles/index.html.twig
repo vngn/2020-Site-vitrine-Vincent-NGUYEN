@@ -8,17 +8,16 @@
 
 </div>
 {% for article in articles %}
-<article class="mh-menu site articles-color">
-    <h2>{{ article.title }}</h2>
-    <div class="metadata">Ecrit le {{ article.createdAt | date('d/m/Y')}} à {{ article.createdAt | date('H:i')}}
-        dans la catégorie {{ article.categories }}</div>
-    <div class="content">
-        <img src="{{ article.image }}" alt="">
-        <br />
-        {{ article.content | raw}}
-        <br />
-    </div>
-</article>
+<ul class="mh-menu site articles-color">
+    <li><a href="">
+            <span>{{ article.createdAt | date ('d/m/Y à H:i') }}</span>
+            <span>{{ article.title }}</span>
+            <span>{{ article.categories }}</span>
+            <span>{{ article.content | raw}}</span>
+            <span><img src="{{ article.image }}" alt=""></span>
+        </a>
+    </li>
+</ul>
 
 <div class="btn-site wrapper">
     <a class="cta" href="{{ path('articles_show', {'id': article.id}) }}">
