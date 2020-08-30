@@ -7,17 +7,16 @@
     <h1 class="articles-color">Article en détail</h1>
 </div>
 
-<article class="mh-menu site articles-color">
-    <h2>{{ articles.title }}</h2>
-    <div class="metadata">Ecrit le {{ articles.createdAt | date('d/m/Y')}} à {{ articles.createdAt | date('H:i')}}
-        dans la catégorie {{ articles.categories }}</div>
-    <div class="content">
-        <img src="{{ articles.image }}" alt="">
-        <br />
-        {{ articles.content | raw}}
-        <br />
-    </div>
-</article>
+<ul class="mh-menu site articles-color">
+    <li><a href="">
+            <span>{{ articles.createdAt | date ('d/m/Y') }}</span>
+            <span>{{ articles.title }}</span>
+            <span>{{ articles.categories }}</span>
+            <span>{{ articles.content | raw }}</span>
+            {# <span>{{ articles.image }}</span> #}
+        </a>
+    </li>
+</ul>
 
 {% if is_granted('ROLE_USER') %}
 <div class="comment example-wrapper articles-color">

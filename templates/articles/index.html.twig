@@ -3,14 +3,14 @@
 {% block title %}La section Articles{% endblock %}
 
 {% block body %}
-<div class="example-wrapper zone">
+<div class="example-wrapper">
     <h1 class="articles-color">Articles</h1>
 
 </div>
 {% for article in articles %}
 <ul class="mh-menu site articles-color">
     <li><a href="">
-            <span>{{ article.createdAt | date ('d/m/Y à H:i') }}</span>
+            <span>{{ article.createdAt | date ('d/m/Y') }}</span>
             <span>{{ article.title }}</span>
             <span>{{ article.categories }}</span>
             <span>{{ article.content | raw}}</span>

@@ -7,17 +7,15 @@
     <h1 class="blog-color">Article du blog en détail</h1>
 </div>
 
-<article class="mh-menu site blog-color">
-    <h2>{{ blog.title }}</h2>
-    <div class="metadata">Ecrit le {{ blog.createdAt | date('d/m/Y')}} à {{ blog.createdAt | date('H:i')}}
-        dans la catégorie {{ blog.categories }}</div>
-    <div class="content">
-        {# <img src="{{ blog.image }}" alt=""> #}
-        <br />
-        {{ blog.content | raw}}
-        <br />
-    </div>
-</article>
+<ul class="mh-menu site blog-color">
+    <li><a href="">
+            <span>{{ blog.createdAt | date ('d/m/Y') }}</span>
+            <span>{{ blog.title }}</span>
+            <span>{{ blog.categories }}</span>
+            <span>{{ blog.content | raw }}</span>
+        </a>
+    </li>
+</ul>
 
 {% if is_granted('ROLE_USER') %}
 <div class="comment example-wrapper blog-color">
