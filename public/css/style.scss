@@ -126,11 +126,11 @@ ul {
     background-color: white;
 }
 
-@mixin zone {
-    border-radius: 5px;
-    margin-bottom: 10px;
-    padding: 0;
-}
+// @mixin zone {
+//     border-radius: 5px;
+//     margin-bottom: 10px;
+//     padding: 0;
+// }
 
 @mixin button-sidebar-position {
     position: fixed;
@@ -214,6 +214,10 @@ body {
     font-size: 15px;
     color: #3a2127;
     overflow-y: scroll;
+
+    // &:hover {
+    //     background-image: url(bgvideo/background-video.mp4);
+    // }
 }
 
 a {
@@ -231,9 +235,9 @@ a {
 
 /* harmonisation des couleurs entre la navbar, les h1 et les bordures */
 
-.zone {
-    @include zone;
-}
+// .zone {
+//     @include zone;
+// }
 
 .role-color {
     @include bgcolor-border-role;
