@@ -2,7 +2,7 @@
     - Document: Site Vincent NGUYEN
     - Version : 1.0.1 du 01/08/2020
     - Auteur: Vincent NGUYEN- 01/08/2020
-*/
+
 /* COLORS
     - default body text     black
     - h1                    black
@@ -10,15 +10,16 @@
     - h3                    black
     - h4                    black
     - p                     black
-    - icon                  black            
-    - border:               $border      
-*/
+    - icon                  white         
+
 /* FONTS
     - Default:              ''
-*/
+
 /* CSS DIRECTORY
+
+    0.  SASS
+
     0.  GLOBAL
-            - bases SASS
 
     1. PAGE ACCUEIL / NEWS
 
@@ -40,10 +41,16 @@
 
     X. FOOTER
 
-
-
+/* ============================== SASS ============================== */
 /* ============================== 0. GLOBAL ============================== */
-/* bases SASS */
+body {
+  background-color: white;
+  font-weight: 400;
+  font-size: 15px;
+  color: #3a2127;
+  overflow-y: scroll;
+}
+
 .example-wrapper {
   margin: 2em auto;
   width: 84%;
@@ -60,21 +67,6 @@ ul {
   list-style: none;
 }
 
-/* fin SASS */
-body {
-  background: #fff;
-  font-weight: 400;
-  font-size: 15px;
-  color: #3a2127;
-  overflow-y: scroll;
-}
-
-a {
-  color: #333;
-  text-decoration: none;
-  padding: 0;
-}
-
 .btn {
   display: inline-block;
   margin: 0;
@@ -82,12 +74,6 @@ a {
 
 /* ============================== 0. PAGES ============================== */
 /* harmonisation des couleurs entre la navbar, les h1 et les bordures */
-.zone {
-  border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 0;
-}
-
 .role-color {
   border: 4px solid green;
   background-color: white;
@@ -120,12 +106,6 @@ a {
 
 .contact-color {
   border: 4px solid #152836;
-  background-color: white;
-}
-
-/* barre de navigation horizontale */
-.zone-nav {
-  border: 4px solid goldenrod;
   background-color: white;
 }
 
@@ -250,6 +230,11 @@ a {
   top: 34.7em;
 }
 
+/* icones des boutons de navigation verticale */
+.icone-admin {
+  color: green;
+}
+
 .bg00 {
   background-position: center;
   background-size: cover;
@@ -262,11 +247,11 @@ h1 {
 }
 
 .mh-menu {
-  width: 84%;
-  height: 450px;
   margin: 10px auto;
   padding: 0;
   position: relative;
+  width: 84%;
+  height: 450px;
 }
 
 .mh-menu ul {
@@ -274,29 +259,10 @@ h1 {
 }
 
 .mh-menu li a {
-  border-radius: 2px;
   display: block;
   width: 100%;
   height: 100%;
   padding: 0 10px;
-}
-
-.symfony :hover a {
-  opacity: 0;
-  -webkit-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
-}
-
-.pdo:hover a {
-  display: none;
-}
-
-.php:hover a {
-  display: none;
-}
-
-.html:hover a {
-  display: none;
 }
 
 .mh-menu li a span {
@@ -315,6 +281,60 @@ h1 {
   font-size: 28px;
   -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
+}
+
+.mh-menu-portfolio {
+  margin: 10px auto;
+  padding: 0;
+  position: relative;
+  width: 84%;
+}
+
+.mh-menu-portfolio ul {
+  list-style: inside;
+}
+
+.mh-menu-portfolio li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.mh-menu-portfolio li a span {
+  display: block;
+}
+
+.mh-menu-portfolio li a span:first-child {
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.mh-menu-portfolio li a span:nth-child(2) {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.production :hover a {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.pdo:hover a {
+  display: none;
+}
+
+.php:hover a {
+  display: none;
+}
+
+.html:hover a {
+  display: none;
 }
 
 .site {

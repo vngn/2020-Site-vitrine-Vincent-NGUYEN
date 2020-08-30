@@ -106,8 +106,7 @@
     background: linear-gradient(white, $color 75%);
 }
 
-@mixin menu-form ($width) {
-    width: $width;
+@mixin menu-form {
     margin: 10px auto;
     padding: 0;
     position: relative;
@@ -338,6 +337,7 @@ h1 {
 .mh-menu {
     @include menu-form;
     width: 84%;
+    height: 450px;
 }
 
 .mh-menu-portfolio {
