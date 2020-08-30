@@ -8,17 +8,19 @@
     <h1 class="portfolio-color">Article du portfolio en détail</h1>
 </div>
 
-<article class="mh-menu site portfolio-color">
-    <h2>{{ portfolio.title }}</h2>
-    <div class="metadata">Ecrit le {{ portfolio.createdAt | date('d/m/Y')}} à {{ portfolio.createdAt | date('H:i')}}
-        dans la catégorie {{ portfolio.categories }}</div>
-    <div class="content">
-        {# <img src="{{ portfolio.image }}" alt=""> #}
-        <br />
-        {{ portfolio.content | raw}}
-        <br />
+<div class="mh-menu site portfolio-color">
+    <div>
+        <h2>{{ portfolio.title }}</h2>
+        <div class="metadata">Ecrit le {{ portfolio.createdAt | date('d/m/Y')}} à {{ portfolio.createdAt | date('H:i')}}
+            dans la catégorie {{ portfolio.categories }}</div>
+        <div class="content">
+            {# <img src="{{ portfolio.image }}" alt=""> #}
+            <br />
+            {{ portfolio.content | raw}}
+            <br />
+        </div>
     </div>
-</article>
+</div>
 
 <div class="btn-site wrapper-link-site">
     <a class="cta" href="https://symfony-store.developpeur-de-site-web.fr/" target="_blank">
