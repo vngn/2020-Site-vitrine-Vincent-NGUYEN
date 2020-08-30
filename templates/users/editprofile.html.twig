@@ -10,9 +10,10 @@
     </div>
     {% endfor %}
 
-    <div class="col-xs4 example-wrapper">
+    <div class="col-xs4 example-wrapper role-color">
         <h1>Modification du profil de {{ app.user.firstname }} {{ app.user.name }}</h1>
         {{ form(form) }}
     </div>
+</div>
 
-    {% endblock %}
+{% endblock %}
