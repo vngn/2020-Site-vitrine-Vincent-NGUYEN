@@ -39,39 +39,8 @@
     9 PAGE MAJ
 
     X. FOOTER
-*/
-/* ============================== CSS RESET ============================== */
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-form,
-fieldset,
-input,
-textarea,
-p,
-blockquote,
-th,
-td {
-  margin: 0;
-  padding: 0;
-}
 
-ol,
-ul {
-  list-style: none;
-}
+
 
 /* ============================== 0. GLOBAL ============================== */
 /* bases SASS */
@@ -84,6 +53,11 @@ ul {
 .example-wrapper code {
   background: #F5F5F5;
   padding: 2px 6px;
+}
+
+ol,
+ul {
+  list-style: none;
 }
 
 /* fin SASS */
@@ -288,7 +262,6 @@ h1 {
 }
 
 .mh-menu {
-  border-radius: 5px;
   width: 84%;
   height: 450px;
   margin: 10px auto;
