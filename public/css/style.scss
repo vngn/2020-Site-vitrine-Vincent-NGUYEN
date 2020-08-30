@@ -4,7 +4,6 @@
     - Document: Site Vincent NGUYEN
     - Version : 1.0.1 du 01/08/2020
     - Auteur: Vincent NGUYEN- 01/08/2020
-*/
 
 /* COLORS
     - default body text     black
@@ -13,13 +12,10 @@
     - h3                    black
     - h4                    black
     - p                     black
-    - icon                  black            
-    - border:               $border      
-*/
+    - icon                  white         
 
 /* FONTS
     - Default:              ''
-*/
 
 /* CSS DIRECTORY
 
@@ -46,9 +42,12 @@
     9 PAGE MAJ
 
     X. FOOTER
-*/
 
 /* ============================== SASS ============================== */
+
+@mixin background-color {
+    background-color: white;
+}
 
 @mixin bg {
     background-position: center;
@@ -59,44 +58,38 @@
 
 @mixin bgcolor-border-role {
     border: 4px solid green;
-    background-color: white;
+    @include background-color;
 }
 
 @mixin bgcolor-border-home {
     border: 4px solid rgb(208, 101, 3);
-    background-color: white;
+    @include background-color;
 }
 
 @mixin bgcolor-border-portfolio {
     border: 4px solid rgb(233, 147, 26);
-    background-color: white;
+    @include background-color;
 }
 
 @mixin bgcolor-border-articles {
     border: 4px solid rgb(22, 145, 190);
-    background-color: white;
+    @include background-color;
 }
 
 @mixin bgcolor-border-blog {
     border: 4px solid rgb(22, 107, 162);
-    background-color: white;
+    @include background-color;
 }
 
 @mixin bgcolor-border-about {
     border: 4px solid rgb(27, 54, 71);
-    background-color: white;
+    @include background-color;
 }
 
 @mixin bgcolor-border-contact {
     border: 4px solid rgb(21, 40, 54);
-    background-color: white;
+    @include background-color;
 }
-
-// @mixin zone {
-//     border-radius: 5px;
-//     margin-bottom: 10px;
-//     padding: 0;
-// }
 
 @mixin button-sidebar-position {
     position: fixed;
@@ -116,7 +109,6 @@
 @mixin menu-form ($width) {
     border-radius: 5px;
     width: $width;
-    // height: 450px;
     margin: 10px auto;
     padding: 0;
     position: relative;
@@ -131,7 +123,6 @@
         width: 100%;
         height: 100%;
         padding: 0 10px;
-        // position: relative;
     }
 
     li a span {
@@ -156,10 +147,19 @@
     }
 }
 
-$font-family: 'acme',
-sans-serif;
+/* ============================== 0. GLOBAL ============================== */
 
-$border: 6px solid goldenrod;
+body {
+    @include background-color;
+    font-weight: 400;
+    font-size: 15px;
+    color: #3a2127;
+    overflow-y: scroll;
+
+    // &:hover {
+    //     background-image: url(bgvideo/background-video.mp4);
+    // }
+}
 
 .example-wrapper {
     margin: 2em auto;
@@ -172,29 +172,9 @@ $border: 6px solid goldenrod;
     padding: 2px 6px;
 }
 
-/* ============================== 0. GLOBAL ============================== */
-
-body {
-    background: #fff;
-    font-weight: 400;
-    font-size: 15px;
-    color: #3a2127;
-    overflow-y: scroll;
-
-    // &:hover {
-    //     background-image: url(bgvideo/background-video.mp4);
-    // }
-}
-
 ol,
 ul {
     list-style: none;
-}
-
-a {
-    color: #333;
-    text-decoration: none;
-    padding: 0;
 }
 
 .btn {
@@ -205,10 +185,6 @@ a {
 /* ============================== 0. PAGES ============================== */
 
 /* harmonisation des couleurs entre la navbar, les h1 et les bordures */
-
-// .zone {
-//     @include zone;
-// }
 
 .role-color {
     @include bgcolor-border-role;
@@ -365,11 +341,6 @@ h1 {
 
 // /* ============================== 1. PAGE ACCUEIL / NEWS ============================== */
 
-// .home-news {
-//     width: 40%;
-//     border-radius: 50%;
-// }
-
 // /* ============================== 2. MES PRODUCTIONS ============================== */
 
 .mh-menu {
@@ -407,7 +378,6 @@ h1 {
     opacity: 0.9925;
 
     li iframe {
-        // border: 3px solid goldenrod;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -425,7 +395,6 @@ h1 {
 }
 
 .site-home li iframe {
-    // border: 3px solid goldenrod;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -433,12 +402,6 @@ h1 {
     left: 0px;
     top: 0px;
     background-color: white;
-    // opacity: 0.9925;
-    // -webkit-transition: opacity 1s ease-in-out;
-    // -moz-transition: opacity 1s ease-in-out;
-    // -o-transition: opacity 1s ease-in-out;
-    // -ms-transition: opacity 1s ease-in-out;
-    // transition: opacity 1s ease-in-out;
 }
 
 .site li:hover iframe {
@@ -453,13 +416,6 @@ h1 {
     text-align: center;
 }
 
-// .image-base-de-travail {
-//     width: 30%;
-//     height: 30%;
-//     border: $border;
-// }
-
 // /* ============================== x. MAJ ============================== */
-
 
 /* ============================== x. FOOTER ============================== */
