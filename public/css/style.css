@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* DOCUMENT INFORMATION
     - Document: Site Vincent NGUYEN
     - Version : 1.0.1 du 01/08/2020
@@ -52,6 +51,7 @@
 
 /* ============================== SASS ============================== */
 /* ============================== 0. GLOBAL ============================== */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
 body {
   background-color: white;
   font-weight: 400;
@@ -297,87 +297,33 @@ h1 {
   transition: color 0.2s linear;
 }
 
-/* texte qui défile */
-/* Texte défilant */
-.messagedefilant {
+/* Texte titre */
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.title {
+  font-weight: 800;
+  color: transparent;
+  font-size: 120px;
+  background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  position: relative;
+  text-align: center;
+  line-height: 115px;
+  letter-spacing: -8px;
+}
+
+.subtitle {
   display: block;
-  margin: 40px auto;
-  padding: 0;
-  overflow: hidden;
-  position: relative;
-  width: 50%;
-  max-width: 640px;
-  height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.messagedefilant div {
-  position: absolute;
-  min-width: 100%;
-  /* au minimum la largeur du conteneur */
-}
-
-.messagedefilant div span,
-.messagedefilant div:after {
-  position: relative;
-  display: inline-block;
-  font-size: 2rem;
-  white-space: nowrap;
-  top: 0;
-}
-
-.messagedefilant div span {
-  -webkit-animation: defilement 10s infinite linear;
-          animation: defilement 10s infinite linear;
-  background: #cde;
-}
-
-.messagedefilant div:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: attr(data-text);
-  -webkit-animation: defilement2 10s infinite linear;
-          animation: defilement2 10s infinite linear;
-  background: #edc;
-}
-
-@-webkit-keyframes defilement {
-  0% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: -100%;
-  }
-}
-
-@keyframes defilement {
-  0% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: -100%;
-  }
-}
-
-@-webkit-keyframes defilement2 {
-  0% {
-    margin-left: 100%;
-  }
-  100% {
-    margin-left: 0%;
-  }
-}
-
-@keyframes defilement2 {
-  0% {
-    margin-left: 100%;
-  }
-  100% {
-    margin-left: 0%;
-  }
-}
-
-/* fin du texte qui défile */
+/* fin du texte titre */
 .mh-menu-home {
   height: 450px;
   margin: auto;
