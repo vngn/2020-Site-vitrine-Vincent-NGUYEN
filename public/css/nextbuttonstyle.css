@@ -20,6 +20,18 @@
   bottom: 75px;
 }
 
+.wrapper-link-page-site {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  position: relative;
+  left: -15px;
+  bottom: 80px;
+}
+
 .wrapper-more-site {
   display: -webkit-box;
   display: -ms-flexbox;

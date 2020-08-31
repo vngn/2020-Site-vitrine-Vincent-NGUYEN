@@ -297,7 +297,7 @@ h1 {
 }
 
 .mh-menu-home {
-  min-height: 500px;
+  height: 450px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -311,7 +311,7 @@ h1 {
 }
 
 .mh-menu-portfolio {
-  min-height: 500px;
+  height: 450px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -325,7 +325,7 @@ h1 {
 }
 
 .mh-menu-articles {
-  min-height: 500px;
+  height: 450px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -339,7 +339,7 @@ h1 {
 }
 
 .mh-menu-blog {
-  min-height: 500px;
+  height: 450px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -353,7 +353,7 @@ h1 {
 }
 
 .mh-menu-about {
-  min-height: 500px;
+  height: 450px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -367,7 +367,7 @@ h1 {
 }
 
 .mh-menu-contact {
-  min-height: 500px;
+  height: 450px;
   margin: auto;
   padding: 50px;
   text-align: center;
