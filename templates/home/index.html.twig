@@ -4,13 +4,18 @@
 
 {% block body %}
 
-<div class="example-wrapper home-color">
+{# <div class="example-wrapper home-color">
     <h1>Site vitrine de Vincent NGUYEN</h1>
     <h1>DEVELOPPEUR DE SITES WEB</h1>
     {% for message in app.flashes('success') %}
     <div class="alert alert-success" role="alert">{{ message }}</div>
     {% endfor %}
+</div> #}
+
+{# <div class="btn-wrapper">
+    <button type="button" class="btn-canvas">Cliquez ici !</button>
 </div>
+<canvas id="canvas"></canvas> #}
 
 <div class="grix xs2 md4 lg6 gutter-xs2">
     <div>
@@ -25,7 +30,8 @@
             <p>Portfolio</p>
             <p>La page "Portfolio" présente l'ensemble de mes productions, que vous pouvez commenter.</p>
             <hr />
-            <p>Cette page contient actuellement {{ app.user.portfolio | length }} productions et {{ app.user.portfolioComments | length }} commentaires</p>
+            <p>Cette page contient actuellement {{ app.user.portfolio | length }} productions et
+                {{ app.user.portfolioComments | length }} commentaires</p>
         </div>
 
         <div class="btn-site wrapper">
@@ -42,7 +48,8 @@
                 retranscriptions, des lignes de codes divers et d'autres sources d'instruction, d'inspiration et d'aide,
                 que vous pouvez commenter.</p>
             <hr />
-            <p>Cette page contient actuellement {{ app.user.articles | length }} articles et {{ app.user.articlesComments | length }} commentaires</p>
+            <p>Cette page contient actuellement {{ app.user.articles | length }} articles et
+                {{ app.user.articlesComments | length }} commentaires</p>
         </div>
 
         <div class="btn-site wrapper">
@@ -57,7 +64,8 @@
             <p>Blog</p>
             <p>La page "Blog" regroupe différents messages aux thématiques variées, que vous pouvez commenter.</p>
             <hr />
-            <p>Cette page contient actuellement {{ app.user.blog | length }} articles et {{ app.user.blogComments | length }} commentaires</p>
+            <p>Cette page contient actuellement {{ app.user.blog | length }} articles et
+                {{ app.user.blogComments | length }} commentaires</p>
         </div>
 
         <div class="btn-site wrapper">
@@ -83,7 +91,8 @@
     <div>
         <div class="mh-menu-home sidenav-border-color-contact">
             <p>Contact</p>
-            <p>La page "Contact" vous permet via un formulaire de me contacter afin d'échanger sur différents sujets, demandes, offres, renseigneemnts particuliers...</p>
+            <p>La page "Contact" vous permet via un formulaire de me contacter afin d'échanger sur différents sujets,
+                demandes, offres, renseigneemnts particuliers...</p>
         </div>
 
         <div class="btn-site wrapper">
