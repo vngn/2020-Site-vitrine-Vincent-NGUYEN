@@ -383,8 +383,8 @@ h1 {
   margin: auto;
   padding: 10px;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #e9931a));
-  background: linear-gradient(white, #e9931a 75%);
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #1b3647));
+  background: linear-gradient(white, #1b3647 75%);
 }
 
 .mh-menu-about:hover {

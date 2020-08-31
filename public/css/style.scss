@@ -451,7 +451,7 @@ h1 {
 
 .mh-menu-about {
     @include menu-home-for-all;
-    background: linear-gradient(white, $color-portfolio 75%);
+    background: linear-gradient(white, $color-about 75%);
 
     &:hover {
         background: linear-gradient(white 75%, $color-about);
