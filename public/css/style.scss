@@ -12,7 +12,15 @@
     - h3                    black
     - h4                    black
     - p                     black
-    - icon                  white         
+    - icon                  white   
+    - users                 $color-users   
+    - visitors              $color-visitors 
+    - home                  $color-home 
+    - users                 $color-users 
+    - articles              $color-articles 
+    - blog                  $color-blog 
+    - about                 $color-about 
+    - contact               $color-contact    
 
 /* FONTS
     - Default:              ''
@@ -45,6 +53,22 @@
 
 /* ============================== SASS ============================== */
 
+$color-users: green;
+
+$color-visitors: red;
+
+$color-home: rgb(208, 101, 3);
+
+$color-portfolio: rgb(233, 147, 26);
+
+$color-articles: rgb(22, 145, 190);
+
+$color-blog: rgb(22, 107, 162);
+
+$color-about: rgb(27, 54, 71);
+
+$color-contact: rgb(21, 40, 54);
+
 @mixin background-color {
     background-color: white;
 }
@@ -57,42 +81,42 @@
 }
 
 @mixin bgcolor-border-users {
-    border: 4px solid green;
+    border: 4px solid $color-users;
     @include background-color;
 }
 
 @mixin bgcolor-border-visitors {
-    border: 4px solid red;
+    border: 4px solid $color-visitors;
     @include background-color;
 }
 
 @mixin bgcolor-border-home {
-    border: 4px solid rgb(208, 101, 3);
+    border: 4px solid $color-home;
     @include background-color;
 }
 
 @mixin bgcolor-border-portfolio {
-    border: 4px solid rgb(233, 147, 26);
+    border: 4px solid $color-portfolio;
     @include background-color;
 }
 
 @mixin bgcolor-border-articles {
-    border: 4px solid rgb(22, 145, 190);
+    border: 4px solid $color-articles;
     @include background-color;
 }
 
 @mixin bgcolor-border-blog {
-    border: 4px solid rgb(22, 107, 162);
+    border: 4px solid $color-blog;
     @include background-color;
 }
 
 @mixin bgcolor-border-about {
-    border: 4px solid rgb(27, 54, 71);
+    border: 4px solid $color-about;
     @include background-color;
 }
 
 @mixin bgcolor-border-contact {
-    border: 4px solid rgb(21, 40, 54);
+    border: 4px solid $color-contact;
     @include background-color;
 }
 
@@ -109,6 +133,13 @@
 @mixin sidenav-gradient ($color) {
     border: 4px solid $color;
     background: linear-gradient(white, $color 75%);
+}
+
+@mixin menu-home-for-all {
+    min-height: 500px;
+    margin: auto;
+    padding: 50px;
+    text-align: center;
 }
 
 @mixin menu-form {
@@ -227,35 +258,35 @@ ul {
 }
 
 .sidenav-border-color-users {
-    @include sidenav-gradient(green);
+    @include sidenav-gradient($color-users);
 }
 
 .sidenav-border-color-visitors {
-    @include sidenav-gradient(red);
+    @include sidenav-gradient($color-visitors);
 }
 
 .sidenav-border-color-home {
-    @include sidenav-gradient(rgb(208, 101, 3));
+    @include sidenav-gradient($color-home);
 }
 
 .sidenav-border-color-portfolio {
-    @include sidenav-gradient(rgb(233, 147, 26));
+    @include sidenav-gradient($color-portfolio);
 }
 
 .sidenav-border-color-articles {
-    @include sidenav-gradient(rgb(22, 145, 190));
+    @include sidenav-gradient($color-articles);
 }
 
 .sidenav-border-color-blog {
-    @include sidenav-gradient(rgb(22, 107, 162));
+    @include sidenav-gradient($color-blog);
 }
 
 .sidenav-border-color-about {
-    @include sidenav-gradient(rgb(27, 54, 71));
+    @include sidenav-gradient($color-about);
 }
 
 .sidenav-border-color-contact {
-    @include sidenav-gradient(rgb(21, 40, 54));
+    @include sidenav-gradient($color-contact);
 }
 
 .sidenav-trigger {
@@ -319,7 +350,7 @@ ul {
 /* icones des boutons de navigation verticale */
 
 .icone-admin {
-    color: green
+    color: $color-users
 }
 
 .bg00 {
@@ -348,24 +379,60 @@ h1 {
 // /* ============================== 1. PAGE ACCUEIL / NEWS ============================== */
 
 .mh-menu-home {
-    min-height: 500px;
-    border-radius: 50%;
-    margin: auto;
-    padding: 50px;
-    text-align: center;
-    transition: 5s;
+    @include menu-home-for-all;
+    background: linear-gradient(white, $color-home 75%);
+
     &:hover {
-        border-radius: 0;
-        transition: 0.5s;
+        background: linear-gradient(white 75%, $color-home);
+    }
+}
+
+.mh-menu-portfolio {
+    @include menu-home-for-all;
+    background: linear-gradient(white, $color-portfolio 75%);
+
+    &:hover {
+        background: linear-gradient(white 75%, $color-portfolio);
+    }
+}
+
+.mh-menu-articles {
+    @include menu-home-for-all;
+    background: linear-gradient(white, $color-articles 75%);
+
+    &:hover {
+        background: linear-gradient(white 75%, $color-articles);
+    }
+}
+
+.mh-menu-blog {
+    @include menu-home-for-all;
+    background: linear-gradient(white, $color-blog 75%);
+
+    &:hover {
+        background: linear-gradient(white 75%, $color-blog);
+    }
+}
+
+.mh-menu-about {
+    @include menu-home-for-all;
+    background: linear-gradient(white, $color-portfolio 75%);
+
+    &:hover {
+        background: linear-gradient(white 75%, $color-about);
+    }
+}
+
+.mh-menu-contact {
+    @include menu-home-for-all;
+    background: linear-gradient(white, $color-contact 75%);
+
+    &:hover {
+        background: linear-gradient(white 75%, $color-contact);
     }
 }
 
 // /* ============================== 2. MES PRODUCTIONS ============================== */
-
-.mh-menu-portfolio {
-    @include menu-form;
-    width: 84%;
-}
 
 .production :hover a {
     opacity: 0;

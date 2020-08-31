@@ -10,7 +10,15 @@
     - h3                    black
     - h4                    black
     - p                     black
-    - icon                  white         
+    - icon                  white   
+    - users                 $color-users   
+    - visitors              $color-visitors 
+    - home                  $color-home 
+    - users                 $color-users 
+    - articles              $color-articles 
+    - blog                  $color-blog 
+    - about                 $color-about 
+    - contact               $color-contact    
 
 /* FONTS
     - Default:              ''
@@ -290,54 +298,86 @@ h1 {
 
 .mh-menu-home {
   min-height: 500px;
-  border-radius: 50%;
   margin: auto;
   padding: 50px;
   text-align: center;
-  -webkit-transition: 5s;
-  transition: 5s;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #d06503));
+  background: linear-gradient(white, #d06503 75%);
 }
 
 .mh-menu-home:hover {
-  border-radius: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, white), to(#d06503));
+  background: linear-gradient(white 75%, #d06503);
 }
 
 .mh-menu-portfolio {
-  margin: 10px auto;
-  padding: 0;
-  position: relative;
-  width: 84%;
+  min-height: 500px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #e9931a));
+  background: linear-gradient(white, #e9931a 75%);
 }
 
-.mh-menu-portfolio ul {
-  list-style: inside;
+.mh-menu-portfolio:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, white), to(#e9931a));
+  background: linear-gradient(white 75%, #e9931a);
 }
 
-.mh-menu-portfolio li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 0 10px;
+.mh-menu-articles {
+  min-height: 500px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #1691be));
+  background: linear-gradient(white, #1691be 75%);
 }
 
-.mh-menu-portfolio li a span {
-  display: block;
+.mh-menu-articles:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, white), to(#1691be));
+  background: linear-gradient(white 75%, #1691be);
 }
 
-.mh-menu-portfolio li a span:first-child {
-  font-weight: 700;
-  font-size: 16px;
-  padding-top: 10px;
+.mh-menu-blog {
+  min-height: 500px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #166ba2));
+  background: linear-gradient(white, #166ba2 75%);
 }
 
-.mh-menu-portfolio li a span:nth-child(2) {
-  font-weight: 400;
-  font-style: italic;
-  font-size: 28px;
-  -webkit-transition: color 0.2s linear;
-  transition: color 0.2s linear;
+.mh-menu-blog:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, white), to(#166ba2));
+  background: linear-gradient(white 75%, #166ba2);
+}
+
+.mh-menu-about {
+  min-height: 500px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #e9931a));
+  background: linear-gradient(white, #e9931a 75%);
+}
+
+.mh-menu-about:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, white), to(#1b3647));
+  background: linear-gradient(white 75%, #1b3647);
+}
+
+.mh-menu-contact {
+  min-height: 500px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #152836));
+  background: linear-gradient(white, #152836 75%);
+}
+
+.mh-menu-contact:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, white), to(#152836));
+  background: linear-gradient(white 75%, #152836);
 }
 
 .production :hover a {
