@@ -56,8 +56,13 @@
     background-attachment: fixed;
 }
 
-@mixin bgcolor-border-role {
+@mixin bgcolor-border-users {
     border: 4px solid green;
+    @include background-color;
+}
+
+@mixin bgcolor-border-visitors {
+    border: 4px solid red;
     @include background-color;
 }
 
@@ -183,8 +188,12 @@ ul {
 
 /* harmonisation des couleurs entre la navbar, les h1 et les bordures */
 
-.role-color {
-    @include bgcolor-border-role;
+.users-color {
+    @include bgcolor-border-users;
+}
+
+.visitors-color {
+    @include bgcolor-border-visitors;
 }
 
 .home-color {
