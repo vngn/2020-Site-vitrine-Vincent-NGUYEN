@@ -288,12 +288,11 @@ h1 {
   transition: color 0.2s linear;
 }
 
-/* bouton multi-message */
-/* fin bouton multi-message */
 .mh-menu-home {
-  width: 84%;
-  border-radius: 25%;
+  min-height: 500px;
+  border-radius: 50%;
   margin: auto;
+  padding: 50px;
   text-align: center;
   -webkit-transition: 5s;
   transition: 5s;
