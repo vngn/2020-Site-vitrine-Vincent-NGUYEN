@@ -13,70 +13,63 @@
 
 <div class="grix xs1 md2 lg5 gutter-xs2">
     <div>
-        <ul class="mh-menu-home home-color">
-            <li>
-                {# <iframe src="/portfolio" class="site-iframe"></iframe> #}
-            </li>
-        </ul>
+        <div class="mh-menu-home sidenav-border-color-portfolio">
+            <p>{{ app.user.portfolio | length }} Productions</p>
+            <p>{{ app.user.portfolioComments | length }} commentaires</p>
+        </div>
 
         <div class="btn-site wrapper">
-            <a class="cta" href="/portfolio"><span class="next-button">Page Portfolio ici</span>
+            <a class="cta" href="/portfolio"><span class="next-button">Portfolio</span>
                 {{ include('includes/next-button.html.twig') }}
             </a>
         </div>
     </div>
 
     <div>
-        <ul class="mh-menu-home home-color">
-            <li>
-                {# <iframe src="/articles" class="site-iframe"></iframe> #}
-            </li>
-        </ul>
+        <div class="mh-menu-home sidenav-border-color-articles">
+            <p>{{ app.user.articles | length }} Articles</p>
+            <p>{{ app.user.articlesComments | length }} commentaires</p>
+        </div>
 
         <div class="btn-site wrapper">
-            <a class="cta" href="/articles"><span class="next-button">Page Articles ici</span>
+            <a class="cta" href="/articles"><span class="next-button">Articles</span>
                 {{ include('includes/next-button.html.twig') }}
             </a>
         </div>
     </div>
 
     <div>
-        <ul class="mh-menu-home home-color">
-            <li>
-                {# <iframe src="/blog" class="site-iframe"></iframe> #}
-            </li>
-        </ul>
+        <div class="mh-menu-home sidenav-border-color-blog">
+            <p>{{ app.user.blog | length }} Articles</p>
+            <p>{{ app.user.blogComments | length }} commentaires</p>
+        </div>
 
         <div class="btn-site wrapper">
-            <a class="cta" href="/blog"><span class="next-button">Page Blog ici</span>
+            <a class="cta" href="/blog"><span class="next-button">Blog</span>
                 {{ include('includes/next-button.html.twig') }}
             </a>
         </div>
     </div>
 
     <div>
-        <ul class="mh-menu-home home-color">
-            <li>
-                {# <iframe src="/about" class="site-iframe"></iframe> #}
-            </li>
-        </ul>
+        <div class="mh-menu-home sidenav-border-color-about">
+            <p>A propos</p>
+        </div>
 
         <div class="btn-site wrapper">
-            <a class="cta" href="/about"><span class="next-button">Page A propos ici</span>
+            <a class="cta" href="/about"><span class="next-button">A propos</span>
                 {{ include('includes/next-button.html.twig') }}
             </a>
         </div>
     </div>
 
     <div>
-        <ul class="mh-menu-home home-color">
-            <li>
-                {# <iframe src="/contact" class="site-iframe"></iframe> #}
-            </li>
-        </ul>
+        <div class="mh-menu-home sidenav-border-color-contact">
+            <p>Contact</p>
+        </div>
 
         <div class="btn-site wrapper">
-            <a class="cta" href="/contact"><span class="next-button">Page Contact ici</span>
+            <a class="cta" href="/contact"><span class="next-button">Contact</span>
                 {{ include('includes/next-button.html.twig') }}
             </a>
         </div>

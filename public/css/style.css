@@ -289,10 +289,19 @@ h1 {
 }
 
 .mh-menu-home {
-  max-width: 330px;
-  height: 330px;
+  width: 84%;
+  height: 300px;
   border-radius: 50%;
   margin: auto;
+  text-align: center;
+  -webkit-transition: 5s;
+  transition: 5s;
+}
+
+.mh-menu-home:hover {
+  border-radius: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .mh-menu-portfolio {

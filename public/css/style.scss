@@ -330,6 +330,12 @@ h1 {
     text-align: center;
 }
 
+.mh-menu {
+    @include menu-form;
+    width: 84%;
+    height: 450px;
+}
+
 // div {
 //     opacity: 0.9925;
 //     transition: 2s;
@@ -341,26 +347,21 @@ h1 {
 
 // /* ============================== 1. PAGE ACCUEIL / NEWS ============================== */
 
-// .homepage {
-//     display: flex;
-//     justify-content: space-around;
-// }
-
-// /* ============================== 2. MES PRODUCTIONS ============================== */
-
-.mh-menu {
-    @include menu-form;
-    width: 84%;
-    height: 450px;
-}
-
 .mh-menu-home {
-    // @include menu-form;
-    max-width: 330px;
-    height: 330px;
+    width: 84%;
+    height: 300px;
     border-radius: 50%;
     margin: auto;
+    text-align: center;
+    transition: 5s;
+    // vertical-align: middle;
+    &:hover {
+        border-radius: 0;
+        transition: 0.5s;
+    }
 }
+
+// /* ============================== 2. MES PRODUCTIONS ============================== */
 
 .mh-menu-portfolio {
     @include menu-form;
