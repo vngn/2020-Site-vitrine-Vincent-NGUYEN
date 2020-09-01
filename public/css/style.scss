@@ -32,7 +32,7 @@
 
     0. TOUTES LES PAGES
 
-    1. PAGE ACCUEIL / NEWS
+    1. PAGE ACCUEIL
 
     2. PAGE PORTFOLIO
 
@@ -48,7 +48,7 @@
 
     8. PAGE USERS
 
-    9 PAGE MAJ
+    9. PAGE MAJ
 
     X. FOOTER
 
@@ -152,7 +152,7 @@ ul {
     }
 }
 
-/* harmonisation des couleurs entre la navbar, les h1 et les bordures */
+/* harmonisation des couleurs */
 
 @mixin bgcolor-border-users {
     border: 4px solid $color-users;
@@ -226,7 +226,7 @@ ul {
     @include bgcolor-border-contact;
 }
 
-/* barres de navigation verticale */
+/* barres de navigation verticales */
 
 @mixin sidenav {
     border-top-right-radius: 20px;
@@ -294,7 +294,7 @@ ul {
     }
 }
 
-/* boutons de navigation de la barre verticale */
+/* boutons de navigation des barres de navigation verticales */
 
 .sidenav-role-icone {
     font-size: 22px;
@@ -358,7 +358,7 @@ ul {
     top: 38em;
 }
 
-/* icones des boutons de navigation verticale */
+/* icones des boutons des barres de navigation verticales */
 
 .sidenav-menu-trigger {
     opacity: 0.4;
@@ -399,7 +399,7 @@ h1 {
     text-align: center;
 }
 
-// /* ============================== 1. PAGE ACCUEIL / NEWS ============================== */
+// /* ============================== 1. PAGE ACCUEIL ============================== */
 
 /* Texte titre */
 
@@ -429,7 +429,7 @@ h1 {
     padding-bottom: 10px;
 }
 
-/* fin du texte titre */
+/* blocks thèmes de la page accueil */
 
 @mixin menu-home-for-all ($color) {
     height: 450px;
@@ -452,7 +452,7 @@ h1 {
 
 .mh-menu-home {
     @include menu-home-for-all ($color-home);
-    
+    background-image: 
 }
 
 .mh-menu-portfolio {
