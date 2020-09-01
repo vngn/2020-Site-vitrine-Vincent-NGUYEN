@@ -27,8 +27,6 @@
 
 /* CSS DIRECTORY
 
-    0.  SASS
-
     0.  GLOBAL
 
     1. PAGE ACCUEIL / NEWS
@@ -51,7 +49,7 @@
 
     X. FOOTER
 
-/* ============================== SASS ============================== */
+/* ============================== 0. GLOBAL ============================== */
 
 $color-users: green;
 
@@ -69,16 +67,89 @@ $color-about: rgb(27, 54, 71);
 
 $color-contact: rgb(21, 40, 54);
 
-@mixin background-color {
-    background-color: white;
-}
-
 @mixin bg {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+@mixin background-color {
+    background-color: white;
+}
+
+body {
+    @include background-color;
+    font-weight: 400;
+    font-size: 15px;
+    color: #3a2127;
+    overflow-y: scroll;
+}
+
+.example-wrapper {
+    margin: 2em auto;
+    width: 84%;
+    font: 18px/1.5 sans-serif;
+}
+
+.example-wrapper code {
+    background: #F5F5F5;
+    padding: 2px 6px;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+.btn {
+    display: inline-block;
+    margin: 0;
+}
+
+/* ============================== 0. PAGES ============================== */
+
+.mh-menu {
+    width: 84%;
+    height: 450px;
+    margin: 10px auto;
+    padding: 0;
+    position: relative;
+
+    ul {
+        list-style: inside;
+    }
+
+    li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 0 10px;
+    }
+
+    li a span {
+        display: block;
+    }
+
+    li a span:first-child {
+        font-weight: 700;
+        font-size: 16px;
+        padding-top: 10px;
+    }
+
+    li a span:nth-child(2) {
+        font-weight: 400;
+        font-style: italic;
+        font-size: 28px;
+        -webkit-transition: color 0.2s linear;
+        -moz-transition: color 0.2s linear;
+        -o-transition: color 0.2s linear;
+        -ms-transition: color 0.2s linear;
+        transition: color 0.2s linear;
+    }
+}
+
+/* harmonisation des couleurs entre la navbar, les h1 et les bordures */
 
 @mixin bgcolor-border-users {
     border: 4px solid $color-users;
@@ -120,115 +191,6 @@ $color-contact: rgb(21, 40, 54);
     @include background-color;
 }
 
-@mixin button-sidebar-position {
-    position: fixed;
-    left: 0;
-}
-
-@mixin sidenav {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 220px;
-}
-
-@mixin sidenav-gradient ($color) {
-    border: 4px solid $color;
-    background: linear-gradient(white, $color 75%);
-}
-
-@mixin menu-home-for-all ($color) {
-    height: 450px;
-    margin: auto;
-    padding: 10px;
-    text-align: center;
-    color: white;
-    background-color: $color;
-    box-shadow: 0 0 100px -100px white inset;
-    transition: box-shadow 2.5s;
-
-    &:hover {
-        color: black;
-        box-shadow: 0 480px 100px -100px white inset;
-        transition: box-shadow 1s;
-    }
-}
-
-@mixin menu-form {
-    margin: 10px auto;
-    padding: 0;
-    position: relative;
-
-    ul {
-        list-style: inside;
-    }
-
-    li a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding: 0 10px;
-    }
-
-    li a span {
-        display: block;
-    }
-
-    li a span:first-child {
-        font-weight: 700;
-        font-size: 16px;
-        padding-top: 10px;
-    }
-
-    li a span:nth-child(2) {
-        font-weight: 400;
-        font-style: italic;
-        font-size: 28px;
-        -webkit-transition: color 0.2s linear;
-        -moz-transition: color 0.2s linear;
-        -o-transition: color 0.2s linear;
-        -ms-transition: color 0.2s linear;
-        transition: color 0.2s linear;
-    }
-}
-
-/* ============================== 0. GLOBAL ============================== */
-
-body {
-    @include background-color;
-    font-weight: 400;
-    font-size: 15px;
-    color: #3a2127;
-    overflow-y: scroll;
-
-    // &:hover {
-    //     background-image: url(bgvideo/background-video.mp4);
-    // }
-}
-
-.example-wrapper {
-    margin: 2em auto;
-    width: 84%;
-    font: 18px/1.5 sans-serif;
-}
-
-.example-wrapper code {
-    background: #F5F5F5;
-    padding: 2px 6px;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-.btn {
-    display: inline-block;
-    margin: 0;
-}
-
-/* ============================== 0. PAGES ============================== */
-
-/* harmonisation des couleurs entre la navbar, les h1 et les bordures */
-
 .users-color {
     @include bgcolor-border-users;
 }
@@ -262,6 +224,16 @@ ul {
 }
 
 /* barres de navigation verticale */
+
+@mixin sidenav {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 220px;
+}
+
+@mixin sidenav-gradient ($color) {
+    border: 4px solid $color;
+    background: linear-gradient(white, $color 75%);
+}
 
 .sidenav {
     @include sidenav;
@@ -311,6 +283,11 @@ ul {
 }
 
 /* boutons de navigation de la barre verticale */
+
+@mixin button-sidebar-position {
+    position: fixed;
+    left: 0;
+}
 
 .sidenav-admin {
     @include button-sidebar-position;
@@ -371,21 +348,6 @@ h1 {
     text-align: center;
 }
 
-.mh-menu {
-    @include menu-form;
-    width: 84%;
-    height: 450px;
-}
-
-// div {
-//     opacity: 0.9925;
-//     transition: 2s;
-
-//     &:hover {
-//         opacity: 1;
-//         transition: 1s;
-//     }
-
 // /* ============================== 1. PAGE ACCUEIL / NEWS ============================== */
 
 /* Texte titre */
@@ -424,6 +386,23 @@ h1 {
 }
 
 /* fin du texte titre */
+
+@mixin menu-home-for-all ($color) {
+    height: 450px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: $color;
+    box-shadow: 0 0 100px -100px white inset;
+    transition: box-shadow 2.5s;
+
+    &:hover {
+        color: black;
+        box-shadow: 0 480px 100px -100px white inset;
+        transition: box-shadow 1s;
+    }
+}
 
 .mh-menu-home {
     @include menu-home-for-all ($color-home);
