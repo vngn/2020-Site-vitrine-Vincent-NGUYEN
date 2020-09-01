@@ -432,12 +432,21 @@ ul {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border: 2px solid white;
+  width: 100px;
+  height: 100px;
+  left: 55px;
+  bottom: 25px;
 }
 
 .sidenav-menu-trigger:hover {
   opacity: 1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.sidenav-menu-icone {
+  font-size: 75px;
+  margin-left: -8px;
 }
 
 .icone-admin {

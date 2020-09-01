@@ -349,21 +349,24 @@ ul {
 
 /* icones des boutons de navigation verticale */
 
-@mixin button-menu-sidebar-position {
-    position: fixed;
-    left: 0.5em;
-    border: 4px solid white;
-}
-
 .sidenav-menu-trigger {
     opacity: 0.4;
     transition: 0.5s;
     border: 2px solid white;
+    width: 100px;
+    height: 100px;
+    left: 55px;
+    bottom: 25px;
 
     &:hover {
         opacity: 1;
         transition: 0.5s;
     }
+}
+
+.sidenav-menu-icone {
+    font-size: 75px;
+    margin-left: -8px;
 }
 
 .icone-admin {
