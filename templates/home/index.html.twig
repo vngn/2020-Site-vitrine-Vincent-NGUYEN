@@ -5,8 +5,8 @@
 {% block body %}
 
 <div class="example-wrapper home-color">
-        <div class="title">Vincent NGUYEN</div>
-        <div class="subtitle"> Developpeur de site Web : bienvenue sur mon site vitrine</div>
+    <div class="title">Vincent NGUYEN</div>
+    <div class="subtitle"> Developpeur de site Web : bienvenue sur mon site vitrine</div>
 </div>
 
 <div class="example-wrapper grix xs1 md2 lg3 gutter-xs7">
@@ -22,8 +22,8 @@
             <p>Portfolio</p>
             <p>La page "Portfolio" présente l'ensemble de mes productions, que vous pouvez commenter.</p>
             <hr />
-            <p>Cette page contient actuellement {{ app.user.portfolio | length }} productions et
-                {{ app.user.portfolioComments | length }} commentaires</p>
+            <p>Cette page contient actuellement {{ portfolio | length }} productions et {{ portfolioComment | length }}
+                commentaires</p>
         </div>
 
         <div class="btn-site wrapper-link-page-site">
@@ -40,8 +40,8 @@
                 retranscriptions, des lignes de codes divers et d'autres sources d'instruction, d'inspiration et d'aide,
                 que vous pouvez commenter.</p>
             <hr />
-            <p>Cette page contient actuellement {{ app.user.articles | length }} articles et
-                {{ app.user.articlesComments | length }} commentaires</p>
+            <p>Cette page contient actuellement {{ articles | length }} articles et
+                {{ articlesComment | length }} commentaires</p>
         </div>
 
         <div class="btn-site wrapper-link-page-site">
@@ -56,8 +56,8 @@
             <p>Blog</p>
             <p>La page "Blog" regroupe différents messages aux thématiques variées, que vous pouvez commenter.</p>
             <hr />
-            <p>Cette page contient actuellement {{ app.user.blog | length }} articles et
-                {{ app.user.blogComments | length }} commentaires</p>
+            <p>Cette page contient actuellement {{ blog | length }} articles et
+                {{ blogComment | length }} commentaires</p>
         </div>
 
         <div class="btn-site wrapper-link-page-site">
