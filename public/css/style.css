@@ -305,6 +305,8 @@ h1 {
   font-size: 140px;
   background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
   background-position: 40% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
   position: relative;
   text-align: center;
   line-height: 140px;
