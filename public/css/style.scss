@@ -233,45 +233,60 @@ ul {
     border-bottom-right-radius: 220px;
 }
 
-@mixin sidenav-gradient ($color) {
-    border: 4px solid $color;
-    background: linear-gradient(white, $color 75%);
-}
+// @mixin sidenav-gradient ($color) {
+//     border: 4px solid $color;
+//     background: linear-gradient(white, $color 75%);
+// }
 
 .sidenav {
     @include sidenav;
 }
 
+@mixin gradient-for-all ($color) {
+    color: white;
+    border: 4px solid white;
+    background-color: $color;
+    box-shadow: 0 300px 100px -100px white inset;
+    transition: box-shadow 2.5s;
+
+    &:hover {
+        color: black;
+        border: 4px solid $color;
+        box-shadow: 0 800px 100px -100px white inset;
+        transition: box-shadow 1s;
+    }
+}
+
 .sidenav-border-color-users {
-    @include sidenav-gradient($color-users);
+    @include gradient-for-all ($color-users);
 }
 
 .sidenav-border-color-visitors {
-    @include sidenav-gradient($color-visitors);
+    @include gradient-for-all ($color-visitors);
 }
 
 .sidenav-border-color-home {
-    @include sidenav-gradient($color-home);
+    @include gradient-for-all ($color-home);
 }
 
 .sidenav-border-color-portfolio {
-    @include sidenav-gradient($color-portfolio);
+    @include gradient-for-all ($color-portfolio);
 }
 
 .sidenav-border-color-articles {
-    @include sidenav-gradient($color-articles);
+    @include gradient-for-all ($color-articles);
 }
 
 .sidenav-border-color-blog {
-    @include sidenav-gradient($color-blog);
+    @include gradient-for-all ($color-blog);
 }
 
 .sidenav-border-color-about {
-    @include sidenav-gradient($color-about);
+    @include gradient-for-all ($color-about);
 }
 
 .sidenav-border-color-contact {
-    @include sidenav-gradient($color-contact);
+    @include gradient-for-all ($color-contact);
 }
 
 .sidenav-trigger {
@@ -404,6 +419,7 @@ h1 {
 
 .mh-menu-home {
     @include menu-home-for-all ($color-home);
+    
 }
 
 .mh-menu-portfolio {

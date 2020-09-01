@@ -167,51 +167,187 @@ ul {
 }
 
 .sidenav-border-color-users {
+  color: white;
+  border: 4px solid white;
+  background-color: green;
+  -webkit-box-shadow: 0 300px 100px -100px white inset;
+          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+}
+
+.sidenav-border-color-users:hover {
+  color: black;
   border: 4px solid green;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, green));
-  background: linear-gradient(white, green 75%);
+  -webkit-box-shadow: 0 800px 100px -100px white inset;
+          box-shadow: 0 800px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .sidenav-border-color-visitors {
+  color: white;
+  border: 4px solid white;
+  background-color: red;
+  -webkit-box-shadow: 0 300px 100px -100px white inset;
+          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+}
+
+.sidenav-border-color-visitors:hover {
+  color: black;
   border: 4px solid red;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, red));
-  background: linear-gradient(white, red 75%);
+  -webkit-box-shadow: 0 800px 100px -100px white inset;
+          box-shadow: 0 800px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .sidenav-border-color-home {
+  color: white;
+  border: 4px solid white;
+  background-color: #d06503;
+  -webkit-box-shadow: 0 300px 100px -100px white inset;
+          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+}
+
+.sidenav-border-color-home:hover {
+  color: black;
   border: 4px solid #d06503;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #d06503));
-  background: linear-gradient(white, #d06503 75%);
+  -webkit-box-shadow: 0 800px 100px -100px white inset;
+          box-shadow: 0 800px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .sidenav-border-color-portfolio {
+  color: white;
+  border: 4px solid white;
+  background-color: #e9931a;
+  -webkit-box-shadow: 0 300px 100px -100px white inset;
+          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+}
+
+.sidenav-border-color-portfolio:hover {
+  color: black;
   border: 4px solid #e9931a;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #e9931a));
-  background: linear-gradient(white, #e9931a 75%);
+  -webkit-box-shadow: 0 800px 100px -100px white inset;
+          box-shadow: 0 800px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .sidenav-border-color-articles {
+  color: white;
+  border: 4px solid white;
+  background-color: #1691be;
+  -webkit-box-shadow: 0 300px 100px -100px white inset;
+          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+}
+
+.sidenav-border-color-articles:hover {
+  color: black;
   border: 4px solid #1691be;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #1691be));
-  background: linear-gradient(white, #1691be 75%);
+  -webkit-box-shadow: 0 800px 100px -100px white inset;
+          box-shadow: 0 800px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .sidenav-border-color-blog {
+  color: white;
+  border: 4px solid white;
+  background-color: #166ba2;
+  -webkit-box-shadow: 0 300px 100px -100px white inset;
+          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+}
+
+.sidenav-border-color-blog:hover {
+  color: black;
   border: 4px solid #166ba2;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #166ba2));
-  background: linear-gradient(white, #166ba2 75%);
+  -webkit-box-shadow: 0 800px 100px -100px white inset;
+          box-shadow: 0 800px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .sidenav-border-color-about {
+  color: white;
+  border: 4px solid white;
+  background-color: #1b3647;
+  -webkit-box-shadow: 0 300px 100px -100px white inset;
+          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+}
+
+.sidenav-border-color-about:hover {
+  color: black;
   border: 4px solid #1b3647;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #1b3647));
-  background: linear-gradient(white, #1b3647 75%);
+  -webkit-box-shadow: 0 800px 100px -100px white inset;
+          box-shadow: 0 800px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .sidenav-border-color-contact {
+  color: white;
+  border: 4px solid white;
+  background-color: #152836;
+  -webkit-box-shadow: 0 300px 100px -100px white inset;
+          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+}
+
+.sidenav-border-color-contact:hover {
+  color: black;
   border: 4px solid #152836;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #152836));
-  background: linear-gradient(white, #152836 75%);
+  -webkit-box-shadow: 0 800px 100px -100px white inset;
+          box-shadow: 0 800px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .sidenav-trigger {
