@@ -389,12 +389,14 @@ h1 {
     padding: 10px;
     text-align: center;
     color: white;
+    border: 4px solid white;
     background-color: $color;
     box-shadow: 0 0 100px -100px white inset;
     transition: box-shadow 2.5s;
 
     &:hover {
         color: black;
+        border: 4px solid $color;
         box-shadow: 0 480px 100px -100px white inset;
         transition: box-shadow 1s;
     }
