@@ -1,3 +1,27 @@
+php bin/console cache:clear   
+
+reste à faire :
+
+uniformiser les formulaires
+intégrer condition d'affichage si active ou non
+pot de miel - ajout input fantôme
+intégrer databases dans comment et maj
+annuler les liens survol et clic sujet dans comment
+remplir page about
+finir page contact
+créer et remplir page maj
+gérer le contenu des menus sidenav
+régler le pb des hr/ dans les menus sidenav
+s'occuper du responsive (navbar, sidebar, pages en général)
+bg vidéos sur certaines pages ?
+choix de la police
+
+
+
+
+
+
+
 01 août 2020 
 
 connexion à "wamp"
@@ -120,8 +144,6 @@ création de la table "User"
 "php bin/console make:migration"
 "php bin/console doctrine:migrations:migrate"
     - "yes"    
-
-
 
 création de la table "Contact"
 "php bin/console make:entity"
@@ -347,31 +369,11 @@ uniformation de ckeditor
 commentaires articles ok
 btn commentaires articles ok
 
+voir github pour la suite...
 
 
 
-grossir et centrer btn dans menu sidenav
-paramétrer l'affichage des zones articles et blog
-mettre en place la page à propos et maj
-paramétrer le contenu de la zone portfolio
-paramétrer la sidebar en responsive
-uniformiser les formulaires
-intégrer condition d'affichage si active ou non
-
-pot de miel
-
-databases dans comment et maj
-border radius sur body
-liens survol et clic sujet dans comment
-activer fond video au survol
-
-btn sur menu sidenav impossible à gérer
-blocks impossible à redimensionner
-
-
-
-
-php bin/console cache:clear      
+   
 
 
                     
