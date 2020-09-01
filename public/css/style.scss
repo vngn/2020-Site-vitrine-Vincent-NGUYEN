@@ -11,8 +11,9 @@
     - h2                    black
     - h3                    black
     - h4                    black
-    - p                     black
-    - icon                  white   
+    - block menu            white & black if hover
+    - icon                  white 
+    - button                white & green for background-color  
     - users                 $color-users   
     - visitors              $color-visitors 
     - home                  $color-home 
@@ -27,7 +28,9 @@
 
 /* CSS DIRECTORY
 
-    0.  GLOBAL
+    0. GLOBAL
+
+    0. TOUTES LES PAGES
 
     1. PAGE ACCUEIL / NEWS
 
@@ -107,7 +110,7 @@ ul {
     margin: 0;
 }
 
-/* ============================== 0. PAGES ============================== */
+/* ============================== 0. TOUTES LES PAGES ============================== */
 
 .mh-menu {
     width: 84%;
