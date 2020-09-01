@@ -305,7 +305,6 @@ h1 {
   font-size: 140px;
   background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
   background-position: 40% 50%;
-  -webkit-background-clip: text;
   position: relative;
   text-align: center;
   line-height: 140px;
@@ -327,13 +326,21 @@ h1 {
   margin: auto;
   padding: 10px;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #d06503));
-  background: linear-gradient(white, #d06503 75%);
+  color: white;
+  background-color: #d06503;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2s;
+  transition: -webkit-box-shadow 2s;
+  transition: box-shadow 2s;
+  transition: box-shadow 2s, -webkit-box-shadow 2s;
 }
 
 .mh-menu-home:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, white), to(#d06503));
-  background: linear-gradient(white 75%, #d06503);
+  color: black;
+  background-color: #d06503;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
 }
 
 .mh-menu-portfolio {

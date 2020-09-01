@@ -379,46 +379,52 @@ h1 {
 // /* ============================== 1. PAGE ACCUEIL / NEWS ============================== */
 
 /* Texte titre */
-@mixin center(){
-    -webkit-transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
-      left:50%;
-      top:50%;
-  }
-  
-  @import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
-  
-  .title{
-    font-family: 'Raleway', sans-serif; 
+@mixin center() {
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
+
+.title {
+    font-family: 'Raleway', sans-serif;
     font-weight: 800;
     color: transparent;
-    font-size:140px;
+    font-size: 140px;
     background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
     background-position: 40% 50%;
-    -webkit-background-clip: text;
-    position:relative;
-    text-align:center;
-    line-height:140px;
+    // -webkit-background-clip: text;
+    position: relative;
+    text-align: center;
+    line-height: 140px;
     letter-spacing: -8px;
-  }
-  .subtitle{
+}
+
+.subtitle {
     font-family: 'Raleway', sans-serif;
     display: block;
     text-align: center;
-    font-size:25px;
+    font-size: 25px;
     text-transform: uppercase;
     padding-bottom: 10px;
-  }
+}
 
 /* fin du texte titre */
 
 .mh-menu-home {
     @include menu-home-for-all;
-    background: linear-gradient(white, $color-home 75%);
+    color: white;
+    background-color: $color-home;
+    box-shadow: 0 0 100px -100px white inset;
+    transition: box-shadow 2s;
 
     &:hover {
-        background: linear-gradient(white 75%, $color-home);
+        color: black;
+        background-color: $color-home;
+        box-shadow: 0 480px 100px -100px white inset;
     }
 }
 
