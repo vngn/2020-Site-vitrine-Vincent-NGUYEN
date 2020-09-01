@@ -40,18 +40,24 @@
 <section id="commentaires">
     <h1 class="example-wrapper blog-color">{{ blog.blogComment | length }} commentaire(s) :</h1>
     <div class="comment example-wrapper blog-color">
-        {% for blogComment in blog.blogComment %}
-        <ul class="">
-            <li><a href="">
-                    <span>{{ blogComment.users.firstname }} {{ blogComment.users.name }}</span>
-                    <span>({{ blogComment.createdAt | date ('d/m/Y à H:i') }})</span>
-                    <br />
-                    <span>{{ blogComment.content | raw }}</span>
-                </a>
-            </li>
-        <hr />
-        {%  endfor %}
-
+        <table class="table striped">
+            <thead>
+                <tr>
+                    <th>Auteur</th>
+                    <th>Date</th>
+                    <th>Contenu</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for blogComment in blog.blogComment %}
+                <tr>
+                    <td>{{ blogComment.users.firstname }} {{ blogComment.users.name }}</td>
+                    <td>({{ blogComment.createdAt | date ('d/m/Y à H:i') }})</td>
+                    <td>{{ blogComment.content | raw }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 </section>
 

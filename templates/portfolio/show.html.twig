@@ -49,18 +49,24 @@
 <section id="commentaires">
     <h1 class="example-wrapper portfolio-color">{{ portfolio.portfolioComment | length }} commentaire(s) :</h1>
     <div class="comment example-wrapper portfolio-color">
-        {% for portfolioComment in portfolio.portfolioComment %}
-        <ul class="">
-            <li><a href="">
-                    <span>{{ portfolioComment.users.firstname }} {{ portfolioComment.users.name }}</span>
-                    <span>({{ portfolioComment.createdAt | date ('d/m/Y à H:i') }})</span>
-                    <br />
-                    <span>{{ portfolioComment.content | raw }}</span>
-                </a>
-            </li>
-        </ul>
-        <hr />
-        {%  endfor %}
+        <table class="table striped">
+            <thead>
+                <tr>
+                    <th>Auteur</th>
+                    <th>Date</th>
+                    <th>Contenu</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for portfolioComment in portfolio.portfolioComment %}
+                <tr>
+                    <td>{{ portfolioComment.users.firstname }} {{ portfolioComment.users.name }}</td>
+                    <td>({{ portfolioComment.createdAt | date ('d/m/Y à H:i') }})</td>
+                    <td>{{ portfolioComment.content | raw }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 </section>
 
