@@ -675,6 +675,7 @@ h1 {
   transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
+/* icones en fond des blocks thèmes de la page accueil */
 .production :hover a {
   opacity: 0;
   -webkit-transition: opacity 1s ease-in-out;
