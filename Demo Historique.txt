@@ -1,5 +1,9 @@
 php bin/console cache:clear   
 
+web 3.0 maquette
+web design inspiration
+pinterest
+
 ++++++ reste à faire ++++++
 
 général :
@@ -8,7 +12,7 @@ général :
 - gérer le contenu des menus sidenav
 - régler le pb des hr/ dans les menus sidenav
 - s'occuper du responsive (navbar, sidebar, pages en général)
-- choisir la police
+- choisir la police (roboto) grosse police
 - bg vidéos sur certaines pages ?
 
 admin :
