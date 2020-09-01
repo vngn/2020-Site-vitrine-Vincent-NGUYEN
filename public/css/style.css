@@ -327,18 +327,17 @@ h1 {
   padding: 10px;
   text-align: center;
   color: white;
-  background-color: #d06503;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 2s;
   transition: -webkit-box-shadow 2s;
   transition: box-shadow 2s;
   transition: box-shadow 2s, -webkit-box-shadow 2s;
+  background-color: #d06503;
 }
 
 .mh-menu-home:hover {
   color: black;
-  background-color: #d06503;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
 }
@@ -348,13 +347,20 @@ h1 {
   margin: auto;
   padding: 10px;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #e9931a));
-  background: linear-gradient(white, #e9931a 75%);
+  color: white;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2s;
+  transition: -webkit-box-shadow 2s;
+  transition: box-shadow 2s;
+  transition: box-shadow 2s, -webkit-box-shadow 2s;
+  background-color: #e9931a;
 }
 
 .mh-menu-portfolio:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, white), to(#e9931a));
-  background: linear-gradient(white 75%, #e9931a);
+  color: black;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
 }
 
 .mh-menu-articles {
@@ -362,13 +368,20 @@ h1 {
   margin: auto;
   padding: 10px;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #1691be));
-  background: linear-gradient(white, #1691be 75%);
+  color: white;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2s;
+  transition: -webkit-box-shadow 2s;
+  transition: box-shadow 2s;
+  transition: box-shadow 2s, -webkit-box-shadow 2s;
+  background-color: #1691be;
 }
 
 .mh-menu-articles:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, white), to(#1691be));
-  background: linear-gradient(white 75%, #1691be);
+  color: black;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
 }
 
 .mh-menu-blog {
@@ -376,13 +389,20 @@ h1 {
   margin: auto;
   padding: 10px;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #166ba2));
-  background: linear-gradient(white, #166ba2 75%);
+  color: white;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2s;
+  transition: -webkit-box-shadow 2s;
+  transition: box-shadow 2s;
+  transition: box-shadow 2s, -webkit-box-shadow 2s;
+  background-color: #166ba2;
 }
 
 .mh-menu-blog:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, white), to(#166ba2));
-  background: linear-gradient(white 75%, #166ba2);
+  color: black;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
 }
 
 .mh-menu-about {
@@ -390,13 +410,20 @@ h1 {
   margin: auto;
   padding: 10px;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #1b3647));
-  background: linear-gradient(white, #1b3647 75%);
+  color: white;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2s;
+  transition: -webkit-box-shadow 2s;
+  transition: box-shadow 2s;
+  transition: box-shadow 2s, -webkit-box-shadow 2s;
+  background-color: #1b3647;
 }
 
 .mh-menu-about:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, white), to(#1b3647));
-  background: linear-gradient(white 75%, #1b3647);
+  color: black;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
 }
 
 .mh-menu-contact {
@@ -404,13 +431,20 @@ h1 {
   margin: auto;
   padding: 10px;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(75%, #152836));
-  background: linear-gradient(white, #152836 75%);
+  color: white;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2s;
+  transition: -webkit-box-shadow 2s;
+  transition: box-shadow 2s;
+  transition: box-shadow 2s, -webkit-box-shadow 2s;
+  background-color: #152836;
 }
 
 .mh-menu-contact:hover {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, white), to(#152836));
-  background: linear-gradient(white 75%, #152836);
+  color: black;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
 }
 
 .production :hover a {

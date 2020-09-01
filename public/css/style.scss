@@ -140,6 +140,14 @@ $color-contact: rgb(21, 40, 54);
     margin: auto;
     padding: 10px;
     text-align: center;
+    color: white;
+    box-shadow: 0 0 100px -100px white inset;
+    transition: box-shadow 2s;
+
+    &:hover {
+        color: black;
+        box-shadow: 0 480px 100px -100px white inset;
+    }
 }
 
 @mixin menu-form {
@@ -416,61 +424,32 @@ h1 {
 
 .mh-menu-home {
     @include menu-home-for-all;
-    color: white;
     background-color: $color-home;
-    box-shadow: 0 0 100px -100px white inset;
-    transition: box-shadow 2s;
-
-    &:hover {
-        color: black;
-        background-color: $color-home;
-        box-shadow: 0 480px 100px -100px white inset;
-    }
 }
 
 .mh-menu-portfolio {
     @include menu-home-for-all;
-    background: linear-gradient(white, $color-portfolio 75%);
-
-    &:hover {
-        background: linear-gradient(white 75%, $color-portfolio);
-    }
+    background-color: $color-portfolio;
 }
 
 .mh-menu-articles {
     @include menu-home-for-all;
-    background: linear-gradient(white, $color-articles 75%);
-
-    &:hover {
-        background: linear-gradient(white 75%, $color-articles);
-    }
+    background-color: $color-articles;
 }
 
 .mh-menu-blog {
     @include menu-home-for-all;
-    background: linear-gradient(white, $color-blog 75%);
-
-    &:hover {
-        background: linear-gradient(white 75%, $color-blog);
-    }
+    background-color: $color-blog;
 }
 
 .mh-menu-about {
     @include menu-home-for-all;
-    background: linear-gradient(white, $color-about 75%);
-
-    &:hover {
-        background: linear-gradient(white 75%, $color-about);
-    }
+    background-color: $color-about;
 }
 
 .mh-menu-contact {
     @include menu-home-for-all;
-    background: linear-gradient(white, $color-contact 75%);
-
-    &:hover {
-        background: linear-gradient(white 75%, $color-contact);
-    }
+    background-color: $color-contact;
 }
 
 // /* ============================== 2. MES PRODUCTIONS ============================== */
