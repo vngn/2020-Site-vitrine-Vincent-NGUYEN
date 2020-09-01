@@ -1,26 +1,36 @@
 php bin/console cache:clear   
 
-reste à faire :
+++++++ reste à faire ++++++
 
-uniformiser les formulaires
-intégrer condition d'affichage si active ou non
-pot de miel - ajout input fantôme
-intégrer databases dans comment et maj
-annuler les liens survol et clic sujet dans comment
-remplir page about
-finir page contact
-créer et remplir page maj
-gérer le contenu des menus sidenav
-régler le pb des hr/ dans les menus sidenav
-s'occuper du responsive (navbar, sidebar, pages en général)
-bg vidéos sur certaines pages ?
-choix de la police
+général :
+- uniformiser les formulaires
+- pot de miel - ajout input fantôme
+- gérer le contenu des menus sidenav
+- régler le pb des hr/ dans les menus sidenav
+- s'occuper du responsive (navbar, sidebar, pages en général)
+- choisir la police
+- bg vidéos sur certaines pages ?
 
+admin :
+- intégrer gestion admin des commentaires
+- intégrer gestion admin des users
 
+pages portfolio, articles et blog :
+- intégrer condition d'affichage si active ou non
+- annuler les liens survol et clic sujet dans comment
+- intégrer databases dans comment
 
+page about :
+- remplir page about
 
+page contact :
+- finir page contact
 
+page maj :
+- créer et remplir page maj
+- intégrer databases ?
 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 01 août 2020 
 
