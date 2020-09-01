@@ -363,67 +363,86 @@ ul {
 }
 
 /* boutons de navigation de la barre verticale */
+.sidenav-role-icone {
+  font-size: 22px;
+  margin-left: -8px;
+}
+
+.sidenav-icone {
+  font-size: 27px;
+  margin-left: -8px;
+}
+
 .sidenav-admin {
   position: fixed;
-  left: 0.5em;
+  left: 0.4em;
   border: 1px solid white;
-  top: 18em;
+  width: 50px;
+  top: 19em;
 }
 
 .sidenav-registered {
   position: fixed;
-  left: 0.5em;
+  left: 0.4em;
   border: 1px solid white;
-  top: 18em;
+  width: 50px;
+  top: 19em;
 }
 
 .sidenav-visitor {
   position: fixed;
-  left: 0.5em;
+  left: 0.4em;
   border: 1px solid white;
-  top: 18em;
+  width: 50px;
+  top: 19em;
 }
 
 .sidenav-menu {
   position: fixed;
-  left: 0.5em;
+  left: 0.4em;
   border: 1px solid white;
-  top: 22.5em;
+  width: 50px;
+  top: 23em;
 }
 
 .sidenav-portfolio {
   position: fixed;
-  left: 0.5em;
+  left: 0.4em;
   border: 1px solid white;
-  top: 25.25em;
+  width: 50px;
+  top: 26em;
 }
 
 .sidenav-articles {
   position: fixed;
-  left: 0.5em;
+  left: 0.4em;
   border: 1px solid white;
-  top: 28em;
+  width: 50px;
+  top: 29em;
 }
 
 .sidenav-blog {
   position: fixed;
-  left: 0.5em;
+  left: 0.4em;
   border: 1px solid white;
-  top: 30.75em;
+  width: 50px;
+  top: 32em;
 }
 
 .sidenav-about {
   position: fixed;
-  left: 0.5em;
+  left: 0.4em;
   border: 1px solid white;
-  top: 33.5em;
+  width: 50px;
+  top: 35em;
 }
 
 .sidenav-contact {
   position: fixed;
-  left: 0.5em;
+  left: 0.4em;
   border: 1px solid white;
-  top: 36.25em;
+  width: 50px;
+  top: 38em;
 }
 
 /* icones des boutons de navigation verticale */

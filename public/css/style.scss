@@ -296,55 +296,66 @@ ul {
 
 /* boutons de navigation de la barre verticale */
 
+.sidenav-role-icone {
+    font-size: 22px;
+    margin-left: -8px;
+}
+
+.sidenav-icone {
+    font-size: 27px;
+    margin-left: -8px;
+}
+
 @mixin button-sidebar-position {
     position: fixed;
-    left: 0.5em;
+    left: 0.4em;
     border: 1px solid white;
+    width: 50px;
 }
 
 .sidenav-admin {
     @include button-sidebar-position;
-    top: 18em;
+    top: 19em;
 }
 
 .sidenav-registered {
     @include button-sidebar-position;
-    top: 18em;
+    top: 19em;
 }
 
 .sidenav-visitor {
     @include button-sidebar-position;
-    top: 18em;
+    top: 19em;
 }
 
 .sidenav-menu {
     @include button-sidebar-position;
-    top: 22.5em;
+    top: 23em;
 }
 
 .sidenav-portfolio {
     @include button-sidebar-position;
-    top: 25.25em;
+    top: 26em;
 }
 
 .sidenav-articles {
     @include button-sidebar-position;
-    top: 28em;
+    top: 29em;
 }
 
 .sidenav-blog {
     @include button-sidebar-position;
-    top: 30.75em;
+    top: 32em;
 }
 
 .sidenav-about {
     @include button-sidebar-position;
-    top: 33.5em;
+    top: 35em;
 }
 
 .sidenav-contact {
     @include button-sidebar-position;
-    top: 36.25em;
+    top: 38em;
 }
 
 /* icones des boutons de navigation verticale */
