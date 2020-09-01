@@ -135,18 +135,20 @@ $color-contact: rgb(21, 40, 54);
     background: linear-gradient(white, $color 75%);
 }
 
-@mixin menu-home-for-all {
+@mixin menu-home-for-all ($color) {
     height: 450px;
     margin: auto;
     padding: 10px;
     text-align: center;
     color: white;
+    background-color: $color;
     box-shadow: 0 0 100px -100px white inset;
-    transition: box-shadow 2s;
+    transition: box-shadow 2.5s;
 
     &:hover {
         color: black;
         box-shadow: 0 480px 100px -100px white inset;
+        transition: box-shadow 1s;
     }
 }
 
@@ -424,33 +426,27 @@ h1 {
 /* fin du texte titre */
 
 .mh-menu-home {
-    @include menu-home-for-all;
-    background-color: $color-home;
+    @include menu-home-for-all ($color-home);
 }
 
 .mh-menu-portfolio {
-    @include menu-home-for-all;
-    background-color: $color-portfolio;
+    @include menu-home-for-all ($color-portfolio);
 }
 
 .mh-menu-articles {
-    @include menu-home-for-all;
-    background-color: $color-articles;
+    @include menu-home-for-all ($color-articles);
 }
 
 .mh-menu-blog {
-    @include menu-home-for-all;
-    background-color: $color-blog;
+    @include menu-home-for-all ($color-blog);
 }
 
 .mh-menu-about {
-    @include menu-home-for-all;
-    background-color: $color-about;
+    @include menu-home-for-all ($color-about);
 }
 
 .mh-menu-contact {
-    @include menu-home-for-all;
-    background-color: $color-contact;
+    @include menu-home-for-all ($color-contact);
 }
 
 // /* ============================== 2. MES PRODUCTIONS ============================== */

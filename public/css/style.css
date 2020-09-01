@@ -329,19 +329,23 @@ h1 {
   padding: 10px;
   text-align: center;
   color: white;
+  background-color: #d06503;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2s;
-  transition: -webkit-box-shadow 2s;
-  transition: box-shadow 2s;
-  transition: box-shadow 2s, -webkit-box-shadow 2s;
-  background-color: #d06503;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-home:hover {
   color: black;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .mh-menu-portfolio {
@@ -350,19 +354,23 @@ h1 {
   padding: 10px;
   text-align: center;
   color: white;
+  background-color: #e9931a;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2s;
-  transition: -webkit-box-shadow 2s;
-  transition: box-shadow 2s;
-  transition: box-shadow 2s, -webkit-box-shadow 2s;
-  background-color: #e9931a;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-portfolio:hover {
   color: black;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .mh-menu-articles {
@@ -371,19 +379,23 @@ h1 {
   padding: 10px;
   text-align: center;
   color: white;
+  background-color: #1691be;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2s;
-  transition: -webkit-box-shadow 2s;
-  transition: box-shadow 2s;
-  transition: box-shadow 2s, -webkit-box-shadow 2s;
-  background-color: #1691be;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-articles:hover {
   color: black;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .mh-menu-blog {
@@ -392,19 +404,23 @@ h1 {
   padding: 10px;
   text-align: center;
   color: white;
+  background-color: #166ba2;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2s;
-  transition: -webkit-box-shadow 2s;
-  transition: box-shadow 2s;
-  transition: box-shadow 2s, -webkit-box-shadow 2s;
-  background-color: #166ba2;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-blog:hover {
   color: black;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .mh-menu-about {
@@ -413,19 +429,23 @@ h1 {
   padding: 10px;
   text-align: center;
   color: white;
+  background-color: #1b3647;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2s;
-  transition: -webkit-box-shadow 2s;
-  transition: box-shadow 2s;
-  transition: box-shadow 2s, -webkit-box-shadow 2s;
-  background-color: #1b3647;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-about:hover {
   color: black;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .mh-menu-contact {
@@ -434,19 +454,23 @@ h1 {
   padding: 10px;
   text-align: center;
   color: white;
+  background-color: #152836;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2s;
-  transition: -webkit-box-shadow 2s;
-  transition: box-shadow 2s;
-  transition: box-shadow 2s, -webkit-box-shadow 2s;
-  background-color: #152836;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-contact:hover {
   color: black;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .production :hover a {
