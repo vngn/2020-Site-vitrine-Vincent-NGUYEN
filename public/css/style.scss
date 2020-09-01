@@ -354,13 +354,6 @@ h1 {
 // /* ============================== 1. PAGE ACCUEIL / NEWS ============================== */
 
 /* Texte titre */
-@mixin center() {
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-}
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
 
