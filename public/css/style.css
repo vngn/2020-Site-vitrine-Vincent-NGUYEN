@@ -432,6 +432,7 @@ ul {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border: 2px solid white;
+  border-radius: 20px;
   width: 100px;
   height: 100px;
   left: 55px;
