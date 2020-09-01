@@ -296,12 +296,12 @@ ul {
 
 /* boutons de navigation des barres de navigation verticales */
 
-.sidenav-role-icone {
+.sidenav-role-icon {
     font-size: 22px;
     margin-left: -8px;
 }
 
-.sidenav-icone {
+.sidenav-icon {
     font-size: 27px;
     margin-left: -8px;
 }
@@ -376,20 +376,20 @@ ul {
     }
 }
 
-.sidenav-menu-role-icone {
+.sidenav-menu-role-icon {
     font-size: 60px;
     margin-top: 6px;
     margin-left: -8px;
 }
 
-.sidenav-menu-icone {
+.sidenav-menu-icon {
     font-size: 75px;
     margin-left: -8px;
 }
 
-.icone-admin {
-    color: $color-users
-}
+// .icone-admin {
+//     color: $color-users
+// }
 
 .bg00 {
     @include bg;
@@ -452,7 +452,6 @@ h1 {
 
 .mh-menu-home {
     @include menu-home-for-all ($color-home);
-    background-image: 
 }
 
 .mh-menu-portfolio {

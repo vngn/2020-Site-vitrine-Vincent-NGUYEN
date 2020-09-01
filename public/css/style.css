@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* DOCUMENT INFORMATION
     - Document: Site Vincent NGUYEN
     - Version : 1.0.1 du 01/08/2020
@@ -30,7 +31,7 @@
 
     0. TOUTES LES PAGES
 
-    1. PAGE ACCUEIL / NEWS
+    1. PAGE ACCUEIL
 
     2. PAGE PORTFOLIO
 
@@ -46,7 +47,7 @@
 
     8. PAGE USERS
 
-    9 PAGE MAJ
+    9. PAGE MAJ
 
     X. FOOTER
 
@@ -119,7 +120,7 @@ ul {
   transition: color 0.2s linear;
 }
 
-/* harmonisation des couleurs entre la navbar, les h1 et les bordures */
+/* harmonisation des couleurs */
 .users-color {
   border: 4px solid green;
   background-color: white;
@@ -160,7 +161,7 @@ ul {
   background-color: white;
 }
 
-/* barres de navigation verticale */
+/* barres de navigation verticales */
 .sidenav {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 220px;
@@ -362,13 +363,13 @@ ul {
   transition: 0.5s;
 }
 
-/* boutons de navigation de la barre verticale */
-.sidenav-role-icone {
+/* boutons de navigation des barres de navigation verticales */
+.sidenav-role-icon {
   font-size: 22px;
   margin-left: -8px;
 }
 
-.sidenav-icone {
+.sidenav-icon {
   font-size: 27px;
   margin-left: -8px;
 }
@@ -445,7 +446,7 @@ ul {
   top: 38em;
 }
 
-/* icones des boutons de navigation verticale */
+/* icones des boutons des barres de navigation verticales */
 .sidenav-menu-trigger {
   opacity: 0.4;
   -webkit-transition: 0.5s;
@@ -464,19 +465,15 @@ ul {
   transition: 0.5s;
 }
 
-.sidenav-menu-role-icone {
+.sidenav-menu-role-icon {
   font-size: 60px;
   margin-top: 6px;
   margin-left: -8px;
 }
 
-.sidenav-menu-icone {
+.sidenav-menu-icon {
   font-size: 75px;
   margin-left: -8px;
-}
-
-.icone-admin {
-  color: green;
 }
 
 .bg00 {
@@ -515,7 +512,7 @@ h1 {
   padding-bottom: 10px;
 }
 
-/* fin du texte titre */
+/* blocks thèmes de la page accueil */
 .mh-menu-home {
   height: 450px;
   margin: auto;
