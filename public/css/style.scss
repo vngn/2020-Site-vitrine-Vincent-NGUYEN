@@ -233,11 +233,6 @@ ul {
     border-bottom-right-radius: 220px;
 }
 
-// @mixin sidenav-gradient ($color) {
-//     border: 4px solid $color;
-//     background: linear-gradient(white, $color 75%);
-// }
-
 .sidenav {
     @include sidenav;
 }
@@ -246,7 +241,7 @@ ul {
     color: white;
     border: 4px solid white;
     background-color: $color;
-    box-shadow: 0 300px 100px -100px white inset;
+    box-shadow: 0 0 100px -100px white inset;
     transition: box-shadow 2.5s;
 
     &:hover {
@@ -290,7 +285,6 @@ ul {
 }
 
 .sidenav-trigger {
-
     opacity: 0.4;
     transition: 0.5s;
 
@@ -304,7 +298,8 @@ ul {
 
 @mixin button-sidebar-position {
     position: fixed;
-    left: 0;
+    left: 0.5em;
+    border: 1px solid white;
 }
 
 .sidenav-admin {
@@ -324,35 +319,52 @@ ul {
 
 .sidenav-menu {
     @include button-sidebar-position;
-    top: 22.2em;
+    top: 22.5em;
 }
 
 .sidenav-portfolio {
     @include button-sidebar-position;
-    top: 24.7em;
+    top: 25.25em;
 }
 
 .sidenav-articles {
     @include button-sidebar-position;
-    top: 27.2em;
+    top: 28em;
 }
 
 .sidenav-blog {
     @include button-sidebar-position;
-    top: 29.7em;
+    top: 30.75em;
 }
 
 .sidenav-about {
     @include button-sidebar-position;
-    top: 32.2em;
+    top: 33.5em;
 }
 
 .sidenav-contact {
     @include button-sidebar-position;
-    top: 34.7em;
+    top: 36.25em;
 }
 
 /* icones des boutons de navigation verticale */
+
+@mixin button-menu-sidebar-position {
+    position: fixed;
+    left: 0.5em;
+    border: 4px solid white;
+}
+
+.sidenav-menu-trigger {
+    opacity: 0.4;
+    transition: 0.5s;
+    border: 2px solid white;
+
+    &:hover {
+        opacity: 1;
+        transition: 0.5s;
+    }
+}
 
 .icone-admin {
     color: $color-users

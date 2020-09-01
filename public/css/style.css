@@ -170,8 +170,8 @@ ul {
   color: white;
   border: 4px solid white;
   background-color: green;
-  -webkit-box-shadow: 0 300px 100px -100px white inset;
-          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 2.5s;
   transition: -webkit-box-shadow 2.5s;
   transition: box-shadow 2.5s;
@@ -193,8 +193,8 @@ ul {
   color: white;
   border: 4px solid white;
   background-color: red;
-  -webkit-box-shadow: 0 300px 100px -100px white inset;
-          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 2.5s;
   transition: -webkit-box-shadow 2.5s;
   transition: box-shadow 2.5s;
@@ -216,8 +216,8 @@ ul {
   color: white;
   border: 4px solid white;
   background-color: #d06503;
-  -webkit-box-shadow: 0 300px 100px -100px white inset;
-          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 2.5s;
   transition: -webkit-box-shadow 2.5s;
   transition: box-shadow 2.5s;
@@ -239,8 +239,8 @@ ul {
   color: white;
   border: 4px solid white;
   background-color: #e9931a;
-  -webkit-box-shadow: 0 300px 100px -100px white inset;
-          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 2.5s;
   transition: -webkit-box-shadow 2.5s;
   transition: box-shadow 2.5s;
@@ -262,8 +262,8 @@ ul {
   color: white;
   border: 4px solid white;
   background-color: #1691be;
-  -webkit-box-shadow: 0 300px 100px -100px white inset;
-          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 2.5s;
   transition: -webkit-box-shadow 2.5s;
   transition: box-shadow 2.5s;
@@ -285,8 +285,8 @@ ul {
   color: white;
   border: 4px solid white;
   background-color: #166ba2;
-  -webkit-box-shadow: 0 300px 100px -100px white inset;
-          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 2.5s;
   transition: -webkit-box-shadow 2.5s;
   transition: box-shadow 2.5s;
@@ -308,8 +308,8 @@ ul {
   color: white;
   border: 4px solid white;
   background-color: #1b3647;
-  -webkit-box-shadow: 0 300px 100px -100px white inset;
-          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 2.5s;
   transition: -webkit-box-shadow 2.5s;
   transition: box-shadow 2.5s;
@@ -331,8 +331,8 @@ ul {
   color: white;
   border: 4px solid white;
   background-color: #152836;
-  -webkit-box-shadow: 0 300px 100px -100px white inset;
-          box-shadow: 0 300px 100px -100px white inset;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 2.5s;
   transition: -webkit-box-shadow 2.5s;
   transition: box-shadow 2.5s;
@@ -365,59 +365,81 @@ ul {
 /* boutons de navigation de la barre verticale */
 .sidenav-admin {
   position: fixed;
-  left: 0;
+  left: 0.5em;
+  border: 1px solid white;
   top: 18em;
 }
 
 .sidenav-registered {
   position: fixed;
-  left: 0;
+  left: 0.5em;
+  border: 1px solid white;
   top: 18em;
 }
 
 .sidenav-visitor {
   position: fixed;
-  left: 0;
+  left: 0.5em;
+  border: 1px solid white;
   top: 18em;
 }
 
 .sidenav-menu {
   position: fixed;
-  left: 0;
-  top: 22.2em;
+  left: 0.5em;
+  border: 1px solid white;
+  top: 22.5em;
 }
 
 .sidenav-portfolio {
   position: fixed;
-  left: 0;
-  top: 24.7em;
+  left: 0.5em;
+  border: 1px solid white;
+  top: 25.25em;
 }
 
 .sidenav-articles {
   position: fixed;
-  left: 0;
-  top: 27.2em;
+  left: 0.5em;
+  border: 1px solid white;
+  top: 28em;
 }
 
 .sidenav-blog {
   position: fixed;
-  left: 0;
-  top: 29.7em;
+  left: 0.5em;
+  border: 1px solid white;
+  top: 30.75em;
 }
 
 .sidenav-about {
   position: fixed;
-  left: 0;
-  top: 32.2em;
+  left: 0.5em;
+  border: 1px solid white;
+  top: 33.5em;
 }
 
 .sidenav-contact {
   position: fixed;
-  left: 0;
-  top: 34.7em;
+  left: 0.5em;
+  border: 1px solid white;
+  top: 36.25em;
 }
 
 /* icones des boutons de navigation verticale */
+.sidenav-menu-trigger {
+  opacity: 0.4;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 2px solid white;
+}
+
+.sidenav-menu-trigger:hover {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .icone-admin {
   color: green;
 }

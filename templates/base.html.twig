@@ -31,11 +31,6 @@
 </head>
 
 <body class="layout with-sidenav bg00" style="background-image: url('{{asset('images/bg00.jpg')}}')">
-    <!-- Bootstrap Background Vidéo-->
-    {# <video id="video" autoplay="true" loop muted>
-        <source src="{{asset('bgvideo/background-video.mp4')}}" type="video/mp4" />
-    </video> #}
-
     <header class="container-fluid main clearfix">
         <nav id="menu" class="nav nav-head">
             <ul>
@@ -97,7 +92,7 @@
         <div class="sidenav-header">
             <button data-target="admin-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
         </div>
-        <a href="{{ path('users') }}" class="btn rounded-1 press green dark-4 sidenav-trigger">
+        <a href="{{ path('users') }}" class="btn rounded-1 press green dark-4 sidenav-menu-trigger">
             <span>
                 <i class="fas fa-user-cog"></i>
             </span>
@@ -125,7 +120,7 @@
         <div class="sidenav-header">
             <button data-target="registered-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
         </div>
-        <a href="{{ path('users') }}" class="btn rounded-1 press green dark-4 sidenav-trigger">
+        <a href="{{ path('users') }}" class="btn rounded-1 press green dark-4 sidenav-menu-trigger">
             <span>
                 <i class="fas fa-user-check"></i>
             </span>
@@ -144,7 +139,7 @@
         <div class="sidenav-header">
             <button data-target="visitor-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
         </div>
-        <a href="{{ path('users') }}" class="btn rounded-1 press red sidenav-trigger">
+        <a href="{{ path('users') }}" class="btn rounded-1 press red sidenav-menu-trigger">
             <span>
                 <i class="fas fa-user-lock"></i>
             </span>
@@ -163,7 +158,7 @@
         <div class="sidenav-header">
             <button data-target="menu-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
         </div>
-        <a href="{{ path('app_home') }}" class="btn rounded-1 press orange dark-2 sidenav-trigger">
+        <a href="{{ path('app_home') }}" class="btn rounded-1 press orange dark-2 sidenav-menu-trigger">
             <span>
                 <i class="icon-home"></i>
             </span>
@@ -184,7 +179,7 @@
         <div class="sidenav-header">
             <button data-target="portfolio-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
         </div>
-        <a href="{{ path('portfolio_index') }}" class="btn rounded-1 press orange sidenav-trigger">
+        <a href="{{ path('portfolio_index') }}" class="btn rounded-1 press orange sidenav-menu-trigger">
             <span>
                 <i class="icon-portfolio"></i>
             </span>
@@ -204,7 +199,7 @@
         <div class="sidenav-header">
             <button data-target="articles-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
         </div>
-        <a href="{{ path('articles_index') }}" class="btn rounded-1 press blue light-1 sidenav-trigger">
+        <a href="{{ path('articles_index') }}" class="btn rounded-1 press blue light-1 sidenav-menu-trigger">
             <span>
                 <i class="icon-services"></i>
             </span>
@@ -224,7 +219,7 @@
         <div class="sidenav-header">
             <button data-target="blog-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
         </div>
-        <a href="{{ path('blog_index') }}" class="btn rounded-1 press blue dark-2 sidenav-trigger">
+        <a href="{{ path('blog_index') }}" class="btn rounded-1 press blue dark-2 sidenav-menu-trigger">
             <span>
                 <i class="icon-blog"></i>
             </span>
@@ -242,7 +237,7 @@
         <div class="sidenav-header">
             <button data-target="about-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
         </div>
-        <a href="{{ path('about_index') }}" class="btn rounded-1 press airforce dark-3 sidenav-trigger">
+        <a href="{{ path('about_index') }}" class="btn rounded-1 press airforce dark-3 sidenav-menu-trigger">
             <span>
                 <i class="icon-team"></i>
             </span>
@@ -262,7 +257,7 @@
         <div class="sidenav-header">
             <button data-target="contact-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
         </div>
-        <a href="{{ path('contact_index') }}" class="btn rounded-1 press airforce dark-5 sidenav-trigger">
+        <a href="{{ path('contact_index') }}" class="btn rounded-1 press airforce dark-5 sidenav-menu-trigger">
             <span>
                 <i class="icon-contact"></i>
             </span>
