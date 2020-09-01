@@ -189,7 +189,7 @@ ul {
   transition: 0.5s;
 }
 
-/* boutons de navigation verticale */
+/* boutons de navigation de la barre verticale */
 .sidenav-admin {
   position: fixed;
   left: 0;
