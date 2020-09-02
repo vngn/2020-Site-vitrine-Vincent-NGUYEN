@@ -167,7 +167,7 @@ ul {
   border-bottom-right-radius: 220px;
 }
 
-.sidenav-border-color-users {
+.sidenav-color-users {
   color: white;
   background-color: green;
   -webkit-box-shadow: 0 0 100px -100px white inset;
@@ -178,7 +178,7 @@ ul {
   transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
-.sidenav-border-color-users:hover {
+.sidenav-color-users:hover {
   color: black;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
@@ -188,7 +188,7 @@ ul {
   transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
-.sidenav-border-color-visitors {
+.sidenav-color-visitors {
   color: white;
   background-color: red;
   -webkit-box-shadow: 0 0 100px -100px white inset;
@@ -199,7 +199,7 @@ ul {
   transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
-.sidenav-border-color-visitors:hover {
+.sidenav-color-visitors:hover {
   color: black;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
@@ -209,7 +209,7 @@ ul {
   transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
-.sidenav-border-color-home {
+.sidenav-color-home {
   color: white;
   background-color: #d06503;
   -webkit-box-shadow: 0 0 100px -100px white inset;
@@ -220,7 +220,7 @@ ul {
   transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
-.sidenav-border-color-home:hover {
+.sidenav-color-home:hover {
   color: black;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
@@ -230,7 +230,7 @@ ul {
   transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
-.sidenav-border-color-portfolio {
+.sidenav-color-portfolio {
   color: white;
   background-color: #e9931a;
   -webkit-box-shadow: 0 0 100px -100px white inset;
@@ -241,7 +241,7 @@ ul {
   transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
-.sidenav-border-color-portfolio:hover {
+.sidenav-color-portfolio:hover {
   color: black;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
@@ -251,7 +251,7 @@ ul {
   transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
-.sidenav-border-color-articles {
+.sidenav-color-articles {
   color: white;
   background-color: #1691be;
   -webkit-box-shadow: 0 0 100px -100px white inset;
@@ -262,7 +262,7 @@ ul {
   transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
-.sidenav-border-color-articles:hover {
+.sidenav-color-articles:hover {
   color: black;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
@@ -272,7 +272,7 @@ ul {
   transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
-.sidenav-border-color-blog {
+.sidenav-color-blog {
   color: white;
   background-color: #166ba2;
   -webkit-box-shadow: 0 0 100px -100px white inset;
@@ -283,7 +283,7 @@ ul {
   transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
-.sidenav-border-color-blog:hover {
+.sidenav-color-blog:hover {
   color: black;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
@@ -293,7 +293,7 @@ ul {
   transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
-.sidenav-border-color-about {
+.sidenav-color-about {
   color: white;
   background-color: #1b3647;
   -webkit-box-shadow: 0 0 100px -100px white inset;
@@ -304,7 +304,7 @@ ul {
   transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
-.sidenav-border-color-about:hover {
+.sidenav-color-about:hover {
   color: black;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
@@ -314,7 +314,7 @@ ul {
   transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
-.sidenav-border-color-contact {
+.sidenav-color-contact {
   color: white;
   background-color: #152836;
   -webkit-box-shadow: 0 0 100px -100px white inset;
@@ -325,7 +325,7 @@ ul {
   transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
-.sidenav-border-color-contact:hover {
+.sidenav-color-contact:hover {
   color: black;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;

@@ -250,35 +250,35 @@ ul {
     }
 }
 
-.sidenav-border-color-users {
+.sidenav-color-users {
     @include gradient-for-all ($color-users);
 }
 
-.sidenav-border-color-visitors {
+.sidenav-color-visitors {
     @include gradient-for-all ($color-visitors);
 }
 
-.sidenav-border-color-home {
+.sidenav-color-home {
     @include gradient-for-all ($color-home);
 }
 
-.sidenav-border-color-portfolio {
+.sidenav-color-portfolio {
     @include gradient-for-all ($color-portfolio);
 }
 
-.sidenav-border-color-articles {
+.sidenav-color-articles {
     @include gradient-for-all ($color-articles);
 }
 
-.sidenav-border-color-blog {
+.sidenav-color-blog {
     @include gradient-for-all ($color-blog);
 }
 
-.sidenav-border-color-about {
+.sidenav-color-about {
     @include gradient-for-all ($color-about);
 }
 
-.sidenav-border-color-contact {
+.sidenav-color-contact {
     @include gradient-for-all ($color-contact);
 }
 
@@ -400,6 +400,7 @@ h1 {
 .text-titre {
     width: 100%;
     height: 880px;
+    // height: 100vh;
     padding-top: 330px;
     margin-top: -100px;
 }
