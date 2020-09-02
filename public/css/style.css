@@ -543,6 +543,7 @@ h1 {
 
 /* blocks thèmes de la page accueil */
 .mh-menu-home {
+  width: 450px;
   height: 450px;
   margin: auto;
   padding: 50px;
@@ -556,6 +557,8 @@ h1 {
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  float: left;
+  margin-top: 50px;
 }
 
 .mh-menu-home:hover {
@@ -570,6 +573,7 @@ h1 {
 }
 
 .mh-menu-portfolio {
+  width: 450px;
   height: 450px;
   margin: auto;
   padding: 50px;
@@ -583,6 +587,8 @@ h1 {
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  float: right;
+  margin-top: 50px;
 }
 
 .mh-menu-portfolio:hover {
@@ -597,6 +603,7 @@ h1 {
 }
 
 .mh-menu-articles {
+  width: 450px;
   height: 450px;
   margin: auto;
   padding: 50px;
@@ -610,6 +617,8 @@ h1 {
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  float: left;
+  margin-top: 50px;
 }
 
 .mh-menu-articles:hover {
@@ -624,6 +633,7 @@ h1 {
 }
 
 .mh-menu-blog {
+  width: 450px;
   height: 450px;
   margin: auto;
   padding: 50px;
@@ -637,6 +647,8 @@ h1 {
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  float: right;
+  margin-top: 50px;
 }
 
 .mh-menu-blog:hover {
@@ -651,6 +663,7 @@ h1 {
 }
 
 .mh-menu-about {
+  width: 450px;
   height: 450px;
   margin: auto;
   padding: 50px;
@@ -664,6 +677,8 @@ h1 {
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  float: left;
+  margin-top: 50px;
 }
 
 .mh-menu-about:hover {
@@ -678,6 +693,7 @@ h1 {
 }
 
 .mh-menu-contact {
+  width: 450px;
   height: 450px;
   margin: auto;
   padding: 50px;
@@ -691,6 +707,8 @@ h1 {
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  float: right;
+  margin-top: 50px;
 }
 
 .mh-menu-contact:hover {

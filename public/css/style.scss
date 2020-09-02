@@ -452,6 +452,7 @@ h1 {
 /* blocks thèmes de la page accueil */
 
 @mixin menu-home-for-all ($color) {
+    width: 450px;
     height: 450px;
     margin: auto;
     padding: 50px;
@@ -472,26 +473,38 @@ h1 {
 
 .mh-menu-home {
     @include menu-home-for-all ($color-home);
+    float:left;
+    margin-top: 50px;
 }
 
 .mh-menu-portfolio {
     @include menu-home-for-all ($color-portfolio);
+    float: right;
+    margin-top: 50px;
 }
 
 .mh-menu-articles {
     @include menu-home-for-all ($color-articles);
+    float:left;
+    margin-top: 50px;
 }
 
 .mh-menu-blog {
     @include menu-home-for-all ($color-blog);
+    float: right;
+    margin-top: 50px;
 }
 
 .mh-menu-about {
     @include menu-home-for-all ($color-about);
+    float:left;
+    margin-top: 50px;
 }
 
 .mh-menu-contact {
     @include menu-home-for-all ($color-contact);
+    float: right;
+    margin-top: 50px;
 }
 
 /* icones en fond des blocks thèmes de la page accueil */
