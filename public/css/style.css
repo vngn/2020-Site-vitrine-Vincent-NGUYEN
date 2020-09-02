@@ -523,18 +523,26 @@ h1 {
   margin: auto;
   padding: 10px;
   text-align: center;
-  color: white;
   border-radius: 20px;
+  color: white;
   background-color: #d06503;
-  -webkit-transition: 2.5s;
-  transition: 2.5s;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-home:hover {
-  background-color: white;
   color: black;
-  -webkit-transition: 1s;
-  transition: 1s;
+  background-color: white;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
+  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-portfolio {
@@ -542,18 +550,26 @@ h1 {
   margin: auto;
   padding: 10px;
   text-align: center;
-  color: white;
   border-radius: 20px;
+  color: white;
   background-color: #e9931a;
-  -webkit-transition: 2.5s;
-  transition: 2.5s;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-portfolio:hover {
-  background-color: white;
   color: black;
-  -webkit-transition: 1s;
-  transition: 1s;
+  background-color: white;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
+  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-articles {
@@ -561,18 +577,26 @@ h1 {
   margin: auto;
   padding: 10px;
   text-align: center;
-  color: white;
   border-radius: 20px;
+  color: white;
   background-color: #1691be;
-  -webkit-transition: 2.5s;
-  transition: 2.5s;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-articles:hover {
-  background-color: white;
   color: black;
-  -webkit-transition: 1s;
-  transition: 1s;
+  background-color: white;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
+  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-blog {
@@ -580,18 +604,26 @@ h1 {
   margin: auto;
   padding: 10px;
   text-align: center;
-  color: white;
   border-radius: 20px;
+  color: white;
   background-color: #166ba2;
-  -webkit-transition: 2.5s;
-  transition: 2.5s;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-blog:hover {
-  background-color: white;
   color: black;
-  -webkit-transition: 1s;
-  transition: 1s;
+  background-color: white;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
+  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-about {
@@ -599,18 +631,26 @@ h1 {
   margin: auto;
   padding: 10px;
   text-align: center;
-  color: white;
   border-radius: 20px;
+  color: white;
   background-color: #1b3647;
-  -webkit-transition: 2.5s;
-  transition: 2.5s;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-about:hover {
-  background-color: white;
   color: black;
-  -webkit-transition: 1s;
-  transition: 1s;
+  background-color: white;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
+  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-contact {
@@ -618,18 +658,26 @@ h1 {
   margin: auto;
   padding: 10px;
   text-align: center;
-  color: white;
   border-radius: 20px;
+  color: white;
   background-color: #152836;
-  -webkit-transition: 2.5s;
-  transition: 2.5s;
+  -webkit-box-shadow: 0 0 100px -100px white inset;
+          box-shadow: 0 0 100px -100px white inset;
+  -webkit-transition: -webkit-box-shadow 2.5s;
+  transition: -webkit-box-shadow 2.5s;
+  transition: box-shadow 2.5s;
+  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-contact:hover {
-  background-color: white;
   color: black;
-  -webkit-transition: 1s;
-  transition: 1s;
+  background-color: white;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
+  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 /* icones en fond des blocks thèmes de la page accueil */

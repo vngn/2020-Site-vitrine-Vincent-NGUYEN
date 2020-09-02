@@ -452,15 +452,17 @@ h1 {
     margin: auto;
     padding: 10px;
     text-align: center;
-    color: white;
     border-radius: 20px;
+    color: white;
     background-color: $color;
-    transition: 2.5s;
+    box-shadow: 0 0 100px -100px white inset;
+    transition: box-shadow 2.5s;
 
     &:hover {
-        background-color: white;
         color: black;
-        transition: 1s;
+        background-color: white;
+        box-shadow: 0 480px 100px -100px white inset;
+        transition: background-color 2s, box-shadow 2.5s;
     }
 }
 
