@@ -83,7 +83,7 @@ ul {
 }
 
 /* ============================== 0. TOUTES LES PAGES ============================== */
-body {
+.bg00 {
   background: url("../images/bg00.jpg");
   background-position: center;
   background-size: cover;
