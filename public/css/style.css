@@ -542,33 +542,9 @@ h1 {
 }
 
 /* blocks thèmes de la page accueil */
-.grix {
-  width: 100vw;
-}
-
-.no-background-block-menu-left {
-  width: 100vw;
-  margin-top: -36px;
-  padding-bottom: 50px;
-  padding-left: 155px;
-  background-color: rgba(255, 255, 255, 0.075);
-  -webkit-box-shadow: 0 0 100px 100px white inset;
-          box-shadow: 0 0 100px 100px white inset;
-}
-
-.no-background-block-menu-right {
-  width: 100vw;
-  margin-top: -36px;
-  padding-bottom: 50px;
-  padding-right: 155px;
-  background-color: rgba(255, 255, 255, 0.075);
-  -webkit-box-shadow: 0 0 100px 100px white inset;
-          box-shadow: 0 0 100px 100px white inset;
-}
-
 .mh-menu-home {
-  width: 600px;
-  height: 600px;
+  width: 450px;
+  height: 450px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -581,15 +557,13 @@ h1 {
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
-  float: left;
-  margin-top: 50px;
 }
 
 .mh-menu-home:hover {
   color: black;
   background-color: white;
-  -webkit-box-shadow: 0 600px 100px -100px white inset;
-          box-shadow: 0 600px 100px -100px white inset;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
@@ -597,8 +571,8 @@ h1 {
 }
 
 .mh-menu-portfolio {
-  width: 600px;
-  height: 600px;
+  width: 450px;
+  height: 450px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -611,15 +585,13 @@ h1 {
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
-  float: right;
-  margin-top: 50px;
 }
 
 .mh-menu-portfolio:hover {
   color: black;
   background-color: white;
-  -webkit-box-shadow: 0 600px 100px -100px white inset;
-          box-shadow: 0 600px 100px -100px white inset;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
@@ -627,8 +599,8 @@ h1 {
 }
 
 .mh-menu-articles {
-  width: 600px;
-  height: 600px;
+  width: 450px;
+  height: 450px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -641,15 +613,13 @@ h1 {
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
-  float: left;
-  margin-top: 50px;
 }
 
 .mh-menu-articles:hover {
   color: black;
   background-color: white;
-  -webkit-box-shadow: 0 600px 100px -100px white inset;
-          box-shadow: 0 600px 100px -100px white inset;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
@@ -657,8 +627,8 @@ h1 {
 }
 
 .mh-menu-blog {
-  width: 600px;
-  height: 600px;
+  width: 450px;
+  height: 450px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -671,15 +641,13 @@ h1 {
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
-  float: right;
-  margin-top: 50px;
 }
 
 .mh-menu-blog:hover {
   color: black;
   background-color: white;
-  -webkit-box-shadow: 0 600px 100px -100px white inset;
-          box-shadow: 0 600px 100px -100px white inset;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
@@ -687,8 +655,8 @@ h1 {
 }
 
 .mh-menu-about {
-  width: 600px;
-  height: 600px;
+  width: 450px;
+  height: 450px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -701,15 +669,13 @@ h1 {
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
-  float: left;
-  margin-top: 50px;
 }
 
 .mh-menu-about:hover {
   color: black;
   background-color: white;
-  -webkit-box-shadow: 0 600px 100px -100px white inset;
-          box-shadow: 0 600px 100px -100px white inset;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
@@ -717,8 +683,8 @@ h1 {
 }
 
 .mh-menu-contact {
-  width: 600px;
-  height: 600px;
+  width: 450px;
+  height: 450px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -731,15 +697,13 @@ h1 {
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
-  float: right;
-  margin-top: 50px;
 }
 
 .mh-menu-contact:hover {
   color: black;
   background-color: white;
-  -webkit-box-shadow: 0 600px 100px -100px white inset;
-          box-shadow: 0 600px 100px -100px white inset;
+  -webkit-box-shadow: 0 480px 100px -100px white inset;
+          box-shadow: 0 480px 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;

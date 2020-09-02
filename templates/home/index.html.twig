@@ -10,104 +10,79 @@
     <div class="post-title">Bienvenue sur mon site vitrine</div>
 </div>
 
-<div class="example-wrapper grix xs1 md1 lg1">
-    <div class="no-background-block-menu-left">
-        <a href="{{ path('app_home') }}">
-            <div class="mh-menu-home home-color">
-                <span>
-                    <i class="icon-home sidenav-menu-icon"></i>
-                </span>
-                <p>Accueil</p>
-                <p>La page "Accueil" présente l'ensemble du site et détailles chacune de ses pages.</p>
-            </div>
-        </a>
-    </div>
-</div>
+<div class="example-wrapper grix xs1 md2 lg3 gutter-xs7">
+    <a href="{{ path('app_home') }}">
+        <div class="mh-menu-home home-color">
+            <span>
+                <i class="icon-home sidenav-menu-icon"></i>
+            </span>
+            <p>Accueil</p>
+            <p>La page "Accueil" présente l'ensemble du site et détailles chacune de ses pages.</p>
+        </div>
+    </a>
 
-<div class="example-wrapper grix xs1 md1 lg1">
-    <div class="no-background-block-menu-right">
-        <a href="{{ path('portfolio_index') }}">
-            <div class="mh-menu-portfolio portfolio-color">
-                <span>
-                    <i class="icon-portfolio sidenav-menu-icon"></i>
-                </span>
-                <p>Portfolio</p>
-                <p>La page "Portfolio" présente l'ensemble de mes productions, que vous pouvez commenter.</p>
-                <hr />
-                <p>Cette page contient actuellement {{ portfolio | length }} productions et
-                    {{ portfolioComment | length }}
-                    commentaires</p>
-            </div>
-        </a>
-    </div>
-</div>
+    <a href="{{ path('portfolio_index') }}">
+        <div class="mh-menu-portfolio portfolio-color">
+            <span>
+                <i class="icon-portfolio sidenav-menu-icon"></i>
+            </span>
+            <p>Portfolio</p>
+            <p>La page "Portfolio" présente l'ensemble de mes productions, que vous pouvez commenter.</p>
+            <hr />
+            <p>Cette page contient actuellement {{ portfolio | length }} productions et {{ portfolioComment | length }}
+                commentaires</p>
+        </div>
+    </a>
 
-<div class="example-wrapper grix xs1 md1 lg1">
-    <div class="no-background-block-menu-left">
-        <a href="{{ path('articles_index') }}">
-            <div class="mh-menu-articles articles-color">
-                <span>
-                    <i class="icon-services sidenav-menu-icon"></i>
-                </span>
-                <p>Articles</p>
-                <p>La page "Articles" présente différents articles techniques : des liens vers des tutoriels et ses
-                    retranscriptions, des lignes de codes divers et d'autres sources d'instruction, d'inspiration et
-                    d'aide,
-                    que vous pouvez commenter.</p>
-                <hr />
-                <p>Cette page contient actuellement {{ articles | length }} articles et
-                    {{ articlesComment | length }} commentaires</p>
-            </div>
-        </a>
-    </div>
-</div>
+    <a href="{{ path('articles_index') }}">
+        <div class="mh-menu-articles articles-color">
+            <span>
+                <i class="icon-services sidenav-menu-icon"></i>
+            </span>
+            <p>Articles</p>
+            <p>La page "Articles" présente différents articles techniques : des liens vers des tutoriels et ses
+                retranscriptions, des lignes de codes divers et d'autres sources d'instruction, d'inspiration et d'aide,
+                que vous pouvez commenter.</p>
+            <hr />
+            <p>Cette page contient actuellement {{ articles | length }} articles et
+                {{ articlesComment | length }} commentaires</p>
+        </div>
+    </a>
 
-<div class="example-wrapper grix xs1 md1 lg1">
-    <div class="no-background-block-menu-right">
-        <a href="{{ path('blog_index') }}">
-            <div class="mh-menu-blog blog-color">
-                <span>
-                    <i class="icon-blog sidenav-menu-icon"></i>
-                </span>
-                <p>Blog</p>
-                <p>La page "Blog" regroupe différents messages aux thématiques variées, que vous pouvez commenter.</p>
-                <hr />
-                <p>Cette page contient actuellement {{ blog | length }} articles et
-                    {{ blogComment | length }} commentaires</p>
-            </div>
-        </a>
-    </div>
-</div>
+    <a href="{{ path('blog_index') }}">
+        <div class="mh-menu-blog blog-color">
+            <span>
+                <i class="icon-blog sidenav-menu-icon"></i>
+            </span>
+            <p>Blog</p>
+            <p>La page "Blog" regroupe différents messages aux thématiques variées, que vous pouvez commenter.</p>
+            <hr />
+            <p>Cette page contient actuellement {{ blog | length }} articles et
+                {{ blogComment | length }} commentaires</p>
+        </div>
+    </a>
 
-<div class="example-wrapper grix xs1 md1 lg1">
-    <div class="no-background-block-menu-left">
-        <a href="{{ path('about_index') }}">
-            <div class="mh-menu-about about-color">
-                <span>
-                    <i class="icon-team sidenav-menu-icon"></i>
-                </span>
-                <p>A propos</p>
-                <p>La page "A propos" vous permet d'avoir différentes information à mon sujet.</p>
-            </div>
-        </a>
-    </div>
-</div>
+    <a href="{{ path('about_index') }}">
+        <div class="mh-menu-about about-color">
+            <span>
+                <i class="icon-team sidenav-menu-icon"></i>
+            </span>
+            <p>A propos</p>
+            <p>La page "A propos" vous permet d'avoir différentes information à mon sujet.</p>
+        </div>
+    </a>
 
-<div class="example-wrapper grix xs1 md1 lg1">
-    <div class="no-background-block-menu-right">
-        <a href="{{ path('contact_index') }}">
-            <div class="mh-menu-contact contact-color">
-                <span>
-                    <i class="icon-contact sidenav-menu-icon"></i>
-                </span>
-                <p>Contact</p>
-                <p>La page "Contact" vous permet via un formulaire de me contacter afin d'échanger sur
-                    différents
-                    sujets,
-                    demandes, offres, renseignements particuliers...</p>
-            </div>
-        </a>
-    </div>
+    <a href="{{ path('contact_index') }}">
+        <div class="mh-menu-contact contact-color">
+            <span>
+                <i class="icon-contact sidenav-menu-icon"></i>
+            </span>
+            <p>Contact</p>
+            <p>La page "Contact" vous permet via un formulaire de me contacter afin d'échanger sur
+                différents
+                sujets,
+                demandes, offres, renseignements particuliers...</p>
+        </div>
+    </a>
 </div>
-
 {% endblock %}

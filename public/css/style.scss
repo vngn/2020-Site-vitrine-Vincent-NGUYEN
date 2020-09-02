@@ -451,34 +451,9 @@ h1 {
 
 /* blocks thèmes de la page accueil */
 
-.grix {
-    width: 100vw;
-}
-
-.no-background-block-menu-left {
-    width: 100vw;
-    margin-top: -36px;
-    padding-bottom: 50px;
-    padding-left: 155px;
-    background-color: rgba(255,255,255,0.075);
-    box-shadow: 0 0 100px 100px white inset;
-
-
-}
-
-.no-background-block-menu-right {
-    width: 100vw;
-    // margin-left: 50%;
-    margin-top: -36px;
-    padding-bottom: 50px;
-    padding-right: 155px;
-    background-color: rgba(255,255,255,0.075);
-    box-shadow: 0 0 100px 100px white inset;
-}
-
 @mixin menu-home-for-all ($color) {
-    width: 600px;
-    height: 600px;
+    width: 450px;
+    height: 450px;
     margin: auto;
     padding: 50px;
     text-align: center;
@@ -491,45 +466,33 @@ h1 {
     &:hover {
         color: black;
         background-color: white;
-        box-shadow: 0 600px 100px -100px white inset;
+        box-shadow: 0 480px 100px -100px white inset;
         transition: background-color 2s, box-shadow 2.5s;
     }
 }
 
 .mh-menu-home {
     @include menu-home-for-all ($color-home);
-    float: left;
-    margin-top: 50px;
 }
 
 .mh-menu-portfolio {
     @include menu-home-for-all ($color-portfolio);
-    float: right;
-    margin-top: 50px;
 }
 
 .mh-menu-articles {
     @include menu-home-for-all ($color-articles);
-    float: left;
-    margin-top: 50px;
 }
 
 .mh-menu-blog {
     @include menu-home-for-all ($color-blog);
-    float: right;
-    margin-top: 50px;
 }
 
 .mh-menu-about {
     @include menu-home-for-all ($color-about);
-    float: left;
-    margin-top: 50px;
 }
 
 .mh-menu-contact {
     @include menu-home-for-all ($color-contact);
-    float: right;
-    margin-top: 50px;
 }
 
 /* icones en fond des blocks thèmes de la page accueil */
