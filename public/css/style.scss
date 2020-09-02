@@ -240,13 +240,16 @@ ul {
 @mixin gradient-for-all ($color) {
     color: white;
     background-color: $color;
+    color: white;
+    background-color: $color;
     box-shadow: 0 0 100px -100px white inset;
-    transition: box-shadow 2.5s;
+    transition: background-color 2.5s, box-shadow 2.5s;
 
     &:hover {
         color: black;
+        background-color: white;
         box-shadow: 0 800px 100px -100px white inset;
-        transition: box-shadow 1s;
+        transition: background-color 2.5s, box-shadow 2.5s;
     }
 }
 
@@ -457,7 +460,7 @@ h1 {
     color: white;
     background-color: $color;
     box-shadow: 0 0 100px -100px white inset;
-    transition: box-shadow 2.5s;
+    transition: background-color 2s, box-shadow 2.5s;
 
     &:hover {
         color: black;

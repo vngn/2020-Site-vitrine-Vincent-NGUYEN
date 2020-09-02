@@ -170,169 +170,193 @@ ul {
 .sidenav-color-users {
   color: white;
   background-color: green;
+  color: white;
+  background-color: green;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2.5s;
-  transition: -webkit-box-shadow 2.5s;
-  transition: box-shadow 2.5s;
-  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-users:hover {
   color: black;
+  background-color: white;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 1s;
-  transition: -webkit-box-shadow 1s;
-  transition: box-shadow 1s;
-  transition: box-shadow 1s, -webkit-box-shadow 1s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-visitors {
   color: white;
   background-color: red;
+  color: white;
+  background-color: red;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2.5s;
-  transition: -webkit-box-shadow 2.5s;
-  transition: box-shadow 2.5s;
-  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-visitors:hover {
   color: black;
+  background-color: white;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 1s;
-  transition: -webkit-box-shadow 1s;
-  transition: box-shadow 1s;
-  transition: box-shadow 1s, -webkit-box-shadow 1s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-home {
   color: white;
   background-color: #d06503;
+  color: white;
+  background-color: #d06503;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2.5s;
-  transition: -webkit-box-shadow 2.5s;
-  transition: box-shadow 2.5s;
-  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-home:hover {
   color: black;
+  background-color: white;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 1s;
-  transition: -webkit-box-shadow 1s;
-  transition: box-shadow 1s;
-  transition: box-shadow 1s, -webkit-box-shadow 1s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-portfolio {
   color: white;
   background-color: #e9931a;
+  color: white;
+  background-color: #e9931a;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2.5s;
-  transition: -webkit-box-shadow 2.5s;
-  transition: box-shadow 2.5s;
-  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-portfolio:hover {
   color: black;
+  background-color: white;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 1s;
-  transition: -webkit-box-shadow 1s;
-  transition: box-shadow 1s;
-  transition: box-shadow 1s, -webkit-box-shadow 1s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-articles {
   color: white;
   background-color: #1691be;
+  color: white;
+  background-color: #1691be;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2.5s;
-  transition: -webkit-box-shadow 2.5s;
-  transition: box-shadow 2.5s;
-  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-articles:hover {
   color: black;
+  background-color: white;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 1s;
-  transition: -webkit-box-shadow 1s;
-  transition: box-shadow 1s;
-  transition: box-shadow 1s, -webkit-box-shadow 1s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-blog {
   color: white;
   background-color: #166ba2;
+  color: white;
+  background-color: #166ba2;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2.5s;
-  transition: -webkit-box-shadow 2.5s;
-  transition: box-shadow 2.5s;
-  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-blog:hover {
   color: black;
+  background-color: white;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 1s;
-  transition: -webkit-box-shadow 1s;
-  transition: box-shadow 1s;
-  transition: box-shadow 1s, -webkit-box-shadow 1s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-about {
   color: white;
   background-color: #1b3647;
+  color: white;
+  background-color: #1b3647;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2.5s;
-  transition: -webkit-box-shadow 2.5s;
-  transition: box-shadow 2.5s;
-  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-about:hover {
   color: black;
+  background-color: white;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 1s;
-  transition: -webkit-box-shadow 1s;
-  transition: box-shadow 1s;
-  transition: box-shadow 1s, -webkit-box-shadow 1s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-contact {
   color: white;
   background-color: #152836;
+  color: white;
+  background-color: #152836;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2.5s;
-  transition: -webkit-box-shadow 2.5s;
-  transition: box-shadow 2.5s;
-  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-contact:hover {
   color: black;
+  background-color: white;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 1s;
-  transition: -webkit-box-shadow 1s;
-  transition: box-shadow 1s;
-  transition: box-shadow 1s, -webkit-box-shadow 1s;
+  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s;
+  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-trigger {
@@ -528,10 +552,10 @@ h1 {
   background-color: #d06503;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2.5s;
-  transition: -webkit-box-shadow 2.5s;
-  transition: box-shadow 2.5s;
-  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-home:hover {
@@ -555,10 +579,10 @@ h1 {
   background-color: #e9931a;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2.5s;
-  transition: -webkit-box-shadow 2.5s;
-  transition: box-shadow 2.5s;
-  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-portfolio:hover {
@@ -582,10 +606,10 @@ h1 {
   background-color: #1691be;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2.5s;
-  transition: -webkit-box-shadow 2.5s;
-  transition: box-shadow 2.5s;
-  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-articles:hover {
@@ -609,10 +633,10 @@ h1 {
   background-color: #166ba2;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2.5s;
-  transition: -webkit-box-shadow 2.5s;
-  transition: box-shadow 2.5s;
-  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-blog:hover {
@@ -636,10 +660,10 @@ h1 {
   background-color: #1b3647;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2.5s;
-  transition: -webkit-box-shadow 2.5s;
-  transition: box-shadow 2.5s;
-  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-about:hover {
@@ -663,10 +687,10 @@ h1 {
   background-color: #152836;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: -webkit-box-shadow 2.5s;
-  transition: -webkit-box-shadow 2.5s;
-  transition: box-shadow 2.5s;
-  transition: box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, -webkit-box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s;
+  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .mh-menu-contact:hover {
