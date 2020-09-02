@@ -452,8 +452,8 @@ h1 {
 /* blocks thèmes de la page accueil */
 
 @mixin menu-home-for-all ($color) {
-    width: 450px;
-    height: 450px;
+    width: 600px;
+    height: 600px;
     margin: auto;
     padding: 50px;
     text-align: center;
@@ -466,7 +466,7 @@ h1 {
     &:hover {
         color: black;
         background-color: white;
-        box-shadow: 0 480px 100px -100px white inset;
+        box-shadow: 0 600px 100px -100px white inset;
         transition: background-color 2s, box-shadow 2.5s;
     }
 }

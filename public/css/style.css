@@ -543,8 +543,8 @@ h1 {
 
 /* blocks thèmes de la page accueil */
 .mh-menu-home {
-  width: 450px;
-  height: 450px;
+  width: 600px;
+  height: 600px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -564,8 +564,8 @@ h1 {
 .mh-menu-home:hover {
   color: black;
   background-color: white;
-  -webkit-box-shadow: 0 480px 100px -100px white inset;
-          box-shadow: 0 480px 100px -100px white inset;
+  -webkit-box-shadow: 0 600px 100px -100px white inset;
+          box-shadow: 0 600px 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
@@ -573,8 +573,8 @@ h1 {
 }
 
 .mh-menu-portfolio {
-  width: 450px;
-  height: 450px;
+  width: 600px;
+  height: 600px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -594,8 +594,8 @@ h1 {
 .mh-menu-portfolio:hover {
   color: black;
   background-color: white;
-  -webkit-box-shadow: 0 480px 100px -100px white inset;
-          box-shadow: 0 480px 100px -100px white inset;
+  -webkit-box-shadow: 0 600px 100px -100px white inset;
+          box-shadow: 0 600px 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
@@ -603,8 +603,8 @@ h1 {
 }
 
 .mh-menu-articles {
-  width: 450px;
-  height: 450px;
+  width: 600px;
+  height: 600px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -624,8 +624,8 @@ h1 {
 .mh-menu-articles:hover {
   color: black;
   background-color: white;
-  -webkit-box-shadow: 0 480px 100px -100px white inset;
-          box-shadow: 0 480px 100px -100px white inset;
+  -webkit-box-shadow: 0 600px 100px -100px white inset;
+          box-shadow: 0 600px 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
@@ -633,8 +633,8 @@ h1 {
 }
 
 .mh-menu-blog {
-  width: 450px;
-  height: 450px;
+  width: 600px;
+  height: 600px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -654,8 +654,8 @@ h1 {
 .mh-menu-blog:hover {
   color: black;
   background-color: white;
-  -webkit-box-shadow: 0 480px 100px -100px white inset;
-          box-shadow: 0 480px 100px -100px white inset;
+  -webkit-box-shadow: 0 600px 100px -100px white inset;
+          box-shadow: 0 600px 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
@@ -663,8 +663,8 @@ h1 {
 }
 
 .mh-menu-about {
-  width: 450px;
-  height: 450px;
+  width: 600px;
+  height: 600px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -684,8 +684,8 @@ h1 {
 .mh-menu-about:hover {
   color: black;
   background-color: white;
-  -webkit-box-shadow: 0 480px 100px -100px white inset;
-          box-shadow: 0 480px 100px -100px white inset;
+  -webkit-box-shadow: 0 600px 100px -100px white inset;
+          box-shadow: 0 600px 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
@@ -693,8 +693,8 @@ h1 {
 }
 
 .mh-menu-contact {
-  width: 450px;
-  height: 450px;
+  width: 600px;
+  height: 600px;
   margin: auto;
   padding: 50px;
   text-align: center;
@@ -714,8 +714,8 @@ h1 {
 .mh-menu-contact:hover {
   color: black;
   background-color: white;
-  -webkit-box-shadow: 0 480px 100px -100px white inset;
-          box-shadow: 0 480px 100px -100px white inset;
+  -webkit-box-shadow: 0 600px 100px -100px white inset;
+          box-shadow: 0 600px 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, -webkit-box-shadow 2.5s;
   transition: background-color 2s, box-shadow 2.5s;
