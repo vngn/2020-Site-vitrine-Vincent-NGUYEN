@@ -551,7 +551,7 @@ h1 {
   margin-top: -36px;
   padding-bottom: 50px;
   padding-left: 155px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.075);
 }
 
 .no-background-block-menu-right {
@@ -560,7 +560,7 @@ h1 {
   margin-top: -36px;
   padding-bottom: 50px;
   padding-right: 155px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.075);
 }
 
 .mh-menu-home {

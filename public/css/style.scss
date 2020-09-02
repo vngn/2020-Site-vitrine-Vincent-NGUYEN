@@ -460,8 +460,8 @@ h1 {
     margin-top: -36px;
     padding-bottom: 50px;
     padding-left: 155px;
-    // background-color: rgba(255,255,255,0.5);
-    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255,0.075);
+    // background-color: rgb(255,255,255);
 
 }
 
@@ -471,8 +471,8 @@ h1 {
     margin-top: -36px;
     padding-bottom: 50px;
     padding-right: 155px;
-// background-color: rgba(255,255,255,0.5);
-background-color: rgb(255,255,255);
+background-color: rgba(255,255,255,0.075);
+// background-color: rgb(255,255,255);
 }
 
 @mixin menu-home-for-all ($color) {
