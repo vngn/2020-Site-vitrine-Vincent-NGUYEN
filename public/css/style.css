@@ -521,7 +521,7 @@ h1 {
 .mh-menu-home {
   height: 450px;
   margin: auto;
-  padding: 10px;
+  padding: 50px;
   text-align: center;
   border-radius: 20px;
   color: white;
@@ -548,7 +548,7 @@ h1 {
 .mh-menu-portfolio {
   height: 450px;
   margin: auto;
-  padding: 10px;
+  padding: 50px;
   text-align: center;
   border-radius: 20px;
   color: white;
@@ -575,7 +575,7 @@ h1 {
 .mh-menu-articles {
   height: 450px;
   margin: auto;
-  padding: 10px;
+  padding: 50px;
   text-align: center;
   border-radius: 20px;
   color: white;
@@ -602,7 +602,7 @@ h1 {
 .mh-menu-blog {
   height: 450px;
   margin: auto;
-  padding: 10px;
+  padding: 50px;
   text-align: center;
   border-radius: 20px;
   color: white;
@@ -629,7 +629,7 @@ h1 {
 .mh-menu-about {
   height: 450px;
   margin: auto;
-  padding: 10px;
+  padding: 50px;
   text-align: center;
   border-radius: 20px;
   color: white;
@@ -656,7 +656,7 @@ h1 {
 .mh-menu-contact {
   height: 450px;
   margin: auto;
-  padding: 10px;
+  padding: 50px;
   text-align: center;
   border-radius: 20px;
   color: white;
