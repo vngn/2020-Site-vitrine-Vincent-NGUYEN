@@ -130,42 +130,34 @@ ul {
 
 /* harmonisation des couleurs */
 .users-color {
-  border: 4px solid green;
   background-color: white;
 }
 
 .visitors-color {
-  border: 4px solid red;
   background-color: white;
 }
 
 .home-color {
-  border: 4px solid #d06503;
   background-color: white;
 }
 
 .portfolio-color {
-  border: 4px solid #e9931a;
   background-color: white;
 }
 
 .articles-color {
-  border: 4px solid #1691be;
   background-color: white;
 }
 
 .blog-color {
-  border: 4px solid #166ba2;
   background-color: white;
 }
 
 .about-color {
-  border: 4px solid #1b3647;
   background-color: white;
 }
 
 .contact-color {
-  border: 4px solid #152836;
   background-color: white;
 }
 
@@ -177,7 +169,6 @@ ul {
 
 .sidenav-border-color-users {
   color: white;
-  border: 4px solid white;
   background-color: green;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
@@ -189,7 +180,6 @@ ul {
 
 .sidenav-border-color-users:hover {
   color: black;
-  border: 4px solid green;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 1s;
@@ -200,7 +190,6 @@ ul {
 
 .sidenav-border-color-visitors {
   color: white;
-  border: 4px solid white;
   background-color: red;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
@@ -212,7 +201,6 @@ ul {
 
 .sidenav-border-color-visitors:hover {
   color: black;
-  border: 4px solid red;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 1s;
@@ -223,7 +211,6 @@ ul {
 
 .sidenav-border-color-home {
   color: white;
-  border: 4px solid white;
   background-color: #d06503;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
@@ -235,7 +222,6 @@ ul {
 
 .sidenav-border-color-home:hover {
   color: black;
-  border: 4px solid #d06503;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 1s;
@@ -246,7 +232,6 @@ ul {
 
 .sidenav-border-color-portfolio {
   color: white;
-  border: 4px solid white;
   background-color: #e9931a;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
@@ -258,7 +243,6 @@ ul {
 
 .sidenav-border-color-portfolio:hover {
   color: black;
-  border: 4px solid #e9931a;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 1s;
@@ -269,7 +253,6 @@ ul {
 
 .sidenav-border-color-articles {
   color: white;
-  border: 4px solid white;
   background-color: #1691be;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
@@ -281,7 +264,6 @@ ul {
 
 .sidenav-border-color-articles:hover {
   color: black;
-  border: 4px solid #1691be;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 1s;
@@ -292,7 +274,6 @@ ul {
 
 .sidenav-border-color-blog {
   color: white;
-  border: 4px solid white;
   background-color: #166ba2;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
@@ -304,7 +285,6 @@ ul {
 
 .sidenav-border-color-blog:hover {
   color: black;
-  border: 4px solid #166ba2;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 1s;
@@ -315,7 +295,6 @@ ul {
 
 .sidenav-border-color-about {
   color: white;
-  border: 4px solid white;
   background-color: #1b3647;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
@@ -327,7 +306,6 @@ ul {
 
 .sidenav-border-color-about:hover {
   color: black;
-  border: 4px solid #1b3647;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 1s;
@@ -338,7 +316,6 @@ ul {
 
 .sidenav-border-color-contact {
   color: white;
-  border: 4px solid white;
   background-color: #152836;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
@@ -350,7 +327,6 @@ ul {
 
 .sidenav-border-color-contact:hover {
   color: black;
-  border: 4px solid #152836;
   -webkit-box-shadow: 0 800px 100px -100px white inset;
           box-shadow: 0 800px 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 1s;
@@ -496,6 +472,11 @@ h1 {
 }
 
 /* Texte titre */
+.text-titre {
+  margin-top: 280px;
+  margin-bottom: 320px;
+}
+
 .title {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -527,7 +508,6 @@ h1 {
   padding: 10px;
   text-align: center;
   color: white;
-  border: 4px solid white;
   background-color: #d06503;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
@@ -539,7 +519,6 @@ h1 {
 
 .mh-menu-home:hover {
   color: black;
-  border: 4px solid #d06503;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 1s;
@@ -554,7 +533,6 @@ h1 {
   padding: 10px;
   text-align: center;
   color: white;
-  border: 4px solid white;
   background-color: #e9931a;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
@@ -566,7 +544,6 @@ h1 {
 
 .mh-menu-portfolio:hover {
   color: black;
-  border: 4px solid #e9931a;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 1s;
@@ -581,7 +558,6 @@ h1 {
   padding: 10px;
   text-align: center;
   color: white;
-  border: 4px solid white;
   background-color: #1691be;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
@@ -593,7 +569,6 @@ h1 {
 
 .mh-menu-articles:hover {
   color: black;
-  border: 4px solid #1691be;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 1s;
@@ -608,7 +583,6 @@ h1 {
   padding: 10px;
   text-align: center;
   color: white;
-  border: 4px solid white;
   background-color: #166ba2;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
@@ -620,7 +594,6 @@ h1 {
 
 .mh-menu-blog:hover {
   color: black;
-  border: 4px solid #166ba2;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 1s;
@@ -635,7 +608,6 @@ h1 {
   padding: 10px;
   text-align: center;
   color: white;
-  border: 4px solid white;
   background-color: #1b3647;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
@@ -647,7 +619,6 @@ h1 {
 
 .mh-menu-about:hover {
   color: black;
-  border: 4px solid #1b3647;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 1s;
@@ -662,7 +633,6 @@ h1 {
   padding: 10px;
   text-align: center;
   color: white;
-  border: 4px solid white;
   background-color: #152836;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
@@ -674,7 +644,6 @@ h1 {
 
 .mh-menu-contact:hover {
   color: black;
-  border: 4px solid #152836;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
   -webkit-transition: -webkit-box-shadow 1s;

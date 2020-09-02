@@ -163,42 +163,34 @@ ul {
 /* harmonisation des couleurs */
 
 @mixin bgcolor-border-users {
-    border: 4px solid $color-users;
     @include background-color;
 }
 
 @mixin bgcolor-border-visitors {
-    border: 4px solid $color-visitors;
     @include background-color;
 }
 
 @mixin bgcolor-border-home {
-    border: 4px solid $color-home;
     @include background-color;
 }
 
 @mixin bgcolor-border-portfolio {
-    border: 4px solid $color-portfolio;
     @include background-color;
 }
 
 @mixin bgcolor-border-articles {
-    border: 4px solid $color-articles;
     @include background-color;
 }
 
 @mixin bgcolor-border-blog {
-    border: 4px solid $color-blog;
     @include background-color;
 }
 
 @mixin bgcolor-border-about {
-    border: 4px solid $color-about;
     @include background-color;
 }
 
 @mixin bgcolor-border-contact {
-    border: 4px solid $color-contact;
     @include background-color;
 }
 
@@ -247,14 +239,12 @@ ul {
 
 @mixin gradient-for-all ($color) {
     color: white;
-    border: 4px solid white;
     background-color: $color;
     box-shadow: 0 0 100px -100px white inset;
     transition: box-shadow 2.5s;
 
     &:hover {
         color: black;
-        border: 4px solid $color;
         box-shadow: 0 800px 100px -100px white inset;
         transition: box-shadow 1s;
     }
@@ -407,6 +397,12 @@ h1 {
 
 /* Texte titre */
 
+.text-titre {
+
+    margin-top: 280px;
+    margin-bottom: 320px;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
 
 .title {
@@ -441,14 +437,12 @@ h1 {
     padding: 10px;
     text-align: center;
     color: white;
-    border: 4px solid white;
     background-color: $color;
     box-shadow: 0 0 100px -100px white inset;
     transition: box-shadow 2.5s;
 
     &:hover {
         color: black;
-        border: 4px solid $color;
         box-shadow: 0 480px 100px -100px white inset;
         transition: box-shadow 1s;
     }
