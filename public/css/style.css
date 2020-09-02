@@ -473,8 +473,10 @@ h1 {
 
 /* Texte titre */
 .text-titre {
-  margin-top: 280px;
-  margin-bottom: 320px;
+  width: 100%;
+  height: 1080px;
+  padding-top: 360px;
+  margin-top: -100px;
 }
 
 .title {
@@ -498,7 +500,7 @@ h1 {
   text-align: center;
   font-size: 25px;
   text-transform: uppercase;
-  padding-bottom: 10px;
+  padding-top: 20px;
 }
 
 /* blocks thèmes de la page accueil */
