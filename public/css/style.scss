@@ -451,6 +451,30 @@ h1 {
 
 /* blocks thèmes de la page accueil */
 
+.grix {
+    width: 100vw;
+}
+
+.no-background-block-menu-left {
+    width: 50vw;
+    margin-top: -50px;
+    padding-bottom: 50px;
+    padding-left: 155px;
+    background-color: rgba(255,255,255,0.5);
+    // background-color: rgb(255, 255, 255);
+
+}
+
+.no-background-block-menu-right {
+    width: 50vw;
+    margin-left: 50%;
+    margin-top: -36px;
+    padding-bottom: 50px;
+    padding-right: 155px;
+    background-color: rgba(255,255,255,0.5);
+    // background-color: rgb(255, 255, 255);
+}
+
 @mixin menu-home-for-all ($color) {
     width: 600px;
     height: 600px;
@@ -473,7 +497,7 @@ h1 {
 
 .mh-menu-home {
     @include menu-home-for-all ($color-home);
-    float:left;
+    float: left;
     margin-top: 50px;
 }
 
@@ -485,7 +509,7 @@ h1 {
 
 .mh-menu-articles {
     @include menu-home-for-all ($color-articles);
-    float:left;
+    float: left;
     margin-top: 50px;
 }
 
@@ -497,7 +521,7 @@ h1 {
 
 .mh-menu-about {
     @include menu-home-for-all ($color-about);
-    float:left;
+    float: left;
     margin-top: 50px;
 }
 
