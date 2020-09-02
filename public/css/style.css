@@ -83,6 +83,14 @@ ul {
 }
 
 /* ============================== 0. TOUTES LES PAGES ============================== */
+body {
+  background: url("../images/bg00.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .mh-menu {
   width: 84%;
   height: 450px;
