@@ -7,6 +7,8 @@ pinterest
 ++++++ reste à faire ++++++
 
 général :
+- régler pb d'affichage du burger (4 pages sur 6 s'affichent) liés à la ligne 405 su style.scss (margin-top: -100px;) en rapport avec le texte-titre
+
 - uniformiser les formulaires
 - pot de miel - ajout input fantôme
 - gérer le contenu des menus sidenav
