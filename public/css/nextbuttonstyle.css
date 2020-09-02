@@ -51,7 +51,7 @@
   text-decoration: none;
   font-size: 20px;
   color: white;
-  background: green;
+  background: #b04c34;
   -webkit-transition: 1s;
   transition: 1s;
   -webkit-box-shadow: 6px 6px 0 black;
@@ -67,8 +67,8 @@
 .cta:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-box-shadow: 10px 10px 0 goldenrod;
-          box-shadow: 10px 10px 0 goldenrod;
+  -webkit-box-shadow: 10px 10px 0 #24415b;
+          box-shadow: 10px 10px 0 #24415b;
 }
 
 .cta .next-button:nth-child(2) {
@@ -135,7 +135,7 @@ path.two {
     fill: white;
   }
   50% {
-    fill: #FBC638;
+    fill: #24415b;
   }
   100% {
     fill: white;
@@ -146,7 +146,7 @@ path.two {
     fill: white;
   }
   50% {
-    fill: #FBC638;
+    fill: #24415b;
   }
   100% {
     fill: white;

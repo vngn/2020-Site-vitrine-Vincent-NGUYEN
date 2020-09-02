@@ -34,7 +34,7 @@
     text-decoration: none;
     font-size: 20px;
     color: white;
-    background: green;
+    background: rgb(176, 76, 52);
     transition: 1s;
     box-shadow: 6px 6px 0 black;
     transform: skewX(-15deg);
@@ -46,7 +46,7 @@
 
 .cta:hover {
     transition: 0.5s;
-    box-shadow: 10px 10px 0 goldenrod;
+    box-shadow: 10px 10px 0 rgb(36,65,91);
 }
 
 .cta .next-button:nth-child(2) {
@@ -104,7 +104,7 @@ path.two {
     }
 
     50% {
-        fill: #FBC638;
+        fill: rgb(36,65,91);
     }
 
     100% {

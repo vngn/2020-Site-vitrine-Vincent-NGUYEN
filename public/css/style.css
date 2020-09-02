@@ -217,9 +217,9 @@ ul {
 
 .sidenav-color-home {
   color: white;
-  background-color: #d06503;
+  background-color: #f29220;
   color: white;
-  background-color: #d06503;
+  background-color: #f29220;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
@@ -241,9 +241,9 @@ ul {
 
 .sidenav-color-portfolio {
   color: white;
-  background-color: #e9931a;
+  background-color: #f29220;
   color: white;
-  background-color: #e9931a;
+  background-color: #f29220;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
@@ -265,9 +265,9 @@ ul {
 
 .sidenav-color-articles {
   color: white;
-  background-color: #1691be;
+  background-color: #2a9ad4;
   color: white;
-  background-color: #1691be;
+  background-color: #2a9ad4;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
@@ -289,9 +289,9 @@ ul {
 
 .sidenav-color-blog {
   color: white;
-  background-color: #166ba2;
+  background-color: #116bab;
   color: white;
-  background-color: #166ba2;
+  background-color: #116bab;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
@@ -313,9 +313,9 @@ ul {
 
 .sidenav-color-about {
   color: white;
-  background-color: #1b3647;
+  background-color: #253f4e;
   color: white;
-  background-color: #1b3647;
+  background-color: #253f4e;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
@@ -337,9 +337,9 @@ ul {
 
 .sidenav-color-contact {
   color: white;
-  background-color: #152836;
+  background-color: #152530;
   color: white;
-  background-color: #152836;
+  background-color: #152530;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
@@ -549,7 +549,7 @@ h1 {
   text-align: center;
   border-radius: 20px;
   color: white;
-  background-color: #d06503;
+  background-color: #f29220;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
@@ -576,7 +576,7 @@ h1 {
   text-align: center;
   border-radius: 20px;
   color: white;
-  background-color: #e9931a;
+  background-color: #f29220;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
@@ -603,7 +603,7 @@ h1 {
   text-align: center;
   border-radius: 20px;
   color: white;
-  background-color: #1691be;
+  background-color: #2a9ad4;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
@@ -630,7 +630,7 @@ h1 {
   text-align: center;
   border-radius: 20px;
   color: white;
-  background-color: #166ba2;
+  background-color: #116bab;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
@@ -657,7 +657,7 @@ h1 {
   text-align: center;
   border-radius: 20px;
   color: white;
-  background-color: #1b3647;
+  background-color: #253f4e;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
@@ -684,7 +684,7 @@ h1 {
   text-align: center;
   border-radius: 20px;
   color: white;
-  background-color: #152836;
+  background-color: #152530;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
