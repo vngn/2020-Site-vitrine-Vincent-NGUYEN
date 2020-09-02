@@ -474,9 +474,19 @@ h1 {
 /* Texte titre */
 .text-titre {
   width: 100%;
-  height: 1080px;
-  padding-top: 360px;
+  height: 880px;
+  padding-top: 330px;
   margin-top: -100px;
+}
+
+.pre-title {
+  font-family: 'Raleway', sans-serif;
+  display: block;
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 200px;
 }
 
 .title {
@@ -494,13 +504,15 @@ h1 {
   letter-spacing: -8px;
 }
 
-.subtitle {
+.post-title {
   font-family: 'Raleway', sans-serif;
   display: block;
   text-align: center;
   font-size: 25px;
   text-transform: uppercase;
   padding-top: 20px;
+  text-align: right;
+  padding-right: 200px;
 }
 
 /* blocks thèmes de la page accueil */
