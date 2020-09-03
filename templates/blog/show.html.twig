@@ -52,7 +52,7 @@
                 {% for blogComment in blog.blogComment %}
                 <tr>
                     <td>{{ blogComment.users.firstname }} {{ blogComment.users.name }}</td>
-                    <td>({{ blogComment.createdAt | date ('d/m/Y à H:i') }})</td>
+                    <td>{{ blogComment.createdAt | date ('d/m/Y (H:i)') }}</td>
                     <td>{{ blogComment.content | raw }}</td>
                 </tr>
                 {% endfor %}

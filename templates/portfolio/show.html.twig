@@ -61,7 +61,7 @@
                 {% for portfolioComment in portfolio.portfolioComment %}
                 <tr>
                     <td>{{ portfolioComment.users.firstname }} {{ portfolioComment.users.name }}</td>
-                    <td>({{ portfolioComment.createdAt | date ('d/m/Y à H:i') }})</td>
+                    <td>{{ portfolioComment.createdAt | date ('d/m/Y (H:i)') }}</td>
                     <td>{{ portfolioComment.content | raw }}</td>
                 </tr>
                 {% endfor %}
