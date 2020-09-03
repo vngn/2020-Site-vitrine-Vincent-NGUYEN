@@ -162,68 +162,36 @@ ul {
 
 /* harmonisation des couleurs */
 
-@mixin bgcolor-border-users {
-    @include background-color;
-}
-
-@mixin bgcolor-border-visitors {
-    @include background-color;
-}
-
-@mixin bgcolor-border-home {
-    @include background-color;
-}
-
-@mixin bgcolor-border-portfolio {
-    @include background-color;
-}
-
-@mixin bgcolor-border-articles {
-    @include background-color;
-}
-
-@mixin bgcolor-border-blog {
-    @include background-color;
-}
-
-@mixin bgcolor-border-about {
-    @include background-color;
-}
-
-@mixin bgcolor-border-contact {
-    @include background-color;
-}
-
 .users-color {
-    @include bgcolor-border-users;
+    @include background-color;
 }
 
 .visitors-color {
-    @include bgcolor-border-visitors;
+    @include background-color;
 }
 
 .home-color {
-    @include bgcolor-border-home;
+    @include background-color;
 }
 
 .portfolio-color {
-    @include bgcolor-border-portfolio;
+    @include background-color;
 }
 
 .articles-color {
-    @include bgcolor-border-articles;
+    @include background-color;
 }
 
 .blog-color {
-    @include bgcolor-border-blog;
+    @include background-color;
 }
 
 .about-color {
-    @include bgcolor-border-about;
+    @include background-color;
 }
 
 .contact-color {
-    @include bgcolor-border-contact;
+    @include background-color;
 }
 
 /* barres de navigation verticales */
