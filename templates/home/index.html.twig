@@ -17,7 +17,8 @@
                 <i class="icon-home sidenav-menu-icon"></i>
             </span>
             <h3>Accueil</h3>
-            <p>Cette page présente l'ensemble du site et détailles chacune de ses pages.</p>
+            <p>Cette page présente l'ensemble du site et détaille chacune de ses pages.</p>
+            <p>Allez consulter le Blog pour plus d'informations sur ces dernières</p>
         </div>
     </a>
 
@@ -27,9 +28,10 @@
                 <i class="icon-portfolio sidenav-menu-icon"></i>
             </span>
             <h3>Portfolio</h3>
+            <p class="page-summary">Cette page contient actuellement {{ portfolio | length }} productions<br />
+            et {{ portfolioComment | length }}
+                commentaires</p>
             <p>Cette page présente l'ensemble de mes productions, que vous pouvez commenter.</p>
-            {# <p>Cette page contient actuellement {{ portfolio | length }} productions et {{ portfolioComment | length }}
-                commentaires</p> #}
         </div>
     </a>
 
@@ -39,11 +41,11 @@
                 <i class="icon-services sidenav-menu-icon"></i>
             </span>
             <h3>Articles</h3>
+            <p class="page-summary">Cette page contient actuellement {{ articles | length }} articles<br />
+            et {{ articlesComment | length }} commentaires</p>
             <p>Cette page présente différents articles techniques : des liens vers des tutoriels et ses
                 retranscriptions, des lignes de codes divers et d'autres sources d'instruction, d'inspiration et d'aide,
                 que vous pouvez commenter.</p>
-            {# <p>Cette page contient actuellement {{ articles | length }} articles et
-                {{ articlesComment | length }} commentaires</p> #}
         </div>
     </a>
 
@@ -53,9 +55,9 @@
                 <i class="icon-blog sidenav-menu-icon"></i>
             </span>
             <h3>Blog</h3>
+            <p class="page-summary">Cette page contient actuellement {{ blog | length }} articles<br />
+            et {{ blogComment | length }} commentaires</p>
             <p>Cette page regroupe différents messages aux thématiques variées, que vous pouvez commenter.</p>
-            {# <p>Cette page contient actuellement {{ blog | length }} articles et
-                {{ blogComment | length }} commentaires</p> #}
         </div>
     </a>
 
@@ -75,10 +77,8 @@
                 <i class="icon-contact sidenav-menu-icon"></i>
             </span>
             <h3>Contact</h3>
-            <p>Cette page vous permet via un formulaire de me contacter afin d'échanger sur
-                différents
-                sujets,
-                demandes, offres, renseignements particuliers...</p>
+            <p>Cette page vous permet via un formulaire de me contacter afin d'échanger sur différents sujets, demandes,
+                offres, renseignements particuliers...</p>
         </div>
     </a>
 </div>

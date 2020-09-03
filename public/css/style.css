@@ -794,6 +794,10 @@ h1 {
   color: #152530;
 }
 
+.page-summary {
+  font-size: 0.75em;
+}
+
 /* icones en fond des blocks thèmes de la page accueil */
 .production :hover a {
   opacity: 0;
