@@ -504,9 +504,27 @@ h1 {
 }
 
 .all-title-except-home .text-titre {
-  height: 140px;
-  padding-top: 0;
-  margin-top: 0;
+  height: 220px;
+  padding: 0;
+  padding-top: 20px;
+  margin: 120px auto;
+  border-radius: 20px;
+}
+
+.all-title-except-home .title {
+  line-height: 180px;
+}
+
+.about-title .text-titre {
+  height: 220px;
+  padding: 0;
+  padding-top: 10px;
+  margin: 120px auto;
+  border-radius: 20px;
+}
+
+.about-title .title {
+  line-height: 180px;
 }
 
 .pre-title {
