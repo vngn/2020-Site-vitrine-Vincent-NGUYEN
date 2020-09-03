@@ -22,12 +22,14 @@ class ArticlesType extends AbstractType
             ->add('content', CKEditorType::class)
             ->add('categories', EntityType::class, [
                 'class' => Categories::class,
+                // 'choice_label' => 'title',
+                // 'multiple' => true,
+                // "expanded" => true
             ])
             // ->add('parent', EntityType::class, [
             //     'class' => Categories::class,
             // ])
-            ->add('Valider', SubmitType::class)
-        ;
+            ->add('Valider', SubmitType::class);
     }
 
     public function configureOptions(OptionsResolver $resolver)

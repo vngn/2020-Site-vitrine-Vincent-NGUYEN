@@ -59,7 +59,7 @@ class BlogController extends AbstractController
             $em->persist($blog);
             $em->flush();
 
-            return $this->redirectToRoute('users');
+            return $this->redirectToRoute('blog_index');
         }
         return $this->render('/blog/add.html.twig', [
             'form' => $form->createView(),

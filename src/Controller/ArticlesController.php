@@ -63,7 +63,7 @@ class ArticlesController extends AbstractController
             $em->persist($article);
             $em->flush();
 
-            return $this->redirectToRoute('users');
+            return $this->redirectToRoute('articles_index');
         }
 
         return $this->render('articles/add.html.twig', [
