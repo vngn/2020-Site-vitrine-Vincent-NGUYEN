@@ -11,6 +11,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -81,6 +82,28 @@ class PortfolioController extends AbstractController
         $em->persist($portfolio);
         $em->flush();
         return new Response("true");
+    }
+
+    /**
+     * @Route("/edit/{id}", name="portfolio_edit", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function edit(Request $request, Portfolio $portfolio, SluggerInterface $slugger): Response
+    {
+        $form = $this->createForm(PortfolioType::class, $portfolio);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('portfolio_index');
+        }
+
+        return $this->render('portfolio/edit.html.twig', [
+            'portfolio' => $portfolio,
+            'form' => $form->createView(),
+        ]);
     }
 
     /**

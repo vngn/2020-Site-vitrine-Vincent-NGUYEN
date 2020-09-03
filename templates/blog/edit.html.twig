@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier un article{% endblock %}
+
+{% block body %}
+<div class="example-wrapper">
+    <h1 class="blog-color">Modifier un article</h1>
+</div>
+
+<div class="example-wrapper blog-color">
+    {{ form(form) }}
+</div>
+
+<div class="btn-site wrapper">
+    <a class="cta" href="{{ path('blog_index') }}">
+        <span class="next-button">Retour à la liste</span>
+        {{ include('includes/next-button.html.twig') }}
+    </a>
+</div>
+
+{% endblock %}

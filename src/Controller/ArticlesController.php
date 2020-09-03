@@ -72,6 +72,21 @@ class ArticlesController extends AbstractController
     }
 
     /**
+     * @Route("/activate/{id}", name="articles_activate")
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function activate(Articles $article)
+    {
+        $article->setActive(($article->getActive())?false:true);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($article);
+        $em->flush();
+
+        return new Response("true");
+    }
+
+    /**
      * @Route("/edit/{id}", name="articles_edit", methods={"GET","POST"})
      * @IsGranted("ROLE_ADMIN")
      */
@@ -91,21 +106,6 @@ class ArticlesController extends AbstractController
             'articles' => $articles,
             'form' => $form->createView(),
         ]);
-    }
-
-    /**
-     * @Route("/activate/{id}", name="articles_activate")
-     * @IsGranted("ROLE_ADMIN")
-     */
-    public function activate(Articles $article)
-    {
-        $article->setActive(($article->getActive())?false:true);
-
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($article);
-        $em->flush();
-
-        return new Response("true");
     }
 
     /**

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier une production{% endblock %}
+
+{% block body %}
+<div class="example-wrapper">
+    <h1 class="portfolio-color">Modifier une production</h1>
+</div>
+
+<div class="example-wrapper portfolio-color">
+    {{ form(form) }}
+</div>
+
+<div class="btn-site wrapper">
+    <a class="cta" href="{{ path('portfolio_index') }}">
+        <span class="next-button">Retour à la liste</span>
+        {{ include('includes/next-button.html.twig') }}
+    </a>
+</div>
+
+{% endblock %}

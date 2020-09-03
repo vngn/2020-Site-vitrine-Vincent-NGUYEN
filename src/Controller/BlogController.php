@@ -9,6 +9,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 /**
@@ -76,6 +77,28 @@ class BlogController extends AbstractController
         $em->persist($blog);
         $em->flush();
         return new Response("true");
+    }
+
+    /**
+     * @Route("/edit/{id}", name="blog_edit", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function edit(Request $request, Blog $blog, SluggerInterface $slugger): Response
+    {
+        $form = $this->createForm(BlogType::class, $blog);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('blog_index');
+        }
+
+        return $this->render('blog/edit.html.twig', [
+            'blog' => $blog,
+            'form' => $form->createView(),
+        ]);
     }
     
     /**
