@@ -4,8 +4,10 @@
 
 {% block body %}
 
-<div class="example-wrapper">
-    <h1 class="portfolio-color">Portfolio</h1>
+<div class="example-wrapper all-title-except-home">
+    <div class="example-wrapper home-color text-titre">
+    <div class="title">Portfolio</div>
+</div>
     {% for message in app.flashes('success') %}
     <div class="alert alert-success" role="alert">{{ message }}</div>
     {% endfor %}

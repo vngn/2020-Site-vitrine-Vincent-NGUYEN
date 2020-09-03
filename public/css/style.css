@@ -503,6 +503,12 @@ h1 {
   margin-top: -100px;
 }
 
+.all-title-except-home .text-titre {
+  height: 140px;
+  padding-top: 0;
+  margin-top: 0;
+}
+
 .pre-title {
   font-family: 'Raleway', sans-serif;
   display: block;

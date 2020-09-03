@@ -3,11 +3,17 @@
 {% block title %}La section Articles{% endblock %}
 
 {% block body %}
-<div class="example-wrapper">
-    <h1 class="articles-color">Articles</h1>
-
+<div class="example-wrapper all-title-except-home">
+    <div class="example-wrapper home-color text-titre">
+    <div class="title">Articles</div>
 </div>
+    {% for message in app.flashes('success') %}
+    <div class="alert alert-success" role="alert">{{ message }}</div>
+    {% endfor %}
+</div>
+
 {% for article in articles %}
+
 <ul class="mh-menu site articles-color">
     <li><a href="">
             <span>{{ article.createdAt | date ('d/m/Y') }}</span>
