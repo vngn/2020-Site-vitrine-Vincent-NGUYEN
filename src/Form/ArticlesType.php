@@ -20,7 +20,6 @@ class ArticlesType extends AbstractType
         $builder
             ->add('title', TextType::class)
             ->add('content', CKEditorType::class)
-            ->add('image', TextType::class)
             ->add('categories', EntityType::class, [
                 'class' => Categories::class,
             ])

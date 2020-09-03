@@ -54,11 +54,6 @@ class Articles
     private $categories;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $image;
-
-    /**
      * @ORM\OneToMany(targetEntity=ArticlesComment::class, mappedBy="article", orphanRemoval=true)
      */
     private $articleComment;
@@ -133,18 +128,6 @@ class Articles
     public function setCategories(?Categories $categories): self
     {
         $this->categories = $categories;
-
-        return $this;
-    }
-
-    public function getImage(): ?string
-    {
-        return $this->image;
-    }
-
-    public function setImage(string $image): self
-    {
-        $this->image = $image;
 
         return $this;
     }
