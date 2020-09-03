@@ -546,168 +546,228 @@ h1 {
   width: 450px;
   height: 450px;
   margin: auto;
-  padding: 50px;
+  margin-top: 60px;
+  padding: 60px;
   text-align: center;
   border-radius: 20px;
   color: white;
   background-color: #f29220;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
 }
 
 .mh-menu-home:hover {
+  padding: 60px 55px;
+  font-size: 1.05em;
   color: black;
   background-color: white;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
-  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  border: 1px solid #f29220;
+  -webkit-box-shadow: 0 0 50px #f29220 inset;
+          box-shadow: 0 0 50px #f29220 inset;
+}
+
+.mh-menu-home:hover .sidenav-menu-icon {
+  color: #f29220;
 }
 
 .mh-menu-portfolio {
   width: 450px;
   height: 450px;
   margin: auto;
-  padding: 50px;
+  margin-top: 60px;
+  padding: 60px;
   text-align: center;
   border-radius: 20px;
   color: white;
   background-color: #f29220;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
 }
 
 .mh-menu-portfolio:hover {
+  padding: 60px 55px;
+  font-size: 1.05em;
   color: black;
   background-color: white;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
-  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  border: 1px solid #f29220;
+  -webkit-box-shadow: 0 0 50px #f29220 inset;
+          box-shadow: 0 0 50px #f29220 inset;
+}
+
+.mh-menu-portfolio:hover .sidenav-menu-icon {
+  color: #f29220;
 }
 
 .mh-menu-articles {
   width: 450px;
   height: 450px;
   margin: auto;
-  padding: 50px;
+  margin-top: 60px;
+  padding: 60px;
   text-align: center;
   border-radius: 20px;
   color: white;
   background-color: #2a9ad4;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
 }
 
 .mh-menu-articles:hover {
+  padding: 60px 55px;
+  font-size: 1.05em;
   color: black;
   background-color: white;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
-  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  border: 1px solid #2a9ad4;
+  -webkit-box-shadow: 0 0 50px #2a9ad4 inset;
+          box-shadow: 0 0 50px #2a9ad4 inset;
+}
+
+.mh-menu-articles:hover .sidenav-menu-icon {
+  color: #2a9ad4;
 }
 
 .mh-menu-blog {
   width: 450px;
   height: 450px;
   margin: auto;
-  padding: 50px;
+  margin-top: 60px;
+  padding: 60px;
   text-align: center;
   border-radius: 20px;
   color: white;
   background-color: #116bab;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
 }
 
 .mh-menu-blog:hover {
+  padding: 60px 55px;
+  font-size: 1.05em;
   color: black;
   background-color: white;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
-  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  border: 1px solid #116bab;
+  -webkit-box-shadow: 0 0 50px #116bab inset;
+          box-shadow: 0 0 50px #116bab inset;
+}
+
+.mh-menu-blog:hover .sidenav-menu-icon {
+  color: #116bab;
 }
 
 .mh-menu-about {
   width: 450px;
   height: 450px;
   margin: auto;
-  padding: 50px;
+  margin-top: 60px;
+  padding: 60px;
   text-align: center;
   border-radius: 20px;
   color: white;
   background-color: #253f4e;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
 }
 
 .mh-menu-about:hover {
+  padding: 60px 55px;
+  font-size: 1.05em;
   color: black;
   background-color: white;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
-  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  border: 1px solid #253f4e;
+  -webkit-box-shadow: 0 0 50px #253f4e inset;
+          box-shadow: 0 0 50px #253f4e inset;
+}
+
+.mh-menu-about:hover .sidenav-menu-icon {
+  color: #253f4e;
 }
 
 .mh-menu-contact {
   width: 450px;
   height: 450px;
   margin: auto;
-  padding: 50px;
+  margin-top: 60px;
+  padding: 60px;
   text-align: center;
   border-radius: 20px;
   color: white;
   background-color: #152530;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
 }
 
 .mh-menu-contact:hover {
+  padding: 60px 55px;
+  font-size: 1.05em;
   color: black;
   background-color: white;
   -webkit-box-shadow: 0 480px 100px -100px white inset;
           box-shadow: 0 480px 100px -100px white inset;
-  -webkit-transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, -webkit-box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s;
-  transition: background-color 2s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
+  -webkit-transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s;
+  transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s, -webkit-box-shadow 2s;
+  border: 1px solid #152530;
+  -webkit-box-shadow: 0 0 50px #152530 inset;
+          box-shadow: 0 0 50px #152530 inset;
+}
+
+.mh-menu-contact:hover .sidenav-menu-icon {
+  color: #152530;
 }
 
 /* icones en fond des blocks thèmes de la page accueil */
