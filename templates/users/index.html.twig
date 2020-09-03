@@ -27,6 +27,28 @@
 </div>
 
 <div class="example-wrapper users-color">
+    <h1>{{ app.user.portfolioComments | length }} commentaire(s) dans la section Portfolio</h1>
+    <table class="table striped">
+        <thead>
+            <tr>
+                <th>Titre de l'article</th>
+                <th>Contenu du commentaire</th>
+                <th>date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for productionComment in app.user.portfolioComments %}
+            <tr>
+                <td>{{ productionComment.article.title }}</td>
+                <td>{{ productionComment.content | raw }}</td>
+                <td>{{ productionComment.createdAt | date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="example-wrapper users-color">
     <h1>{{ app.user.articlesComments | length }} commentaire(s) dans la section Articles</h1>
     <table class="table striped">
         <thead>
@@ -70,25 +92,4 @@
     </table>
 </div>
 
-<div class="example-wrapper users-color">
-    <h1>{{ app.user.portfolioComments | length }} commentaire(s) dans la section Portfolio</h1>
-    <table class="table striped">
-        <thead>
-            <tr>
-                <th>Titre de l'article</th>
-                <th>Contenu du commentaire</th>
-                <th>date</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for productionComment in app.user.portfolioComments %}
-            <tr>
-                <td>{{ productionComment.article.title }}</td>
-                <td>{{ productionComment.content | raw }}</td>
-                <td>{{ productionComment.createdAt | date }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
 {% endblock %}
