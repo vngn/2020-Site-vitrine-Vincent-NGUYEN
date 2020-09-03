@@ -3,7 +3,7 @@
 {% block title %}Gérer les catégories{% endblock %}
 
 {% block body %}
-<div class="example-wrapper role-color">
+<div class="example-wrapper users-color">
     <h1>Gérer les catégories</h1>
     <a href="{{ path("categories_add") }}" class="btn shadow-1 rounded-1 blue">Ajouter une catégorie</a>
     <table class="table striped">
@@ -24,11 +24,42 @@
                 <td>
                     <a href="{{ path("categories_edit", {id: categorie.id}) }}"
                         class="btn shadow-1 rounded-1 blue">Modifier</a>
+                    <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
+                        data-id="{{ categorie.id }}" data-nom="{{ categorie.name }}" data-parent="{{ categorie.parent }}">Supprimer</a>    
                 </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
 </div>
+<div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
+        <div class="modal-header">Supprimer une catégorie</div>
+        <div class="divider"></div>
+        <div class="modal-content">
 
+        </div>
+        <div class="divider"></div>
+        <div class="modal-footer">
+            <a href="" class="btn red">valider</a>
+            <button data-target="modal-delete"
+                class="ml-auto btn shadow-1 rounded-1 small primary modal-trigger">Fermer</button>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block javascripts %}
+    <script>
+        window.onload = () => {
+            let modal = new Axentix.Modal('#modal-delete');
+            let supprimer = document.querySelectorAll(".modal-trigger")
+            for (let bouton of supprimer) {
+                bouton.addEventListener("click", function () {
+                    document.querySelector(".modal-footer a").href = `/categories/delete/${this.dataset.id}`
+                    document.querySelector(".modal-content").innerText =
+                        `Êtes-vous sûr(e) de vouloir supprimer l'article "${this.dataset.nom}"`
+                })
+            }
+        }
+    </script>
+</div>
 {% endblock %}

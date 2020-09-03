@@ -74,4 +74,18 @@ class CategoriesController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+
+    /**
+     * @Route("/delete/{id}", name="categories_delete")
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function delete(Categories $categorie)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($categorie);
+        $em->flush();
+
+        $this->addFlash('message', 'Categorie supprimée avec succès');
+        return $this->redirectToRoute('categories_index');
+    }
 }

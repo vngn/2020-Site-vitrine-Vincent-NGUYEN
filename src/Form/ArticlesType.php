@@ -23,6 +23,9 @@ class ArticlesType extends AbstractType
             ->add('categories', EntityType::class, [
                 'class' => Categories::class,
             ])
+            // ->add('parent', EntityType::class, [
+            //     'class' => Categories::class,
+            // ])
             ->add('Valider', SubmitType::class)
         ;
     }
