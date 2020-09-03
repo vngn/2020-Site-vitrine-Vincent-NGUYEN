@@ -430,7 +430,7 @@ h1 {
     color: white;
     background-color: $color;
     box-shadow: 0 0 100px -100px white inset;
-    transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s;
+    transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s;
 
     &:hover {
         padding: 60px 55px;
@@ -438,7 +438,7 @@ h1 {
         color: black;
         background-color: white;
         box-shadow: 0 480px 100px -100px white inset;
-        transition: background-color 2s, box-shadow 2s, font-size 2s, color 2s, padding 2s;
+        transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s;
         border: 1px solid $color;
         box-shadow: 0 0 50px $color inset;
 
