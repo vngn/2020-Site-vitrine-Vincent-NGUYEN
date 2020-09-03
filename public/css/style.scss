@@ -54,6 +54,8 @@
 
 /* ============================== 0. GLOBAL ============================== */
 
+/* couleurs */
+
 $color-users: green;
 
 $color-visitors: red;
@@ -70,15 +72,40 @@ $color-about: rgb(37, 63, 78);
 
 $color-contact: rgb(21, 37, 48);
 
-@mixin bg {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 @mixin background-color {
     background-color: white;
+}
+
+.users-color {
+    @include background-color;
+}
+
+.visitors-color {
+    @include background-color;
+}
+
+.home-color {
+    @include background-color;
+}
+
+.portfolio-color {
+    @include background-color;
+}
+
+.articles-color {
+    @include background-color;
+}
+
+.blog-color {
+    @include background-color;
+}
+
+.about-color {
+    @include background-color;
+}
+
+.contact-color {
+    @include background-color;
 }
 
 body {
@@ -89,16 +116,7 @@ body {
     overflow-y: scroll;
 }
 
-.example-wrapper {
-    margin: 2em auto;
-    width: 84%;
-    font: 18px/1.5 sans-serif;
-}
-
-.example-wrapper code {
-    background: #F5F5F5;
-    padding: 2px 6px;
-}
+/* paramétrages divers */
 
 ol,
 ul {
@@ -110,7 +128,13 @@ ul {
     margin: 0;
 }
 
+h1 {
+    text-align: center;
+}
+
 /* ============================== 0. TOUTES LES PAGES ============================== */
+
+/* background */
 
 .bg00 {
     background: url('../images/bg00.jpg');
@@ -118,6 +142,19 @@ ul {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+/* blocs de page de base */
+
+.example-wrapper {
+    margin: 2em auto;
+    width: 84%;
+    font: 18px/1.5 sans-serif;
+}
+
+.example-wrapper code {
+    background: #F5F5F5;
+    padding: 2px 6px;
 }
 
 .mh-menu {
@@ -158,40 +195,6 @@ ul {
         -ms-transition: color 0.2s linear;
         transition: color 0.2s linear;
     }
-}
-
-/* harmonisation des couleurs */
-
-.users-color {
-    @include background-color;
-}
-
-.visitors-color {
-    @include background-color;
-}
-
-.home-color {
-    @include background-color;
-}
-
-.portfolio-color {
-    @include background-color;
-}
-
-.articles-color {
-    @include background-color;
-}
-
-.blog-color {
-    @include background-color;
-}
-
-.about-color {
-    @include background-color;
-}
-
-.contact-color {
-    @include background-color;
 }
 
 /* barres de navigation verticales */
@@ -356,24 +359,7 @@ ul {
     margin-left: -8px;
 }
 
-.bg00 {
-    @include bg;
-}
-
-h1 {
-    text-align: center;
-}
-
-// /* ============================== 1. PAGE ACCUEIL ============================== */
-
-/* Texte titre */
-
-.text-titre {
-    width: 100%;
-    height: 880px;
-    padding-top: 330px;
-    margin-top: -100px;
-}
+/* Texte titre sauf page d'accueil */
 
 .all-title-except-home .text-titre {
     height: 220px;
@@ -397,6 +383,17 @@ h1 {
 
 .about-title .title {
     line-height: 180px;
+}
+
+// /* ============================== 1. PAGE ACCUEIL ============================== */
+
+/* Texte titre */
+
+.text-titre {
+    width: 100%;
+    height: 880px;
+    padding-top: 330px;
+    margin-top: -100px;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
@@ -439,7 +436,7 @@ h1 {
     padding-right: 12%;
 }
 
-/* blocks thèmes de la page accueil */
+/* blocks thèmes de la page d'accueil */
 
 @mixin menu-home-for-all ($color) {
     width: 450px;
@@ -497,8 +494,6 @@ h1 {
 .page-summary {
     font-size: 0.75em;
 }
-
-/* icones en fond des blocks thèmes de la page accueil */
 
 // /* ============================== 2. MES PRODUCTIONS ============================== */
 
