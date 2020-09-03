@@ -11,6 +11,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -66,6 +67,28 @@ class ArticlesController extends AbstractController
         }
 
         return $this->render('articles/add.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/edit/{id}", name="articles_edit", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function edit(Request $request, Articles $articles, SluggerInterface $slugger): Response
+    {
+        $form = $this->createForm(ArticlesType::class, $articles);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('articles_index');
+        }
+
+        return $this->render('articles/edit.html.twig', [
+            'articles' => $articles,
             'form' => $form->createView(),
         ]);
     }

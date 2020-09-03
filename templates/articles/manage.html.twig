@@ -31,6 +31,10 @@
                         <span class="slider"></span>
                     </label>
                 </td>
+
+                <td>
+                    <a href="{{ path('articles_edit', {'id': article.id}) }}" class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
+                </td>
                 <td>
                     <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
                         data-id="{{ article.id }}" data-titre="{{ article.title }}">Supprimer</a>
@@ -39,6 +43,7 @@
             {% endfor %}
         </tbody>
     </table>
+
     <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
         <div class="modal-header">Supprimer un article</div>
         <div class="divider"></div>
