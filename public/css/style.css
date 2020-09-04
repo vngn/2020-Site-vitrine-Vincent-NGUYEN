@@ -143,24 +143,24 @@ h1 {
   list-style: inside;
 }
 
-.mh-menu li a {
+.mh-menu li {
   display: block;
   width: 100%;
   height: 100%;
   padding: 0 10px;
 }
 
-.mh-menu li a span {
+.mh-menu li span {
   display: block;
 }
 
-.mh-menu li a span:first-child {
+.mh-menu li span:first-child {
   font-weight: 700;
   font-size: 16px;
   padding-top: 10px;
 }
 
-.mh-menu li a span:nth-child(2) {
+.mh-menu li span:nth-child(2) {
   font-weight: 400;
   font-style: italic;
   font-size: 28px;
@@ -175,8 +175,6 @@ h1 {
 }
 
 .sidenav-color-users {
-  color: white;
-  background-color: green;
   color: white;
   background-color: green;
   -webkit-box-shadow: 0 0 100px -100px white inset;
@@ -201,8 +199,6 @@ h1 {
 .sidenav-color-visitors {
   color: white;
   background-color: red;
-  color: white;
-  background-color: red;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
@@ -223,8 +219,6 @@ h1 {
 }
 
 .sidenav-color-home {
-  color: white;
-  background-color: #f29220;
   color: white;
   background-color: #f29220;
   -webkit-box-shadow: 0 0 100px -100px white inset;
@@ -249,8 +243,6 @@ h1 {
 .sidenav-color-portfolio {
   color: white;
   background-color: #f29220;
-  color: white;
-  background-color: #f29220;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
@@ -271,8 +263,6 @@ h1 {
 }
 
 .sidenav-color-articles {
-  color: white;
-  background-color: #2a9ad4;
   color: white;
   background-color: #2a9ad4;
   -webkit-box-shadow: 0 0 100px -100px white inset;
@@ -297,8 +287,6 @@ h1 {
 .sidenav-color-blog {
   color: white;
   background-color: #116bab;
-  color: white;
-  background-color: #116bab;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
@@ -321,8 +309,6 @@ h1 {
 .sidenav-color-about {
   color: white;
   background-color: #253f4e;
-  color: white;
-  background-color: #253f4e;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
@@ -343,8 +329,6 @@ h1 {
 }
 
 .sidenav-color-contact {
-  color: white;
-  background-color: #152530;
   color: white;
   background-color: #152530;
   -webkit-box-shadow: 0 0 100px -100px white inset;

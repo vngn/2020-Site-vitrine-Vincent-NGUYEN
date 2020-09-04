@@ -5,8 +5,8 @@
 {% block body %}
 <div class="example-wrapper all-title-except-home">
     <div class="example-wrapper home-color text-titre">
-    <div class="title">Articles</div>
-</div>
+        <div class="title">Articles</div>
+    </div>
     {% for message in app.flashes('success') %}
     <div class="alert alert-success" role="alert">{{ message }}</div>
     {% endfor %}
@@ -19,8 +19,8 @@
             <span>{{ article.createdAt | date ('d/m/Y') }}</span>
             <span>{{ article.title }}</span>
             <span>{{ article.categories }}</span>
-            <span>{{ article.content | raw}}</span>
         </a>
+        <span>{{ article.content | raw}}</span>
     </li>
 </ul>
 

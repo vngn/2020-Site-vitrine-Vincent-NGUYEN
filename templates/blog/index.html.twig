@@ -5,8 +5,8 @@
 {% block body %}
 <div class="example-wrapper all-title-except-home">
     <div class="example-wrapper home-color text-titre">
-    <div class="title">Blog</div>
-</div>
+        <div class="title">Blog</div>
+    </div>
     {% for message in app.flashes('success') %}
     <div class="alert alert-success" role="alert">{{ message }}</div>
     {% endfor %}
@@ -15,12 +15,11 @@
 {% for articleBlog in blog %}
 
 <ul class="mh-menu blog-color">
-    <li><a href="">
-            <span>{{ articleBlog.createdAt | date ('d/m/Y') }}</span>
-            <span>{{ articleBlog.title }}</span>
-            <span>{{ articleBlog.categories }}</span>
-            <span>{{ articleBlog.content | raw }}</span>
-        </a>
+    <li>
+        <span>{{ articleBlog.createdAt | date ('d/m/Y') }}</span>
+        <span>{{ articleBlog.title }}</span>
+        <span>{{ articleBlog.categories }}</span>
+        <span>{{ articleBlog.content | raw }}</span>
     </li>
 </ul>
 
