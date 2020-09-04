@@ -14,6 +14,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * @Route("/portfolio")
@@ -47,23 +49,40 @@ class PortfolioController extends AbstractController
      * @Route("/add", name="portfolio_add")
      * @IsGranted("ROLE_ADMIN")
      */
-    public function add(Request $request)
+    public function add(Request $request, SluggerInterface $slugger): Response
     {
         $portfolio = new Portfolio;
 
         $form = $this->createForm(PortfolioType::class, $portfolio);
 
-        $form->handleRequest($request);
+        $form->handleRequest($request); 
 
         if ($form->isSubmitted() && $form->isValid()) {
             $portfolio->setUsers($this->getUser());
             $portfolio->setActive(false);
+            $background = $form->get('background')->getData();
+
+            if ($background) {
+                $originalFilename = pathinfo($background->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename.'-'.uniqid().'.'.$background->guessExtension();
+
+                try {
+                    $background->move(
+                        $this->getParameter('photos_directory'),
+                        $newFilename
+                    );
+                } 
+                catch (FileException $e) {
+                        $portfolio->setbackground($newFilename);
+                }
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($portfolio);
             $em->flush();
 
             return $this->redirectToRoute('portfolio_index');
+            }
         }
 
         return $this->render('portfolio/add.html.twig', [
