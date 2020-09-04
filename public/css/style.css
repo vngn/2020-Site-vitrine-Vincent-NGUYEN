@@ -376,7 +376,7 @@ h1 {
 
 .sidenav-admin {
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
@@ -385,7 +385,7 @@ h1 {
 
 .sidenav-registered {
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
@@ -394,7 +394,7 @@ h1 {
 
 .sidenav-visitor {
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
@@ -403,7 +403,7 @@ h1 {
 
 .sidenav-menu {
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
@@ -412,7 +412,7 @@ h1 {
 
 .sidenav-portfolio {
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
@@ -421,7 +421,7 @@ h1 {
 
 .sidenav-articles {
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
@@ -430,7 +430,7 @@ h1 {
 
 .sidenav-blog {
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
@@ -439,7 +439,7 @@ h1 {
 
 .sidenav-about {
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
@@ -448,7 +448,7 @@ h1 {
 
 .sidenav-contact {
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
