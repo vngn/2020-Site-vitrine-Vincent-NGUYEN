@@ -9,6 +9,7 @@
 }
 
 .wrapper-link-site {
+  z-index: 999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
