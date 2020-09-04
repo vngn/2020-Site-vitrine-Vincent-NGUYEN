@@ -32,16 +32,6 @@ class Categories
     private $slug;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Categories::class, inversedBy="categories")
-     */
-    private $parent;
-
-    /**
-     * @ORM\OneToMany(targetEntity=Categories::class, mappedBy="parent")
-     */
-    private $categories;
-
-    /**
      * @ORM\OneToMany(targetEntity=Articles::class, mappedBy="categories")
      */
     private $articles;
@@ -92,18 +82,6 @@ class Categories
         return $this->slug;
     }
 
-    public function getParent(): ?self
-    {
-        return $this->parent;
-    }
-
-    public function setParent(?self $parent): self
-    {
-        $this->parent = $parent;
-
-        return $this;
-    }
-
     /**
      * @return Collection|self[]
      */
@@ -116,7 +94,6 @@ class Categories
     {
         if (!$this->categories->contains($category)) {
             $this->categories[] = $category;
-            $category->setParent($this);
         }
 
         return $this;
@@ -127,9 +104,6 @@ class Categories
         if ($this->categories->contains($category)) {
             $this->categories->removeElement($category);
             // set the owning side to null (unless already changed)
-            if ($category->getParent() === $this) {
-                $category->setParent(null);
-            }
         }
 
         return $this;
