@@ -497,15 +497,6 @@ h1 {
 
 /* ============================== 2. PAGE PORTFOLIO ============================== */
 
-.site :hover a {
-    opacity: 0;
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    -ms-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
-}
-
 .site {
     z-index: 0;
     box-shadow: 600px 0 300px rgba(255,255,255, 0.9925) inset;
@@ -513,6 +504,15 @@ h1 {
     background-size: cover;
     background-repeat: no-repeat;
     // background-attachment: fixed;
+
+    &:hover a {
+        opacity: 0;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+        -ms-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+    }
 
     li iframe {
         width: 100%;
@@ -528,16 +528,6 @@ h1 {
         -ms-transition: opacity 1s ease-in-out;
         transition: opacity 1s ease-in-out;
     }
-}
-
-.site-home li iframe {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-    left: 0px;
-    top: 0px;
-    background-color: white;
 }
 
 .site li:hover iframe {
