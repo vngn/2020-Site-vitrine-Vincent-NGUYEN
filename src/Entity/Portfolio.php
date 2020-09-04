@@ -66,6 +66,11 @@ class Portfolio
      */
     private $users;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $background;
+
     public function __construct()
     {
         $this->portfolioComment = new ArrayCollection();
@@ -199,6 +204,18 @@ class Portfolio
     public function setUsers(?Users $users): self
     {
         $this->users = $users;
+
+        return $this;
+    }
+
+    public function getBackground(): ?string
+    {
+        return $this->background;
+    }
+
+    public function setBackground(?string $background): self
+    {
+        $this->background = $background;
 
         return $this;
     }

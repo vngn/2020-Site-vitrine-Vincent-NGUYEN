@@ -805,6 +805,9 @@ h1 {
 
 .site {
   opacity: 0.9925;
+  background-image: url("../images/bg-walkingdead.png");
+  -webkit-box-shadow: 500px 0 250px 50px white inset;
+          box-shadow: 500px 0 250px 50px white inset;
 }
 
 .site li iframe {
@@ -814,7 +817,6 @@ h1 {
   z-index: 1;
   left: 0px;
   top: 0px;
-  background-color: white;
   opacity: 0;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;

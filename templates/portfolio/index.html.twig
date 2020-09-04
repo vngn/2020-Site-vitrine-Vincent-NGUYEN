@@ -6,8 +6,8 @@
 
 <div class="example-wrapper all-title-except-home">
     <div class="example-wrapper home-color text-titre">
-    <div class="title">Portfolio</div>
-</div>
+        <div class="title">Portfolio</div>
+    </div>
     {% for message in app.flashes('success') %}
     <div class="alert alert-success" role="alert">{{ message }}</div>
     {% endfor %}
@@ -15,8 +15,11 @@
 
 {% for articlePortfolio in portfolio %}
 
-<ul class="mh-menu site production portfolio-color">
-    <li><a href="">
+<ul class="mh-menu site production portfolio-color 
+style="background-image: {{ articlePortfolio.background }};
+    box-shadow: 500px 0 250px 50px white inset;">
+    <li>
+        <a href="">
             <span>{{ articlePortfolio.createdAt | date ('d/m/Y') }}</span>
             <span>{{ articlePortfolio.title }}</span>
             <span>{{ articlePortfolio.categories }}</span>
