@@ -803,18 +803,6 @@ h1 {
   transition: opacity 1s ease-in-out;
 }
 
-.pdo:hover a {
-  display: none;
-}
-
-.php:hover a {
-  display: none;
-}
-
-.html:hover a {
-  display: none;
-}
-
 .site {
   opacity: 0.9925;
 }
