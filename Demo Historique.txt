@@ -23,6 +23,7 @@ pages portfolio, articles et blog :
 - intégrer condition d'affichage si active ou non
 - annuler les liens survol et clic sujet dans comment
 - intégrer databases dans comment
+- régler bug affichage btn "lire la suite"
 
 page about :
 - remplir page about
