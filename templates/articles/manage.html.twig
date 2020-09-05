@@ -22,7 +22,7 @@
             {% for article in articles %}
             <tr>
                 <td>{{ article.id }}</td>
-                <td>{{ article.title }}</td>
+                <td><a href="{{ path('articles_show', {'id': article.id}) }}">{{ article.title }}</a></td>
                 {# <td>{{ article.categories }}</td> #}
                 <td>{{ article.createdAt | date }}</td>
                 <td>

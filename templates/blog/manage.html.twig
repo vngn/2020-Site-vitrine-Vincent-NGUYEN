@@ -22,7 +22,7 @@
             {% for blog in blog %}
             <tr>
                 <td>{{ blog.id }}</td>
-                <td>{{ blog.title }}</td>
+                <td><a href="{{ path('blog_show', {'id': blog.id}) }}">{{ blog.title }}</a></td>
                 {# <td>{{ blog.categories }}</td> #}
                 <td>{{ blog.createdAt | date }}</td>
                 <td>
