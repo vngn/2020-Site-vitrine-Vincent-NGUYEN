@@ -32,8 +32,13 @@
                     </label>
                 </td>
                 <td>
-                    <a href="{{ path('portfolio_edit', {'id': portfolio.id}) }}" class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
-                
+                    <a href="{{ path('portfolio_edit', {'id': portfolio.id}) }}"
+                        class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
+
+                    <a href="{{ path('portfolio_edit', {'id': portfolio.id}) }}"
+                        class="btn shadow-1 rounded-1 red modal-trigger">Gérer les commentaires
+                        ({{ portfolio.portfolioComment | length }})</a>    
+
                     <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
                         data-id="{{ portfolio.id }}" data-titre="{{ portfolio.title }}">Supprimer</a>
                 </td>
