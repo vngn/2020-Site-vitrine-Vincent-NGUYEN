@@ -197,6 +197,10 @@ h1 {
     }
 }
 
+a {
+	text-decoration: none;
+}
+
 /* barres de navigation verticales */
 
 @mixin sidenav {

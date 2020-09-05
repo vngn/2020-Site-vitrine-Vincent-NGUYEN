@@ -168,6 +168,10 @@ h1 {
   transition: color 0.2s linear;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* barres de navigation verticales */
 .sidenav {
   border-top-right-radius: 20px;
