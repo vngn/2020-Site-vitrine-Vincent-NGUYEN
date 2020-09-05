@@ -133,7 +133,7 @@ h1 {
 }
 
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .link {
@@ -145,11 +145,25 @@ a {
 /* background */
 
 .bg00 {
+    // z-index:900;
     background: url('../images/bg00.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    // -webkit-transition: all 2s;
+    // transition: all 2s;
+    // -webkit-filter: grayscale(100%);
+    // /* Pour les navigateurs Chrome, Safari, Opera */
+    // filter: grayscale(100%);
+    // /* Firefox */
+
+    // &:hover {
+    //     -webkit-filter: grayscale(0%);
+    //     /* Pour les navigateurs Chrome, Safari, Opera */
+    //     filter: grayscale(0%);
+    //     /* Firefox */
+    // }
 }
 
 /* blocs de page de base */
@@ -205,7 +219,7 @@ a {
     }
 }
 
-/* barres de navigation verticales */
+/* barres de navigation verticales (Axentix) */
 
 @mixin sidenav {
     border-top-right-radius: 20px;
@@ -507,7 +521,7 @@ a {
 
 .site {
     z-index: 0;
-    box-shadow: 600px 0 300px rgba(255,255,255, 0.9925) inset;
+    box-shadow: 600px 0 300px rgba(255, 255, 255, 0.9925) inset;
     // background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
