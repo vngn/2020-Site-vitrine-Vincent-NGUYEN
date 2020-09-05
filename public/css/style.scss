@@ -151,20 +151,23 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    // -webkit-transition: all 2s;
-    // transition: all 2s;
-    // -webkit-filter: grayscale(100%);
-    // /* Pour les navigateurs Chrome, Safari, Opera */
-    // filter: grayscale(100%);
-    // /* Firefox */
-
-    // &:hover {
-    //     -webkit-filter: grayscale(0%);
-    //     /* Pour les navigateurs Chrome, Safari, Opera */
-    //     filter: grayscale(0%);
-    //     /* Firefox */
-    // }
 }
+
+// ? {
+// -webkit-transition: all 2s;
+//     transition: all 2s;
+//     -webkit-filter: grayscale(100%);
+//     /* Pour les navigateurs Chrome, Safari, Opera */
+//     filter: grayscale(100%);
+//     /* Firefox */
+
+//     &:hover {
+//         -webkit-filter: grayscale(0%);
+//         /* Pour les navigateurs Chrome, Safari, Opera */
+//         filter: grayscale(0%);
+//         /* Firefox */
+//     }
+// }
 
 /* blocs de page de base */
 
