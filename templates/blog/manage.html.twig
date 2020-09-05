@@ -22,9 +22,9 @@
             {% for blog in blog %}
             <tr>
                 <td>{{ blog.id }}</td>
-                <td><a href="{{ path('blog_show', {'id': blog.id}) }}">{{ blog.title }}</a></td>
+                <td><a href="{{ path('blog_show', {'id': blog.id}) }}" class="link">{{ blog.title }}</a></td>
                 {# <td>{{ blog.categories }}</td> #}
-                <td>{{ blog.createdAt | date }}</td>
+                <td>{{ blog.createdAt | date ('d/m/Y') }}</td>
                 <td>
                     <label class="form-switch mt-2">
                         <input type="checkbox" {{ (blog.active) ? 'checked' : '' }} data-id="{{ blog.id }}" />

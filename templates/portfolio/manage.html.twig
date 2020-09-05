@@ -22,9 +22,9 @@
             {% for portfolio in portfolio %}
             <tr>
                 <td>{{ portfolio.id }}</td>
-                <td><a href="{{ path('portfolio_show', {'id': portfolio.id}) }}">{{ portfolio.title }}</a></td>
+                <td><a href="{{ path('portfolio_show', {'id': portfolio.id}) }}" class="link">{{ portfolio.title }}</a></td>
                 {# <td>{{ portfolio.categories }}</td> #}
-                <td>{{ portfolio.createdAt | date }}</td>
+                <td>{{ portfolio.createdAt | date ('d/m/Y') }}</td>
                 <td>
                     <label class="form-switch mt-2">
                         <input type="checkbox" {{ (portfolio.active) ? 'checked' : '' }} data-id="{{ portfolio.id }}" />

@@ -132,6 +132,14 @@ h1 {
     text-align: center;
 }
 
+a {
+	text-decoration: none;
+}
+
+.link {
+    color: blue;
+}
+
 /* ============================== 0. TOUTES LES PAGES ============================== */
 
 /* background */
@@ -195,10 +203,6 @@ h1 {
         -ms-transition: color 0.2s linear;
         transition: color 0.2s linear;
     }
-}
-
-a {
-	text-decoration: none;
 }
 
 /* barres de navigation verticales */

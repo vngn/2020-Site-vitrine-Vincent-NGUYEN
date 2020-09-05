@@ -22,9 +22,9 @@
             {% for article in articles %}
             <tr>
                 <td>{{ article.id }}</td>
-                <td><a href="{{ path('articles_show', {'id': article.id}) }}">{{ article.title }}</a></td>
+                <td><a href="{{ path('articles_show', {'id': article.id}) }}" class="link">{{ article.title }}</a></td>
                 {# <td>{{ article.categories }}</td> #}
-                <td>{{ article.createdAt | date }}</td>
+                <td>{{ article.createdAt | date ('d/m/Y') }}</td>
                 <td>
                     <label class="form-switch mt-2">
                         <input type="checkbox" {{ (article.active) ? 'checked' : '' }} data-id="{{ article.id }}" />
