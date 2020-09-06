@@ -136,10 +136,9 @@ a {
 
 .mh-menu {
   width: 84%;
-  height: 550px;
   border-radius: 20px;
   margin: 10px auto;
-  padding: 0;
+  padding: 20px;
   position: relative;
 }
 
@@ -792,6 +791,7 @@ a {
 /* ============================== 2. PAGE PORTFOLIO ============================== */
 .site {
   z-index: 0;
+  height: 550px;
   text-shadow: 0 0 2px white;
   -webkit-box-shadow: 600px 0 300px rgba(255, 255, 255, 0.9925) inset;
           box-shadow: 600px 0 300px rgba(255, 255, 255, 0.9925) inset;

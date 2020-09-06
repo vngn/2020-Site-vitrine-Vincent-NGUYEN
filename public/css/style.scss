@@ -177,17 +177,12 @@ a {
     padding: 2px 6px;
 }
 
-.mh-menu {
+@mixin block-shape {
     width: 84%;
-    height: 550px;
     border-radius: 20px;
     margin: 10px auto;
-    padding: 0;
+    padding: 20px;
     position: relative;
-
-    // ul {
-    //     list-style: inside;
-    // }
 
     li {
         display: block;
@@ -216,6 +211,11 @@ a {
         -ms-transition: color 0.2s linear;
         transition: color 0.2s linear;
     }
+}
+
+.mh-menu {
+
+    @include block-shape;
 }
 
 /* barres de navigation verticales (Axentix) */
@@ -519,6 +519,7 @@ a {
 
 .site {
     z-index: 0;
+    height: 550px;
     text-shadow: 0 0 2px white;
     box-shadow: 600px 0 300px rgba(255, 255, 255, 0.9925) inset;
     // background-position: center;
