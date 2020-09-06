@@ -5,14 +5,10 @@
 {% block body %}
 
 
-<div class="example-wrapper all-title-except-home">
-    <div class="example-wrapper home-color">
-    <div class="title">Contact</div>
-</div>
-    {% for message in app.flashes('success') %}
-    <div class="alert alert-success" role="alert">{{ message }}</div>
-    {% endfor %}
-</div>
+<video class="video-title" height="360" autoplay="true" loop muted>
+    <source src="{{asset('bgvideo/background-video.mp4')}}" type="video/mp4" />
+</video>
+<div class="video-title-text">Contact</div>
 
 <div class="example-wrapper contact-color">
     {{ form(form) }}

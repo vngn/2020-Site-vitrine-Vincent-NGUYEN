@@ -486,12 +486,12 @@ a {
 .video-title-text {
   z-index: 4;
   position: relative;
-  top: -350px;
+  top: -380px;
   text-shadow: 0 0 2px black;
   border-radius: 20px;
-  -webkit-box-shadow: 12px 12px white, 12px -12px white, -12px -12px white, -12px 12px white;
-          box-shadow: 12px 12px white, 12px -12px white, -12px -12px white, -12px 12px white;
-  width: 525px;
+  -webkit-box-shadow: 5px 50px white, 5px -50px white, -5px -50px white, -5px 50px white;
+          box-shadow: 5px 50px white, 5px -50px white, -5px -50px white, -5px 50px white;
+  width: 630px;
   margin: auto;
   font-size: 140px;
   line-height: 295px;
@@ -500,26 +500,6 @@ a {
   font-weight: 800;
   text-align: center;
   letter-spacing: -2px;
-}
-
-.titleb {
-  text-shadow: 0 0 2px black;
-  border-radius: 20px;
-  margin-top: 50px;
-  padding-top: 100px;
-  height: 400px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  width: 800px;
-  font-size: 140px;
-  line-height: 180px;
-  color: white;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 800;
-  text-align: center;
-  letter-spacing: -8px;
 }
 
 /* ============================== 1. PAGE ACCUEIL ============================== */
