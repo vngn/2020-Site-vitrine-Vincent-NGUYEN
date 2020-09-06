@@ -3,10 +3,12 @@
 {% block title %}La section Blog{% endblock %}
 
 {% block body %}
-<video class="video-title" height="360" autoplay="true" loop muted>
-    <source src="{{asset('bgvideo/background-video.mp4')}}" type="video/mp4" />
-</video>
-<div class="video-title-text">Blog</div>
+<div class="color-block-video-title">
+    <video class="video-title" height="360" autoplay="true" loop muted>
+        <source src="{{asset('bgvideo/background-video.mp4')}}" type="video/mp4" />
+    </video>
+    <div class="video-title-text">Blog</div>
+</div>
 
 {% for articleBlog in blog %}
 

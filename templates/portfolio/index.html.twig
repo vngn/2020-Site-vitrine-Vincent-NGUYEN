@@ -3,15 +3,17 @@
 {% block title %}Hello MainController!{% endblock %}
 
 {% block body %}
-
-<video class="video-title" height="360" autoplay="true" loop muted>
-    <source src="{{asset('bgvideo/background-video.mp4')}}" type="video/mp4" />
-</video>
-<div class="video-title-text">Portfolio</div>
+<div class="color-block-video-title">
+    <video class="video-title" height="360" autoplay="true" loop muted>
+        <source src="{{asset('bgvideo/background-video.mp4')}}" type="video/mp4" />
+    </video>
+    <div class="video-title-text">Portfolio</div>
+</div>
 
 {% for articlePortfolio in portfolio %}
 
-<ul class="block-portfolio portfolio-color" style="background-image: url('{{ asset('uploads/images/'~ articlePortfolio.background) }}');">
+<ul class="block-portfolio portfolio-color"
+    style="background-image: url('{{ asset('uploads/images/'~ articlePortfolio.background) }}');">
     <li>
         <a href="">
             <span>{{ articlePortfolio.createdAt | date ('d/m/Y') }}</span>

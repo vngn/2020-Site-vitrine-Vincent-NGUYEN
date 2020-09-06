@@ -378,20 +378,27 @@ a {
 
 /* Texte titre sauf page d'accueil */
 
+.color-block-video-title {
+    height: 580px;
+    padding-top: 330px;
+    margin-top: -100px;
+    margin-bottom: 100px;
+    background: $background-color;;
+}
+
 .video-title {
     z-index: 2;
     width: 100%;
-    margin: 50px auto;
-
+    margin: -175px auto;
 }
 
 .video-title-text {
     z-index: 4;
     position: relative;
-    top: -380px;
+    top: -165px;
     text-shadow: 0 0 2px black;
     border-radius: 20px;
-    box-shadow: 5px 50px white, 5px -50px white, -5px -50px white, -5px 50px white;
+    box-shadow: 25px 50px white, 25px -50px white, -25px -50px white, -25px 50px white;
     width: 630px;
     margin: auto;
     font-size: 140px;

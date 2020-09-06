@@ -3,9 +3,10 @@
 {% block title %}Hello MainController!{% endblock %}
 
 {% block body %}
-
-<video class="text-title video-title" height="360" autoplay="true" loop muted>
-    <source src="{{asset('bgvideo/background-video.mp4')}}" type="video/mp4" />
-</video>
-<div class="video-title-text">A propos</div>
+<div class="color-block-video-title">
+    <video class="video-title" height="360" autoplay="true" loop muted>
+        <source src="{{asset('bgvideo/background-video.mp4')}}" type="video/mp4" />
+    </video>
+    <div class="video-title-text">A propos</div>
+</div>
 {% endblock %}
