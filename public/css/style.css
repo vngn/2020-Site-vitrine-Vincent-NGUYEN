@@ -898,12 +898,12 @@ a {
 
 /* ============================== 4. PAGE BLOG ============================== */
 .block-blog {
-  opacity: 0.9925;
   width: 84%;
   border-radius: 20px;
   margin: 10px auto;
   padding: 20px;
   position: relative;
+  opacity: 0.9925;
 }
 
 .block-blog li {
