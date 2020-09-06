@@ -30,14 +30,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 
-{% if is_granted('ROLE_ADMIN') %}
+{# {% if is_granted('ROLE_ADMIN') %}
 <!-- Bootstrap Background Vidéo-->
 <video id="video" autoplay="true" loop muted>
     <source src="{{asset('bgvideo/background-video.mp4')}}" type="video/mp4" />
 </video>
 {% else %}
 <body class="bg00">
-{% endif %}
+{% endif %} #}
 
     <header class="container-fluid main clearfix">
         <nav id="menu" class="nav nav-head">

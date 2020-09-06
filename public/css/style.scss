@@ -5,6 +5,24 @@
     - Version : 1.0.1 du 01/08/2020
     - Auteur: Vincent NGUYEN- 01/08/2020
 
+/* Z-INDEX
+
+style.scss :
+    - .block-portfolio                      z-index: 0
+    - .block-portfolio li iframe            z-index: 1
+    - .video-title                          z-index: 2
+    - .video-title-rext                     z-index: 4
+    // - .bg00                                 z-index: 900
+    - @mixin button-sidebar-position        z-index: 998
+    - @mixin sidenav                        z-index: 999
+    
+
+nasbar.scss :
+    - .navtoogle i                          z-index: -1
+
+nextbutton.scss :
+    - .wrapper-link-site                    z-index: 99
+
 /* COLORS
     - default body text     black
     - h1                    black
@@ -386,28 +404,55 @@ a {
 
 /* Texte titre sauf page d'accueil */
 
-.all-title-except-home .text-title {
-    height: 220px;
-    padding: 0;
-    padding-top: 20px;
-    margin: 120px auto;
-    // border-radius: 20px;
+.video-title {
+    z-index: 2;
+    width: 100%;
+    margin: 50px auto;
+
 }
 
-.all-title-except-home .title {
-    line-height: 180px;
-}
-
-.about-title .text-title {
-    height: 220px;
-    padding: 0;
-    padding-top: 10px;
-    margin: 120px auto;
+.video-title-text {
+    z-index: 4;
+    position: relative;
+    top: -350px;
+    text-shadow: 0 0 2px black;
     border-radius: 20px;
+    box-shadow: 12px 12px white, 12px -12px white, -12px -12px white, -12px 12px white;
+    width: 525px;
+    margin: auto;
+    font-size: 140px;
+    line-height: 295px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: -2px;
+
 }
 
-.about-title .title {
+.titleb {
+    text-shadow: 0 0 2px black;
+    border-radius: 20px;
+    margin-top: 50px;
+    padding-top: 100px;
+    height: 400px;
+    // background-color: transparent;
+    // background: url('../bgvideo/background-video.mp4');
+    // background: url('../images/rainbow-nebula.jpg');
+    // background: url('../images/bg00.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 800px;
+    font-size: 140px;
     line-height: 180px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    // line-height: 140px;
+    letter-spacing: -8px;
 }
 
 /* ============================== 1. PAGE ACCUEIL ============================== */
