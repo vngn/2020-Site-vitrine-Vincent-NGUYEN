@@ -118,9 +118,19 @@ body {
 
 /* paramétrages divers */
 
+/* boutons généraux (modifier, gérer, supprimer...) */
+
 .btn {
     display: inline-block;
     margin: 0;
+}
+
+/* boutons type next-btn (page du site, lire la suite...) */
+
+.btn-site {
+    width: 84%;
+    margin: 10px auto 40px;
+    text-align: center;
 }
 
 h1 {
@@ -517,9 +527,9 @@ a {
 
 /* ============================== 2. PAGE PORTFOLIO ============================== */
 
-.site {
+.block-production {
     z-index: 0;
-    height: 550px;
+    height: 500px;
     text-shadow: 0 0 2px white;
     box-shadow: 600px 0 300px rgba(255, 255, 255, 0.9925) inset;
     // background-position: center;
@@ -553,16 +563,10 @@ a {
     }
 }
 
-.site li:hover iframe {
+.block-production li:hover iframe {
     left: 0px;
     top: 0px;
     opacity: 1;
-}
-
-.btn-site {
-    width: 84%;
-    margin: 10px auto 40px;
-    text-align: center;
 }
 
 /* ============================== 3. PAGE ARTICLES ============================== */

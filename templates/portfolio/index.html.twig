@@ -15,7 +15,7 @@
 
 {% for articlePortfolio in portfolio %}
 
-<ul class="mh-menu site portfolio-color" style="background-image: url('{{ asset('uploads/images/'~ articlePortfolio.background) }}');">
+<ul class="mh-menu block-production portfolio-color" style="background-image: url('{{ asset('uploads/images/'~ articlePortfolio.background) }}');">
     <li>
         <a href="">
             <span>{{ articlePortfolio.createdAt | date ('d/m/Y') }}</span>
