@@ -223,11 +223,6 @@ a {
     }
 }
 
-.mh-menu {
-
-    @include block-shape;
-}
-
 /* barres de navigation verticales (Axentix) */
 
 @mixin sidenav {
@@ -417,6 +412,10 @@ a {
 
 /* ============================== 1. PAGE ACCUEIL ============================== */
 
+.block-home {
+    @include block-shape;
+}
+
 /* Texte titre */
 
 .text-titre {
@@ -497,27 +496,27 @@ a {
     }
 }
 
-.mh-menu-home {
+.block-menu-home {
     @include menu-home-for-all ($color-home);
 }
 
-.mh-menu-portfolio {
+.block-menu-portfolio {
     @include menu-home-for-all ($color-portfolio);
 }
 
-.mh-menu-articles {
+.block-menu-articles {
     @include menu-home-for-all ($color-articles);
 }
 
-.mh-menu-blog {
+.block-menu-blog {
     @include menu-home-for-all ($color-blog);
 }
 
-.mh-menu-about {
+.block-menu-about {
     @include menu-home-for-all ($color-about);
 }
 
-.mh-menu-contact {
+.block-menu-contact {
     @include menu-home-for-all ($color-contact);
 }
 
@@ -528,6 +527,7 @@ a {
 /* ============================== 2. PAGE PORTFOLIO ============================== */
 
 .block-portfolio {
+    @include block-shape;
     z-index: 0;
     height: 500px;
     text-shadow: 0 0 2px white;
@@ -571,10 +571,15 @@ a {
 
 /* ============================== 3. PAGE ARTICLES ============================== */
 
+.block-articles {
+    @include block-shape;
+}
+
 /* ============================== 4. PAGE BLOG ============================== */
 
 .block-blog {
     opacity: 0.9925;
+    @include block-shape;
 }
 
 /* ============================== 5. PAGE A PROPOS ============================== */

@@ -142,39 +142,6 @@ a {
   padding: 2px 6px;
 }
 
-.mh-menu {
-  width: 84%;
-  border-radius: 20px;
-  margin: 10px auto;
-  padding: 20px;
-  position: relative;
-}
-
-.mh-menu li {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 0 10px;
-}
-
-.mh-menu li span {
-  display: block;
-}
-
-.mh-menu li span:first-child {
-  font-weight: 700;
-  font-size: 16px;
-  padding-top: 10px;
-}
-
-.mh-menu li span:nth-child(2) {
-  font-weight: 400;
-  font-style: italic;
-  font-size: 28px;
-  -webkit-transition: color 0.2s linear;
-  transition: color 0.2s linear;
-}
-
 /* barres de navigation verticales (Axentix) */
 .sidenav {
   border-top-right-radius: 20px;
@@ -517,6 +484,39 @@ a {
 }
 
 /* ============================== 1. PAGE ACCUEIL ============================== */
+.block-home {
+  width: 84%;
+  border-radius: 20px;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+}
+
+.block-home li {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.block-home li span {
+  display: block;
+}
+
+.block-home li span:first-child {
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.block-home li span:nth-child(2) {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
 /* Texte titre */
 .text-titre {
   width: 100%;
@@ -564,7 +564,7 @@ a {
 }
 
 /* blocks thèmes de la page d'accueil */
-.mh-menu-home {
+.block-menu-home {
   width: 450px;
   height: 450px;
   margin: auto;
@@ -582,7 +582,7 @@ a {
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
 }
 
-.mh-menu-home:hover {
+.block-menu-home:hover {
   padding: 60px 50px;
   font-size: 1.05em;
   color: black;
@@ -598,11 +598,11 @@ a {
           box-shadow: 0 0 50px #f29220 inset;
 }
 
-.mh-menu-home:hover .sidenav-menu-icon {
+.block-menu-home:hover .sidenav-menu-icon {
   color: #f29220;
 }
 
-.mh-menu-portfolio {
+.block-menu-portfolio {
   width: 450px;
   height: 450px;
   margin: auto;
@@ -620,7 +620,7 @@ a {
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
 }
 
-.mh-menu-portfolio:hover {
+.block-menu-portfolio:hover {
   padding: 60px 50px;
   font-size: 1.05em;
   color: black;
@@ -636,11 +636,11 @@ a {
           box-shadow: 0 0 50px #f29220 inset;
 }
 
-.mh-menu-portfolio:hover .sidenav-menu-icon {
+.block-menu-portfolio:hover .sidenav-menu-icon {
   color: #f29220;
 }
 
-.mh-menu-articles {
+.block-menu-articles {
   width: 450px;
   height: 450px;
   margin: auto;
@@ -658,7 +658,7 @@ a {
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
 }
 
-.mh-menu-articles:hover {
+.block-menu-articles:hover {
   padding: 60px 50px;
   font-size: 1.05em;
   color: black;
@@ -674,11 +674,11 @@ a {
           box-shadow: 0 0 50px #2a9ad4 inset;
 }
 
-.mh-menu-articles:hover .sidenav-menu-icon {
+.block-menu-articles:hover .sidenav-menu-icon {
   color: #2a9ad4;
 }
 
-.mh-menu-blog {
+.block-menu-blog {
   width: 450px;
   height: 450px;
   margin: auto;
@@ -696,7 +696,7 @@ a {
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
 }
 
-.mh-menu-blog:hover {
+.block-menu-blog:hover {
   padding: 60px 50px;
   font-size: 1.05em;
   color: black;
@@ -712,11 +712,11 @@ a {
           box-shadow: 0 0 50px #116bab inset;
 }
 
-.mh-menu-blog:hover .sidenav-menu-icon {
+.block-menu-blog:hover .sidenav-menu-icon {
   color: #116bab;
 }
 
-.mh-menu-about {
+.block-menu-about {
   width: 450px;
   height: 450px;
   margin: auto;
@@ -734,7 +734,7 @@ a {
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
 }
 
-.mh-menu-about:hover {
+.block-menu-about:hover {
   padding: 60px 50px;
   font-size: 1.05em;
   color: black;
@@ -750,11 +750,11 @@ a {
           box-shadow: 0 0 50px #253f4e inset;
 }
 
-.mh-menu-about:hover .sidenav-menu-icon {
+.block-menu-about:hover .sidenav-menu-icon {
   color: #253f4e;
 }
 
-.mh-menu-contact {
+.block-menu-contact {
   width: 450px;
   height: 450px;
   margin: auto;
@@ -772,7 +772,7 @@ a {
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
 }
 
-.mh-menu-contact:hover {
+.block-menu-contact:hover {
   padding: 60px 50px;
   font-size: 1.05em;
   color: black;
@@ -788,7 +788,7 @@ a {
           box-shadow: 0 0 50px #152530 inset;
 }
 
-.mh-menu-contact:hover .sidenav-menu-icon {
+.block-menu-contact:hover .sidenav-menu-icon {
   color: #152530;
 }
 
@@ -798,6 +798,11 @@ a {
 
 /* ============================== 2. PAGE PORTFOLIO ============================== */
 .block-portfolio {
+  width: 84%;
+  border-radius: 20px;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
   z-index: 0;
   height: 500px;
   text-shadow: 0 0 2px white;
@@ -805,6 +810,31 @@ a {
           box-shadow: 600px 0 300px rgba(255, 255, 255, 0.9925) inset;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.block-portfolio li {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.block-portfolio li span {
+  display: block;
+}
+
+.block-portfolio li span:first-child {
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.block-portfolio li span:nth-child(2) {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 
 .block-portfolio:hover a {
@@ -833,9 +863,72 @@ a {
 }
 
 /* ============================== 3. PAGE ARTICLES ============================== */
+.block-articles {
+  width: 84%;
+  border-radius: 20px;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+}
+
+.block-articles li {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.block-articles li span {
+  display: block;
+}
+
+.block-articles li span:first-child {
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.block-articles li span:nth-child(2) {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
 /* ============================== 4. PAGE BLOG ============================== */
 .block-blog {
   opacity: 0.9925;
+  width: 84%;
+  border-radius: 20px;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+}
+
+.block-blog li {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.block-blog li span {
+  display: block;
+}
+
+.block-blog li span:first-child {
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.block-blog li span:nth-child(2) {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 
 /* ============================== 5. PAGE A PROPOS ============================== */
