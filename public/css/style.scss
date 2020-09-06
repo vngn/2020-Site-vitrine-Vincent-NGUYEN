@@ -74,6 +74,10 @@ nextbutton.scss :
 
 /* couleurs */
 
+$background-color: white;
+
+$background-color-bis: rgb(225, 225, 225);
+
 $color-users: green;
 
 $color-visitors: red;
@@ -90,44 +94,41 @@ $color-about: rgb(37, 63, 78);
 
 $color-contact: rgb(21, 37, 48);
 
-@mixin background-color {
-    background-color: white;
-}
-
 .users-color {
-    @include background-color;
+    background-color: $background-color;
 }
 
 .visitors-color {
-    @include background-color;
+    background-color: $background-color;
 }
 
 .home-color {
-    @include background-color;
+    background-color: $background-color;
 }
 
 .portfolio-color {
-    @include background-color;
+    background-color: $background-color;
 }
 
 .articles-color {
-    @include background-color;
+    background-color: $background-color;
 }
 
 .blog-color {
-    @include background-color;
+    background-color: $background-color;
 }
 
 .about-color {
-    @include background-color;
+    background-color: $background-color;
 }
 
 .contact-color {
-    @include background-color;
+    background-color: $background-color;
 }
 
 body {
-    @include background-color;
+    width: 100%;
+    background-color: $background-color-bis;
     font-weight: 400;
     font-size: 15px;
     color: #3a2127;
@@ -164,33 +165,6 @@ a {
 }
 
 /* ============================== 0. TOUTES LES PAGES ============================== */
-
-/* background */
-
-.bg00 {
-    // z-index:900;
-    background: url('../images/bg00.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-// ? {
-// -webkit-transition: all 2s;
-//     transition: all 2s;
-//     -webkit-filter: grayscale(100%);
-//     /* Pour les navigateurs Chrome, Safari, Opera */
-//     filter: grayscale(100%);
-//     /* Firefox */
-
-//     &:hover {
-//         -webkit-filter: grayscale(0%);
-//         /* Pour les navigateurs Chrome, Safari, Opera */
-//         filter: grayscale(0%);
-//         /* Firefox */
-//     }
-// }
 
 /* blocs de page de base */
 
