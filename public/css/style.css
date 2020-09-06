@@ -472,8 +472,7 @@ a {
   border-radius: 20px;
   width: 100px;
   height: 100px;
-  left: 55px;
-  bottom: 25px;
+  margin: -35px auto 25px;
 }
 
 .sidenav-menu-trigger:hover {
