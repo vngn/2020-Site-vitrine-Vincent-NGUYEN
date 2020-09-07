@@ -11,7 +11,6 @@ général :
 - uniformiser les formulaires
 - pot de miel - ajout input fantôme
 - gérer le contenu des menus sidenav
-- régler le pb des hr/ dans les menus sidenav
 - s'occuper du responsive (navbar, sidebar, pages en général)
 - choisir la police (roboto) grosse police
 
