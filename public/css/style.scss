@@ -140,14 +140,12 @@ body {
 /* paramétrages divers */
 
 /* boutons généraux (modifier, gérer, supprimer...) */
-
 .btn {
     display: inline-block;
     margin: 0;
 }
 
 /* boutons type next-btn (page du site, lire la suite...) */
-
 .btn-site {
     width: 84%;
     margin: 10px auto 40px;
@@ -162,9 +160,18 @@ a {
     text-decoration: none;
 }
 
+/* couleur des liens */
 .link {
     color: blue;
 }
+
+hr {
+    width: 100%;
+    margin: 0;
+    
+}
+
+
 
 /* ============================== 0. TOUTES LES PAGES ============================== */
 
