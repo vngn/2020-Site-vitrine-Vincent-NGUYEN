@@ -8,7 +8,9 @@
     <h1 class="portfolio-color">Article du portfolio en détail</h1>
 </div>
 
-<ul class="block-portfolio portfolio-color">
+<ul class="block-portfolio portfolio-color"
+    style="background-image: url('{{ asset('uploads/images/'~ portfolio.background) }}');">
+
     <li><a href="">
             <span>{{ portfolio.createdAt | date ('d/m/Y') }}</span>
             <span>{{ portfolio.title }}</span>
