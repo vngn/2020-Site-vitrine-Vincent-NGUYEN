@@ -19,7 +19,7 @@
             <span>{{ articlePortfolio.createdAt | date ('d/m/Y') }}</span>
             <span>{{ articlePortfolio.title }}</span>
             <span>{{ articlePortfolio.categories }}</span>
-            <span>{{ articlePortfolio.content | raw }}</span>
+            {# <span>{{ articlePortfolio.content | raw }}</span> #}
         </a>
         <iframe src="{{ articlePortfolio.image }}" class="site-iframe"></iframe>
     </li>
