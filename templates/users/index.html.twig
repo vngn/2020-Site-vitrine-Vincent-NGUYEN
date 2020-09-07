@@ -3,30 +3,35 @@
 {% block title %}Profil de {{ app.user.firstname }} {{ app.user.name }} !{% endblock %}
 
 {% block body %}
-<div class="grix xs4 container example-wrapper">
+<div class="example-wrapper block-users users-color">
     {% for message in app.flashes('message') %}
-    <div class="col-xs4">
-        <div class="p-3 my-2 rounded-2 success">{{ message }}</div>
-    </div>
+    <div class="p-3 my-2 rounded-2 success">{{ message }}</div>
     {% endfor %}
 
-    <div class="col-xs4 users-color">
-        <h1>Profil de {{ app.user.firstname }} {{ app.user.name }}</h1>
+    <h1>Profil de {{ app.user.firstname }} {{ app.user.name }}</h1>
 
-        <div class="col-xs1">Nom :</div>
-        <div class="col-xs3">{{ app.user.name }}</div>
-        <div class="col-xs1">Prénom :</div>
-        <div class="col-xs3">{{ app.user.firstname }}</div>
-        <div class="col-xs1">Email :</div>
-        <div class="col-xs3">{{ app.user.email }}</div>
-        <div class="col-xs4">
-            <a href="{{ path('users_profil_edit') }}" class="btn shadow-1 rounded-1 blue">Modifier le profil</a>
-            <a href="{{ path('users_pass_edit') }}" class="btn shadow-1 rounded-1 blue">Modifier le mot de passe</a>
-        </div>
-    </div>
+    <table class="table striped">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ app.user.name }}</td>
+                <td>{{ app.user.firstname }}</td>
+                <td>{{ app.user.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('users_profil_edit') }}" class="btn shadow-1 rounded-1 blue">Modifier le profil</a>
+    <a href="{{ path('users_pass_edit') }}" class="btn shadow-1 rounded-1 blue">Modifier le mot de passe</a>
 </div>
 
-<div class="example-wrapper users-color">
+<div class="example-wrapper block-users users-color">
     <h1>{{ app.user.portfolioComments | length }} commentaire(s) dans la section Portfolio</h1>
     <table class="table striped">
         <thead>
@@ -48,7 +53,7 @@
     </table>
 </div>
 
-<div class="example-wrapper users-color">
+<div class="example-wrapper block-users users-color">
     <h1>{{ app.user.articlesComments | length }} commentaire(s) dans la section Articles</h1>
     <table class="table striped">
         <thead>
@@ -70,7 +75,7 @@
     </table>
 </div>
 
-<div class="example-wrapper users-color">
+<div class="example-wrapper block-users users-color">
     <h1>{{ app.user.blogComments | length }} commentaire(s) dans section Blog</h1>
     <table class="table striped">
         <thead>
