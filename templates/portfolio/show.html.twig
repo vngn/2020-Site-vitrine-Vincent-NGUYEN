@@ -29,7 +29,7 @@
 </div>
 
 {% if is_granted('ROLE_USER') %}
-<div class="comment example-wrapper block-portfolio-mini portfolio-color portfolio-btn-adjustment">
+<div class="comment example-wrapper block-portfolio-light portfolio-color portfolio-btn-adjustment">
     {{ form_start(portfolioCommentForm) }}
     {{ form_row(portfolioCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
 
@@ -50,9 +50,9 @@
 {% endif %}
 
 <section id="commentaires">
-    <h1 class="example-wrapper block-portfolio-mini portfolio-color">{{ portfolio.portfolioComment | length }}
+    <h1 class="example-wrapper block-portfolio-light portfolio-color">{{ portfolio.portfolioComment | length }}
         commentaire(s) :</h1>
-    <div class="comment example-wrapper block-portfolio-mini portfolio-color">
+    <div class="comment example-wrapper block-portfolio-light portfolio-color">
         <table class="table striped">
             <thead>
                 <tr>

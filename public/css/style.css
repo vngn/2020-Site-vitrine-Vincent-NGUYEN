@@ -818,7 +818,7 @@ a {
 }
 
 /* ============================== 2. PAGE PORTFOLIO ============================== */
-.block-portfolio-mini {
+.block-portfolio-light {
   width: 84%;
   border: 1px solid #e1e1e1;
   border-radius: 20px;
@@ -827,24 +827,24 @@ a {
   position: relative;
 }
 
-.block-portfolio-mini li {
+.block-portfolio-light li {
   display: block;
   width: 100%;
   height: 100%;
   padding: 0 10px;
 }
 
-.block-portfolio-mini li span {
+.block-portfolio-light li span {
   display: block;
 }
 
-.block-portfolio-mini li span:first-child {
+.block-portfolio-light li span:first-child {
   font-weight: 700;
   font-size: 16px;
   padding-top: 10px;
 }
 
-.block-portfolio-mini li span:nth-child(2) {
+.block-portfolio-light li span:nth-child(2) {
   font-weight: 400;
   font-style: italic;
   font-size: 28px;
@@ -1032,6 +1032,40 @@ a {
 }
 
 /* ============================== 7. PAGE CATEGORIES ============================== */
+.block-categories {
+  width: 84%;
+  border: 1px solid #e1e1e1;
+  border-radius: 20px;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+}
+
+.block-categories li {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.block-categories li span {
+  display: block;
+}
+
+.block-categories li span:first-child {
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.block-categories li span:nth-child(2) {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
 /* ============================== 8. PAGE USERS ============================== */
 /* ============================== 9. MAJ ============================== */
 /* ============================== x. FOOTER ============================== */

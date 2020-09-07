@@ -181,13 +181,17 @@ a {
     padding: 2px 6px;
 }
 
-@mixin block-shape {
+@mixin block-shape-light {
     width: 84%;
     border: 1px solid $background-color-border-bis;
     border-radius: 20px;
     margin: 10px auto;
     padding: 20px;
     position: relative;
+}
+
+@mixin block-shape {
+    @include blockshape-light;
 
     li {
         display: block;
@@ -531,7 +535,7 @@ a {
 
 /* ============================== 2. PAGE PORTFOLIO ============================== */
 
-.block-portfolio-mini {
+.block-portfolio-light {
     @include block-shape;
 }
 
@@ -606,6 +610,10 @@ a {
 }
 
 /* ============================== 7. PAGE CATEGORIES ============================== */
+
+.block-categories {
+    @include block-shape;
+}
 
 /* ============================== 8. PAGE USERS ============================== */
 
