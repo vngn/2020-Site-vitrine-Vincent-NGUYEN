@@ -18,7 +18,7 @@
 </ul>
 
 {% if is_granted('ROLE_USER') %}
-<div class="comment example-wrapper blog-color">
+<div class="comment example-wrapper block-blog blog-color">
     {{ form_start(blogCommentForm) }}
     {{ form_row(blogCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
 
@@ -38,8 +38,8 @@
 {% endif %}
 
 <section id="commentaires">
-    <h1 class="example-wrapper blog-color">{{ blog.blogComment | length }} commentaire(s) :</h1>
-    <div class="comment example-wrapper blog-color">
+    <h1 class="example-wrapper block-blog blog-color">{{ blog.blogComment | length }} commentaire(s) :</h1>
+    <div class="comment example-wrapper block-blog blog-color">
         <table class="table striped">
             <thead>
                 <tr>

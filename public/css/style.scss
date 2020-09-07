@@ -531,6 +531,15 @@ a {
 
 /* ============================== 2. PAGE PORTFOLIO ============================== */
 
+.block-portfolio-mini {
+    @include block-shape;
+}
+
+/* suppression marge entre bloc portfolio et bouton commentaire */
+.portfolio-btn-adjustment {
+    margin-top: -82px;
+}
+
 .block-portfolio {
     @include block-shape;
     border-radius: 0;

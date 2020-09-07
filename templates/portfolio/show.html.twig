@@ -29,7 +29,7 @@
 </div>
 
 {% if is_granted('ROLE_USER') %}
-<div class="comment example-wrapper portfolio-color">
+<div class="comment example-wrapper block-portfolio-mini portfolio-color portfolio-btn-adjustment">
     {{ form_start(portfolioCommentForm) }}
     {{ form_row(portfolioCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
 
@@ -43,14 +43,16 @@
 </div>
 
 {% else %}
-
-{{ include('includes/show-visitors.html.twig') }}
+<div class="portfolio-btn-adjustment">
+    {{ include('includes/show-visitors.html.twig') }}
+</div>
 
 {% endif %}
 
 <section id="commentaires">
-    <h1 class="example-wrapper portfolio-color">{{ portfolio.portfolioComment | length }} commentaire(s) :</h1>
-    <div class="comment example-wrapper portfolio-color">
+    <h1 class="example-wrapper block-portfolio-mini portfolio-color">{{ portfolio.portfolioComment | length }}
+        commentaire(s) :</h1>
+    <div class="comment example-wrapper block-portfolio-mini portfolio-color">
         <table class="table striped">
             <thead>
                 <tr>
