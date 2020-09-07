@@ -544,6 +544,11 @@ a {
     @include block-shape;
 }
 
+.block-portfolio-menu {
+    @include block-shape;
+    text-align: center;
+}
+
 /* suppression marge entre bloc portfolio et bouton commentaire */
 .portfolio-btn-adjustment {
     margin-top: -82px;
