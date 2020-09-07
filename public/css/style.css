@@ -106,7 +106,7 @@ nextbutton.scss :
 
 body {
   width: 100%;
-  background-color: #e1e1e1;
+  background-color: #ebebeb;
   font-weight: 400;
   font-size: 15px;
   color: #3a2127;
@@ -506,6 +506,7 @@ a {
 /* ============================== 1. PAGE ACCUEIL ============================== */
 .block-home {
   width: 84%;
+  border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
   padding: 20px;
@@ -819,10 +820,12 @@ a {
 /* ============================== 2. PAGE PORTFOLIO ============================== */
 .block-portfolio {
   width: 84%;
+  border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
   padding: 20px;
   position: relative;
+  border-radius: 0;
   z-index: 0;
   height: 500px;
   text-shadow: 0 0 2px white;
@@ -866,7 +869,7 @@ a {
 .block-portfolio li iframe {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 0;
   position: absolute;
   z-index: 1;
   left: 0px;
@@ -885,6 +888,7 @@ a {
 /* ============================== 3. PAGE ARTICLES ============================== */
 .block-articles {
   width: 84%;
+  border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
   padding: 20px;
@@ -919,6 +923,7 @@ a {
 /* ============================== 4. PAGE BLOG ============================== */
 .block-blog {
   width: 84%;
+  border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
   padding: 20px;
