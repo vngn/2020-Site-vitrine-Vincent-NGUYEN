@@ -191,7 +191,7 @@ a {
 }
 
 @mixin block-shape {
-    @include blockshape-light;
+    @include block-shape-light;
 
     li {
         display: block;
@@ -214,11 +214,16 @@ a {
         font-weight: 400;
         font-style: italic;
         font-size: 28px;
-        -webkit-transition: color 0.2s linear;
-        -moz-transition: color 0.2s linear;
-        -o-transition: color 0.2s linear;
-        -ms-transition: color 0.2s linear;
-        transition: color 0.2s linear;
+        // -webkit-transition: color 0.2s linear;
+        // -moz-transition: color 0.2s linear;
+        // -o-transition: color 0.2s linear;
+        // -ms-transition: color 0.2s linear;
+        // transition: color 0.2s linear;
+    }
+
+    li span:nth-child(4) {
+        font-weight: 400;
+        font-size: 20px;
     }
 }
 
@@ -548,7 +553,7 @@ a {
     @include block-shape;
     border-radius: 0;
     z-index: 0;
-    height: 500px;
+    height: 680px;
     text-shadow: 0 0 2px white;
     box-shadow: 600px 0 300px rgba(255, 255, 255, 0.9925) inset;
     // background-position: center;

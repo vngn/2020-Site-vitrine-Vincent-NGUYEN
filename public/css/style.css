@@ -534,8 +534,11 @@ a {
   font-weight: 400;
   font-style: italic;
   font-size: 28px;
-  -webkit-transition: color 0.2s linear;
-  transition: color 0.2s linear;
+}
+
+.block-home li span:nth-child(4) {
+  font-weight: 400;
+  font-size: 20px;
 }
 
 /* Texte titre */
@@ -848,8 +851,11 @@ a {
   font-weight: 400;
   font-style: italic;
   font-size: 28px;
-  -webkit-transition: color 0.2s linear;
-  transition: color 0.2s linear;
+}
+
+.block-portfolio-light li span:nth-child(4) {
+  font-weight: 400;
+  font-size: 20px;
 }
 
 /* suppression marge entre bloc portfolio et bouton commentaire */
@@ -866,7 +872,7 @@ a {
   position: relative;
   border-radius: 0;
   z-index: 0;
-  height: 500px;
+  height: 680px;
   text-shadow: 0 0 2px white;
   -webkit-box-shadow: 600px 0 300px rgba(255, 255, 255, 0.9925) inset;
           box-shadow: 600px 0 300px rgba(255, 255, 255, 0.9925) inset;
@@ -895,8 +901,11 @@ a {
   font-weight: 400;
   font-style: italic;
   font-size: 28px;
-  -webkit-transition: color 0.2s linear;
-  transition: color 0.2s linear;
+}
+
+.block-portfolio li span:nth-child(4) {
+  font-weight: 400;
+  font-size: 20px;
 }
 
 .block-portfolio:hover a {
@@ -955,8 +964,11 @@ a {
   font-weight: 400;
   font-style: italic;
   font-size: 28px;
-  -webkit-transition: color 0.2s linear;
-  transition: color 0.2s linear;
+}
+
+.block-articles li span:nth-child(4) {
+  font-weight: 400;
+  font-size: 20px;
 }
 
 /* ============================== 4. PAGE BLOG ============================== */
@@ -991,8 +1003,11 @@ a {
   font-weight: 400;
   font-style: italic;
   font-size: 28px;
-  -webkit-transition: color 0.2s linear;
-  transition: color 0.2s linear;
+}
+
+.block-blog li span:nth-child(4) {
+  font-weight: 400;
+  font-size: 20px;
 }
 
 /* ============================== 5. PAGE A PROPOS ============================== */
@@ -1027,8 +1042,11 @@ a {
   font-weight: 400;
   font-style: italic;
   font-size: 28px;
-  -webkit-transition: color 0.2s linear;
-  transition: color 0.2s linear;
+}
+
+.block-contact li span:nth-child(4) {
+  font-weight: 400;
+  font-size: 20px;
 }
 
 /* ============================== 7. PAGE CATEGORIES ============================== */
@@ -1062,8 +1080,11 @@ a {
   font-weight: 400;
   font-style: italic;
   font-size: 28px;
-  -webkit-transition: color 0.2s linear;
-  transition: color 0.2s linear;
+}
+
+.block-categories li span:nth-child(4) {
+  font-weight: 400;
+  font-size: 20px;
 }
 
 /* ============================== 8. PAGE USERS ============================== */
