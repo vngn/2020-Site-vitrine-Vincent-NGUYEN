@@ -12,7 +12,11 @@
 
 <div class="block-portfolio-button-menu portfolio-color">
     {% for articleCategories in categories %}
-    <button id="{{ articleCategories.slug }}">{{ articleCategories.name }}</button>
+    {# {% for articlePortfolio in portfolio %} #}
+    <button id="{{ articleCategories.slug }}">{{ articleCategories.name }}
+        {# ({{ articlePortfolio.categories | length }}) #}
+        </button>
+    {# {% endfor %} #}
     {% endfor %}
 </div>
 
