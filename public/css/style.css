@@ -159,6 +159,7 @@ a {
   z-index: 999;
 }
 
+/* sidenav-overlay (dans axentis.min.css):  pour un effet sur l'ensemble de l'écran quand ouverture de la sidenav */
 .sidenav-color-users {
   color: white;
   background-color: green;
