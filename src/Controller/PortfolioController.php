@@ -7,15 +7,16 @@ use App\Form\PortfolioType;
 use App\Entity\PortfolioComment;
 use App\Form\PortfolioCommentType;
 use App\Repository\PortfolioRepository;
+use App\Repository\CategoriesRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * @Route("/portfolio")
@@ -27,10 +28,11 @@ class PortfolioController extends AbstractController
     /**
      * @Route("/", name="portfolio_index")
      */
-    public function index(PortfolioRepository $portfolioRepo)
+    public function index(PortfolioRepository $portfolioRepo, CategoriesRepository $catsRepo)
     {
         return $this->render('portfolio/index.html.twig', [
-            'portfolio' => $portfolioRepo->findAll()
+            'portfolio' => $portfolioRepo->findAll(),
+            'categories' => $catsRepo->findAll()
         ]);
     }
 

@@ -858,7 +858,7 @@ a {
   font-size: 20px;
 }
 
-.block-portfolio-menu {
+.block-portfolio-button-menu {
   width: 84%;
   border: 1px solid #e1e1e1;
   border-radius: 20px;
@@ -868,30 +868,30 @@ a {
   text-align: center;
 }
 
-.block-portfolio-menu li {
+.block-portfolio-button-menu li {
   display: block;
   width: 100%;
   height: 100%;
   padding: 0 10px;
 }
 
-.block-portfolio-menu li span {
+.block-portfolio-button-menu li span {
   display: block;
 }
 
-.block-portfolio-menu li span:first-child {
+.block-portfolio-button-menu li span:first-child {
   font-weight: 700;
   font-size: 16px;
   padding-top: 10px;
 }
 
-.block-portfolio-menu li span:nth-child(2) {
+.block-portfolio-button-menu li span:nth-child(2) {
   font-weight: 400;
   font-style: italic;
   font-size: 28px;
 }
 
-.block-portfolio-menu li span:nth-child(4) {
+.block-portfolio-button-menu li span:nth-child(4) {
   font-weight: 400;
   font-size: 20px;
 }
