@@ -28,30 +28,12 @@
     </a>
 </div>
 
-{% if is_granted('ROLE_USER') %}
-<div class="comment example-wrapper block-portfolio-light portfolio-color portfolio-btn-adjustment">
-    {{ form_start(portfolioCommentForm) }}
-    {{ form_row(portfolioCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
-
-    <div class="btn-site wrapper">
-        <button type="submit" class="cta">
-            <span class="next-button">Ajouter un commentaire</span>
-            {{ include('includes/next-button.html.twig') }}
-            {{ form_end(portfolioCommentForm) }}
-        </button>
-    </div>
-</div>
-
-{% else %}
-<div class="portfolio-btn-adjustment">
-    {{ include('includes/show-visitors.html.twig') }}
-</div>
-
-{% endif %}
-
 <section id="commentaires">
-    <h1 class="example-wrapper block-portfolio-light portfolio-color">{{ portfolio.portfolioComment | length }}
-        commentaire(s) :</h1>
+    <div class="portfolio-comment-adjustment">
+        <h1 class="example-wrapper block-portfolio-light portfolio-color">{{ portfolio.portfolioComment | length }}
+            commentaire(s) :</h1>
+    </div>
+
     <div class="comment example-wrapper block-portfolio-light portfolio-color">
         <table class="table striped">
             <thead>
@@ -74,6 +56,25 @@
     </div>
 </section>
 
+{% if is_granted('ROLE_USER') %}
+<div class="comment example-wrapper block-portfolio-light portfolio-color">
+    {{ form_start(portfolioCommentForm) }}
+    {{ form_row(portfolioCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
+
+    <div class="btn-site wrapper">
+        <button type="submit" class="cta">
+            <span class="next-button">Ajouter un commentaire</span>
+            {{ include('includes/next-button.html.twig') }}
+            {{ form_end(portfolioCommentForm) }}
+        </button>
+    </div>
+</div>
+
+{% else %}
+
+{{ include('includes/show-visitors.html.twig') }}
+
+{% endif %}
 
 {% endblock %}
 

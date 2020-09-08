@@ -18,26 +18,6 @@
     </li>
 </ul>
 
-{% if is_granted('ROLE_USER') %}
-<div class="comment example-wrapper block-articles articles-color">
-    {{ form_start(articlesCommentForm) }}
-    {{ form_row(articlesCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
-
-    <div class="btn-site wrapper">
-        <button type="submit" class="cta">
-            <span class="next-button">Ajouter un commentaire</span>
-            {{ include('includes/next-button.html.twig') }}
-            {{ form_end(articlesCommentForm) }}
-        </button>
-    </div>
-</div>
-
-{% else %}
-
-{{ include('includes/show-visitors.html.twig') }}
-
-{% endif %}
-
 <section id="commentaires">
     <h1 class="example-wrapper block-articles articles-color">{{ articles.articleComment | length }} commentaire(s) :</h1>
     <div class="comment example-wrapper block-articles articles-color">
@@ -61,6 +41,26 @@
         </table>
     </div>
 </section>
+
+{% if is_granted('ROLE_USER') %}
+<div class="comment example-wrapper block-articles articles-color">
+    {{ form_start(articlesCommentForm) }}
+    {{ form_row(articlesCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
+
+    <div class="btn-site wrapper">
+        <button type="submit" class="cta">
+            <span class="next-button">Ajouter un commentaire</span>
+            {{ include('includes/next-button.html.twig') }}
+            {{ form_end(articlesCommentForm) }}
+        </button>
+    </div>
+</div>
+
+{% else %}
+
+{{ include('includes/show-visitors.html.twig') }}
+
+{% endif %}
 
 {% endblock %}
 
