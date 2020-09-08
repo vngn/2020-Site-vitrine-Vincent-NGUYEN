@@ -237,22 +237,22 @@ hr {
 .buttonFilter {
     background: rgb(176, 76, 52);
     padding: 10px;
-    margin: 10px;
+    margin: 3px;
+    width: 100px;
     color: white;
     border-radius: 5px;
     transition: all .5s;
-    transition-timing-function: cubic-bezier(.2, 3, .4, 1);
-    user-select: none;
+    border: 1px solid $background-color-border-bis;
     
-    // &:hover{
-    //     transform: scale(1.15, 1.15);
-    //     background: white;
-    //     color: rgb(176, 76, 52);
-    // }
+    &:hover{
+        font-style: italic;
+    }
 }
 .activeButton {
     background: rgb(36,65,91);
-    font-size: 1.1em;
+    border: 1px solid $background-color-border-bis;
+
+    // font-size: 1.1em;
 }
 
 /* barres de navigation verticales (Axentix) */
@@ -336,7 +336,7 @@ hr {
     left: 0.4em;
     border: 1px solid white;
     width: 50px;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 
 .sidenav-admin {

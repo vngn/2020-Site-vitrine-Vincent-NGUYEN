@@ -162,22 +162,22 @@ hr {
 .buttonFilter {
   background: #b04c34;
   padding: 10px;
-  margin: 10px;
+  margin: 3px;
+  width: 100px;
   color: white;
   border-radius: 5px;
   -webkit-transition: all .5s;
   transition: all .5s;
-  -webkit-transition-timing-function: cubic-bezier(0.2, 3, 0.4, 1);
-          transition-timing-function: cubic-bezier(0.2, 3, 0.4, 1);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  border: 1px solid #e1e1e1;
+}
+
+.buttonFilter:hover {
+  font-style: italic;
 }
 
 .activeButton {
   background: #24415b;
-  font-size: 1.1em;
+  border: 1px solid #e1e1e1;
 }
 
 /* barres de navigation verticales (Axentix) */
@@ -305,7 +305,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.4;
   top: 19em;
 }
 
@@ -315,7 +315,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.4;
   top: 19em;
 }
 
@@ -325,7 +325,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.4;
   top: 19em;
 }
 
@@ -335,7 +335,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.4;
   top: 23em;
 }
 
@@ -345,7 +345,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.4;
   top: 26em;
 }
 
@@ -355,7 +355,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.4;
   top: 29em;
 }
 
@@ -365,7 +365,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.4;
   top: 32em;
 }
 
@@ -375,7 +375,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.4;
   top: 35em;
 }
 
@@ -385,7 +385,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.4;
   top: 38em;
 }
 
