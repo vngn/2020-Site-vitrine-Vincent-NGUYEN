@@ -23,7 +23,7 @@
 
 {% for articlePortfolio in portfolio %}
 
-<div class={{ articlePortfolio.categories.slug }}>
+<div class="{{ articlePortfolio.categories.slug }} portfolioFilter">
 
     <ul class="block-portfolio portfolio-color"
         style="background-image: url('{{ asset('uploads/images/'~ articlePortfolio.background) }}');">
