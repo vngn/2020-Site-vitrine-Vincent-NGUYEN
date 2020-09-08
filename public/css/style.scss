@@ -171,8 +171,6 @@ hr {
     
 }
 
-
-
 /* ============================== 0. TOUTES LES PAGES ============================== */
 
 /* blocs de page de base */
@@ -245,6 +243,7 @@ hr {
     transition: all .5s;
     transition-timing-function: cubic-bezier(.2, 3, .4, 1);
     user-select: none;
+    
     &:hover{
         transform: scale(1.1, 1.1);
     }
@@ -252,7 +251,6 @@ hr {
 .activeButton {
     background-color: green;
     font-size: 1.1em;
-
 }
 
 /* barres de navigation verticales (Axentix) */
@@ -343,6 +341,7 @@ hr {
     left: 0.4em;
     border: 1px solid white;
     width: 50px;
+    opacity: 0.6;
 }
 
 .sidenav-admin {
@@ -393,7 +392,7 @@ hr {
 /* icones des boutons des barres de navigation verticales */
 
 .sidenav-menu-trigger {
-    opacity: 0.4;
+    opacity: 0.6;
     transition: 0.5s;
     border: 2px solid white;
     border-radius: 20px;

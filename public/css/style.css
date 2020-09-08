@@ -398,6 +398,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
+  opacity: 0.6;
   top: 19em;
 }
 
@@ -407,6 +408,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
+  opacity: 0.6;
   top: 19em;
 }
 
@@ -416,6 +418,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
+  opacity: 0.6;
   top: 19em;
 }
 
@@ -425,6 +428,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
+  opacity: 0.6;
   top: 23em;
 }
 
@@ -434,6 +438,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
+  opacity: 0.6;
   top: 26em;
 }
 
@@ -443,6 +448,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
+  opacity: 0.6;
   top: 29em;
 }
 
@@ -452,6 +458,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
+  opacity: 0.6;
   top: 32em;
 }
 
@@ -461,6 +468,7 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
+  opacity: 0.6;
   top: 35em;
 }
 
@@ -470,12 +478,13 @@ hr {
   left: 0.4em;
   border: 1px solid white;
   width: 50px;
+  opacity: 0.6;
   top: 38em;
 }
 
 /* icones des boutons des barres de navigation verticales */
 .sidenav-menu-trigger {
-  opacity: 0.4;
+  opacity: 0.6;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border: 2px solid white;
