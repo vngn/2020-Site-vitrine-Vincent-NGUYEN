@@ -12,10 +12,10 @@
 </div>
 
 <div class="block-portfolio-button-menu portfolio-color">
-    <button id="allProject" class="buttonFilter">Tous ({{ portfolio | length }})</button>
+    <button id="allProject" class="buttonFilter">Tous<br />({{ portfolio | length }})</button>
     {% for categories in categoriesButton %}
     {%  if  categories.portfolio | length != NULL %}
-    <button id="{{ categories.slug }}" class="buttonFilter">{{ categories.name }}
+    <button id="{{ categories.slug }}" class="buttonFilter">{{ categories.name }}<br />
         ({{ categories.portfolio | length }})</button>
     {% endif %}
     {% endfor %}
