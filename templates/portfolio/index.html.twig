@@ -10,17 +10,17 @@
     <div class="video-title-text">Portfolio</div>
 </div>
 
-<div class="block-portfolio-button-menu portfolio-color">
-    {% for articleCategories in categories %}
-    {# {% for articlePortfolio in portfolio %} #}
-    <button id="{{ articleCategories.slug }}">{{ articleCategories.name }}
-        {# ({{ articlePortfolio.categories | length }}) #}
-        </button>
-    {# {% endfor %} #}
+{# <div class="block-portfolio-button-menu portfolio-color">
+    {% for categories in categoriesButton %}
+    <button id="{{ categories.slug }}"
+        class="buttonFilter">{{ categories.name }}({{ categories.portfolio | length }})</button>
     {% endfor %}
-</div>
+    <button id="allProject" class="buttonFilter">Tous</button>
+</div> #}
 
 {% for articlePortfolio in portfolio %}
+
+{# <div class={{ articlesPortfolio.categories.slug }}> #}
 
 <ul class="block-portfolio portfolio-color"
     style="background-image: url('{{ asset('uploads/images/'~ articlePortfolio.background) }}');">
@@ -50,5 +50,6 @@
     </a>
 </div>
 {% endfor %}
+{# </div> #}
 
 {% endblock %}
