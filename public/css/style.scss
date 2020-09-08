@@ -413,10 +413,10 @@ hr {
 /* Texte titre sauf page d'accueil */
 
 .color-block-video-title {
-    height: 580px;
+    height: 630px;
     padding-top: 330px;
     margin-top: -100px;
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
     background: $background-color;;
 }
 
@@ -565,8 +565,8 @@ hr {
 }
 
 .block-portfolio-button-menu {
-    @include block-shape;
     text-align: center;
+    margin: -100px auto 115px;
 }
 
 // zone de texte avec date, titre et catégorie
