@@ -160,7 +160,7 @@ hr {
 
 /* barres de boutons de tri par catégorie des pages portfolio,articles et blog */
 .buttonFilter {
-  background-color: red;
+  background: #b04c34;
   padding: 5px 10px;
   margin: 5px;
   color: white;
@@ -181,7 +181,7 @@ hr {
 }
 
 .activeButton {
-  background-color: green;
+  background: #24415b;
   font-size: 1.1em;
 }
 
