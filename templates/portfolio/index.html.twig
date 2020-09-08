@@ -3,6 +3,7 @@
 {% block title %}Hello MainController!{% endblock %}
 
 {% block body %}
+
 <div class="color-block-video-title">
     <video class="video-title" height="360" autoplay="true" loop muted>
         <source src="{{asset('bgvideo/background-video.mp4')}}" type="video/mp4" />
@@ -10,46 +11,67 @@
     <div class="video-title-text">Portfolio</div>
 </div>
 
-{# <div class="block-portfolio-button-menu portfolio-color">
+<div class="block-portfolio-button-menu portfolio-color">
     {% for categories in categoriesButton %}
+    {%  if  categories.portfolio | length != NULL %}
     <button id="{{ categories.slug }}"
         class="buttonFilter">{{ categories.name }}({{ categories.portfolio | length }})</button>
+    {% endif %}
     {% endfor %}
-    <button id="allProject" class="buttonFilter">Tous</button>
-</div> #}
+    <button id="allProject" class="buttonFilter">Tous ({{ app.user.portfolio | length }})</button>
+</div>
 
 {% for articlePortfolio in portfolio %}
 
-{# <div class={{ articlesPortfolio.categories.slug }}> #}
+<div class={{ articlePortfolio.categories.slug }}>
 
-<ul class="block-portfolio portfolio-color"
-    style="background-image: url('{{ asset('uploads/images/'~ articlePortfolio.background) }}');">
-    <li>
-        <a href="">
-            <span>{{ articlePortfolio.createdAt | date ('d/m/Y') }}</span>
-            <span>{{ articlePortfolio.title }}</span>
-            <span>{{ articlePortfolio.categories }}</span>
-            {# <span>{{ articlePortfolio.content | raw }}</span> #}
+    <ul class="block-portfolio portfolio-color"
+        style="background-image: url('{{ asset('uploads/images/'~ articlePortfolio.background) }}');">
+        <li>
+            <a href="">
+                <span>{{ articlePortfolio.createdAt | date ('d/m/Y') }}</span>
+                <span>{{ articlePortfolio.title }}</span>
+                <span>{{ articlePortfolio.categories }}</span>
+                {# <span>{{ articlePortfolio.content | raw }}</span> #}
+            </a>
+            <iframe src="{{ articlePortfolio.image }}" class="site-iframe"></iframe>
+        </li>
+    </ul>
+
+    <div class="btn-site wrapper-link-site">
+        <a class="cta" href="{{ articlePortfolio.image }}" target="_blank">
+            <span class="next-button">Page du site</span>
+            {{ include('includes/next-button.html.twig') }}
         </a>
-        <iframe src="{{ articlePortfolio.image }}" class="site-iframe"></iframe>
-    </li>
-</ul>
+    </div>
 
-<div class="btn-site wrapper-link-site">
-    <a class="cta" href="{{ articlePortfolio.image }}" target="_blank">
-        <span class="next-button">Page du site</span>
-        {{ include('includes/next-button.html.twig') }}
-    </a>
+    <div class="btn-site wrapper-more-site">
+        <a class="cta" href="{{ path('portfolio_show', {'id': articlePortfolio.id}) }}">
+            <span class="next-button">Lire la suite / {{ articlePortfolio.portfolioComment | length }}
+                commentaire(s)</span>
+            {{ include('includes/next-button.html.twig') }}
+        </a>
+    </div>
 </div>
 
-<div class="btn-site wrapper-more-site">
-    <a class="cta" href="{{ path('portfolio_show', {'id': articlePortfolio.id}) }}">
-        <span class="next-button">Lire la suite / {{ articlePortfolio.portfolioComment | length }}
-            commentaire(s)</span>
-        {{ include('includes/next-button.html.twig') }}
-    </a>
-</div>
 {% endfor %}
-{# </div> #}
+
+<script>
+    $(document).ready(function () {
+        $('.buttonFilter').click(function () {
+            let slug = $(this).attr('id');
+            //Mise en valeur du bouton sélectionné
+            $('.buttonFilter').removeClass("activeButton");
+            $(this).addClass("activeButton");
+            //Système de filtre des portfolios
+            if (slug != 'allProject') {
+                $('.portfolioFilter').hide();
+                $("." + slug).toggle();
+            } else {
+                $('.portfolioFilter').show();
+            }
+        });
+    });
+</script>
 
 {% endblock %}

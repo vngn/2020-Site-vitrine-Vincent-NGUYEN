@@ -32,7 +32,7 @@ class PortfolioController extends AbstractController
     {
         return $this->render('portfolio/index.html.twig', [
             'portfolio' => $portfolioRepo->findAll(),
-            'categories' => $catsRepo->findAll()
+            'categoriesButton' => $catsRepo->findAll()
         ]);
     }
 
@@ -118,7 +118,7 @@ class PortfolioController extends AbstractController
             
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('portfolio_index');
+            return $this->redirectToRoute('portfolio_manage');
         }
 
         return $this->render('portfolio/edit.html.twig', [
