@@ -164,7 +164,7 @@ hr {
   padding: 5px 10px;
   margin: auto 10px;
   color: white;
-  border-radius: 20px;
+  border-radius: 5px;
   -webkit-transition: all .5s;
   transition: all .5s;
   -webkit-transition-timing-function: cubic-bezier(0.2, 3, 0.4, 1);
