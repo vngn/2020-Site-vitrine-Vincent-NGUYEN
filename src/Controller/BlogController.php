@@ -19,7 +19,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class BlogController extends AbstractController
 {
     /**
-     * @Route("/", name="blog_index")
+     * @Route("", name="blog_index")
      */
     public function index(BlogRepository $blogRepo)
     {

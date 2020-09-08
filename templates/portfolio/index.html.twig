@@ -14,8 +14,8 @@
 <div class="block-portfolio-button-menu portfolio-color">
     {% for categories in categoriesButton %}
     {%  if  categories.portfolio | length != NULL %}
-    <button id="{{ categories.slug }}"
-        class="buttonFilter">{{ categories.name }}({{ categories.portfolio | length }})</button>
+    <button id="{{ categories.slug }}" class="buttonFilter">{{ categories.name }}
+        ({{ categories.portfolio | length }})</button>
     {% endif %}
     {% endfor %}
     <button id="allProject" class="buttonFilter">Tous ({{ app.user.portfolio | length }})</button>
@@ -56,6 +56,7 @@
 
 {% endfor %}
 
+{# script pour boutons tri #}
 <script>
     $(document).ready(function () {
         $('.buttonFilter').click(function () {
@@ -71,6 +72,20 @@
                 $('.portfolioFilter').show();
             }
         });
+    });
+</script>
+
+{# script pour récupérer les url des boutons du menu tri en jquery et les intégrer à la sidenav #}
+<script>
+    $(document).ready(function () {
+        //On va chercher le slug ou la catégorie dans l'url en GET
+        let searchParams = new URLSearchParams(window.location.search)
+        searchParams.has('categorie')
+        let categorie = searchParams.get('categorie')
+        // On met en place le filtre
+        $("#" + categorie).addClass('activeButton');
+        $('.portfolioFilter').hide();
+        $("." + categorie).toggle('.portfolioFilter');
     });
 </script>
 

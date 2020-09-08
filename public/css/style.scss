@@ -235,8 +235,25 @@ hr {
 }
 
 /* barres de boutons de tri par catégorie des pages portfolio,articles et blog */
+
+.buttonFilter {
+    background-color: red; 
+    padding: 5px 10px;
+    margin: auto 10px;
+    color: white;
+    border-radius: 20px;
+    transition: all .5s;
+    transition-timing-function: cubic-bezier(.2, 3, .4, 1);
+    user-select: none;
+    &:hover{
+        transform: scale(1.1, 1.1);
+    }
+}
 .activeButton {
-    background-color: red;
+    background-color: green;
+    border-radius: 20px;
+    font-size: 1.1em;
+
 }
 
 /* barres de navigation verticales (Axentix) */

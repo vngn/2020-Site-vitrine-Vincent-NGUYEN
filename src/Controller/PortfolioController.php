@@ -26,7 +26,7 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
 class PortfolioController extends AbstractController
 {
     /**
-     * @Route("/", name="portfolio_index")
+     * @Route("", name="portfolio_index")
      */
     public function index(PortfolioRepository $portfolioRepo, CategoriesRepository $catsRepo)
     {

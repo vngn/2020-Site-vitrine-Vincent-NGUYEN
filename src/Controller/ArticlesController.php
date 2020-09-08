@@ -23,7 +23,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ArticlesController extends AbstractController
 {
     /**
-     * @Route("/", name="articles_index")
+     * @Route("", name="articles_index")
      */
     public function index(ArticlesRepository $articlesRepo)
     {
