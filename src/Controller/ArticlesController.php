@@ -7,6 +7,7 @@ use App\Form\ArticlesType;
 use App\Entity\ArticlesComment;
 use App\Form\ArticlesCommentType;
 use App\Repository\ArticlesRepository;
+use App\Repository\CategoriesRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -25,10 +26,11 @@ class ArticlesController extends AbstractController
     /**
      * @Route("", name="articles_index")
      */
-    public function index(ArticlesRepository $articlesRepo)
+    public function index(ArticlesRepository $articlesRepo, CategoriesRepository $catsRepo)
     {
         return $this->render('articles/index.html.twig', [
-            'articles' => $articlesRepo->findAll()
+            'articles' => $articlesRepo->findAll(),
+            'categoriesButton' => $catsRepo->findAll()
         ]);
     }
 
@@ -99,7 +101,7 @@ class ArticlesController extends AbstractController
             
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('articles_index');
+            return $this->redirectToRoute('articles_manage');
         }
 
         return $this->render('articles/edit.html.twig', [

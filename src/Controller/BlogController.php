@@ -5,6 +5,7 @@ use App\Form\BlogType;
 use App\Entity\BlogComment;
 use App\Form\BlogCommentType;
 use App\Repository\BlogRepository;
+use App\Repository\CategoriesRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,10 +22,11 @@ class BlogController extends AbstractController
     /**
      * @Route("", name="blog_index")
      */
-    public function index(BlogRepository $blogRepo)
+    public function index(BlogRepository $blogRepo, CategoriesRepository $catsRepo)
     {
         return $this->render('blog/index.html.twig', [
-            'blog' => $blogRepo->findAll()
+            'blog' => $blogRepo->findAll(),
+            'categoriesButton' => $catsRepo->findAll()
         ]);
     }
 
@@ -92,7 +94,7 @@ class BlogController extends AbstractController
             
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('blog_index');
+            return $this->redirectToRoute('blog_manage');
         }
 
         return $this->render('blog/edit.html.twig', [

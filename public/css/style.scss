@@ -446,6 +446,13 @@ hr {
     letter-spacing: -2px;
 }
 
+/* menu boutons pour tri pages portfolio, articles et blog */
+
+@mixin block-button-menu {
+    text-align: center;
+    margin: -100px auto 115px;
+}
+
 /* ============================== 1. PAGE ACCUEIL ============================== */
 
 .block-home {
@@ -567,8 +574,7 @@ hr {
 }
 
 .block-portfolio-button-menu {
-    text-align: center;
-    margin: -100px auto 115px;
+    @include block-button-menu;
 }
 
 // zone de texte avec date, titre et catégorie
@@ -638,11 +644,19 @@ hr {
     @include block-shape;
 }
 
+.block-articles-button-menu {
+    @include block-button-menu;
+}
+
 /* ============================== 4. PAGE BLOG ============================== */
 
 .block-blog {
     @include block-shape;
     opacity: 0.9925;
+}
+
+.block-blog-button-menu {
+    @include block-button-menu;
 }
 
 /* ============================== 5. PAGE A PROPOS ============================== */

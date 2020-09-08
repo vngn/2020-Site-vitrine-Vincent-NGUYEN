@@ -451,6 +451,7 @@ hr {
   letter-spacing: -2px;
 }
 
+/* menu boutons pour tri pages portfolio, articles et blog */
 /* ============================== 1. PAGE ACCUEIL ============================== */
 .block-home {
   width: 84%;
@@ -934,6 +935,11 @@ hr {
   font-size: 20px;
 }
 
+.block-articles-button-menu {
+  text-align: center;
+  margin: -100px auto 115px;
+}
+
 /* ============================== 4. PAGE BLOG ============================== */
 .block-blog {
   width: 84%;
@@ -971,6 +977,11 @@ hr {
 .block-blog li span:nth-child(4) {
   font-weight: 400;
   font-size: 20px;
+}
+
+.block-blog-button-menu {
+  text-align: center;
+  margin: -100px auto 115px;
 }
 
 /* ============================== 5. PAGE A PROPOS ============================== */

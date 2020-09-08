@@ -3,11 +3,22 @@
 {% block title %}La section Blog{% endblock %}
 
 {% block body %}
+
 <div class="color-block-video-title">
     <video class="video-title" height="360" autoplay="true" loop muted>
         <source src="{{asset('bgvideo/background-video.mp4')}}" type="video/mp4" />
     </video>
     <div class="video-title-text">Blog</div>
+</div>
+
+<div class="block-blog-button-menu blog-color">
+    <button id="allProject" class="buttonFilter">Tous<br />({{ blog | length }})</button>
+    {% for categories in categoriesButton %}
+    {%  if  categories.blog | length != NULL %}
+    <button id="{{ categories.slug }}" class="buttonFilter">{{ categories.name }}<br />
+        ({{ categories.blog | length }})</button>
+    {% endif %}
+    {% endfor %}
 </div>
 
 {% for articleBlog in blog %}
@@ -27,9 +38,45 @@
         {{ include('includes/next-button.html.twig') }}
     </a>
 </div>
-{% endfor %}
-{% endblock %}
 
-{% block javascripts %}
+{% endfor %}
+
+{# script pour boutons tri #}
+<script>
+    $(document).ready(function () {
+        $('.buttonFilter').click(function () {
+            let slug = $(this).attr('id');
+            //Mise en valeur du bouton sélectionné
+            $('.buttonFilter').removeClass("activeButton");
+            $(this).addClass("activeButton");
+            //Système de filtre des portfolios
+            if (slug != 'allProject') {
+                $('.blogFilter').hide();
+                $("." + slug).toggle();
+            } else {
+                $('.blogFilter').show();
+            }
+        });
+    });
+</script>
+
+{# script pour récupérer les url des boutons du menu tri en jquery et les intégrer à la sidenav #}
+<script>
+    $(document).ready(function () {
+        //On va chercher le slug ou la catégorie dans l'url en GET
+        let searchParams = new URLSearchParams(window.location.search)
+        searchParams.has('categorie')
+        let categorie = searchParams.get('categorie');
+        console.log(categorie);
+        if (categorie != null) {
+            // On met en place le filtre
+            $("#" + categorie).addClass('activeButton');
+            $('.blogFilter').hide();
+            $("." + categorie).toggle('.blogFilter');
+        } else {
+            $("#allProject").addClass('activeButton');
+        }
+    });
+</script>
 
 {% endblock %}
