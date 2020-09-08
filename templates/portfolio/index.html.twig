@@ -12,13 +12,13 @@
 </div>
 
 <div class="block-portfolio-button-menu portfolio-color">
+    <button id="allProject" class="buttonFilter">Tous ({{ portfolio | length }})</button>
     {% for categories in categoriesButton %}
     {%  if  categories.portfolio | length != NULL %}
     <button id="{{ categories.slug }}" class="buttonFilter">{{ categories.name }}
         ({{ categories.portfolio | length }})</button>
     {% endif %}
     {% endfor %}
-    <button id="allProject" class="buttonFilter">Tous ({{ portfolio | length }})</button>
 </div>
 
 {% for articlePortfolio in portfolio %}
@@ -28,12 +28,14 @@
     <ul class="block-portfolio portfolio-color"
         style="background-image: url('{{ asset('uploads/images/'~ articlePortfolio.background) }}');">
         <li>
-            <a href="">
-                <span>{{ articlePortfolio.createdAt | date ('d/m/Y') }}</span>
-                <span>{{ articlePortfolio.title }}</span>
-                <span>{{ articlePortfolio.categories }}</span>
-                {# <span>{{ articlePortfolio.content | raw }}</span> #}
-            </a>
+            <div class="block-portfolio-insert">
+                <a href="">
+                    <span>{{ articlePortfolio.createdAt | date ('d/m/Y') }}</span>
+                    <span>{{ articlePortfolio.title }}</span>
+                    <span>{{ articlePortfolio.categories }}</span>
+                    {# <span>{{ articlePortfolio.content | raw }}</span> #}
+                </a>
+            </div>
             <iframe src="{{ articlePortfolio.image }}" class="site-iframe"></iframe>
         </li>
     </ul>
@@ -80,15 +82,15 @@
     $(document).ready(function () {
         //On va chercher le slug ou la catégorie dans l'url en GET
         let searchParams = new URLSearchParams(window.location.search)
-        searchParams.has('categorie') 
+        searchParams.has('categorie')
         let categorie = searchParams.get('categorie');
         console.log(categorie);
-        if (categorie != null){
-        // On met en place le filtre
-        $("#" + categorie).addClass('activeButton');
-        $('.portfolioFilter').hide();
-        $("." + categorie).toggle('.portfolioFilter');
-        }else{
+        if (categorie != null) {
+            // On met en place le filtre
+            $("#" + categorie).addClass('activeButton');
+            $('.portfolioFilter').hide();
+            $("." + categorie).toggle('.portfolioFilter');
+        } else {
             $("#allProject").addClass('activeButton');
         }
     });
