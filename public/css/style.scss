@@ -234,6 +234,11 @@ hr {
     }
 }
 
+/* barres de boutons de tri par catégorie des pages portfolio,articles et blog */
+.activeButton {
+    background-color: red;
+}
+
 /* barres de navigation verticales (Axentix) */
 
 @mixin sidenav {
@@ -642,6 +647,3 @@ hr {
 
 /* ============================== x. FOOTER ============================== */
 
-.activeButton {
-    background-color: red;
-}

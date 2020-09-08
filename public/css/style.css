@@ -158,6 +158,11 @@ hr {
   padding: 2px 6px;
 }
 
+/* barres de boutons de tri par catégorie des pages portfolio,articles et blog */
+.activeButton {
+  background-color: red;
+}
+
 /* barres de navigation verticales (Axentix) */
 .sidenav {
   border-top-right-radius: 20px;
@@ -1171,7 +1176,4 @@ hr {
 
 /* ============================== 9. MAJ ============================== */
 /* ============================== x. FOOTER ============================== */
-.activeButton {
-  background-color: red;
-}
 /*# sourceMappingURL=style.css.map */
