@@ -80,12 +80,17 @@
     $(document).ready(function () {
         //On va chercher le slug ou la catégorie dans l'url en GET
         let searchParams = new URLSearchParams(window.location.search)
-        searchParams.has('categorie')
-        let categorie = searchParams.get('categorie')
+        searchParams.has('categorie') 
+        let categorie = searchParams.get('categorie');
+        console.log(categorie);
+        if (categorie != null){
         // On met en place le filtre
         $("#" + categorie).addClass('activeButton');
         $('.portfolioFilter').hide();
         $("." + categorie).toggle('.portfolioFilter');
+        }else{
+            $("#allProject").addClass('activeButton');
+        }
     });
 </script>
 
