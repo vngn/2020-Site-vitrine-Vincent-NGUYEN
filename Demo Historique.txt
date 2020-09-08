@@ -13,6 +13,7 @@ général :
 - gérer le contenu des menus sidenav
 - s'occuper du responsive (navbar, sidebar, pages en général)
 - choisir la police (roboto) grosse police
+- tarte au citron
 
 admin :
 - intégrer gestion admin des commentaires

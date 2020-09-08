@@ -37,7 +37,7 @@
     color: white;
     background: rgb(176, 76, 52);
     transition: 1s;
-    box-shadow: 6px 6px 0 black;
+    box-shadow: 6px 6px 2px black;
     transform: skewX(-15deg);
 }
 
@@ -47,7 +47,7 @@
 
 .cta:hover {
     transition: 0.5s;
-    box-shadow: 10px 10px 0 rgb(36,65,91);
+    box-shadow: 10px 10px 2px rgb(36,65,91);
 }
 
 .cta .next-button:nth-child(2) {

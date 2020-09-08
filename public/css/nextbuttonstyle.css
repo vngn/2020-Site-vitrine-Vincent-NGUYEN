@@ -54,8 +54,8 @@
   background: #b04c34;
   -webkit-transition: 1s;
   transition: 1s;
-  -webkit-box-shadow: 6px 6px 0 black;
-          box-shadow: 6px 6px 0 black;
+  -webkit-box-shadow: 6px 6px 2px black;
+          box-shadow: 6px 6px 2px black;
   -webkit-transform: skewX(-15deg);
           transform: skewX(-15deg);
 }
@@ -67,8 +67,8 @@
 .cta:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-box-shadow: 10px 10px 0 #24415b;
-          box-shadow: 10px 10px 0 #24415b;
+  -webkit-box-shadow: 10px 10px 2px #24415b;
+          box-shadow: 10px 10px 2px #24415b;
 }
 
 .cta .next-button:nth-child(2) {
