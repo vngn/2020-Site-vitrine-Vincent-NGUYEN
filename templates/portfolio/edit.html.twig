@@ -7,9 +7,42 @@
     <h1 class="portfolio-color">Modifier une production</h1>
 </div>
 
-<div class="example-wrapper portfolio-color">
+<div class="example-wrapper block-portfolio-light portfolio-color">
     {{ form(form) }}
 </div>
+
+<section id="commentaires">
+    <h1 class="example-wrapper block-portfolio-light portfolio-color">{{ portfolio.portfolioComment | length }}
+        commentaire(s) :</h1>
+
+    <div class="comment example-wrapper block-portfolio-light portfolio-color">
+        <table class="table striped">
+            <thead>
+                <tr>
+                    <th>Auteur</th>
+                    <th>Date</th>
+                    <th>Contenu</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for portfolioComment in portfolio.portfolioComment %}
+                <tr>
+                    <td>{{ portfolioComment.users.firstname }} {{ portfolioComment.users.name }}</td>
+                    <td>{{ portfolioComment.createdAt | date ('d/m/Y (H:i)') }}</td>
+                    <td>{{ portfolioComment.content | raw }}</td>
+                    <td>
+                        <a href="#" class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
+                        <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
+                            data-id="{{ portfolioComment.id }}" data-prenom="{{ portfolioComment.users.firstname }}"
+                            data-nom="{{ portfolioComment.users.name }}">Supprimer</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
 
 <div class="btn-site wrapper">
     <a class="cta" href="{{ path('portfolio_index') }}">
@@ -18,4 +51,41 @@
     </a>
 </div>
 
+<div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
+    <div class="modal-header">Supprimer un commentaire</div>
+    <div class="divider"></div>
+    <div class="modal-content">
+
+    </div>
+    <div class="divider"></div>
+    <div class="modal-footer">
+        <a href="" class="btn red">valider</a>
+        <button data-target="modal-delete"
+            class="ml-auto btn shadow-1 rounded-1 small primary modal-trigger">Fermer</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    window.onload = () => {
+        let modal = new Axentix.Modal('#modal-delete');
+
+        let supprimer = document.querySelectorAll(".modal-trigger")
+        for (let bouton of supprimer) {
+            bouton.addEventListener("click", function () {
+                document.querySelector(".modal-footer a").href =
+                    `/portfolio/commentDelete/${this.dataset.id}`
+                document.querySelector(".modal-content").innerText =
+                    `Êtes-vous sûr(e) de vouloir supprimer le commentaire de ${this.dataset.prenom} ${this.dataset.nom}`
+            })
+        }
+        // raffraichir la page 0.5s après le changement de valeur du bouton active
+        $('.form-switch').click(function () {
+            setTimeout(function () {
+                window.location.reload();
+            }, 500);
+        });
+    }
+</script>
 {% endblock %}

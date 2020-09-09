@@ -141,6 +141,19 @@ class PortfolioController extends AbstractController
     }
 
     /**
+     * @Route("/commentDelete/{id}", name="portfolio_comment_delete")
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function commentDelete(PortfolioComment $portfolioComment)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($portfolioComment);
+        $em->flush();
+        $this->addFlash('message', 'Commentaire supprimé avec succès');
+        return $this->redirectToRoute('portfolio_manage');
+    }
+
+    /**
      * @Route("/{id}", name="portfolio_show")
      */
     public function show($id, Portfolio $portfolio, PortfolioRepository $portfolioRepo, Request $request, EntityManagerInterface $manager) 
