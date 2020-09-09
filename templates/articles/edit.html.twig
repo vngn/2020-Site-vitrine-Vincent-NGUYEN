@@ -3,19 +3,14 @@
 {% block title %}Modifier un article{% endblock %}
 
 {% block body %}
-<div class="example-wrapper">
-    <h1 class="articles-color">Modifier un article</h1>
-</div>
-
-<div class="example-wrapper articles-color">
+<div class="example-wrapper block-users users-color">
+    <h1>Modifier l'article</h1>
     {{ form(form) }}
 </div>
 
 <section id="commentaires">
-    <h1 class="example-wrapper block-articles-light articles-color">{{ articles.articleComment | length }}
-        commentaire(s) :</h1>
-
-    <div class="comment example-wrapper block-articles-light articles-color">
+    <div class="example-wrapper block-users articles-color">
+        <h1>Gérer les {{ articles.articleComment | length }} commentaires</h1>
         <table class="table striped">
             <thead>
                 <tr>
@@ -32,7 +27,8 @@
                     <td>{{ articlesComment.createdAt | date ('d/m/Y (H:i)') }}</td>
                     <td>{{ articlesComment.content | raw }}</td>
                     <td>
-                        <a href="{{ path('articles_comment_edit', {'id': articlesComment.id}) }}" class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
+                        <a href="{{ path('articles_comment_edit', {'id': articlesComment.id}) }}"
+                            class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
                         <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
                             data-id="{{ articlesComment.id }}" data-prenom="{{ articlesComment.users.firstname }}"
                             data-nom="{{ articlesComment.users.name }}">Supprimer</a>
@@ -45,7 +41,7 @@
 </section>
 
 <div class="btn-site wrapper">
-    <a class="cta" href="{{ path('articles_index') }}">
+    <a class="cta" href="{{ path('articles_manage') }}">
         <span class="next-button">Retour à la liste</span>
         {{ include('includes/next-button.html.twig') }}
     </a>

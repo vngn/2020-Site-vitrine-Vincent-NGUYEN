@@ -3,19 +3,14 @@
 {% block title %}Modifier un article{% endblock %}
 
 {% block body %}
-<div class="example-wrapper">
+<div class="example-wrapper block-users users-color">
     <h1 class="blog-color">Modifier un article</h1>
-</div>
-
-<div class="example-wrapper blog-color">
     {{ form(form) }}
 </div>
 
 <section id="commentaires">
-    <h1 class="example-wrapper block-blog-light blog-color">{{ blog.blogComment | length }}
-        commentaire(s) :</h1>
-
-    <div class="comment example-wrapper block-blog-light blog-color">
+    <div class="example-wrapper block-users articles-color">
+        <h1>Gérer les {{ blog.blogComment | length }} commentaires</h1>
         <table class="table striped">
             <thead>
                 <tr>
@@ -32,7 +27,8 @@
                     <td>{{ blogComment.createdAt | date ('d/m/Y (H:i)') }}</td>
                     <td>{{ blogComment.content | raw }}</td>
                     <td>
-                        <a href="{{ path('blog_comment_edit', {'id': blogComment.id}) }}" class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
+                        <a href="{{ path('blog_comment_edit', {'id': blogComment.id}) }}"
+                            class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
                         <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
                             data-id="{{ blogComment.id }}" data-prenom="{{ blogComment.users.firstname }}"
                             data-nom="{{ blogComment.users.name }}">Supprimer</a>
@@ -45,7 +41,7 @@
 </section>
 
 <div class="btn-site wrapper">
-    <a class="cta" href="{{ path('blog_index') }}">
+    <a class="cta" href="{{ path('blog_manage') }}">
         <span class="next-button">Retour à la liste</span>
         {{ include('includes/next-button.html.twig') }}
     </a>

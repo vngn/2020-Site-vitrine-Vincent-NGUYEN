@@ -3,49 +3,45 @@
 {% block title %}Modifier une production{% endblock %}
 
 {% block body %}
-<div class="example-wrapper">
-    <h1 class="portfolio-color">Modifier une production</h1>
-</div>
-
-<div class="example-wrapper block-portfolio-light portfolio-color">
+<div class="example-wrapper block-users users-color">
+    <h1>Modifier l'article</h1>
     {{ form(form) }}
 </div>
 
 <section id="commentaires">
-    <h1 class="example-wrapper block-portfolio-light portfolio-color">{{ portfolio.portfolioComment | length }}
-        commentaire(s) :</h1>
-
-    <div class="comment example-wrapper block-portfolio-light portfolio-color">
-        <table class="table striped">
-            <thead>
-                <tr>
-                    <th>Auteur</th>
-                    <th>Date</th>
-                    <th>Contenu</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for portfolioComment in portfolio.portfolioComment %}
-                <tr>
-                    <td>{{ portfolioComment.users.firstname }} {{ portfolioComment.users.name }}</td>
-                    <td>{{ portfolioComment.createdAt | date ('d/m/Y (H:i)') }}</td>
-                    <td>{{ portfolioComment.content | raw }}</td>
-                    <td>
-                        <a href="{{ path('portfolio_comment_edit', {'id': portfolioComment.id}) }}" class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
-                        <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
-                            data-id="{{ portfolioComment.id }}" data-prenom="{{ portfolioComment.users.firstname }}"
-                            data-nom="{{ portfolioComment.users.name }}">Supprimer</a>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+    <div class="example-wrapper block-users articles-color">
+        <h1>Gérer les {{ portfolio.portfolioComment | length }} commentaires</h1>
+            <table class="table striped">
+                <thead>
+                    <tr>
+                        <th>Auteur</th>
+                        <th>Date</th>
+                        <th>Contenu</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for portfolioComment in portfolio.portfolioComment %}
+                    <tr>
+                        <td>{{ portfolioComment.users.firstname }} {{ portfolioComment.users.name }}</td>
+                        <td>{{ portfolioComment.createdAt | date ('d/m/Y (H:i)') }}</td>
+                        <td>{{ portfolioComment.content | raw }}</td>
+                        <td>
+                            <a href="{{ path('portfolio_comment_edit', {'id': portfolioComment.id}) }}"
+                                class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
+                            <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
+                                data-id="{{ portfolioComment.id }}" data-prenom="{{ portfolioComment.users.firstname }}"
+                                data-nom="{{ portfolioComment.users.name }}">Supprimer</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
 </section>
 
 <div class="btn-site wrapper">
-    <a class="cta" href="{{ path('portfolio_index') }}">
+    <a class="cta" href="{{ path('portfolio_manage') }}">
         <span class="next-button">Retour à la liste</span>
         {{ include('includes/next-button.html.twig') }}
     </a>
