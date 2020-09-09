@@ -111,6 +111,28 @@ class ArticlesController extends AbstractController
     }
 
     /**
+     * @Route("/commentEdit/{id}", name="articles_comment_edit", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function commentEdit(Request $request, ArticlesComment $articlesComment, SluggerInterface $slugger): Response
+    {
+        $form = $this->createForm(ArticlesCommentType::class, $articlesComment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('articles_manage');
+        }
+
+        return $this->render('articles/commentEdit.html.twig', [
+            'articles' => $articlesComment,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
      * @Route("/delete/{id}", name="articles_delete")
      * @IsGranted("ROLE_ADMIN")
      */

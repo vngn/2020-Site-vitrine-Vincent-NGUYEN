@@ -45,14 +45,8 @@
 <div class="comment example-wrapper block-blog blog-color">
     {{ form_start(blogCommentForm) }}
     {{ form_row(blogCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
-
-    <div class="btn-site wrapper">
-        <button type="submit" class="cta">
-            <span class="next-button">Ajouter un commentaire</span>
-            {{ include('includes/next-button.html.twig') }}
-            {{ form_end(blogCommentForm) }}
-        </button>
-    </div>
+    {{ form_end(blogCommentForm) }}
+</div>
 </div>
 
 {% else %}

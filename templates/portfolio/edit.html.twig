@@ -32,7 +32,7 @@
                     <td>{{ portfolioComment.createdAt | date ('d/m/Y (H:i)') }}</td>
                     <td>{{ portfolioComment.content | raw }}</td>
                     <td>
-                        <a href="#" class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
+                        <a href="{{ path('portfolio_comment_edit', {'id': portfolioComment.id}) }}" class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
                         <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
                             data-id="{{ portfolioComment.id }}" data-prenom="{{ portfolioComment.users.firstname }}"
                             data-nom="{{ portfolioComment.users.name }}">Supprimer</a>

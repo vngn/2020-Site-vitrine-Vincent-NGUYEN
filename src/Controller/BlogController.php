@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Controller;
+
 use App\Entity\Blog;
 use App\Form\BlogType;
 use App\Entity\BlogComment;
@@ -13,10 +15,12 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
 /**
  * @Route("/blog")
  * @package App\Controller
  */
+
 class BlogController extends AbstractController
 {
     /**
@@ -99,6 +103,28 @@ class BlogController extends AbstractController
 
         return $this->render('blog/edit.html.twig', [
             'blog' => $blog,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/commentEdit/{id}", name="blog_comment_edit", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function commentEdit(Request $request, BlogComment $blogComment, SluggerInterface $slugger): Response
+    {
+        $form = $this->createForm(BlogCommentType::class, $blogComment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('blog_manage');
+        }
+
+        return $this->render('blog/commentEdit.html.twig', [
+            'blog' => $blogComment,
             'form' => $form->createView(),
         ]);
     }

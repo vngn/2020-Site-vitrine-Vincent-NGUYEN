@@ -128,6 +128,28 @@ class PortfolioController extends AbstractController
     }
 
     /**
+     * @Route("/commentEdit/{id}", name="portfolio_comment_edit", methods={"GET","POST"})
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function commentEdit(Request $request, PortfolioComment $portfolioComment, SluggerInterface $slugger): Response
+    {
+        $form = $this->createForm(PortfolioCommentType::class, $portfolioComment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('portfolio_manage');
+        }
+
+        return $this->render('portfolio/commentEdit.html.twig', [
+            'portfolio' => $portfolioComment,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
      * @Route("/delete/{id}", name="portfolio_delete")
      * @IsGranted("ROLE_ADMIN")
      */

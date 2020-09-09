@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class BlogCommentType extends AbstractType
 {
@@ -14,6 +15,7 @@ class BlogCommentType extends AbstractType
     {
         $builder
         ->add('content', CKEditorType::class)
+        ->add('Valider', SubmitType::class)
         ;
     }
 

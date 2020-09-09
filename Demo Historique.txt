@@ -15,11 +15,10 @@ général :
 - tarte au citron
 
 admin :
-- intégrer gestion admin des commentaires
 - intégrer gestion admin des users
 
 pages portfolio, articles et blog :
-- intégrer condition d'affichage si active ou non
+- différencier le conteu des pages index et show
 
 page about :
 - remplir page about

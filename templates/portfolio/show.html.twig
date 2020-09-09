@@ -60,14 +60,7 @@
 <div class="comment example-wrapper block-portfolio-light portfolio-color">
     {{ form_start(portfolioCommentForm) }}
     {{ form_row(portfolioCommentForm.content, {'attr': {'placeholder': "Votre commentaire"}}) }}
-
-    <div class="btn-site wrapper">
-        <button type="submit" class="cta">
-            <span class="next-button">Ajouter un commentaire</span>
-            {{ include('includes/next-button.html.twig') }}
-            {{ form_end(portfolioCommentForm) }}
-        </button>
-    </div>
+    {{ form_end(portfolioCommentForm) }}
 </div>
 
 {% else %}

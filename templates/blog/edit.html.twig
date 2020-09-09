@@ -32,7 +32,7 @@
                     <td>{{ blogComment.createdAt | date ('d/m/Y (H:i)') }}</td>
                     <td>{{ blogComment.content | raw }}</td>
                     <td>
-                        <a href="#" class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
+                        <a href="{{ path('blog_comment_edit', {'id': blogComment.id}) }}" class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
                         <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
                             data-id="{{ blogComment.id }}" data-prenom="{{ blogComment.users.firstname }}"
                             data-nom="{{ blogComment.users.name }}">Supprimer</a>
