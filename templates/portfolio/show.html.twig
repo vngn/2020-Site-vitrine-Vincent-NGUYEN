@@ -11,12 +11,15 @@
 <ul class="block-portfolio portfolio-color"
     style="background-image: url('{{ asset('uploads/images/'~ portfolio.background) }}');">
 
-    <li><a href="">
-            <span>{{ portfolio.createdAt | date ('d/m/Y') }}</span>
-            <span>{{ portfolio.title }}</span>
-            <span>{{ portfolio.categories }}</span>
-            <span>{{ portfolio.content | raw }}</span>
-        </a>
+    <li>
+        <div class="block-portfolio-insert">
+            <a href="">
+                <span>{{ portfolio.createdAt | date ('d/m/Y') }}</span>
+                <span>{{ portfolio.title }}</span>
+                <span>{{ portfolio.categories }}</span>
+                <span>{{ portfolio.content | raw }}</span>
+            </a>
+        </div>
         <iframe src="{{ portfolio.image }}" class="site-iframe"></iframe>
     </li>
 </ul>
