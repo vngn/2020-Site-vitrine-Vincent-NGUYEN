@@ -23,23 +23,26 @@
 
 {% for articleBlog in blog %}
 
-<ul class="block-blog blog-color">
-    <li>
-        <span>{{ articleBlog.createdAt | date ('d/m/Y') }}</span>
-        <span>{{ articleBlog.title }}</span>
-        <span>{{ articleBlog.categories }}</span>
-        {# <span>{{ articleBlog.content | raw }}</span> #}
-        <span><a class="link" href="{{ path('blog_show', {'id': articleBlog.id}) }}">Lire la suite /
-                {{ articleBlog.blogComment | length }} commentaire(s)</a></span>
-    </li>
-</ul>
+<div class="{{ articleBlog.categories.slug }} blogFilter">
 
-{# <div class="btn-site wrapper">
+    <ul class="block-blog blog-color">
+        <li>
+            <span>{{ articleBlog.createdAt | date ('d/m/Y') }}</span>
+            <span>{{ articleBlog.title }}</span>
+            <span>{{ articleBlog.categories }}</span>
+            {# <span>{{ articleBlog.content | raw }}</span> #}
+            <span><a class="link" href="{{ path('blog_show', {'id': articleBlog.id}) }}">Lire la suite /
+                    {{ articleBlog.blogComment | length }} commentaire(s)</a></span>
+        </li>
+    </ul>
+
+    {# <div class="btn-site wrapper">
     <a class="cta" href="{{ path('blog_show', {'id': articleBlog.id}) }}">
         <span class="next-button">Lire la suite / {{ articleBlog.blogComment | length }} commentaire(s)</span>
         {{ include('includes/next-button.html.twig') }}
     </a>
 </div> #}
+</div>
 
 {% endfor %}
 

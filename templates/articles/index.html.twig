@@ -23,60 +23,64 @@
 
 {% for article in articles %}
 
-<ul class="block-articles articles-color">
-    <li><a href="">
-            <span>{{ article.createdAt | date ('d/m/Y') }}</span>
-            <span>{{ article.title }}</span>
-            <span>{{ article.categories }}</span>
+<div class="{{ article.categories.slug }} articlesFilter">
+
+    <ul class="block-articles articles-color">
+        <li><a href="">
+                <span>{{ article.createdAt | date ('d/m/Y') }}</span>
+                <span>{{ article.title }}</span>
+                <span>{{ article.categories }}</span>
+            </a>
+            <span>{{ article.content | raw}}</span>
+        </li>
+    </ul>
+
+    <div class="btn-site wrapper">
+        <a class="cta" href="{{ path('articles_show', {'id': article.id}) }}">
+            <span class="next-button">Lire la suite / {{ article.articleComment | length }} commentaire(s)</span>
+            {{ include('includes/next-button.html.twig') }}
         </a>
-        <span>{{ article.content | raw}}</span>
-    </li>
-</ul>
+    </div>
+    </div>
 
-<div class="btn-site wrapper">
-    <a class="cta" href="{{ path('articles_show', {'id': article.id}) }}">
-        <span class="next-button">Lire la suite / {{ article.articleComment | length }} commentaire(s)</span>
-        {{ include('includes/next-button.html.twig') }}
-    </a>
-</div>
-{% endfor %}
+    {% endfor %}
 
-{# script pour boutons tri #}
-<script>
-    $(document).ready(function () {
-        $('.buttonFilter').click(function () {
-            let slug = $(this).attr('id');
-            //Mise en valeur du bouton sélectionné
-            $('.buttonFilter').removeClass("activeButton");
-            $(this).addClass("activeButton");
-            //Système de filtre des portfolios
-            if (slug != 'allProject') {
+    {# script pour boutons tri #}
+    <script>
+        $(document).ready(function () {
+            $('.buttonFilter').click(function () {
+                let slug = $(this).attr('id');
+                //Mise en valeur du bouton sélectionné
+                $('.buttonFilter').removeClass("activeButton");
+                $(this).addClass("activeButton");
+                //Système de filtre des portfolios
+                if (slug != 'allProject') {
+                    $('.articlesFilter').hide();
+                    $("." + slug).toggle();
+                } else {
+                    $('.articlesFilter').show();
+                }
+            });
+        });
+    </script>
+
+    {# script pour récupérer les url des boutons du menu tri en jquery et les intégrer à la sidenav #}
+    <script>
+        $(document).ready(function () {
+            //On va chercher le slug ou la catégorie dans l'url en GET
+            let searchParams = new URLSearchParams(window.location.search)
+            searchParams.has('categorie')
+            let categorie = searchParams.get('categorie');
+            console.log(categorie);
+            if (categorie != null) {
+                // On met en place le filtre
+                $("#" + categorie).addClass('activeButton');
                 $('.articlesFilter').hide();
-                $("." + slug).toggle();
+                $("." + categorie).toggle('.articlesFilter');
             } else {
-                $('.articlesFilter').show();
+                $("#allProject").addClass('activeButton');
             }
         });
-    });
-</script>
+    </script>
 
-{# script pour récupérer les url des boutons du menu tri en jquery et les intégrer à la sidenav #}
-<script>
-    $(document).ready(function () {
-        //On va chercher le slug ou la catégorie dans l'url en GET
-        let searchParams = new URLSearchParams(window.location.search)
-        searchParams.has('categorie')
-        let categorie = searchParams.get('categorie');
-        console.log(categorie);
-        if (categorie != null) {
-            // On met en place le filtre
-            $("#" + categorie).addClass('activeButton');
-            $('.articlesFilter').hide();
-            $("." + categorie).toggle('.articlesFilter');
-        } else {
-            $("#allProject").addClass('activeButton');
-        }
-    });
-</script>
-
-{% endblock %}
+    {% endblock %}
