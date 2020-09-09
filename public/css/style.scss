@@ -168,7 +168,7 @@ a {
 hr {
     width: 100%;
     margin: 0;
-    
+
 }
 
 /* ============================== 0. TOUTES LES PAGES ============================== */
@@ -232,29 +232,6 @@ hr {
     }
 }
 
-/* barres de boutons de tri par catégorie des pages portfolio,articles et blog */
-
-.buttonFilter {
-    background: rgb(176, 76, 52);
-    padding: 10px;
-    margin: 3px;
-    width: 100px;
-    color: white;
-    border-radius: 5px;
-    transition: all .5s;
-    border: 1px solid $background-color-border-bis;
-    
-    &:hover{
-        font-style: italic;
-    }
-}
-.activeButton {
-    background: rgb(36,65,91);
-    border: 1px solid $background-color-border-bis;
-
-    // font-size: 1.1em;
-}
-
 /* barres de navigation verticales (Axentix) */
 
 @mixin sidenav {
@@ -266,6 +243,7 @@ hr {
 .sidenav {
     @include sidenav;
 }
+
 /* sidenav-overlay (dans axentis.min.css):  pour un effet sur l'ensemble de l'écran quand ouverture de la sidenav */
 // .sidenav-overlay {}
 
@@ -419,7 +397,7 @@ hr {
     padding-top: 330px;
     margin-top: -100px;
     // margin-bottom: 100px;
-    background: $background-color;;
+    background: $background-color;
 }
 
 .video-title {
@@ -451,6 +429,33 @@ hr {
 @mixin block-button-menu {
     text-align: center;
     margin: -100px auto 115px;
+}
+
+/* barres de boutons de tri par catégorie des pages portfolio,articles et blog */
+
+.buttonFilter {
+
+    background: rgb(176, 76, 52);
+    color: white;
+    padding: 10px;
+    margin: 3px;
+    width: 100px;
+    letter-spacing: .05rem;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+    border: $background-color-border-bis;
+    border-radius: 5px;
+    z-index: 1;
+    box-shadow: 8px 8px 4px $background-color-border-bis;
+
+    &:hover {
+        box-shadow: 4px 4px 2px $background-color-border-bis;
+        transform: scale(0.9);
+    }
+}
+
+.activeButton {
+    background: rgb(36, 65, 91);
 }
 
 /* ============================== 1. PAGE ACCUEIL ============================== */
@@ -682,4 +687,3 @@ hr {
 /* ============================== 9. MAJ ============================== */
 
 /* ============================== x. FOOTER ============================== */
-

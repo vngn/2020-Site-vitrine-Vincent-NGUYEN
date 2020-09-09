@@ -158,28 +158,6 @@ hr {
   padding: 2px 6px;
 }
 
-/* barres de boutons de tri par catégorie des pages portfolio,articles et blog */
-.buttonFilter {
-  background: #b04c34;
-  padding: 10px;
-  margin: 3px;
-  width: 100px;
-  color: white;
-  border-radius: 5px;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  border: 1px solid #e1e1e1;
-}
-
-.buttonFilter:hover {
-  font-style: italic;
-}
-
-.activeButton {
-  background: #24415b;
-  border: 1px solid #e1e1e1;
-}
-
 /* barres de navigation verticales (Axentix) */
 .sidenav {
   border-top-right-radius: 20px;
@@ -452,6 +430,35 @@ hr {
 }
 
 /* menu boutons pour tri pages portfolio, articles et blog */
+/* barres de boutons de tri par catégorie des pages portfolio,articles et blog */
+.buttonFilter {
+  background: #b04c34;
+  color: white;
+  padding: 10px;
+  margin: 3px;
+  width: 100px;
+  letter-spacing: .05rem;
+  overflow: hidden;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  border: #e1e1e1;
+  border-radius: 5px;
+  z-index: 1;
+  -webkit-box-shadow: 8px 8px 4px #e1e1e1;
+          box-shadow: 8px 8px 4px #e1e1e1;
+}
+
+.buttonFilter:hover {
+  -webkit-box-shadow: 4px 4px 2px #e1e1e1;
+          box-shadow: 4px 4px 2px #e1e1e1;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.activeButton {
+  background: #24415b;
+}
+
 /* ============================== 1. PAGE ACCUEIL ============================== */
 .block-home {
   width: 84%;
