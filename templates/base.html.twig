@@ -30,15 +30,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 
-{# {% if is_granted('ROLE_ADMIN') %}
-<!-- Bootstrap Background Vidéo-->
-<video id="video" autoplay="true" loop muted>
-    <source src="{{asset('bgvideo/background-video.mp4')}}" type="video/mp4" />
-</video>
-{% else %}
-<body class="bg00">
-{% endif %} #}
-
 <body>
     <header class="container-fluid main clearfix">
         <nav id="menu" class="nav nav-head">
@@ -221,8 +212,8 @@
 
         <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
         <a href="/articles?categorie=code" class="sidenav-link">Code</a>
-        <a href="/articles?categorie=technique" class="sidenav-link">Technique</a>
-        <a href="/articles?categorie=tutoriel" class="sidenav-link">Tutoriel</a>
+        <a href="/articles?categorie=techno" class="sidenav-link">Techno</a>
+        <a href="/articles?categorie=tuto" class="sidenav-link">Tuto</a>
         <a href="/articles?categorie=divers" class="sidenav-link">Divers</a>
     </div>
 
@@ -240,9 +231,9 @@
         <hr />
 
         <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <a href="/blog?categorie=informatif" class="sidenav-link">Informatif</a>
-        <a href="/blog?categorie=professionnel" class="sidenav-link">Professionnel</a>
-        <a href="/blog?categorie=non-professionnel" class="sidenav-link">Non-professionnel</a>
+        <a href="/blog?categorie=info" class="sidenav-link">Info</a>
+        <a href="/blog?categorie=pro" class="sidenav-link">Pro</a>
+        <a href="/blog?categorie=non-pro" class="sidenav-link">Non-pro</a>
     </div>
 
     {# menu latéral a propos #}
