@@ -436,6 +436,7 @@ hr {
 .buttonFilter {
 
     background: rgb(176, 76, 52);
+    text-transform: uppercase;
     color: white;
     padding: 10px;
     margin: 3px;
@@ -444,13 +445,17 @@ hr {
     overflow: hidden;
     transition: .5s ease-in-out;
     border: $background-color-border-bis;
-    border-radius: 5px;
+    border-radius: 20px;
     z-index: 1;
     box-shadow: 8px 8px 4px $background-color-border-bis;
 
     &:hover {
         box-shadow: 4px 4px 2px $background-color-border-bis;
         transform: scale(0.9);
+    }
+
+    &:focus {
+        outline: $background-color-border-bis;
     }
 }
 

@@ -433,6 +433,7 @@ hr {
 /* barres de boutons de tri par catégorie des pages portfolio,articles et blog */
 .buttonFilter {
   background: #b04c34;
+  text-transform: uppercase;
   color: white;
   padding: 10px;
   margin: 3px;
@@ -442,7 +443,7 @@ hr {
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   border: #e1e1e1;
-  border-radius: 5px;
+  border-radius: 20px;
   z-index: 1;
   -webkit-box-shadow: 8px 8px 4px #e1e1e1;
           box-shadow: 8px 8px 4px #e1e1e1;
@@ -453,6 +454,10 @@ hr {
           box-shadow: 4px 4px 2px #e1e1e1;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+.buttonFilter:focus {
+  outline: #e1e1e1;
 }
 
 .activeButton {
