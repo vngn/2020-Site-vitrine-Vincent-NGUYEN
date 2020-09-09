@@ -22,6 +22,7 @@
 </div>
 
 {% for article in articles %}
+{%  if  article.active != 0 %}
 
 <div class="{{ article.categories.slug }} articlesFilter">
 
@@ -41,46 +42,47 @@
             {{ include('includes/next-button.html.twig') }}
         </a>
     </div>
-    </div>
+</div>
 
-    {% endfor %}
+{% endif %}
+{% endfor %}
 
-    {# script pour boutons tri #}
-    <script>
-        $(document).ready(function () {
-            $('.buttonFilter').click(function () {
-                let slug = $(this).attr('id');
-                //Mise en valeur du bouton sélectionné
-                $('.buttonFilter').removeClass("activeButton");
-                $(this).addClass("activeButton");
-                //Système de filtre des portfolios
-                if (slug != 'allProject') {
-                    $('.articlesFilter').hide();
-                    $("." + slug).toggle();
-                } else {
-                    $('.articlesFilter').show();
-                }
-            });
-        });
-    </script>
-
-    {# script pour récupérer les url des boutons du menu tri en jquery et les intégrer à la sidenav #}
-    <script>
-        $(document).ready(function () {
-            //On va chercher le slug ou la catégorie dans l'url en GET
-            let searchParams = new URLSearchParams(window.location.search)
-            searchParams.has('categorie')
-            let categorie = searchParams.get('categorie');
-            console.log(categorie);
-            if (categorie != null) {
-                // On met en place le filtre
-                $("#" + categorie).addClass('activeButton');
+{# script pour boutons tri #}
+<script>
+    $(document).ready(function () {
+        $('.buttonFilter').click(function () {
+            let slug = $(this).attr('id');
+            //Mise en valeur du bouton sélectionné
+            $('.buttonFilter').removeClass("activeButton");
+            $(this).addClass("activeButton");
+            //Système de filtre des portfolios
+            if (slug != 'allProject') {
                 $('.articlesFilter').hide();
-                $("." + categorie).toggle('.articlesFilter');
+                $("." + slug).toggle();
             } else {
-                $("#allProject").addClass('activeButton');
+                $('.articlesFilter').show();
             }
         });
-    </script>
+    });
+</script>
 
-    {% endblock %}
+{# script pour récupérer les url des boutons du menu tri en jquery et les intégrer à la sidenav #}
+<script>
+    $(document).ready(function () {
+        //On va chercher le slug ou la catégorie dans l'url en GET
+        let searchParams = new URLSearchParams(window.location.search)
+        searchParams.has('categorie')
+        let categorie = searchParams.get('categorie');
+        console.log(categorie);
+        if (categorie != null) {
+            // On met en place le filtre
+            $("#" + categorie).addClass('activeButton');
+            $('.articlesFilter').hide();
+            $("." + categorie).toggle('.articlesFilter');
+        } else {
+            $("#allProject").addClass('activeButton');
+        }
+    });
+</script>
+
+{% endblock %}

@@ -22,6 +22,7 @@
 </div>
 
 {% for articlePortfolio in portfolio %}
+{%  if  articlePortfolio.active != 0 %}
 
 <div class="{{ articlePortfolio.categories.slug }} portfolioFilter">
 
@@ -56,6 +57,7 @@
     </div>
 </div>
 
+{% endif %}
 {% endfor %}
 
 {# script pour boutons tri #}
