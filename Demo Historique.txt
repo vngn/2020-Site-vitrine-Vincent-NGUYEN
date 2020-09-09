@@ -13,6 +13,7 @@ général :
 - s'occuper du responsive (navbar, sidebar, pages en général)
 - choisir la police (roboto) grosse police
 - tarte au citron
+- reduire la width générale
 
 admin :
 - intégrer gestion admin des users
@@ -20,6 +21,7 @@ admin :
 pages portfolio, articles et blog :
 - différencier le conteu des pages index et show
 - mettre en forme les pages edit, manage et comment-edit
+- passer en 2 ou 3 colonnes les pages index
 
 page about :
 - remplir page about
