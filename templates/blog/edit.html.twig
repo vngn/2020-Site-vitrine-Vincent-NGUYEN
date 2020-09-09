@@ -11,6 +11,39 @@
     {{ form(form) }}
 </div>
 
+<section id="commentaires">
+    <h1 class="example-wrapper block-blog-light blog-color">{{ blog.blogComment | length }}
+        commentaire(s) :</h1>
+
+    <div class="comment example-wrapper block-blog-light blog-color">
+        <table class="table striped">
+            <thead>
+                <tr>
+                    <th>Auteur</th>
+                    <th>Date</th>
+                    <th>Contenu</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for blogComment in blog.blogComment %}
+                <tr>
+                    <td>{{ blogComment.users.firstname }} {{ blogComment.users.name }}</td>
+                    <td>{{ blogComment.createdAt | date ('d/m/Y (H:i)') }}</td>
+                    <td>{{ blogComment.content | raw }}</td>
+                    <td>
+                        <a href="#" class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
+                        <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
+                            data-id="{{ blogComment.id }}" data-prenom="{{ blogComment.users.firstname }}"
+                            data-nom="{{ blogComment.users.name }}">Supprimer</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
 <div class="btn-site wrapper">
     <a class="cta" href="{{ path('blog_index') }}">
         <span class="next-button">Retour à la liste</span>
@@ -18,4 +51,41 @@
     </a>
 </div>
 
+<div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
+    <div class="modal-header">Supprimer un commentaire</div>
+    <div class="divider"></div>
+    <div class="modal-content">
+
+    </div>
+    <div class="divider"></div>
+    <div class="modal-footer">
+        <a href="" class="btn red">valider</a>
+        <button data-target="modal-delete"
+            class="ml-auto btn shadow-1 rounded-1 small primary modal-trigger">Fermer</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    window.onload = () => {
+        let modal = new Axentix.Modal('#modal-delete');
+
+        let supprimer = document.querySelectorAll(".modal-trigger")
+        for (let bouton of supprimer) {
+            bouton.addEventListener("click", function () {
+                document.querySelector(".modal-footer a").href =
+                    `/blog/commentDelete/${this.dataset.id}`
+                document.querySelector(".modal-content").innerText =
+                    `Êtes-vous sûr(e) de vouloir supprimer le commentaire de ${this.dataset.prenom} ${this.dataset.nom}`
+            })
+        }
+        // raffraichir la page 0.5s après le changement de valeur du bouton active
+        $('.form-switch').click(function () {
+            setTimeout(function () {
+                window.location.reload();
+            }, 500);
+        });
+    }
+</script>
 {% endblock %}

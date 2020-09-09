@@ -117,6 +117,19 @@ class BlogController extends AbstractController
     }
 
     /**
+     * @Route("/commentDelete/{id}", name="blog_comment_delete")
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function commentDelete(BlogComment $blogComment)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($blogComment);
+        $em->flush();
+        $this->addFlash('message', 'Commentaire supprimé avec succès');
+        return $this->redirectToRoute('blog_manage');
+    }
+
+    /**
      * @Route("/{id}", name="blog_show")
      */
     public function show($id, Blog $blog, BlogRepository $blogRepo, Request $request, EntityManagerInterface $manager) 

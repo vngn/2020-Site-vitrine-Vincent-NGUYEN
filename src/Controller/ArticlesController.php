@@ -125,6 +125,19 @@ class ArticlesController extends AbstractController
     }
 
     /**
+     * @Route("/commentDelete/{id}", name="articles_comment_delete")
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function commentDelete(ArticlesComment $articlesComment)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($articlesComment);
+        $em->flush();
+        $this->addFlash('message', 'Commentaire supprimé avec succès');
+        return $this->redirectToRoute('articles_manage');
+    }
+
+    /**
      * @Route("/{id}", name="articles_show")
      */
     public function show($id, Articles $articles, ArticlesRepository $articlesRepo, Request $request, EntityManagerInterface $manager) 

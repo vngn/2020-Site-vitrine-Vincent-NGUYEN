@@ -35,9 +35,9 @@
                     <a href="{{ path('articles_edit', {'id': article.id}) }}"
                         class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
 
-                    <a href="{{ path('articles_edit', {'id': article.id}) }}"
+                    {# <a href="{{ path('articles_edit', {'id': article.id}) }}"
                         class="btn shadow-1 rounded-1 red modal-trigger">Gérer les commentaires
-                        ({{ article.articleComment | length }})</a>
+                        ({{ article.articleComment | length }})</a> #}
 
                     <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
                         data-id="{{ article.id }}" data-titre="{{ article.title }}">Supprimer</a>
