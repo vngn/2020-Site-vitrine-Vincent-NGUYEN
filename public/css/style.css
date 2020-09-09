@@ -836,6 +836,17 @@ hr {
   background: white;
 }
 
+.block-portfolio-insert-show {
+  padding: 0 20px 10px;
+  text-align: center;
+  margin: 2%;
+  border: 1px solid #e1e1e1;
+  border-radius: 20px;
+  -webkit-box-shadow: 4px 4px 2px black;
+          box-shadow: 4px 4px 2px black;
+  background: white;
+}
+
 /* suppression marge entre bloc portfolio et commentaires */
 .portfolio-comment-adjustment {
   margin-top: -82px;
