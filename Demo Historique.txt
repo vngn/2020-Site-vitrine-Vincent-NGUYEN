@@ -19,6 +19,7 @@ admin :
 
 pages portfolio, articles et blog :
 - différencier le conteu des pages index et show
+- mettre en forme les pages edit, manage et comment-edit
 
 page about :
 - remplir page about
