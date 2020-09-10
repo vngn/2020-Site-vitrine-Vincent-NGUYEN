@@ -17,7 +17,6 @@ class ArticlesCommentType extends AbstractType
         ->add('content', CKEditorType::class,['label' => 'Votre commentaire'])
         ->add('Valider', SubmitType::class)
         ;
-        ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
