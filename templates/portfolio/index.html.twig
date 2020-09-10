@@ -33,19 +33,17 @@
                 style="background-image: url('{{ asset('uploads/images/'~ articlePortfolio.background) }}');">
                 <li>
                     <div class="block-portfolio-insert">
-                        <a href="">
                             <span>{{ articlePortfolio.createdAt | date ('d/m/Y') }}</span>
                             <span>{{ articlePortfolio.title }}</span>
                             <span>{{ articlePortfolio.categories }}</span>
                             {# <span>{{ articlePortfolio.content | raw }}</span> #}
-                        </a>
                     </div>
                     {# <img src="{{ asset('uploads/images/'~ articlePortfolio.background) }}" alt=""> #}
                     <iframe src="{{ articlePortfolio.image }}" class="site-iframe"></iframe>
                 </li>
             </ul>
 
-            <div class="btn-site wrapper-link-site">
+            <div class="btn-site wrapper-link-site-index">
                 <a class="cta" href="{{ articlePortfolio.image }}" target="_blank">
                     <span class="next-button">Page du site</span>
                     {{ include('includes/next-button.html.twig') }}

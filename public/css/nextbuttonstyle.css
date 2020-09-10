@@ -16,6 +16,19 @@
       -ms-flex-pack: left;
           justify-content: left;
   position: relative;
+  left: 25px;
+  bottom: 75px;
+}
+
+.wrapper-link-site-index {
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  position: relative;
   left: -30px;
   bottom: 80px;
 }

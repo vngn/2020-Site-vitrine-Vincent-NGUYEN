@@ -10,6 +10,15 @@
     display: flex;
     justify-content: left;
     position: relative;
+    left: 25px;
+    bottom: 75px;
+}
+
+.wrapper-link-site-index {
+    z-index: 99;
+    display: flex;
+    justify-content: left;
+    position: relative;
     left: -30px;
     bottom: 80px;
 }
