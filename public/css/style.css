@@ -466,12 +466,12 @@ hr {
 
 /* ============================== 1. PAGE ACCUEIL ============================== */
 .block-home {
-  width: 84%;
   border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
   padding: 20px;
   position: relative;
+  width: 84%;
 }
 
 .block-home li {
@@ -783,12 +783,12 @@ hr {
 
 /* ============================== 2. PAGE PORTFOLIO ============================== */
 .block-portfolio-light {
-  width: 84%;
   border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
   padding: 20px;
   position: relative;
+  width: 84%;
 }
 
 .block-portfolio-light li {
@@ -852,8 +852,7 @@ hr {
   margin-top: -82px;
 }
 
-.block-portfolio {
-  width: 84%;
+.block-portfolio-index {
   border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
@@ -861,47 +860,48 @@ hr {
   position: relative;
   border-radius: 0;
   z-index: 0;
-  height: 680px;
   text-shadow: 0 0 2px white;
   background-size: cover;
   background-repeat: no-repeat;
+  width: 480px;
+  height: 340px;
 }
 
-.block-portfolio li {
+.block-portfolio-index li {
   display: block;
   width: 100%;
   height: 100%;
   padding: 0 10px;
 }
 
-.block-portfolio li span {
+.block-portfolio-index li span {
   display: block;
 }
 
-.block-portfolio li span:first-child {
+.block-portfolio-index li span:first-child {
   font-weight: 700;
   font-size: 16px;
   padding-top: 10px;
 }
 
-.block-portfolio li span:nth-child(2) {
+.block-portfolio-index li span:nth-child(2) {
   font-weight: 400;
   font-style: italic;
   font-size: 28px;
 }
 
-.block-portfolio li span:nth-child(4) {
+.block-portfolio-index li span:nth-child(4) {
   font-weight: 400;
   font-size: 20px;
 }
 
-.block-portfolio:hover a {
+.block-portfolio-index:hover a {
   opacity: 0;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
 }
 
-.block-portfolio li iframe {
+.block-portfolio-index li iframe {
   width: 100%;
   height: 100%;
   border-radius: 0;
@@ -914,7 +914,75 @@ hr {
   transition: opacity 1s ease-in-out;
 }
 
-.block-portfolio li:hover iframe {
+.block-portfolio-index li:hover iframe {
+  left: 0px;
+  top: 0px;
+  opacity: 1;
+}
+
+.block-portfolio-show {
+  border: 1px solid #e1e1e1;
+  border-radius: 20px;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 0;
+  z-index: 0;
+  text-shadow: 0 0 2px white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 84%;
+  height: 680px;
+}
+
+.block-portfolio-show li {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.block-portfolio-show li span {
+  display: block;
+}
+
+.block-portfolio-show li span:first-child {
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.block-portfolio-show li span:nth-child(2) {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+}
+
+.block-portfolio-show li span:nth-child(4) {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.block-portfolio-show:hover a {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.block-portfolio-show li iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.block-portfolio-show li:hover iframe {
   left: 0px;
   top: 0px;
   opacity: 1;
@@ -922,12 +990,12 @@ hr {
 
 /* ============================== 3. PAGE ARTICLES ============================== */
 .block-articles {
-  width: 84%;
   border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
   padding: 20px;
   position: relative;
+  width: 84%;
 }
 
 .block-articles li {
@@ -965,12 +1033,12 @@ hr {
 
 /* ============================== 4. PAGE BLOG ============================== */
 .block-blog {
-  width: 84%;
   border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
   padding: 20px;
   position: relative;
+  width: 84%;
   opacity: 0.9925;
 }
 
@@ -1010,12 +1078,12 @@ hr {
 /* ============================== 5. PAGE A PROPOS ============================== */
 /* ============================== 6. PAGE CONTACT ============================== */
 .block-contact {
-  width: 84%;
   border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
   padding: 20px;
   position: relative;
+  width: 84%;
 }
 
 .block-contact li {
@@ -1048,12 +1116,12 @@ hr {
 
 /* ============================== 7. PAGE CATEGORIES ============================== */
 .block-categories {
-  width: 84%;
   border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
   padding: 20px;
   position: relative;
+  width: 84%;
 }
 
 .block-categories li {
@@ -1086,12 +1154,12 @@ hr {
 
 /* ============================== 8. PAGE USERS ============================== */
 .block-users {
-  width: 84%;
   border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
   padding: 20px;
   position: relative;
+  width: 84%;
 }
 
 .block-users li {

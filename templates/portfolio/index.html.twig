@@ -21,44 +21,48 @@
     {% endfor %}
 </div>
 
-{% for articlePortfolio in portfolio %}
-{%  if  articlePortfolio.active != 0 %}
+<div class="example-wrapper grix xs1 md2 lg3 gutter-xs7">
 
-<div class="{{ articlePortfolio.categories.slug }} portfolioFilter">
+    {% for articlePortfolio in portfolio %}
+    {%  if  articlePortfolio.active != 0 %}
 
-    <ul class="block-portfolio portfolio-color"
-        style="background-image: url('{{ asset('uploads/images/'~ articlePortfolio.background) }}');">
-        <li>
-            <div class="block-portfolio-insert">
-                <a href="">
-                    <span>{{ articlePortfolio.createdAt | date ('d/m/Y') }}</span>
-                    <span>{{ articlePortfolio.title }}</span>
-                    <span>{{ articlePortfolio.categories }}</span>
-                    {# <span>{{ articlePortfolio.content | raw }}</span> #}
-                </a>
-            </div>
-            <iframe src="{{ articlePortfolio.image }}" class="site-iframe"></iframe>
-        </li>
-    </ul>
+    <div class="{{ articlePortfolio.categories.slug }} portfolioFilter">
 
-    <div class="btn-site wrapper-link-site">
-        <a class="cta" href="{{ articlePortfolio.image }}" target="_blank">
-            <span class="next-button">Page du site</span>
-            {{ include('includes/next-button.html.twig') }}
-        </a>
+        <ul class="block-portfolio-index portfolio-color"
+            style="background-image: url('{{ asset('uploads/images/'~ articlePortfolio.background) }}');">
+            <li>
+                <div class="block-portfolio-insert">
+                    <a href="">
+                        <span>{{ articlePortfolio.createdAt | date ('d/m/Y') }}</span>
+                        <span>{{ articlePortfolio.title }}</span>
+                        <span>{{ articlePortfolio.categories }}</span>
+                        {# <span>{{ articlePortfolio.content | raw }}</span> #}
+                    </a>
+                </div>
+                <iframe src="{{ articlePortfolio.image }}" class="site-iframe"></iframe>
+            </li>
+        </ul>
+
+        <div class="btn-site wrapper-link-site">
+            <a class="cta" href="{{ articlePortfolio.image }}" target="_blank">
+                <span class="next-button">Page du site</span>
+                {{ include('includes/next-button.html.twig') }}
+            </a>
+        </div>
+
+        <div class="btn-site wrapper-more-site">
+            <a class="cta" href="{{ path('portfolio_show', {'id': articlePortfolio.id}) }}">
+                <span class="next-button">Lire la suite / {{ articlePortfolio.portfolioComment | length }}
+                    commentaire(s)</span>
+                {{ include('includes/next-button.html.twig') }}
+            </a>
+        </div>
     </div>
 
-    <div class="btn-site wrapper-more-site">
-        <a class="cta" href="{{ path('portfolio_show', {'id': articlePortfolio.id}) }}">
-            <span class="next-button">Lire la suite / {{ articlePortfolio.portfolioComment | length }}
-                commentaire(s)</span>
-            {{ include('includes/next-button.html.twig') }}
-        </a>
-    </div>
+    {% endif %}
+    {% endfor %}
+
 </div>
-
-{% endif %}
-{% endfor %}
 
 {# script pour boutons tri #}
 <script>

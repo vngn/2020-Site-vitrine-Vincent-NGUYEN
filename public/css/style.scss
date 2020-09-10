@@ -187,7 +187,7 @@ hr {
 }
 
 @mixin block-shape-light {
-    width: 84%;
+    // width: 84%;
     border: 1px solid $background-color-border-bis;
     border-radius: 20px;
     margin: 10px auto;
@@ -467,6 +467,7 @@ hr {
 
 .block-home {
     @include block-shape;
+    width: 84%;
 }
 
 /* Texte titre */
@@ -581,6 +582,7 @@ hr {
 
 .block-portfolio-light {
     @include block-shape;
+    width: 84%;
 }
 
 .block-portfolio-button-menu {
@@ -615,11 +617,10 @@ hr {
     margin-top: -82px;
 }
 
-.block-portfolio {
+@mixin block-portfolio {
     @include block-shape;
     border-radius: 0;
     z-index: 0;
-    height: 680px;
     text-shadow: 0 0 2px white;
     // box-shadow: 600px 0 300px rgba(255, 255, 255, 0.9925) inset;
     // background-position: center;
@@ -653,7 +654,25 @@ hr {
     }
 }
 
-.block-portfolio li:hover iframe {
+.block-portfolio-index {
+    @include block-portfolio;
+    width: 480px;
+    height: 340px;
+}
+
+.block-portfolio-index li:hover iframe {
+    left: 0px;
+    top: 0px;
+    opacity: 1;
+}
+
+.block-portfolio-show {
+    @include block-portfolio;
+    width: 84%;
+    height: 680px;
+}
+
+.block-portfolio-show li:hover iframe {
     left: 0px;
     top: 0px;
     opacity: 1;
@@ -663,6 +682,7 @@ hr {
 
 .block-articles {
     @include block-shape;
+    width: 84%;
 }
 
 .block-articles-button-menu {
@@ -673,6 +693,7 @@ hr {
 
 .block-blog {
     @include block-shape;
+    width: 84%;
     opacity: 0.9925;
 }
 
@@ -686,18 +707,21 @@ hr {
 
 .block-contact {
     @include block-shape;
+    width: 84%;
 }
 
 /* ============================== 7. PAGE CATEGORIES ============================== */
 
 .block-categories {
     @include block-shape;
+    width: 84%;
 }
 
 /* ============================== 8. PAGE USERS ============================== */
 
 .block-users {
     @include block-shape;
+    width: 84%;
 }
 
 /* ============================== 9. MAJ ============================== */
