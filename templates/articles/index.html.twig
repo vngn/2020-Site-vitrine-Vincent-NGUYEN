@@ -21,31 +21,38 @@
     {% endfor %}
 </div>
 
-{% for article in articles %}
-{%  if  article.active != 0 %}
+<div class="example-wrapper grix xs1 md2 lg2 gutter-xs7">
 
-<div class="{{ article.categories.slug }} articlesFilter">
+    {% for article in articles %}
+    {%  if  article.active != 0 %}
 
-    <ul class="block-articles articles-color">
-        <li><a href="">
-                <span>{{ article.createdAt | date ('d/m/Y') }}</span>
-                <span>{{ article.title }}</span>
-                <span>{{ article.categories }}</span>
-            </a>
-            <span>{{ article.content | raw}}</span>
-        </li>
-    </ul>
+    <div class="{{ article.categories.slug }} articlesFilter">
+        <div class="individual-block-articles-index">
 
-    <div class="btn-site wrapper">
-        <a class="cta" href="{{ path('articles_show', {'id': article.id}) }}">
-            <span class="next-button">Lire la suite / {{ article.articleComment | length }} commentaire(s)</span>
-            {{ include('includes/next-button.html.twig') }}
-        </a>
+            <ul class="block-articles-index articles-color">
+                <li><a href="">
+                        <span>{{ article.createdAt | date ('d/m/Y') }}</span>
+                        <span>{{ article.title }}</span>
+                        <span>{{ article.categories }}</span>
+                    </a>
+                    {# <span>{{ article.content | raw}}</span> #}
+                </li>
+            </ul>
+
+            <div class="btn-site wrapper">
+                <a class="cta" href="{{ path('articles_show', {'id': article.id}) }}">
+                    <span class="next-button">Lire la suite / {{ article.articleComment | length }}
+                        commentaire(s)</span>
+                    {{ include('includes/next-button.html.twig') }}
+                </a>
+            </div>
+        </div>
     </div>
-</div>
 
-{% endif %}
-{% endfor %}
+    {% endif %}
+    {% endfor %}
+
+</div>
 
 {# script pour boutons tri #}
 <script>

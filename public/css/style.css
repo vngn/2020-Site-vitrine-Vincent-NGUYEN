@@ -904,7 +904,7 @@ hr {
   padding: 10px 20px;
   position: relative;
   width: 732px;
-  height: 450px;
+  height: 452px;
   margin-bottom: 50px;
 }
 
@@ -1041,6 +1041,79 @@ hr {
   margin: -100px auto 115px;
 }
 
+.block-articles-index {
+  border: 1px solid #e1e1e1;
+  border-radius: 20px;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 0;
+  z-index: 0;
+  text-shadow: 0 0 2px white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 690px;
+  height: 340px;
+}
+
+.block-articles-index li {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.block-articles-index li span {
+  display: block;
+}
+
+.block-articles-index li span:first-child {
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.block-articles-index li span:nth-child(2) {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+}
+
+.block-articles-index li span:nth-child(4) {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.block-articles-index:hover a {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.block-articles-index li iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.individual-block-articles-index {
+  border: 1px solid #e1e1e1;
+  background: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  position: relative;
+  width: 732px;
+  height: 452px;
+  margin-bottom: 50px;
+}
+
 /* ============================== 4. PAGE BLOG ============================== */
 .block-blog {
   border: 1px solid #e1e1e1;
@@ -1049,7 +1122,6 @@ hr {
   padding: 20px;
   position: relative;
   width: 84%;
-  opacity: 0.9925;
 }
 
 .block-blog li {
@@ -1083,6 +1155,79 @@ hr {
 .block-blog-button-menu {
   text-align: center;
   margin: -100px auto 115px;
+}
+
+.block-blog-index {
+  border: 1px solid #e1e1e1;
+  border-radius: 20px;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 0;
+  z-index: 0;
+  text-shadow: 0 0 2px white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 690px;
+  height: 170px;
+}
+
+.block-blog-index li {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+}
+
+.block-blog-index li span {
+  display: block;
+}
+
+.block-blog-index li span:first-child {
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.block-blog-index li span:nth-child(2) {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 28px;
+}
+
+.block-blog-index li span:nth-child(4) {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.block-blog-index:hover a {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.block-blog-index li iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.individual-block-blog-index {
+  border: 1px solid #e1e1e1;
+  background: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  position: relative;
+  width: 732px;
+  height: 212px;
+  margin-bottom: 50px;
 }
 
 /* ============================== 5. PAGE A PROPOS ============================== */

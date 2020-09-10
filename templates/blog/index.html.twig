@@ -21,24 +21,31 @@
     {% endfor %}
 </div>
 
-{% for articleBlog in blog %}
-{%  if  articleBlog.active != 0 %}
+<div class="example-wrapper grix xs1 md2 lg2 gutter-xs7">
 
-<div class="{{ articleBlog.categories.slug }} blogFilter">
-    <ul class="block-blog blog-color">
-        <li>
-            <span>{{ articleBlog.createdAt | date ('d/m/Y') }}</span>
-            <span>{{ articleBlog.title }}</span>
-            <span>{{ articleBlog.categories }}</span>
-            {# <span>{{ articleBlog.content | raw }}</span> #}
-            <span><a class="link" href="{{ path('blog_show', {'id': articleBlog.id}) }}">Lire la suite /
-                    {{ articleBlog.blogComment | length }} commentaire(s)</a></span>
-        </li>
-    </ul>
-</div>
+    {% for articleBlog in blog %}
+    {%  if  articleBlog.active != 0 %}
+
+    <div class="{{ articleBlog.categories.slug }} blogFilter">
+        <div class="individual-block-blog-index">
+
+            <ul class="block-blog-index blog-color">
+                <li>
+                    <span>{{ articleBlog.createdAt | date ('d/m/Y') }}</span>
+                    <span>{{ articleBlog.title }}</span>
+                    <span>{{ articleBlog.categories }}</span>
+                    {# <span>{{ articleBlog.content | raw }}</span> #}
+                    <span><a class="link" href="{{ path('blog_show', {'id': articleBlog.id}) }}">Lire la suite /
+                            {{ articleBlog.blogComment | length }} commentaire(s)</a></span>
+                </li>
+            </ul>
+        </div>
+    </div>
 
 {% endif %}
 {% endfor %}
+
+</div>
 
 {# script pour boutons tri #}
 <script>
