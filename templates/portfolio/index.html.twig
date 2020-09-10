@@ -21,13 +21,14 @@
     {% endfor %}
 </div>
 
-<div class="example-wrapper grix xs1 md2 lg3 gutter-xs7">
+<div class="example-wrapper grix xs1 md2 lg2 gutter-xs7">
 
     {% for articlePortfolio in portfolio %}
     {%  if  articlePortfolio.active != 0 %}
 
     <div class="{{ articlePortfolio.categories.slug }} portfolioFilter">
         <div class="individual-block-portfolio-index">
+
             <ul class="block-portfolio-index portfolio-color"
                 style="background-image: url('{{ asset('uploads/images/'~ articlePortfolio.background) }}');">
                 <li>
@@ -39,6 +40,7 @@
                             {# <span>{{ articlePortfolio.content | raw }}</span> #}
                         </a>
                     </div>
+                    {# <img src="{{ asset('uploads/images/'~ articlePortfolio.background) }}" alt=""> #}
                     <iframe src="{{ articlePortfolio.image }}" class="site-iframe"></iframe>
                 </li>
             </ul>
