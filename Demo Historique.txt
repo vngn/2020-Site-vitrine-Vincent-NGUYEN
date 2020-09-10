@@ -19,9 +19,7 @@ admin :
 - intégrer gestion admin des users
 
 pages portfolio, articles et blog :
-- différencier le conteu des pages index et show
 - mettre en forme les pages edit, manage et comment-edit
-- passer en 2 ou 3 colonnes les pages index
 
 page about :
 - remplir page about
