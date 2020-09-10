@@ -904,7 +904,8 @@ hr {
   padding: 10px 20px;
   position: relative;
   width: 732px;
-  height: 485px;
+  height: 450px;
+  margin-bottom: 50px;
 }
 
 .block-portfolio-show {
