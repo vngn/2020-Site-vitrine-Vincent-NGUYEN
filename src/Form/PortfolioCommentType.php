@@ -14,7 +14,7 @@ class PortfolioCommentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        ->add('content', CKEditorType::class)
+        ->add('content', CKEditorType::class, ['label' => 'Votre commentaire'])
         ->add('Valider', SubmitType::class)
         ;
     }

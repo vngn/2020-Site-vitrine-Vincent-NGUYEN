@@ -18,17 +18,12 @@ class ArticlesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', TextType::class)
-            ->add('content', CKEditorType::class)
+            ->add('title', TextType::class,['label' => 'Titre '])
+            ->add('content', CKEditorType::class,['label' => 'Contenu :'])
             ->add('categories', EntityType::class, [
                 'class' => Categories::class,
-                // 'choice_label' => 'title',
-                // 'multiple' => true,
-                // "expanded" => true
+                'label' => 'Catégorie '
             ])
-            // ->add('parent', EntityType::class, [
-            //     'class' => Categories::class,
-            // ])
             ->add('Valider', SubmitType::class);
     }
 

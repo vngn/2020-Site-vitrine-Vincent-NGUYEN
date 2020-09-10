@@ -18,10 +18,11 @@ class BlogType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', TextType::class)
-            ->add('content', CKEditorType::class)
+            ->add('title', TextType::class, ['label' => 'Titre '])
+            ->add('content', CKEditorType::class, ['label' => 'Contenu :'])
             ->add('categories', EntityType::class, [
                 'class' => Categories::class,
+                'label' => 'Catégorie '
             ])
             ->add('Valider', SubmitType::class)
         ;
