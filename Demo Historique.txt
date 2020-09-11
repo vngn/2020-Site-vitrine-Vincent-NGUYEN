@@ -53,7 +53,8 @@ page about :
 - remplir page about
 
 page contact :
-- finir page contact et créer une page pour les regrouper
+- finir page contact 
+- positionner un compteur des messages sur la page d'accueil admin
 
 page rgpd :
 -créer page rgpd et mentions légales
