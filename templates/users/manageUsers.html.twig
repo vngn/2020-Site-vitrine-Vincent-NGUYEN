@@ -15,6 +15,7 @@
                 <th>Nom</th>
                 <th>Prénom</th>
                 <th>Email</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -23,12 +24,20 @@
                 <td>{{ user.name }}</td>
                 <td>{{ user.firstname }}</td>
                 <td>{{ user.email }}</td>
+                <td>
+                    {# <a href="{{ path('portfolio_edit', {'id': portfolio.id}) }}"
+                        class="btn shadow-1 rounded-1 red modal-trigger">Modifier l'article<br />Gérer les commentaires
+                        ({{ portfolio.portfolioComment | length }})</a> #}
+
+                    <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
+                        data-prenom="{{ user.firstname }}" data-nom="{{ user.name }}">Supprimer l'utilisateur</a>
+                </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
-    {# <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
-        <div class="modal-header">Supprimer un article</div>
+    <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
+        <div class="modal-header">Supprimer l'utilisateur</div>
         <div class="divider"></div>
         <div class="modal-content">
 
@@ -38,37 +47,31 @@
             <a href="" class="btn red">valider</a>
             <button data-target="modal-delete"
                 class="ml-auto btn shadow-1 rounded-1 small primary modal-trigger">Fermer</button>
-    </div> #}
+        </div>
+        {% endblock %}
+
+        {% block javascripts %}
+        <script>
+            window.onload = () => {
+                let modal = new Axentix.Modal('#modal-delete');
+
+
+
+                let supprimer = document.querySelectorAll(".modal-trigger")
+                for (let bouton of supprimer) {
+                    bouton.addEventListener("click", function () {
+                        document.querySelector(".modal-footer a").href = `/users/delete/${this.dataset.id}`
+                        document.querySelector(".modal-content").innerText =
+                            `Êtes-vous sûr(e) de vouloir supprimer ${this.dataset.prenom} ${this.dataset.nom} des utilisateurs ?`
+                    })
+                }
+                // raffraichir la page 0.5s après le changement de valeur du bouton active
+                $('.form-switch').click(function () {
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 500);
+                });
+            }
+        </script>
+    </div>
     {% endblock %}
-
-    {% block javascripts %}
-    {# <script>
-    window.onload = () => {
-        let modal = new Axentix.Modal('#modal-delete');
-        let activer = document.querySelectorAll("[type=checkbox]")
-        for (let bouton of activer) {
-            bouton.addEventListener("click", function () {
-                let xmlhttp = new XMLHttpRequest;
-
-                xmlhttp.open("get", `/portfolio/activate/${this.dataset.id}`)
-                xmlhttp.send()
-            })
-        }
-        let supprimer = document.querySelectorAll(".modal-trigger")
-        for (let bouton of supprimer) {
-            bouton.addEventListener("click", function () {
-                document.querySelector(".modal-footer a").href = `/portfolio/delete/${this.dataset.id}`
-                document.querySelector(".modal-content").innerText =
-                    `Êtes-vous sûr(e) de vouloir supprimer l'article "${this.dataset.titre}"`
-            })
-        }
-        // raffraichir la page 0.5s après le changement de valeur du bouton active
-        $('.form-switch').click(function () {
-            setTimeout(function () {
-                window.location.reload();
-            }, 500);
-        });
-    }
-</script> #}
-</div>
-{% endblock %}

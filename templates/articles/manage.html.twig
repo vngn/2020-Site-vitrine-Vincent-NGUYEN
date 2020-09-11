@@ -76,7 +76,7 @@
                 bouton.addEventListener("click", function () {
                     document.querySelector(".modal-footer a").href = `/articles/delete/${this.dataset.id}`
                     document.querySelector(".modal-content").innerText =
-                        `Êtes-vous sûr(e) de vouloir supprimer l'article "${this.dataset.titre}"`
+                        `Êtes-vous sûr(e) de vouloir supprimer l'article "${this.dataset.titre}" ?`
                 })
             }
 

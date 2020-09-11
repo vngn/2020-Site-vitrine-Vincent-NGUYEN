@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Blog;
+use App\Entity\Users;
 use App\Form\BlogType;
 use App\Entity\Articles;
 use App\Entity\Categories;
@@ -82,5 +83,34 @@ class UsersController extends AbstractController
         return $this->render('/users/manageUsers.html.twig', [
             'users' => $usersRepo->findAll()
         ]);
+    }
+
+    // /**
+    //  * @Route("/activate/{id}", name="users_activate")
+    //  * @IsGranted("ROLE_ADMIN")
+    //  */
+    // public function activate(Users $user)
+    // {
+    //     $user->setActive(($user->getActive())?false:true);
+
+    //     $em = $this->getDoctrine()->getManager();
+    //     $em->persist($user);
+    //     $em->flush();
+
+    //     return new Response("true");
+    // }
+
+    /**
+     * @Route("/delete/{id}", name="users_delete")
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function delete(Users $user)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($user);
+        $em->flush();
+
+        $this->addFlash('message', 'Utilisateur supprimé avec succès');
+        return $this->redirectToRoute('users_manageUsers');
     }
 }
