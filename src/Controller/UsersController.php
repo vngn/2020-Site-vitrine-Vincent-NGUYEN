@@ -101,7 +101,7 @@ class UsersController extends AbstractController
     // }
 
     /**
-     * @Route("/delete/{id}", name="users_delete")
+     * @Route("users/delete/{id}", name="users_delete")
      * @IsGranted("ROLE_ADMIN")
      */
     public function delete(Users $user)
@@ -111,6 +111,6 @@ class UsersController extends AbstractController
         $em->flush();
 
         $this->addFlash('message', 'Utilisateur supprimé avec succès');
-        return $this->redirectToRoute('users_manageUsers');
+        return $this->redirectToRoute('users_manage');
     }
 }

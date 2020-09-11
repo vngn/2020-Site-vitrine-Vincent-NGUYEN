@@ -30,7 +30,7 @@
                         ({{ portfolio.portfolioComment | length }})</a> #}
 
                     <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
-                        data-prenom="{{ user.firstname }}" data-nom="{{ user.name }}">Supprimer l'utilisateur</a>
+                        data-id="{{ user.id }}" data-prenom="{{ user.firstname }}" data-nom="{{ user.name }}">Supprimer l'utilisateur</a>
                 </td>
             </tr>
             {% endfor %}
