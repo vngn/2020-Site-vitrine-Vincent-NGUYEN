@@ -8,6 +8,7 @@ use App\Entity\Articles;
 use App\Entity\Categories;
 use App\Form\CategoriesType;
 use App\Form\EditProfileType;
+use App\Repository\UsersRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -69,5 +70,15 @@ class UsersController extends AbstractController
             }
         }
         return $this->render('users/editpass.html.twig');
+    }
+
+    /**
+     * @Route("/manageUsers", name="users_manage")
+     */
+    public function manage(UsersRepository $usersRepo)
+    {
+        return $this->render('/users/manageUsers.html.twig', [
+            'users' => $usersRepo->findAll()
+        ]);
     }
 }
