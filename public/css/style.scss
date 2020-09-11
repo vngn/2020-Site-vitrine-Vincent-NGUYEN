@@ -864,3 +864,12 @@ hr {
 
 /* ============================== x. FOOTER ============================== */
 
+.message-temporaire {
+    @include block-shape;
+    width: 84%;
+    background: white;
+    font-size: 1.5em;
+    text-align: justify;
+    padding: 20px;
+    border: 5px dashed red;
+}
