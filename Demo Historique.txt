@@ -14,6 +14,12 @@ dans cpanel :
 dans base de données MySQL:
 - retrouver la bdd nouvellement créée et y importer la copie de la bdd
 
+modifier le .env pour accéder à la bdd
+
+pour accéder a l'ensemble des pages du site, mmettre le htaccess de symfony dans public
+
+dans cpanel, ajouter la redirection = url + ajouter ^/$ à la fin
+
 
 web 3.0 maquette
 web design inspiration
@@ -38,6 +44,7 @@ admin :
 pages portfolio, articles et blog :
 - mettre en forme les pages edit, manage et comment-edit
 - ajouter des contenus et commentaires
+- classer les articles du plus récent au plus ancien
 
 page maj :
 - créer et remplir page maj
