@@ -119,6 +119,7 @@ body {
   width: 100%;
   border: 1px solid #e1e1e1;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 .categories-form {
@@ -126,6 +127,7 @@ body {
   width: 100%;
   border: 1px solid #e1e1e1;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 .email-form {
@@ -133,6 +135,7 @@ body {
   width: 100%;
   border: 1px solid #e1e1e1;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 .firstname-form {
@@ -140,6 +143,7 @@ body {
   width: 100%;
   border: 1px solid #e1e1e1;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 .image-form {
@@ -147,6 +151,7 @@ body {
   width: 100%;
   border: 1px solid #e1e1e1;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 .name-form {
@@ -154,6 +159,7 @@ body {
   width: 100%;
   border: 1px solid #e1e1e1;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 .password-form {
@@ -161,6 +167,7 @@ body {
   width: 100%;
   border: 1px solid #e1e1e1;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 .password-form-password-edit {
@@ -168,6 +175,7 @@ body {
   width: 100%;
   border: 1px solid #e1e1e1;
   margin-bottom: 20px;
+  padding: 5px;
   margin-top: -5px;
   margin-bottom: 10px;
 }
@@ -177,6 +185,7 @@ body {
   width: 100%;
   border: 1px solid #e1e1e1;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 .post-form {
@@ -184,6 +193,7 @@ body {
   width: 100%;
   border: 1px solid #e1e1e1;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 .society-form {
@@ -191,6 +201,7 @@ body {
   width: 100%;
   border: 1px solid #e1e1e1;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 .subject-form {
@@ -198,6 +209,7 @@ body {
   width: 100%;
   border: 1px solid #e1e1e1;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 .title-form {
@@ -205,6 +217,7 @@ body {
   width: 100%;
   border: 1px solid #e1e1e1;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 /* boutons "valider" des formulaires */
