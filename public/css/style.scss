@@ -137,6 +137,98 @@ body {
     overflow-y: scroll;
 }
 
+/* formulaires */
+
+@mixin basic-form {
+    background: rgb(235, 235, 235);
+    width: 100%;
+    border: 1px solid $background-color-border-bis;
+    margin-bottom: 20px;
+}
+
+.background-form {
+    @include basic-form;
+}
+
+.categories-form {
+    @include basic-form;
+}
+
+.email-form {
+    @include basic-form;
+}
+
+.firstname-form {
+    @include basic-form;
+}
+
+.image-form {
+    @include basic-form;
+}
+
+.name-form {
+    @include basic-form;
+}
+
+.password-form {
+    @include basic-form;
+}
+
+.password-form-password-edit {
+    @include basic-form;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.phone-form {
+    @include basic-form;
+}
+
+.post-form {
+    @include basic-form;
+}
+
+.society-form {
+    @include basic-form;
+}
+
+.subject-form {
+    @include basic-form;
+}
+
+.title-form {
+    @include basic-form;
+}
+
+/* boutons "valider" des formulaires */
+
+.btn-submit-form {
+    background: green;
+    color: white;
+    border: 1px solid $background-color-border-bis;
+    width: 100%;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+@mixin basic-btn-submit-edit {
+    background: green;
+    color: white;
+    border: 1px solid $background-color-border-bis;
+    width: 100%;
+    padding: 5px; 
+}
+
+.btn-submit-form-password-edit {
+    @include basic-btn-submit-edit;
+    margin-top: 12px;
+}
+
+.btn-submit-form-profil-edit {
+    @include basic-btn-submit-edit;
+    margin-top: 10px;
+}
+
 /* paramétrages divers */
 
 /* boutons généraux (modifier, gérer, supprimer...) */
@@ -769,64 +861,4 @@ hr {
 /* ============================== 9. MAJ ============================== */
 
 /* ============================== x. FOOTER ============================== */
-
-@mixin basic-form {
-    background: rgb(235, 235, 235);
-    width: 100%;
-    border: 1px solid $background-color-border-bis;
-    margin-bottom: 20px;
-}
-
-.btn-submit-form {
-    background: green;
-    color: white;
-    border: 1px solid $background-color-border-bis;
-    width: 100%;
-    margin-top: 20px;
-    padding: 5px;
-}
-
-.background-form {
-    @include basic-form
-}
-
-.categories-form {
-    @include basic-form
-}
-
-.email-form {
-    @include basic-form
-}
-
-.firstname-form {
-    @include basic-form
-}
-
-.image-form {
-    @include basic-form
-}
-
-.name-form {
-    @include basic-form
-}
-
-.phone-form {
-    @include basic-form
-}
-
-.post-form {
-    @include basic-form
-}
-
-.society-form {
-    @include basic-form
-}
-
-.subject-form {
-    @include basic-form
-}
-
-.title-form {
-    @include basic-form
-}
 

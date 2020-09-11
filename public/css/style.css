@@ -113,6 +113,128 @@ body {
   overflow-y: scroll;
 }
 
+/* formulaires */
+.background-form {
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+}
+
+.categories-form {
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+}
+
+.email-form {
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+}
+
+.firstname-form {
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+}
+
+.image-form {
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+}
+
+.name-form {
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+}
+
+.password-form {
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+}
+
+.password-form-password-edit {
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.phone-form {
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+}
+
+.post-form {
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+}
+
+.society-form {
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+}
+
+.subject-form {
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+}
+
+.title-form {
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
+}
+
+/* boutons "valider" des formulaires */
+.btn-submit-form {
+  background: green;
+  color: white;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  margin-top: 30px;
+  padding: 5px;
+}
+
+.btn-submit-form-password-edit {
+  background: green;
+  color: white;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  padding: 5px;
+  margin-top: 12px;
+}
+
+.btn-submit-form-profil-edit {
+  background: green;
+  color: white;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  padding: 5px;
+  margin-top: 10px;
+}
+
 /* paramétrages divers */
 /* boutons généraux (modifier, gérer, supprimer...) */
 .btn {
@@ -1347,89 +1469,4 @@ hr {
 
 /* ============================== 9. MAJ ============================== */
 /* ============================== x. FOOTER ============================== */
-.btn-submit-form {
-  background: green;
-  color: white;
-  border: 1px solid #e1e1e1;
-  width: 100%;
-  margin-top: 20px;
-  padding: 5px;
-}
-
-.background-form {
-  background: #ebebeb;
-  width: 100%;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 20px;
-}
-
-.categories-form {
-  background: #ebebeb;
-  width: 100%;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 20px;
-}
-
-.email-form {
-  background: #ebebeb;
-  width: 100%;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 20px;
-}
-
-.firstname-form {
-  background: #ebebeb;
-  width: 100%;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 20px;
-}
-
-.image-form {
-  background: #ebebeb;
-  width: 100%;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 20px;
-}
-
-.name-form {
-  background: #ebebeb;
-  width: 100%;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 20px;
-}
-
-.phone-form {
-  background: #ebebeb;
-  width: 100%;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 20px;
-}
-
-.post-form {
-  background: #ebebeb;
-  width: 100%;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 20px;
-}
-
-.society-form {
-  background: #ebebeb;
-  width: 100%;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 20px;
-}
-
-.subject-form {
-  background: #ebebeb;
-  width: 100%;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 20px;
-}
-
-.title-form {
-  background: #ebebeb;
-  width: 100%;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 20px;
-}
 /*# sourceMappingURL=style.css.map */

@@ -22,7 +22,7 @@ class EditProfileType extends AbstractType
             'label' => 'Prénom :',
             'attr' => ['class' => 'firstname-form']
         ])
-        ->add('Valider', SubmitType::class, ['attr' => ['class' => 'btn-submit-form']]);
+        ->add('Valider', SubmitType::class, ['attr' => ['class' => 'btn-submit-form-profil-edit']]);
     }
 
     public function configureOptions(OptionsResolver $resolver)
