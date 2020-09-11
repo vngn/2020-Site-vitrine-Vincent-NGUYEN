@@ -19,21 +19,24 @@ web 3.0 maquette
 web design inspiration
 pinterest
 
+
 ++++++ reste à faire ++++++
 
 général :
 - régler pb d'affichage du burger (4 pages sur 6 s'affichent) liés à la ligne 405 du style.scss (margin-top: -100px;) en rapport avec le texte-titre
-- pot de miel - ajout input fantôme
+- pot de miel - ajout input fantôme / captcha
 - s'occuper du responsive (navbar, sidebar, pages en général)
 - choisir la police (roboto) grosse police
 - tarte au citron
 - reduire la width générale
+- virer la validation d'inription par email
 
 admin :
 - intégrer gestion admin des users
 
 pages portfolio, articles et blog :
 - mettre en forme les pages edit, manage et comment-edit
+- ajouter des contenus et commentaires
 
 page maj :
 - créer et remplir page maj
@@ -43,6 +46,13 @@ page about :
 
 page contact :
 - finir page contact
+
+page rgpd :
+-créer page rgpd et mentions légales
+
+footer :
+- rendre utile le footer
+
 
 
 
