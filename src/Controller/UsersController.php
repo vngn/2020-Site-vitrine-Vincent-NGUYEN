@@ -11,6 +11,7 @@ use App\Form\EditProfileType;
 use App\Repository\UsersRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
@@ -74,6 +75,7 @@ class UsersController extends AbstractController
 
     /**
      * @Route("/manageUsers", name="users_manage")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function manage(UsersRepository $usersRepo)
     {
