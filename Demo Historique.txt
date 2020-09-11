@@ -1,4 +1,19 @@
-php bin/console cache:clear   
+php bin/console cache:clear  
+
+dans cpanel :
+dans sous-domaine :
+- créer un sous-domaine, donner le nom du site et choisir le nom de domaine (developpeur-de-site(web.fr))
+
+dans winscp :
+- retrouver le nouveau dossier créé via cpanel et y copier (dans le fichier public) le dossier du site d'origine
+
+dans phpMyAdmin :
+- exporter la bdd
+
+dans cpanel :
+dans base de données MySQL:
+- retrouver la bdd nouvellement créée et y importer la copie de la bdd
+
 
 web 3.0 maquette
 web design inspiration
