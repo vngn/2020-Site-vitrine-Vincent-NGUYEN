@@ -1348,54 +1348,88 @@ hr {
 /* ============================== 9. MAJ ============================== */
 /* ============================== x. FOOTER ============================== */
 .btn-submit-form {
-  background: pink;
+  background: green;
+  color: white;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  margin-top: 20px;
+  padding: 5px;
 }
 
 .background-form {
-  background: pink;
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
 }
 
 .categories-form {
-  background: pink;
-}
-
-.content-form {
-  background: pink;
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
 }
 
 .email-form {
-  background: pink;
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
 }
 
 .firstname-form {
-  background: pink;
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
 }
 
 .image-form {
-  background: pink;
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
 }
 
 .name-form {
-  background: pink;
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
 }
 
 .phone-form {
-  background: pink;
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
 }
 
 .post-form {
-  background: pink;
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
 }
 
 .society-form {
-  background: pink;
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
 }
 
 .subject-form {
-  background: pink;
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
 }
 
 .title-form {
-  background: pink;
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=style.css.map */

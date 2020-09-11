@@ -15,7 +15,7 @@ class CategoriesType extends AbstractType
     {
         $builder
             ->add('name', TextType::class, [
-                'label' => 'Nom ',
+                'label' => 'Nom :',
                 'attr' => ['class' => 'name-form']
             ])
             ->add('Valider', SubmitType::class, ['attr' => ['class' => 'btn-submit-form']]);

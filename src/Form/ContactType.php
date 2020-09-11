@@ -17,31 +17,31 @@ class ContactType extends AbstractType
     {
         $builder
             ->add('name', TextType::class, [
-                'label' => 'Nom ',
+                'label' => 'Nom :',
                 'attr' => ['class' => 'name-form']
             ])
             ->add('firstname', TextType::class, [
-                'label' => 'Prénom ',
+                'label' => 'Prénom :',
                 'attr' => ['class' => 'firstname-form']
             ])
             ->add('society', TextType::class, [
-                'label' => 'Société ',
+                'label' => 'Société :',
                 'attr' => ['class' => 'society-form']
             ])
             ->add('post', TextType::class, [
-                'label' => 'Fonction ',
+                'label' => 'Fonction :',
                 'attr' => ['class' => 'post-form']
             ])
             ->add('email', TextType::class, [
-                'label' => 'Email ',
+                'label' => 'Email :',
                 'attr' => ['class' => 'email-form']
             ])
             ->add('phone', TelType::class, [
-                'label' => 'Téléphone ',
+                'label' => 'Téléphone :',
                 'attr' => ['class' => 'phone-form']
             ])
             ->add('title', TextType::class, [
-                'label' => 'Sujet ',
+                'label' => 'Sujet :',
                 'attr' => ['class' => 'subject-form']
             ])
             ->add('content', CKEditorType::class, ['label' => 'Votre message :'])

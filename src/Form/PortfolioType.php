@@ -20,21 +20,20 @@ class PortfolioType extends AbstractType
     {
         $builder
             ->add('title', TextType::class, [
-                'label' => 'Titre ',
+                'label' => 'Titre :',
                 'attr' => ['class' => 'title-form']
             ])
-            ->add('content', CKEditorType::class, ['label' => 'Contenu :'])
             ->add('image', TextType::class, [
-                'label' => 'Image ',
+                'label' => 'Image :',
                 'attr' => ['class' => 'image-form']
             ])
             ->add('categories', EntityType::class, [
                 'class' => Categories::class,
-                'label' => 'Catégorie ',
+                'label' => 'Catégorie :',
                 'attr' => ['class' => 'categories-form']
             ])
             ->add('background', FileType::class, [
-                'label' => 'Fond ',
+                'label' => 'Fond :',
                 'attr' => ['class' => 'background-form'],
                 'mapped' => false,
                 'required' => false,
@@ -48,6 +47,7 @@ class PortfolioType extends AbstractType
                     ])
                 ],
             ])
+            ->add('content', CKEditorType::class, ['label' => 'Contenu :'])
             ->add('Valider', SubmitType::class, ['attr' => ['class' => 'btn-submit-form']]);
     }
 

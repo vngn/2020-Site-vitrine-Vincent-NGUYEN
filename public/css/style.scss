@@ -770,55 +770,63 @@ hr {
 
 /* ============================== x. FOOTER ============================== */
 
+@mixin basic-form {
+    background: rgb(235, 235, 235);
+    width: 100%;
+    border: 1px solid $background-color-border-bis;
+    margin-bottom: 20px;
+}
+
 .btn-submit-form {
-    background: pink;
+    background: green;
+    color: white;
+    border: 1px solid $background-color-border-bis;
+    width: 100%;
+    margin-top: 20px;
+    padding: 5px;
 }
 
 .background-form {
-    background: pink;
+    @include basic-form
 }
 
 .categories-form {
-    background: pink;
-}
-
-.content-form {
-    background: pink;
+    @include basic-form
 }
 
 .email-form {
-    background: pink;
+    @include basic-form
 }
 
 .firstname-form {
-    background: pink;
+    @include basic-form
 }
 
 .image-form {
-    background: pink;
+    @include basic-form
 }
 
 .name-form {
-    background: pink;
+    @include basic-form
 }
 
 .phone-form {
-    background: pink;
+    @include basic-form
 }
 
 .post-form {
-    background: pink;
+    @include basic-form
 }
 
 .society-form {
-    background: pink;
+    @include basic-form
 }
 
 .subject-form {
-    background: pink;
+    @include basic-form
 }
 
 .title-form {
-    background: pink;
+    @include basic-form
 }
 
