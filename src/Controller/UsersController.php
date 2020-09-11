@@ -85,21 +85,6 @@ class UsersController extends AbstractController
         ]);
     }
 
-    // /**
-    //  * @Route("/activate/{id}", name="users_activate")
-    //  * @IsGranted("ROLE_ADMIN")
-    //  */
-    // public function activate(Users $user)
-    // {
-    //     $user->setActive(($user->getActive())?false:true);
-
-    //     $em = $this->getDoctrine()->getManager();
-    //     $em->persist($user);
-    //     $em->flush();
-
-    //     return new Response("true");
-    // }
-
     /**
      * @Route("users/delete/{id}", name="users_delete")
      * @IsGranted("ROLE_ADMIN")
