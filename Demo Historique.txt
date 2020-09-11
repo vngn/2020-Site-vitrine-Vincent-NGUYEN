@@ -53,7 +53,7 @@ page about :
 - remplir page about
 
 page contact :
-- finir page contact
+- finir page contact et créer une page pour les regrouper
 
 page rgpd :
 -créer page rgpd et mentions légales
