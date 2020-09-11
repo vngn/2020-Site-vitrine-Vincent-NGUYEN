@@ -19,15 +19,15 @@ class PortfolioType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        ->add('title', TextType::class,[
-            'label' => 'Titre ',
-            'attr' => ['class' => 'title-form']
-        ])
-            ->add('content', CKEditorType::class,['label' => 'Contenu :'])
-            ->add('image', TextType::class,[
+            ->add('title', TextType::class, [
+                'label' => 'Titre ',
+                'attr' => ['class' => 'title-form']
+            ])
+            ->add('content', CKEditorType::class, ['label' => 'Contenu :'])
+            ->add('image', TextType::class, [
                 'label' => 'Image ',
                 'attr' => ['class' => 'image-form']
-                ])
+            ])
             ->add('categories', EntityType::class, [
                 'class' => Categories::class,
                 'label' => 'Catégorie ',
@@ -48,8 +48,7 @@ class PortfolioType extends AbstractType
                     ])
                 ],
             ])
-            ->add('Valider', SubmitType::class, ['attr' => ['class' => 'btn-submit-form']
-            ]);
+            ->add('Valider', SubmitType::class, ['attr' => ['class' => 'btn-submit-form']]);
     }
 
     public function configureOptions(OptionsResolver $resolver)

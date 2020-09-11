@@ -14,9 +14,8 @@ class ArticlesCommentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        ->add('content', CKEditorType::class,['label' => 'Votre commentaire'])
-        ->add('Valider', SubmitType::class)
-        ;
+            ->add('content', CKEditorType::class, ['label' => 'Votre commentaire'])
+            ->add('Valider', SubmitType::class, ['attr' => ['class' => 'btn-submit-form']]);
     }
 
     public function configureOptions(OptionsResolver $resolver)
