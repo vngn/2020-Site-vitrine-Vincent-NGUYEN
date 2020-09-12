@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\BlogRepository;
+use App\Repository\UsersRepository;
 use App\Repository\ContactRepository;
 use App\Repository\ArticlesRepository;
 use App\Repository\PortfolioRepository;
@@ -17,7 +18,7 @@ class MainController extends AbstractController
     /**
      * @Route("/", name="app_home")
      */
-    public function index(PortfolioRepository $portfolioRepo, PortfolioCommentRepository $portfolioCommentRepo, ArticlesRepository $articlesRepo, ArticlesCommentRepository $articlesCommentRepo, BlogRepository $blogRepo, BlogCommentRepository $blogCommentRepo, ContactRepository $contactRepo)
+    public function index(PortfolioRepository $portfolioRepo, PortfolioCommentRepository $portfolioCommentRepo, ArticlesRepository $articlesRepo, ArticlesCommentRepository $articlesCommentRepo, BlogRepository $blogRepo, BlogCommentRepository $blogCommentRepo, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         return $this->render('home/index.html.twig', [
             'controller_name' => 'MainController',
@@ -27,7 +28,8 @@ class MainController extends AbstractController
             'articlesComment' => $articlesCommentRepo->findAll(),
             'blog' => $blogRepo->findAll(),
             'blogComment' => $blogCommentRepo->findAll(),
-            'contact' => $contactRepo->findAll()
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 }
