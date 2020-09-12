@@ -189,7 +189,7 @@ class PortfolioController extends AbstractController
     /**
      * @Route("/{id}", name="portfolio_show")
      */
-    public function show($id, Portfolio $portfolio, PortfolioRepository $portfolioRepo, Request $request, EntityManagerInterface $manager)
+    public function show($id, Portfolio $portfolio, PortfolioRepository $portfolioRepo, Request $request, EntityManagerInterface $manager, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         $portfolioComment = new PortfolioComment();
 
@@ -209,7 +209,9 @@ class PortfolioController extends AbstractController
 
         return $this->render('portfolio/show.html.twig', [
             'portfolio' => $portfolioRepo->find($id),
-            'portfolioCommentForm' => $form->createView()
+            'portfolioCommentForm' => $form->createView(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 }

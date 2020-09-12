@@ -174,7 +174,7 @@ class ArticlesController extends AbstractController
     /**
      * @Route("/{id}", name="articles_show")
      */
-    public function show($id, Articles $articles, ArticlesRepository $articlesRepo, Request $request, EntityManagerInterface $manager)
+    public function show($id, Articles $articles, ArticlesRepository $articlesRepo, Request $request, EntityManagerInterface $manager, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         $articlesComment = new ArticlesComment();
 
@@ -194,7 +194,9 @@ class ArticlesController extends AbstractController
 
         return $this->render('articles/show.html.twig', [
             'articles' => $articlesRepo->find($id),
-            'articlesCommentForm' => $form->createView()
+            'articlesCommentForm' => $form->createView(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 }

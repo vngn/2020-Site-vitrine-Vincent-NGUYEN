@@ -170,7 +170,7 @@ class BlogController extends AbstractController
     /**
      * @Route("/{id}", name="blog_show")
      */
-    public function show($id, Blog $blog, BlogRepository $blogRepo, Request $request, EntityManagerInterface $manager)
+    public function show($id, Blog $blog, BlogRepository $blogRepo, Request $request, EntityManagerInterface $manager, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         $blogComment = new BlogComment();
 
@@ -190,7 +190,9 @@ class BlogController extends AbstractController
 
         return $this->render('blog/show.html.twig', [
             'blog' => $blogRepo->find($id),
-            'blogCommentForm' => $form->createView()
+            'blogCommentForm' => $form->createView(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 }
