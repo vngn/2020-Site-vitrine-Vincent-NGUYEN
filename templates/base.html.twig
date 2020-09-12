@@ -111,7 +111,7 @@
         <hr />
         <a href="{{ path('contact_manage') }}" class="sidenav-link">Gestion des Messages ({{ contact | length }})</a>
         <a href="{{ path('categories_index') }}" class="sidenav-link">Gestion des Catégories</a>
-        <a href="{{ path('users_manage') }}" class="sidenav-link">Gestion des Utilisateurs ({{ users | length }})</a>
+        <a href="{{ path('users_manage') }}" class="sidenav-link">Gestion des Utilisateurs</a>
         <hr />
         <a href="{{ path('users') }}" class="sidenav-link">Mon profil</a>
         <a href="{{ path('app_logout') }}" class="sidenav-link">Se déconnecter</a>
@@ -283,6 +283,12 @@
             <span>
                 <i class="fas fa-user-cog sidenav-role-icon"></i>
             </span>
+        </button>
+
+        <button class="btn rounded-1 press red sidenav-trigger sidenav-contact-length-admin">
+            <a href="{{ path('contact_manage') }}">
+                <span>{{ contact | length }}</span>
+            </a>
         </button>
 
         {% elseif is_granted('ROLE_USER') %}

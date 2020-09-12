@@ -422,6 +422,20 @@ hr {
   top: 19em;
 }
 
+.sidenav-contact-length-admin {
+  position: fixed;
+  z-index: 998;
+  border: 1px solid white;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  opacity: 0.4;
+  top: 19em;
+  left: 3.4em;
+  border-radius: 50%;
+  text-align: center;
+}
+
 .sidenav-registered {
   position: fixed;
   z-index: 998;
