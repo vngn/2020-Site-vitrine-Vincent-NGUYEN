@@ -7,6 +7,8 @@ use App\Form\BlogType;
 use App\Entity\BlogComment;
 use App\Form\BlogCommentType;
 use App\Repository\BlogRepository;
+use App\Repository\UsersRepository;
+use App\Repository\ContactRepository;
 use App\Repository\CategoriesRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -26,11 +28,13 @@ class BlogController extends AbstractController
     /**
      * @Route("", name="blog_index")
      */
-    public function index(BlogRepository $blogRepo, CategoriesRepository $catsRepo)
+    public function index(BlogRepository $blogRepo, CategoriesRepository $catsRepo, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         return $this->render('blog/index.html.twig', [
             'blog' => $blogRepo->findAll(),
-            'categoriesButton' => $catsRepo->findAll()
+            'categoriesButton' => $catsRepo->findAll(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 
@@ -38,10 +42,12 @@ class BlogController extends AbstractController
      * @Route("/manage", name="blog_manage")
      * @IsGranted("ROLE_ADMIN")
      */
-    public function manage(BlogRepository $blogRepo)
+    public function manage(BlogRepository $blogRepo, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         return $this->render('blog/manage.html.twig', [
-            'blog' => $blogRepo->findAll()
+            'blog' => $blogRepo->findAll(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 
@@ -49,7 +55,7 @@ class BlogController extends AbstractController
      * @Route("/add", name="blog_add")
      * @IsGranted("ROLE_ADMIN")
      */
-    public function add(Request $request)
+    public function add(Request $request, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         $blog = new Blog;
 
@@ -69,6 +75,8 @@ class BlogController extends AbstractController
         }
         return $this->render('/blog/add.html.twig', [
             'form' => $form->createView(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 
@@ -89,7 +97,7 @@ class BlogController extends AbstractController
      * @Route("/edit/{id}", name="blog_edit", methods={"GET","POST"})
      * @IsGranted("ROLE_ADMIN")
      */
-    public function edit(Request $request, Blog $blog, SluggerInterface $slugger): Response
+    public function edit(Request $request, Blog $blog, SluggerInterface $slugger, ContactRepository $contactRepo, UsersRepository $usersRepo): Response
     {
         $form = $this->createForm(BlogType::class, $blog);
         $form->handleRequest($request);
@@ -104,6 +112,8 @@ class BlogController extends AbstractController
         return $this->render('blog/edit.html.twig', [
             'blog' => $blog,
             'form' => $form->createView(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 
@@ -111,7 +121,7 @@ class BlogController extends AbstractController
      * @Route("/commentEdit/{id}", name="blog_comment_edit", methods={"GET","POST"})
      * @IsGranted("ROLE_ADMIN")
      */
-    public function commentEdit(Request $request, BlogComment $blogComment, SluggerInterface $slugger): Response
+    public function commentEdit(Request $request, BlogComment $blogComment, SluggerInterface $slugger, ContactRepository $contactRepo, UsersRepository $usersRepo): Response
     {
         $form = $this->createForm(BlogCommentType::class, $blogComment);
         $form->handleRequest($request);
@@ -126,6 +136,8 @@ class BlogController extends AbstractController
         return $this->render('blog/commentEdit.html.twig', [
             'blog' => $blogComment,
             'form' => $form->createView(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
     

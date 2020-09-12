@@ -6,6 +6,8 @@ use App\Entity\Portfolio;
 use App\Form\PortfolioType;
 use App\Entity\PortfolioComment;
 use App\Form\PortfolioCommentType;
+use App\Repository\UsersRepository;
+use App\Repository\ContactRepository;
 use App\Repository\PortfolioRepository;
 use App\Repository\CategoriesRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -28,11 +30,13 @@ class PortfolioController extends AbstractController
     /**
      * @Route("", name="portfolio_index")
      */
-    public function index(PortfolioRepository $portfolioRepo, CategoriesRepository $catsRepo)
+    public function index(PortfolioRepository $portfolioRepo, CategoriesRepository $catsRepo, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         return $this->render('portfolio/index.html.twig', [
             'portfolio' => $portfolioRepo->findAll(),
-            'categoriesButton' => $catsRepo->findAll()
+            'categoriesButton' => $catsRepo->findAll(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 
@@ -40,10 +44,12 @@ class PortfolioController extends AbstractController
      * @Route("/manage", name="portfolio_manage")
      * @IsGranted("ROLE_ADMIN")
      */
-    public function manage(PortfolioRepository $portfolioRepo)
+    public function manage(PortfolioRepository $portfolioRepo, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         return $this->render('portfolio/manage.html.twig', [
-            'portfolio' => $portfolioRepo->findAll()
+            'portfolio' => $portfolioRepo->findAll(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 
@@ -51,7 +57,7 @@ class PortfolioController extends AbstractController
      * @Route("/add", name="portfolio_add")
      * @IsGranted("ROLE_ADMIN")
      */
-    public function add(Request $request, SluggerInterface $slugger): Response
+    public function add(Request $request, SluggerInterface $slugger, ContactRepository $contactRepo, UsersRepository $usersRepo): Response
     {
         $portfolio = new Portfolio;
 
@@ -89,6 +95,8 @@ class PortfolioController extends AbstractController
 
         return $this->render('portfolio/add.html.twig', [
             'form' => $form->createView(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 
@@ -109,7 +117,7 @@ class PortfolioController extends AbstractController
      * @Route("/edit/{id}", name="portfolio_edit", methods={"GET","POST"})
      * @IsGranted("ROLE_ADMIN")
      */
-    public function edit(Request $request, Portfolio $portfolio, SluggerInterface $slugger): Response
+    public function edit(Request $request, Portfolio $portfolio, SluggerInterface $slugger, ContactRepository $contactRepo, UsersRepository $usersRepo): Response
     {
         $form = $this->createForm(PortfolioType::class, $portfolio);
         $form->handleRequest($request);
@@ -124,6 +132,8 @@ class PortfolioController extends AbstractController
         return $this->render('portfolio/edit.html.twig', [
             'portfolio' => $portfolio,
             'form' => $form->createView(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 
@@ -131,7 +141,7 @@ class PortfolioController extends AbstractController
      * @Route("/commentEdit/{id}", name="portfolio_comment_edit", methods={"GET","POST"})
      * @IsGranted("ROLE_ADMIN")
      */
-    public function commentEdit(Request $request, PortfolioComment $portfolioComment, SluggerInterface $slugger): Response
+    public function commentEdit(Request $request, PortfolioComment $portfolioComment, SluggerInterface $slugger, ContactRepository $contactRepo, UsersRepository $usersRepo): Response
     {
         $form = $this->createForm(PortfolioCommentType::class, $portfolioComment);
         $form->handleRequest($request);
@@ -146,6 +156,8 @@ class PortfolioController extends AbstractController
         return $this->render('portfolio/commentEdit.html.twig', [
             'portfolio' => $portfolioComment,
             'form' => $form->createView(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 

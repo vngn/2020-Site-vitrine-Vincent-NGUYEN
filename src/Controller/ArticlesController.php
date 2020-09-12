@@ -6,6 +6,8 @@ use App\Entity\Articles;
 use App\Form\ArticlesType;
 use App\Entity\ArticlesComment;
 use App\Form\ArticlesCommentType;
+use App\Repository\UsersRepository;
+use App\Repository\ContactRepository;
 use App\Repository\ArticlesRepository;
 use App\Repository\CategoriesRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -26,11 +28,13 @@ class ArticlesController extends AbstractController
     /**
      * @Route("", name="articles_index")
      */
-    public function index(ArticlesRepository $articlesRepo, CategoriesRepository $catsRepo)
+    public function index(ArticlesRepository $articlesRepo, CategoriesRepository $catsRepo, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         return $this->render('articles/index.html.twig', [
             'articles' => $articlesRepo->findAll(),
-            'categoriesButton' => $catsRepo->findAll()
+            'categoriesButton' => $catsRepo->findAll(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 
@@ -38,10 +42,12 @@ class ArticlesController extends AbstractController
      * @Route("/manage", name="articles_manage")
      * @IsGranted("ROLE_ADMIN")
      */
-    public function manage(ArticlesRepository $articlesRepo)
+    public function manage(ArticlesRepository $articlesRepo, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         return $this->render('articles/manage.html.twig', [
-            'articles' => $articlesRepo->findAll()
+            'articles' => $articlesRepo->findAll(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 
@@ -49,7 +55,7 @@ class ArticlesController extends AbstractController
      * @Route("/add", name="articles_add")
      * @IsGranted("ROLE_ADMIN")
      */
-    public function add(Request $request)
+    public function add(Request $request, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         $article = new Articles;
 
@@ -70,6 +76,8 @@ class ArticlesController extends AbstractController
 
         return $this->render('articles/add.html.twig', [
             'form' => $form->createView(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 
@@ -92,7 +100,7 @@ class ArticlesController extends AbstractController
      * @Route("/edit/{id}", name="articles_edit", methods={"GET","POST"})
      * @IsGranted("ROLE_ADMIN")
      */
-    public function edit(Request $request, Articles $articles, SluggerInterface $slugger): Response
+    public function edit(Request $request, Articles $articles, SluggerInterface $slugger, ContactRepository $contactRepo, UsersRepository $usersRepo): Response
     {
         $form = $this->createForm(ArticlesType::class, $articles);
         $form->handleRequest($request);
@@ -107,6 +115,8 @@ class ArticlesController extends AbstractController
         return $this->render('articles/edit.html.twig', [
             'articles' => $articles,
             'form' => $form->createView(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 
@@ -114,7 +124,7 @@ class ArticlesController extends AbstractController
      * @Route("/commentEdit/{id}", name="articles_comment_edit", methods={"GET","POST"})
      * @IsGranted("ROLE_ADMIN")
      */
-    public function commentEdit(Request $request, ArticlesComment $articlesComment, SluggerInterface $slugger): Response
+    public function commentEdit(Request $request, ArticlesComment $articlesComment, SluggerInterface $slugger, ContactRepository $contactRepo, UsersRepository $usersRepo): Response
     {
         $form = $this->createForm(ArticlesCommentType::class, $articlesComment);
         $form->handleRequest($request);
@@ -129,6 +139,8 @@ class ArticlesController extends AbstractController
         return $this->render('articles/commentEdit.html.twig', [
             'articles' => $articlesComment,
             'form' => $form->createView(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 

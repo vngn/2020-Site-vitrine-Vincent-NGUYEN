@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Entity\Categories;
 use App\Form\CategoriesType;
+use App\Repository\UsersRepository;
+use App\Repository\ContactRepository;
 use App\Repository\CategoriesRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -20,10 +22,12 @@ class CategoriesController extends AbstractController
     /**
      * @Route("/", name="categories_index")
      */
-    public function index(CategoriesRepository $catsRepo)
+    public function index(CategoriesRepository $catsRepo, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         return $this->render('categories/index.html.twig', [
-            'categories' => $catsRepo->findAll()
+            'categories' => $catsRepo->findAll(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 

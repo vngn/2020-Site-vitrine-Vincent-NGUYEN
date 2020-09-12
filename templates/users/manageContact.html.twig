@@ -7,7 +7,30 @@
     <h1>Gérer les messages</h1>
 </div>
 
-<div class="example-wrapper block-users users-color">
+<div class="example-wrapper">
+
+    {% for contact in contact %}
+
+    <div class="individual-block-users-index">
+        <ul class="block-users-index users-color">
+            <li>
+                <span>{{ contact.firstname }} {{ contact.name }}</span>
+                <span>{{ contact.post }} {{ contact.society }}</span>
+                <span>{{ contact.email }} {{ contact.phone }}</span>
+                <span>{{ contact.createdAt | date ('d/m/Y (H:i)') }}</span>
+                <span>{{ contact.title }}</span>
+                <span>{{ contact.content | raw }}</span>
+                <span><a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
+                        data-id="{{ contact.id }}" data-nom="{{ contact.name }}">Supprimer</a></span>
+            </li>
+        </ul>
+    </div>
+
+    {% endfor %}
+
+{# </div> #}
+
+{# <div class="example-wrapper block-users users-color">
 
     <table class="table striped">
         <thead>
@@ -38,12 +61,13 @@
                 <td>{{ contact.createdAt | date ('d/m/Y (H:i)') }}</td>
                 <td>
                     <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
-                        data-id="{{ contact.id }}" data-prenom="{{ contact.firstname }}" data-nom="{{ contact.name }}">Supprimer</a>
+                        data-id="{{ contact.id }}" data-prenom="{{ contact.firstname }}"
+                        data-nom="{{ contact.name }}">Supprimer</a>
                 </td>
             </tr>
             {% endfor %}
         </tbody>
-    </table>
+    </table> #}
     <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
         <div class="modal-header">Supprimer le message</div>
         <div class="divider"></div>
@@ -65,9 +89,10 @@
                 let supprimer = document.querySelectorAll(".modal-trigger")
                 for (let bouton of supprimer) {
                     bouton.addEventListener("click", function () {
-                        document.querySelector(".modal-footer a").href = `/contact/delete/${this.dataset.id}`
+                        document.querySelector(".modal-footer a").href =
+                            `/contact/delete/${this.dataset.id}`
                         document.querySelector(".modal-content").innerText =
-                            `Êtes-vous sûr(e) de vouloir supprimer le message de ${this.dataset.prenom} ${this.dataset.nom} ?`
+                            `Êtes-vous sûr(e) de vouloir supprimer le message de ${this.dataset.nom} ?`
                     })
                 }
             }

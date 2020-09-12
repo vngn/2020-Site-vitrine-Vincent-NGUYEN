@@ -23,15 +23,18 @@ class UsersController extends AbstractController
     /**
      * @Route("/users", name="users")
      */
-    public function index()
+    public function index(UsersRepository $usersRepo, ContactRepository $contactRepo)
     {
-        return $this->render('users/index.html.twig');
+        return $this->render('users/index.html.twig', [
+            'users' => $usersRepo->findAll(),
+            'contact' => $contactRepo->findAll()
+        ]);
     }
 
     /**
      * @Route("/users/profil/edit", name="users_profil_edit")
      */
-    public function editProfile(Request $request)
+    public function editProfile(Request $request, UsersRepository $usersRepo, ContactRepository $contactRepo)
     {
         $user = $this->getUser();
         $form = $this->createForm(editProfileType::class, $user);
@@ -49,13 +52,15 @@ class UsersController extends AbstractController
 
         return $this->render('users/editprofile.html.twig', [
             'form' => $form->createView(),
+            'users' => $usersRepo->findAll(),
+            'contact' => $contactRepo->findAll()
         ]);
     }
 
     /**
      * @Route("/users/pass/edit", name="users_pass_edit")
      */
-    public function editPass(Request $request, UserPasswordEncoderInterface $passwordEncoder)
+    public function editPass(Request $request, UserPasswordEncoderInterface $passwordEncoder, UsersRepository $usersRepo, ContactRepository $contactRepo)
     {
         if ($request->isMethod('POST')) {
             $em = $this->getDoctrine()->getManager();
@@ -73,17 +78,21 @@ class UsersController extends AbstractController
                 $this->addFlash('error', 'Les deux mots de passe ne sont pas identiques');
             }
         }
-        return $this->render('users/editpass.html.twig');
+        return $this->render('users/editpass.html.twig', [
+            'users' => $usersRepo->findAll(),
+            'contact' => $contactRepo->findAll()
+        ]);
     }
 
     /**
      * @Route("/manageUsers", name="users_manage")
      * @IsGranted("ROLE_ADMIN")
      */
-    public function usersManage(UsersRepository $usersRepo)
+    public function usersManage(UsersRepository $usersRepo, ContactRepository $contactRepo)
     {
         return $this->render('/users/manageUsers.html.twig', [
-            'users' => $usersRepo->findAll()
+            'users' => $usersRepo->findAll(),
+            'contact' => $contactRepo->findAll()
         ]);
     }
 
@@ -105,9 +114,10 @@ class UsersController extends AbstractController
      * @Route("/manageContact", name="contact_manage")
      * @IsGranted("ROLE_ADMIN")
      */
-    public function contactManage(ContactRepository $contactRepo)
+    public function contactManage(UsersRepository $usersRepo, ContactRepository $contactRepo)
     {
         return $this->render('/users/manageContact.html.twig', [
+            'users' => $usersRepo->findAll(),
             'contact' => $contactRepo->findAll()
         ]);
     }
