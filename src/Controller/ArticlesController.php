@@ -87,7 +87,7 @@ class ArticlesController extends AbstractController
      */
     public function activate(Articles $article)
     {
-        $article->setActive(($article->getActive())?false:true);
+        $article->setActive(($article->getActive()) ? false : true);
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($article);
@@ -106,7 +106,7 @@ class ArticlesController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('articles_manage');
@@ -130,7 +130,7 @@ class ArticlesController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('articles_manage');
@@ -174,23 +174,23 @@ class ArticlesController extends AbstractController
     /**
      * @Route("/{id}", name="articles_show")
      */
-    public function show($id, Articles $articles, ArticlesRepository $articlesRepo, Request $request, EntityManagerInterface $manager) 
+    public function show($id, Articles $articles, ArticlesRepository $articlesRepo, Request $request, EntityManagerInterface $manager)
     {
         $articlesComment = new ArticlesComment();
-        
+
         $form = $this->createForm(ArticlesCommentType::class, $articlesComment);
 
         $form->handleRequest($request);
-        
-        if($form->isSubmitted() && $form->isValid()) {
-                $articlesComment->setCreatedAt(new \DateTime())
-                        ->setArticle($articles)
-                        ->setUsers($this->getUser());
-                $manager->persist($articlesComment);
-                $manager->flush();
-                
-                return $this->redirectToRoute('articles_show', ['id' => $articles->getId()]);
-            }
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $articlesComment->setCreatedAt(new \DateTime())
+                ->setArticle($articles)
+                ->setUsers($this->getUser());
+            $manager->persist($articlesComment);
+            $manager->flush();
+
+            return $this->redirectToRoute('articles_show', ['id' => $articles->getId()]);
+        }
 
         return $this->render('articles/show.html.twig', [
             'articles' => $articlesRepo->find($id),

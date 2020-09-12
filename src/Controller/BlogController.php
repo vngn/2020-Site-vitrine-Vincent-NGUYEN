@@ -86,7 +86,7 @@ class BlogController extends AbstractController
      */
     public function activate(Blog $blog)
     {
-        $blog->setActive(($blog->getActive())?false:true);
+        $blog->setActive(($blog->getActive()) ? false : true);
         $em = $this->getDoctrine()->getManager();
         $em->persist($blog);
         $em->flush();
@@ -103,7 +103,7 @@ class BlogController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('blog_manage');
@@ -127,7 +127,7 @@ class BlogController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('blog_manage');
@@ -140,7 +140,7 @@ class BlogController extends AbstractController
             'users' => $usersRepo->findAll()
         ]);
     }
-    
+
     /**
      * @Route("/delete/{id}", name="blog_delete")
      * @IsGranted("ROLE_ADMIN")
@@ -170,23 +170,23 @@ class BlogController extends AbstractController
     /**
      * @Route("/{id}", name="blog_show")
      */
-    public function show($id, Blog $blog, BlogRepository $blogRepo, Request $request, EntityManagerInterface $manager) 
+    public function show($id, Blog $blog, BlogRepository $blogRepo, Request $request, EntityManagerInterface $manager)
     {
         $blogComment = new BlogComment();
-        
+
         $form = $this->createForm(BlogCommentType::class, $blogComment);
 
         $form->handleRequest($request);
-        
-        if($form->isSubmitted() && $form->isValid()) {
-                $blogComment->setCreatedAt(new \DateTime())
-                        ->setArticle($blog)
-                        ->setUsers($this->getUser());
-                $manager->persist($blogComment);
-                $manager->flush();
-                
-                return $this->redirectToRoute('blog_show', ['id' => $blog->getId()]);
-            }
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $blogComment->setCreatedAt(new \DateTime())
+                ->setArticle($blog)
+                ->setUsers($this->getUser());
+            $manager->persist($blogComment);
+            $manager->flush();
+
+            return $this->redirectToRoute('blog_show', ['id' => $blog->getId()]);
+        }
 
         return $this->render('blog/show.html.twig', [
             'blog' => $blogRepo->find($id),
@@ -194,8 +194,3 @@ class BlogController extends AbstractController
         ]);
     }
 }
-
-
-
-
-

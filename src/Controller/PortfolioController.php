@@ -63,7 +63,7 @@ class PortfolioController extends AbstractController
 
         $form = $this->createForm(PortfolioType::class, $portfolio);
 
-        $form->handleRequest($request); 
+        $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $portfolio->setUsers($this->getUser());
@@ -73,23 +73,22 @@ class PortfolioController extends AbstractController
             if ($background) {
                 $originalFilename = pathinfo($background->getClientOriginalName(), PATHINFO_FILENAME);
                 $safeFilename = $slugger->slug($originalFilename);
-                $newFilename = $safeFilename.'-'.uniqid().'.'.$background->guessExtension();
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $background->guessExtension();
 
                 try {
                     $background->move(
                         $this->getParameter('photos_directory'),
                         $newFilename
                     );
-                } 
-                catch (FileException $e) {
-                        $portfolio->setbackground($newFilename);
+                } catch (FileException $e) {
+                    $portfolio->setbackground($newFilename);
                 }
 
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($portfolio);
-            $em->flush();
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($portfolio);
+                $em->flush();
 
-            return $this->redirectToRoute('portfolio_index');
+                return $this->redirectToRoute('portfolio_index');
             }
         }
 
@@ -106,7 +105,7 @@ class PortfolioController extends AbstractController
      */
     public function activate(Portfolio $portfolio)
     {
-        $portfolio->setActive(($portfolio->getActive())?false:true);
+        $portfolio->setActive(($portfolio->getActive()) ? false : true);
         $em = $this->getDoctrine()->getManager();
         $em->persist($portfolio);
         $em->flush();
@@ -123,7 +122,7 @@ class PortfolioController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('portfolio_manage');
@@ -147,7 +146,7 @@ class PortfolioController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('portfolio_manage');
@@ -190,23 +189,23 @@ class PortfolioController extends AbstractController
     /**
      * @Route("/{id}", name="portfolio_show")
      */
-    public function show($id, Portfolio $portfolio, PortfolioRepository $portfolioRepo, Request $request, EntityManagerInterface $manager) 
+    public function show($id, Portfolio $portfolio, PortfolioRepository $portfolioRepo, Request $request, EntityManagerInterface $manager)
     {
         $portfolioComment = new PortfolioComment();
-        
+
         $form = $this->createForm(PortfolioCommentType::class, $portfolioComment);
 
         $form->handleRequest($request);
-        
-        if($form->isSubmitted() && $form->isValid()) {
-                $portfolioComment->setCreatedAt(new \DateTime())
-                        ->setArticle($portfolio)
-                        ->setUsers($this->getUser());
-                $manager->persist($portfolioComment);
-                $manager->flush();
-                
-                return $this->redirectToRoute('portfolio_show', ['id' => $portfolio->getId()]);
-            }
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $portfolioComment->setCreatedAt(new \DateTime())
+                ->setArticle($portfolio)
+                ->setUsers($this->getUser());
+            $manager->persist($portfolioComment);
+            $manager->flush();
+
+            return $this->redirectToRoute('portfolio_show', ['id' => $portfolio->getId()]);
+        }
 
         return $this->render('portfolio/show.html.twig', [
             'portfolio' => $portfolioRepo->find($id),

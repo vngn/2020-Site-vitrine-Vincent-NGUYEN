@@ -171,8 +171,7 @@ class ResetPasswordController extends AbstractController
             ->context([
                 'resetToken' => $resetToken,
                 'tokenLifetime' => $this->resetPasswordHelper->getTokenLifetime()
-            ])
-        ;
+            ]);
 
         $mailer->send($email);
 
