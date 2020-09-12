@@ -35,7 +35,7 @@ class CategoriesController extends AbstractController
      * @Route("/add", name="categories_add")
      * @IsGranted("ROLE_ADMIN")
      */
-    public function add(Request $request)
+    public function add(Request $request, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         $categorie = new Categories;
 
@@ -52,7 +52,9 @@ class CategoriesController extends AbstractController
         }
 
         return $this->render('categories/add.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 
