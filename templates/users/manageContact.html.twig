@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gérer les messages{% endblock %}
+
+{% block body %}
+<div class="example-wrapper block-users users-color">
+    <h1>Gérer les messages</h1>
+</div>
+
+<div class="example-wrapper block-users users-color">
+
+    <table class="table striped">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Société</th>
+                <th>Fonction</th>
+                <th>Email</th>
+                <th>Téléphone</th>
+                <th>Sujet</th>
+                <th>Message</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contact %}
+            <tr>
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.firstname }}</td>
+                <td>{{ contact.society }}</td>
+                <td>{{ contact.post }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.phone }}</td>
+                <td>{{ contact.title }}</td>
+                <td>{{ contact.content | raw }}</td>
+                <td>{{ contact.createdAt | date ('d/m/Y (H:i)') }}</td>
+                <td>
+                    <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
+                        data-id="{{ contact.id }}" data-prenom="{{ contact.firstname }}" data-nom="{{ contact.name }}">Supprimer
+                        le message</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
+        <div class="modal-header">Supprimer le message</div>
+        <div class="divider"></div>
+        <div class="modal-content">
+
+        </div>
+        <div class="divider"></div>
+        <div class="modal-footer">
+            <a href="" class="btn red">valider</a>
+            <button data-target="modal-delete"
+                class="ml-auto btn shadow-1 rounded-1 small primary modal-trigger">Fermer</button>
+        </div>
+        {% endblock %}
+
+        {% block javascripts %}
+        <script>
+            window.onload = () => {
+                let modal = new Axentix.Modal('#modal-delete');
+                let supprimer = document.querySelectorAll(".modal-trigger")
+                for (let bouton of supprimer) {
+                    bouton.addEventListener("click", function () {
+                        document.querySelector(".modal-footer a").href = `/contact/delete/${this.dataset.id}`
+                        document.querySelector(".modal-content").innerText =
+                            `Êtes-vous sûr(e) de vouloir supprimer le message de ${this.dataset.prenom} ${this.dataset.nom} ?`
+                    })
+                }
+            }
+        </script>
+    </div>
+    {% endblock %}

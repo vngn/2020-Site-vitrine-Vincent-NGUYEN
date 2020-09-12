@@ -5,11 +5,13 @@ namespace App\Controller;
 use App\Entity\Blog;
 use App\Entity\Users;
 use App\Form\BlogType;
+use App\Entity\Contact;
 use App\Entity\Articles;
 use App\Entity\Categories;
 use App\Form\CategoriesType;
 use App\Form\EditProfileType;
 use App\Repository\UsersRepository;
+use App\Repository\ContactRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
@@ -78,7 +80,7 @@ class UsersController extends AbstractController
      * @Route("/manageUsers", name="users_manage")
      * @IsGranted("ROLE_ADMIN")
      */
-    public function manage(UsersRepository $usersRepo)
+    public function usersManage(UsersRepository $usersRepo)
     {
         return $this->render('/users/manageUsers.html.twig', [
             'users' => $usersRepo->findAll()
@@ -89,7 +91,7 @@ class UsersController extends AbstractController
      * @Route("users/delete/{id}", name="users_delete")
      * @IsGranted("ROLE_ADMIN")
      */
-    public function delete(Users $user)
+    public function usersDelete(Users $user)
     {
         $em = $this->getDoctrine()->getManager();
         $em->remove($user);
@@ -97,5 +99,30 @@ class UsersController extends AbstractController
 
         $this->addFlash('message', 'Utilisateur supprimé avec succès');
         return $this->redirectToRoute('users_manage');
+    }
+
+    /**
+     * @Route("/manageContact", name="contact_manage")
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function contactManage(ContactRepository $contactRepo)
+    {
+        return $this->render('/users/manageContact.html.twig', [
+            'contact' => $contactRepo->findAll()
+        ]);
+    }
+
+    /**
+     * @Route("contact/delete/{id}", name="contact_delete")
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function contactDelete(Contact $contact)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($contact);
+        $em->flush();
+
+        $this->addFlash('message', 'Message supprimé avec succès');
+        return $this->redirectToRoute('contact_manage');
     }
 }
