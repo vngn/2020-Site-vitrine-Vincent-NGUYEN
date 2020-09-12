@@ -37,8 +37,7 @@
                 <td>{{ contact.createdAt | date ('d/m/Y (H:i)') }}</td>
                 <td>
                     <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
-                        data-id="{{ contact.id }}" data-prenom="{{ contact.firstname }}" data-nom="{{ contact.name }}">Supprimer
-                        le message</a>
+                        data-id="{{ contact.id }}" data-prenom="{{ contact.firstname }}" data-nom="{{ contact.name }}">Supprimer</a>
                 </td>
             </tr>
             {% endfor %}
