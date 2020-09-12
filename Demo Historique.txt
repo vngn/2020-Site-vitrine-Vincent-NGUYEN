@@ -16,7 +16,7 @@ dans base de données MySQL:
 
 modifier le .env pour accéder à la bdd
 
-pour accéder a l'ensemble des pages du site, mmettre le htaccess de symfony dans public
+pour accéder a l'ensemble des pages du site, mmettre le htaccess de symfony dans public (attention au . de .htaccess)
 
 dans cpanel, ajouter la redirection = url + ajouter ^/$ à la fin
 
@@ -42,7 +42,6 @@ admin :
 - intégrer gestion admin des users
 
 pages portfolio, articles et blog :
-- mettre en forme les pages edit, manage et comment-edit
 - ajouter des contenus et commentaires
 - classer les articles du plus récent au plus ancien
 
