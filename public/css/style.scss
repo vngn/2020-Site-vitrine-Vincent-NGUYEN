@@ -313,11 +313,6 @@ hr {
         font-weight: 400;
         font-style: italic;
         font-size: 28px;
-        // -webkit-transition: color 0.2s linear;
-        // -moz-transition: color 0.2s linear;
-        // -o-transition: color 0.2s linear;
-        // -ms-transition: color 0.2s linear;
-        // transition: color 0.2s linear;
     }
 
     li span:nth-child(4) {
@@ -842,21 +837,21 @@ hr {
 /* ============================== 6. PAGE CONTACT ============================== */
 
 .block-contact {
-    @include block-shape;
+    @include block-shape-light;
     width: 84%;
 }
 
 /* ============================== 7. PAGE CATEGORIES ============================== */
 
 .block-categories {
-    @include block-shape;
+    @include block-shape-light;
     width: 84%;
 }
 
 /* ============================== 8. PAGE USERS ============================== */
 
 .block-users {
-    @include block-shape;
+    @include block-shape-light;
     width: 84%;
 }
 
@@ -865,7 +860,7 @@ hr {
 /* ============================== x. FOOTER ============================== */
 
 .message-temporaire {
-    @include block-shape;
+    @include block-shape-light;
     width: 84%;
     background: white;
     font-size: 1.5em;

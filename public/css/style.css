@@ -1376,34 +1376,6 @@ hr {
   width: 84%;
 }
 
-.block-contact li {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 0 10px;
-}
-
-.block-contact li span {
-  display: block;
-}
-
-.block-contact li span:first-child {
-  font-weight: 700;
-  font-size: 16px;
-  padding-top: 10px;
-}
-
-.block-contact li span:nth-child(2) {
-  font-weight: 400;
-  font-style: italic;
-  font-size: 28px;
-}
-
-.block-contact li span:nth-child(4) {
-  font-weight: 400;
-  font-size: 20px;
-}
-
 /* ============================== 7. PAGE CATEGORIES ============================== */
 .block-categories {
   border: 1px solid #e1e1e1;
@@ -1414,34 +1386,6 @@ hr {
   width: 84%;
 }
 
-.block-categories li {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 0 10px;
-}
-
-.block-categories li span {
-  display: block;
-}
-
-.block-categories li span:first-child {
-  font-weight: 700;
-  font-size: 16px;
-  padding-top: 10px;
-}
-
-.block-categories li span:nth-child(2) {
-  font-weight: 400;
-  font-style: italic;
-  font-size: 28px;
-}
-
-.block-categories li span:nth-child(4) {
-  font-weight: 400;
-  font-size: 20px;
-}
-
 /* ============================== 8. PAGE USERS ============================== */
 .block-users {
   border: 1px solid #e1e1e1;
@@ -1450,34 +1394,6 @@ hr {
   padding: 20px;
   position: relative;
   width: 84%;
-}
-
-.block-users li {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 0 10px;
-}
-
-.block-users li span {
-  display: block;
-}
-
-.block-users li span:first-child {
-  font-weight: 700;
-  font-size: 16px;
-  padding-top: 10px;
-}
-
-.block-users li span:nth-child(2) {
-  font-weight: 400;
-  font-style: italic;
-  font-size: 28px;
-}
-
-.block-users li span:nth-child(4) {
-  font-weight: 400;
-  font-size: 20px;
 }
 
 /* ============================== 9. MAJ ============================== */
@@ -1494,33 +1410,5 @@ hr {
   text-align: justify;
   padding: 20px;
   border: 5px dashed red;
-}
-
-.message-temporaire li {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 0 10px;
-}
-
-.message-temporaire li span {
-  display: block;
-}
-
-.message-temporaire li span:first-child {
-  font-weight: 700;
-  font-size: 16px;
-  padding-top: 10px;
-}
-
-.message-temporaire li span:nth-child(2) {
-  font-weight: 400;
-  font-style: italic;
-  font-size: 28px;
-}
-
-.message-temporaire li span:nth-child(4) {
-  font-weight: 400;
-  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */
