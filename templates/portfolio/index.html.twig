@@ -33,10 +33,10 @@
                 style="background-image: url('{{ asset('uploads/images/'~ articlePortfolio.background) }}');">
                 <li>
                     <div class="block-portfolio-insert">
-                            <span>{{ articlePortfolio.createdAt | date ('d/m/Y') }}</span>
-                            <span>{{ articlePortfolio.title }}</span>
-                            <span>{{ articlePortfolio.categories }}</span>
-                            {# <span>{{ articlePortfolio.content | raw }}</span> #}
+                        <span>{{ articlePortfolio.createdAt | date ('d/m/Y') }}</span>
+                        <span>{{ articlePortfolio.title }}</span>
+                        <span>{{ articlePortfolio.categories }}</span>
+                        {# <span>{{ articlePortfolio.content | raw }}</span> #}
                     </div>
                     {# <img src="{{ asset('uploads/images/'~ articlePortfolio.background) }}" alt=""> #}
                     <iframe src="{{ articlePortfolio.image }}" class="site-iframe"></iframe>
@@ -59,11 +59,10 @@
             </div>
         </div>
     </div>
-
     {% endif %}
     {% endfor %}
-
 </div>
+{% endblock %}
 
 {# script pour boutons tri #}
 <script>
@@ -102,5 +101,3 @@
         }
     });
 </script>
-
-{% endblock %}

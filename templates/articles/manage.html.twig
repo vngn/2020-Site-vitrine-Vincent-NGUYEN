@@ -6,6 +6,7 @@
 <div class="example-wrapper block-users users-color">
     <h1 class="articles-color">Gérer les {{ app.user.articles| length }} articles de la page Articles</h1>
 </div>
+
 <div class="example-wrapper block-users users-color">
     <table class="table striped">
         <thead>
@@ -37,7 +38,8 @@
                         ({{ article.articleComment | length }})</a>
 
                     <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
-                        data-id="{{ article.id }}" data-titre="{{ article.title }}">Supprimer l'article<br />et ses commentaires</a>
+                        data-id="{{ article.id }}" data-titre="{{ article.title }}">Supprimer l'article<br />et ses
+                        commentaires</a>
                 </td>
             </tr>
             {% endfor %}
@@ -47,8 +49,7 @@
     <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
         <div class="modal-header">Supprimer un article</div>
         <div class="divider"></div>
-        <div class="modal-content">
-        </div>
+        <div class="modal-content"></div>
         <div class="divider"></div>
         <div class="modal-footer">
             <a href="" class="btn red">valider</a>
@@ -56,37 +57,37 @@
                 class="ml-auto btn shadow-1 rounded-1 small primary modal-trigger">Fermer</button>
         </div>
     </div>
-    {% endblock %}
-
-    {% block javascripts %}
-    <script>
-        window.onload = () => {
-            let modal = new Axentix.Modal('#modal-delete');
-            let activer = document.querySelectorAll("[type=checkbox]")
-            for (let bouton of activer) {
-                bouton.addEventListener("click", function () {
-                    let xmlhttp = new XMLHttpRequest;
-
-                    xmlhttp.open("get", `/articles/activate/${this.dataset.id}`)
-                    xmlhttp.send()
-                })
-            }
-            let supprimer = document.querySelectorAll(".modal-trigger")
-            for (let bouton of supprimer) {
-                bouton.addEventListener("click", function () {
-                    document.querySelector(".modal-footer a").href = `/articles/delete/${this.dataset.id}`
-                    document.querySelector(".modal-content").innerText =
-                        `Êtes-vous sûr(e) de vouloir supprimer l'article "${this.dataset.titre}" ?`
-                })
-            }
-
-            // raffraichir la page 0.5s après le changement de valeur du bouton active
-            $('.form-switch').click(function () {
-                setTimeout(function () {
-                    window.location.reload();
-                }, 500);
-            });
-        }
-    </script>
 </div>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    window.onload = () => {
+        let modal = new Axentix.Modal('#modal-delete');
+        let activer = document.querySelectorAll("[type=checkbox]")
+        for (let bouton of activer) {
+            bouton.addEventListener("click", function () {
+                let xmlhttp = new XMLHttpRequest;
+
+                xmlhttp.open("get", `/articles/activate/${this.dataset.id}`)
+                xmlhttp.send()
+            })
+        }
+        let supprimer = document.querySelectorAll(".modal-trigger")
+        for (let bouton of supprimer) {
+            bouton.addEventListener("click", function () {
+                document.querySelector(".modal-footer a").href = `/articles/delete/${this.dataset.id}`
+                document.querySelector(".modal-content").innerText =
+                    `Êtes-vous sûr(e) de vouloir supprimer l'article "${this.dataset.titre}" ?`
+            })
+        }
+
+        // raffraichir la page 0.5s après le changement de valeur du bouton active
+        $('.form-switch').click(function () {
+            setTimeout(function () {
+                window.location.reload();
+            }, 500);
+        });
+    }
+</script>
 {% endblock %}

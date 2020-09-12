@@ -4,12 +4,12 @@
 
 {% block body %}
 <div class="example-wrapper block-users users-color">
+
     {% for message in app.flashes('message') %}
     <div class="p-3 my-2 rounded-2 success">{{ message }}</div>
     {% endfor %}
 
     <h1>Profil de {{ app.user.firstname }} {{ app.user.name }}</h1>
-
     <table class="table striped">
         <thead>
             <tr>
@@ -26,7 +26,6 @@
             </tr>
         </tbody>
     </table>
-
     <a href="{{ path('users_profil_edit') }}" class="btn shadow-1 rounded-1 blue">Modifier le profil</a>
     <a href="{{ path('users_pass_edit') }}" class="btn shadow-1 rounded-1 blue">Modifier le mot de passe</a>
 </div>

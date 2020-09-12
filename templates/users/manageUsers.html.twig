@@ -8,7 +8,6 @@
 </div>
 
 <div class="example-wrapper block-users users-color">
-
     <table class="table striped">
         <thead>
             <tr>
@@ -33,33 +32,33 @@
             {% endfor %}
         </tbody>
     </table>
+    
     <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
         <div class="modal-header">Supprimer l'utilisateur</div>
         <div class="divider"></div>
-        <div class="modal-content">
-
-        </div>
+        <div class="modal-content"></div>
         <div class="divider"></div>
         <div class="modal-footer">
             <a href="" class="btn red">valider</a>
             <button data-target="modal-delete"
                 class="ml-auto btn shadow-1 rounded-1 small primary modal-trigger">Fermer</button>
         </div>
-        {% endblock %}
-
-        {% block javascripts %}
-        <script>
-            window.onload = () => {
-                let modal = new Axentix.Modal('#modal-delete');
-                let supprimer = document.querySelectorAll(".modal-trigger")
-                for (let bouton of supprimer) {
-                    bouton.addEventListener("click", function () {
-                        document.querySelector(".modal-footer a").href = `/users/delete/${this.dataset.id}`
-                        document.querySelector(".modal-content").innerText =
-                            `Êtes-vous sûr(e) de vouloir supprimer ${this.dataset.prenom} ${this.dataset.nom} des utilisateurs ?`
-                    })
-                }
-            }
-        </script>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+    window.onload = () => {
+        let modal = new Axentix.Modal('#modal-delete');
+        let supprimer = document.querySelectorAll(".modal-trigger")
+        for (let bouton of supprimer) {
+            bouton.addEventListener("click", function () {
+                document.querySelector(".modal-footer a").href = `/users/delete/${this.dataset.id}`
+                document.querySelector(".modal-content").innerText =
+                    `Êtes-vous sûr(e) de vouloir supprimer ${this.dataset.prenom} ${this.dataset.nom} des utilisateurs ?`
+            })
+        }
+    }
+</script>
+{% endblock %}
