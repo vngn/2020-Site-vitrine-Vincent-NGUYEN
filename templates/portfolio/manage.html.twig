@@ -13,7 +13,7 @@
             <tr>
                 <th>ID</th>
                 <th>Titre</th>
-                {# <th>catégorie</th> #}
+                <th>catégorie</th>
                 <th>Date</th>
                 <th>Active</th>
                 <th>Actions</th>
@@ -25,7 +25,7 @@
                 <td>{{ portfolio.id }}</td>
                 <td><a href="{{ path('portfolio_show', {'id': portfolio.id}) }}" class="link">{{ portfolio.title }}</a>
                 </td>
-                {# <td>{{ portfolio.categories }}</td> #}
+                <td>{{ portfolio.categories }}</td>
                 <td>{{ portfolio.createdAt | date ('d/m/Y') }}</td>
                 <td>
                     <label class="form-switch mt-2">
