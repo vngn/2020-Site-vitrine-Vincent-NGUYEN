@@ -38,11 +38,7 @@ général :
 - virer la validation d'incription par email
 - régler pb... retrouver le pb... :/
 
-admin :
-- intégrer gestion admin des users
-
 pages portfolio, articles et blog :
-- ajouter des contenus et commentaires
 - classer les articles du plus récent au plus ancien
 
 page maj :
