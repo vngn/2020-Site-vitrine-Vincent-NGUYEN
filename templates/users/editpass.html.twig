@@ -11,8 +11,11 @@
 <div class="p-3 my-2 rounded-2 success">{{ message }}</div>
 {% endfor %}
 
-<div class="example-wrapper block-users users-color">
+<div class="example-wrapper-add">
     <h1>Modification du mot de passe de {{ app.user.firstname }} {{ app.user.name }}</h1>
+</div>
+
+<div class="example-wrapper block-users users-color">
     <form method="post">
         <div class="form-field">
             <label for="pass">Nouveau mot de passe :</label>

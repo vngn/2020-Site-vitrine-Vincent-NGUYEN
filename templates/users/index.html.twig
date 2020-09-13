@@ -3,13 +3,15 @@
 {% block title %}Profil de {{ app.user.firstname }} {{ app.user.name }} !{% endblock %}
 
 {% block body %}
-<div class="example-wrapper block-users users-color">
+{% for message in app.flashes('message') %}
+<div class="p-3 my-2 rounded-2 success">{{ message }}</div>
+{% endfor %}
 
-    {% for message in app.flashes('message') %}
-    <div class="p-3 my-2 rounded-2 success">{{ message }}</div>
-    {% endfor %}
-
+<div class="example-wrapper-add">
     <h1>Profil de {{ app.user.firstname }} {{ app.user.name }}</h1>
+</div>
+
+<div class="example-wrapper block-users users-color">
     <table class="table striped">
         <thead>
             <tr>
