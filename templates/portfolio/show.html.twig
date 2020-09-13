@@ -8,32 +8,34 @@
     <h1>{{ portfolio.title }}<br />en détail</h1>
 </div>
 
-<ul class="block-portfolio-show portfolio-color"
-    style="background-image: url('{{ asset('uploads/images/'~ portfolio.background) }}');">
+<div class="comment example-wrapper block-portfolio-light portfolio-color">
+    <ul class="block-portfolio-show portfolio-color"
+        style="background-image: url('{{ asset('uploads/images/'~ portfolio.background) }}');">
 
-    <li>
-        <div class="block-portfolio-insert-show">
-            <a href="">
-                <span>{{ portfolio.createdAt | date ('d/m/Y') }}</span>
-                <span>{{ portfolio.title }}</span>
-                <span>{{ portfolio.categories }}</span>
-                <span>{{ portfolio.content | raw }}</span>
-            </a>
-        </div>
-        <iframe src="{{ portfolio.image }}" class="site-iframe"></iframe>
-    </li>
-</ul>
+        <li>
+            <div class="block-portfolio-insert-show">
+                <a href="">
+                    <span>{{ portfolio.createdAt | date ('d/m/Y') }}</span>
+                    <span>{{ portfolio.title }}</span>
+                    <span>{{ portfolio.categories }}</span>
+                    <span>{{ portfolio.content | raw }}</span>
+                </a>
+            </div>
+            <iframe src="{{ portfolio.image }}" class="site-iframe"></iframe>
+        </li>
+    </ul>
 
-<div class="btn-site wrapper-link-site">
-    <a class="cta" href="{{ portfolio.image }}" target="_blank">
-        <span class="next-button">Page du site</span>
-        {{ include('includes/next-button.html.twig') }}
-    </a>
+    <div class="btn-site wrapper-link-site-show">
+        <a class="cta" href="{{ portfolio.image }}" target="_blank">
+            <span class="next-button">Page du site</span>
+            {{ include('includes/next-button.html.twig') }}
+        </a>
+    </div>
 </div>
 
 <section id="commentaires">
-    <div class="portfolio-comment-adjustment">
-        <h1 class="example-wrapper block-portfolio-light portfolio-color">{{ portfolio.portfolioComment | length }}
+    <div class="example-wrapper block-portfolio-light portfolio-color">
+        <h1>{{ portfolio.portfolioComment | length }}
             commentaire(s) :</h1>
     </div>
 

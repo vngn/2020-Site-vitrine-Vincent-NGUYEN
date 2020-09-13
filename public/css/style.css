@@ -20,7 +20,7 @@ nasbar.scss :
     - .navtoogle i                          z-index: -1
 
 nextbutton.scss :
-    - .wrapper-link-site                    z-index: 99
+    - .wrapper-link-site                    z-index: 99               (nextbuttonstyle.scss)     
 
 /* COLORS
     - default body text     black
@@ -981,11 +981,6 @@ hr {
   margin: -100px auto 115px;
 }
 
-/* suppression marge entre bloc portfolio et commentaires */
-.portfolio-comment-adjustment {
-  margin-top: -82px;
-}
-
 .block-portfolio-index {
   border: 1px solid #e1e1e1;
   border-radius: 20px;
@@ -1076,8 +1071,10 @@ hr {
   text-shadow: 0 0 2px white;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 84%;
+  width: 100%;
   height: 680px;
+  margin-top: 0;
+  margin-bottom: -100px;
 }
 
 .block-portfolio-show li {
