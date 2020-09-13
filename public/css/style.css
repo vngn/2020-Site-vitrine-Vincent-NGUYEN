@@ -288,7 +288,7 @@ hr {
   font: 18px/1.5 sans-serif;
 }
 
-.example-wrapper-show, .example-wrapper-manage, .example-wrapper-add {
+.example-wrapper-show, .example-wrapper-manage, .example-wrapper-add, .example-wrapper-users {
   height: 17.5em;
   margin-top: -2em;
   margin-bottom: 80px;
