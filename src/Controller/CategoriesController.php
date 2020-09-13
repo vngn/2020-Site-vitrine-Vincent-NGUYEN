@@ -62,7 +62,7 @@ class CategoriesController extends AbstractController
      * @Route("/edit/{id}", name="categories_edit")
      * @IsGranted("ROLE_ADMIN")
      */
-    public function edit(Categories $categorie, Request $request)
+    public function edit(Categories $categorie, Request $request, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         $form = $this->createForm(CategoriesType::class, $categorie);
 
@@ -77,7 +77,9 @@ class CategoriesController extends AbstractController
         }
 
         return $this->render('categories/add.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'contact' => $contactRepo->findAll(),
+            'users' => $usersRepo->findAll()
         ]);
     }
 
