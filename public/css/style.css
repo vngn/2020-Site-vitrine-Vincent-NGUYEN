@@ -288,6 +288,14 @@ hr {
   font: 18px/1.5 sans-serif;
 }
 
+.example-wrapper-show {
+  height: 17.5em;
+  margin-top: -2em;
+  margin-bottom: 80px;
+  padding-top: 5em;
+  background: white;
+}
+
 .example-wrapper code {
   background: #F5F5F5;
   padding: 2px 6px;
