@@ -34,7 +34,6 @@ général :
 - s'occuper du responsive (navbar, sidebar, pages en général)
 - choisir la police (roboto) grosse police
 - tarte au citron
-- reduire la width générale
 - virer la validation d'incription par email
 - régler pb... retrouver le pb... :/
 
@@ -52,9 +51,6 @@ page rgpd :
 
 footer :
 - rendre utile le footer
-
-
-
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
