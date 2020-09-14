@@ -31,7 +31,7 @@ class ArticlesController extends AbstractController
     public function index(ArticlesRepository $articlesRepo, CategoriesRepository $catsRepo, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         return $this->render('articles/index.html.twig', [
-            'articles' => $articlesRepo->findAll(),
+            'articles' => $articlesRepo->findBy([],['createdAt' => 'DESC']),
             'categoriesButton' => $catsRepo->findAll(),
             'contact' => $contactRepo->findAll(),
             'users' => $usersRepo->findAll()

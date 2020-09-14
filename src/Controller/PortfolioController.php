@@ -33,7 +33,7 @@ class PortfolioController extends AbstractController
     public function index(PortfolioRepository $portfolioRepo, CategoriesRepository $catsRepo, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         return $this->render('portfolio/index.html.twig', [
-            'portfolio' => $portfolioRepo->findAll(),
+            'portfolio' => $portfolioRepo->findBy([],['createdAt' => 'DESC']),
             'categoriesButton' => $catsRepo->findAll(),
             'contact' => $contactRepo->findAll(),
             'users' => $usersRepo->findAll()
