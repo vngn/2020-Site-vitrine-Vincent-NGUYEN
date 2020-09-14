@@ -32,6 +32,9 @@ class ContactController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
+            $contact->setActive(true);
+
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($contact);
             $em->flush();

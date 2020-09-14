@@ -65,7 +65,7 @@ class BlogController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $blog->setUsers($this->getUser());
-            $blog->setActive(false);
+            $blog->setActive(true);
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($blog);

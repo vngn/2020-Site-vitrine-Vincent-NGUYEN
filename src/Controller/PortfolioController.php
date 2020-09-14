@@ -67,7 +67,7 @@ class PortfolioController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $portfolio->setUsers($this->getUser());
-            $portfolio->setActive(false);
+            $portfolio->setActive(true);
             $background = $form->get('background')->getData();
 
             if ($background) {
