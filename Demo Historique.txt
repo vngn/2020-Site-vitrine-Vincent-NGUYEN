@@ -41,9 +41,6 @@ général :
 pages portfolio, articles et blog :
 - classer les articles du plus récent au plus ancien
 
-page maj :
-- remplir page maj
-
 page about :
 - remplir page about
 
