@@ -328,7 +328,7 @@ voir tuto BG
 14 août 2020 
 voir tuto BG
 adaptation
-recherche de résolution d'un problme avec elfinder
+recherche de résolution d'un problème avec elfinder
 
 15 août 2020 
 définition d'une nouvelle navbar
