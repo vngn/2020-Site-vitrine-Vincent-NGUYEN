@@ -22,10 +22,10 @@ class UpdateController extends AbstractController
     /**
      * @Route("/", name="update_index")
      */
-    public function index(UpdateRepository $catsRepo, ContactRepository $contactRepo, UsersRepository $usersRepo)
+    public function index(UpdateRepository $updateRepo, ContactRepository $contactRepo, UsersRepository $usersRepo)
     {
         return $this->render('update/index.html.twig', [
-            'update' => $catsRepo->findAll(),
+            'update' => $updateRepo->findBy([],['createdAt' => 'DESC']),
             'contact' => $contactRepo->findAll(),
             'users' => $usersRepo->findAll()
         ]);
