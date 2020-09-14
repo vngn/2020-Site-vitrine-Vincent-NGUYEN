@@ -19,6 +19,10 @@
                 <span>{{ contact.createdAt | date ('d/m/Y (H:i)') }}</span>
                 <span>{{ contact.title }}</span>
                 <span>{{ contact.content | raw }}</span>
+                <span><label class="form-switch mt-2">
+                        <input type="checkbox" {{ (contact.active) ? 'checked' : '' }} data-id="{{ contact.id }}" />
+                        <span class="slider"></span>
+                    </label></span>
                 <span><a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
                         data-id="{{ contact.id }}" data-nom="{{ contact.name }}">Supprimer</a></span>
             </li>
@@ -44,6 +48,15 @@
 <script>
     window.onload = () => {
         let modal = new Axentix.Modal('#modal-delete');
+        let activer = document.querySelectorAll("[type=checkbox]")
+        for (let bouton of activer) {
+            bouton.addEventListener("click", function () {
+                let xmlhttp = new XMLHttpRequest;
+
+                xmlhttp.open("get", `/contact/activate/${this.dataset.id}`)
+                xmlhttp.send()
+            })
+        }
         let supprimer = document.querySelectorAll(".modal-trigger")
         for (let bouton of supprimer) {
             bouton.addEventListener("click", function () {
@@ -53,6 +66,12 @@
                     `Êtes-vous sûr(e) de vouloir supprimer le message de ${this.dataset.nom} ?`
             })
         }
+        // raffraichir la page 0.5s après le changement de valeur du bouton active
+        $('.form-switch').click(function () {
+            setTimeout(function () {
+                window.location.reload();
+            }, 500);
+        });
     }
 </script>
 {% endblock %}

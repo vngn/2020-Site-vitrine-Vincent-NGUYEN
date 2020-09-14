@@ -32,12 +32,12 @@
 
 <body>
     {# système de comptage en tenant compte des éléments désactivés #}
-    {# {% set count = 0 %}
+    {% set count = 0 %}
     {% for contact in contact %}
     {% if contact.active == 1 %}
     {% set count = count + 1 %}
     {% endif %}
-    {% endfor %} #}
+    {% endfor %}
 
     <header class="container-fluid main clearfix">
         <nav id="menu" class="nav nav-head">
@@ -117,8 +117,8 @@
         <a href="{{ path('articles_manage') }}" class="sidenav-link">Gestion de la page Articles</a>
         <a href="{{ path('blog_manage') }}" class="sidenav-link">Gestion de la page Blog</a>
         <hr />
-        {# <a href="{{ path('contact_manage') }}" class="sidenav-link">Gestion des Messages ({{ count }})</a> #}
-        <a href="{{ path('contact_manage') }}" class="sidenav-link">Gestion des Messages ({{ contact | length }})</a>
+        <a href="{{ path('contact_manage') }}" class="sidenav-link">Gestion des Messages ({{ count }})</a>
+        {# <a href="{{ path('contact_manage') }}" class="sidenav-link">Gestion des Messages ({{ contact | length }})</a> #}
         <a href="{{ path('update_index') }}" class="sidenav-link">Gestion des Maj</a>
         <a href="{{ path('categories_index') }}" class="sidenav-link">Gestion des Catégories</a>
         <a href="{{ path('users_manage') }}" class="sidenav-link">Gestion des Utilisateurs ({{ users | length }})</a>
@@ -297,7 +297,7 @@
 
         <button class="btn rounded-1 press red sidenav-trigger sidenav-contact-length-admin">
             <a href="{{ path('contact_manage') }}">
-                <span>{{ contact | length }}</span>
+                <span>{{ count }}</span>
             </a>
         </button>
 

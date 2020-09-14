@@ -9,6 +9,7 @@ use App\Repository\ContactRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
@@ -47,5 +48,18 @@ class ContactController extends AbstractController
             'form' => $form->createView(),
             'users' => $usersRepo->findAll()
         ]);
+    }
+
+    /**
+     * @Route("/activate/{id}", name="contact_activate")
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function activate(Contact $contact)
+    {
+        $contact->setActive(($contact->getActive()) ? false : true);
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($contact);
+        $em->flush();
+        return new Response("true");
     }
 }
