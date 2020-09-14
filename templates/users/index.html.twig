@@ -47,7 +47,7 @@
             <tr>
                 <td>{{ productionComment.article.title }}</td>
                 <td>{{ productionComment.content | raw }}</td>
-                <td>{{ productionComment.createdAt | date }}</td>
+                <td>{{ productionComment.createdAt | date ('d/m/Y') }}</span>
             </tr>
             {% endfor %}
         </tbody>
