@@ -36,6 +36,7 @@ général :
 - tarte au citron
 - virer la validation d'incription par email
 - régler pb... retrouver le pb... :/
+- revenir vers la page d'avant connexion quand connexion ?
 
 pages portfolio, articles et blog :
 - classer les articles du plus récent au plus ancien

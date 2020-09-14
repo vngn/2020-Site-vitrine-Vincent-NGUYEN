@@ -16,24 +16,30 @@
 </div> #}
 
 <div class="example-wrapper block-categories users-color">
+    {% if is_granted('ROLE_ADMIN') %}
     <a href="{{ path("update_add") }}" class="btn shadow-1 rounded-1 blue">Ajouter une Maj</a>
+    {% endif %}
     <table class="table striped">
         <thead>
             <tr>
                 <th>Date</th>
                 <th>Contenu</th>
+                {% if is_granted('ROLE_ADMIN') %}
                 <th>Actions</th>
+                {% endif %}
             </tr>
         </thead>
         <tbody>
-    {% for update in update %}
+            {% for update in update %}
             <tr>
                 <td>{{ update.createdAt | date ('d/m/Y') }}</td>
                 <td>{{ update.content | raw }}</td>
+                {% if is_granted('ROLE_ADMIN') %}
                 <td>
                     <a href="{{ path("update_edit", {id: update.id}) }}"
                         class="btn shadow-1 rounded-1 blue">Modifier</a>
                 </td>
+                {% endif %}
             </tr>
             {% endfor %}
         </tbody>
