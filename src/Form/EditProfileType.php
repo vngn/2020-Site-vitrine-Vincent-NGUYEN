@@ -18,7 +18,7 @@ class EditProfileType extends AbstractType
         $builder
         ->add('photo', FileType::class, [
             'label' => 'Avatar :',
-            'attr' => ['class' => 'photo-form'],
+            'attr' => ['class' => 'photo-form-edit'],
             'mapped' => false,
             'required' => false,
             'constraints' => [
