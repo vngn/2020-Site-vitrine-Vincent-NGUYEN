@@ -34,9 +34,9 @@
             <tbody>
                 {% for articleComment in articles.articleComment %}
                 <tr>
-                <td>{{ articleComment.users.photo }}</td>
+                    <td>{{ articleComment.users.photo }}</td>
                     <td>{{ articleComment.users.firstname }} {{ articleComment.users.name }}</td>
-                    <td>{{articleComment.createdAt | date ('d/m/Y (H:i)') }}</td>
+                    <td>{{ articleComment.createdAt | date ('d/m/Y (H:i)') }}</td>
                     <td>{{ articleComment.content | raw }}</td>
                 </tr>
                 {% endfor %}
