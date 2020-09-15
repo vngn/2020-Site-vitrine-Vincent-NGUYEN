@@ -10,8 +10,7 @@ style.scss :
     - .block-portfolio                      z-index: 0
     - .block-portfolio li iframe            z-index: 1
     - .video-title                          z-index: 2
-    - .video-title-rext                     z-index: 4
-    // - .bg00                                 z-index: 900
+    - .video-title-text                     z-index: 4
     - @mixin button-sidebar-position        z-index: 998
     - @mixin sidenav                        z-index: 999
     
@@ -106,7 +105,7 @@ nextbutton.scss :
 
 body {
   width: 100%;
-  background-color: #ebebeb;
+  background-color: white;
   font-weight: 400;
   font-size: 15px;
   color: #3a2127;
@@ -300,6 +299,11 @@ hr {
 
 /* ============================== 0. TOUTES LES PAGES ============================== */
 /* blocs de page de base */
+.main-background {
+  background-color: orange;
+  padding-bottom: 100px;
+}
+
 .example-wrapper {
   margin: 2em auto;
   width: 84%;
@@ -575,7 +579,6 @@ hr {
 .color-block-video-title {
   height: 630px;
   padding-top: 330px;
-  margin-top: -100px;
   background: white;
 }
 

@@ -129,7 +129,7 @@ $color-contact: rgb(21, 37, 48);
 
 body {
     width: 100%;
-    background-color: $background-color-bis;
+    background-color: $background-color;
     font-weight: 400;
     font-size: 15px;
     color: #3a2127;
@@ -276,6 +276,11 @@ hr {
 /* ============================== 0. TOUTES LES PAGES ============================== */
 
 /* blocs de page de base */
+
+.main-background {
+    background-color: orange;
+    padding-bottom: 100px
+}
 
 .example-wrapper {
     margin: 2em auto;
@@ -513,7 +518,7 @@ hr {
 .color-block-video-title {
     height: 630px;
     padding-top: 330px;
-    margin-top: -100px;
+    // margin-top: -100px;
     // margin-bottom: 100px;
     background: $background-color;
 }

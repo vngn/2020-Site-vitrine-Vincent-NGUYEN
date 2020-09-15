@@ -94,282 +94,287 @@
         </nav>
     </header>
 
-    {# menu latéral admin #}
+    <div class="main-background">
+        {# menu latéral admin #}
 
-    <div id="admin-sidenav" data-ax="sidenav" class="sidenav-color-users sidenav large white">
-        <div class="sidenav-header">
-            <button data-target="admin-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-        </div>
-        <a href="{{ path('users') }}" class="btn rounded-1 press green dark-4 sidenav-menu-trigger">
-            <span>
-                <i class="fas fa-user-cog sidenav-menu-role-icon"></i>
-            </span>
-        </a>
-        <hr />
-
-        <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <hr />
-        <a href="{{ path('portfolio_add') }}" class="sidenav-link">Ajout dans la page Portfolio</a>
-        <a href="{{ path('articles_add') }}" class="sidenav-link">Ajout dans la page Articles</a>
-        <a href="{{ path('blog_add') }}" class="sidenav-link">Ajout dans la page Blog</a>
-        <hr />
-        <a href="{{ path('portfolio_manage') }}" class="sidenav-link">Gestion de la page Portfolio</a>
-        <a href="{{ path('articles_manage') }}" class="sidenav-link">Gestion de la page Articles</a>
-        <a href="{{ path('blog_manage') }}" class="sidenav-link">Gestion de la page Blog</a>
-        <hr />
-        <a href="{{ path('contact_manage') }}" class="sidenav-link">Gestion des Messages ({{ count }})</a>
-        <a href="{{ path('update_index') }}" class="sidenav-link">Gestion des Maj</a>
-        <a href="{{ path('categories_index') }}" class="sidenav-link">Gestion des Catégories</a>
-        <a href="{{ path('users_manage') }}" class="sidenav-link">Gestion des Utilisateurs ({{ users | length }})</a>
-        <hr />
-        <a href="{{ path('users') }}" class="sidenav-link">Mon profil</a>
-        <a href="{{ path('app_logout') }}" class="sidenav-link">Se déconnecter</a>
-    </div>
-
-    {# menu latéral registered #}
-
-    <div id="registered-sidenav" data-ax="sidenav" class="sidenav-color-users sidenav mf white">
-        <div class="sidenav-header">
-            <button data-target="registered-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-        </div>
-        <a href="{{ path('users') }}" class="btn rounded-1 press green dark-4 sidenav-menu-trigger">
-            <span>
-                <i class="fas fa-user-check sidenav-menu-role-icon"></i>
-            </span>
-        </a>
-        <hr />
-
-        <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <hr />
-        <a href="{{ path('users') }}" class="sidenav-link">Mon profil</a>
-        <a href="{{ path('app_logout') }}" class="sidenav-link">Se déconnecter</a>
-    </div>
-
-    {# menu latéral visitor #}
-
-    <div id="visitor-sidenav" data-ax="sidenav" class="sidenav-color-visitors sidenav md white">
-        <div class="sidenav-header">
-            <button data-target="visitor-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-        </div>
-        <a href="{{ path('users') }}" class="btn rounded-1 press red sidenav-menu-trigger">
-            <span>
-                <i class="fas fa-user-lock sidenav-menu-role-icon"></i>
-            </span>
-        </a>
-        <hr />
-
-        <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <hr />
-        <a href="{{ path('users') }}" class="sidenav-link">Se connecter</a>
-        <a href="{{ path('app_register') }}" class="sidenav-link">S'inscrire</a>
-    </div>
-
-    {# menu latéral général #}
-
-    <div id="menu-sidenav" data-ax="sidenav" class="sidenav-color-home sidenav md white">
-        <div class="sidenav-header">
-            <button data-target="menu-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-        </div>
-        <a href="{{ path('app_home') }}" class="btn rounded-1 press orange dark-2 sidenav-menu-trigger">
-            <span>
-                <i class="icon-home sidenav-menu-icon"></i>
-            </span>
-        </a>
-        <hr />
-
-        <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <a href="{{ path('portfolio_index') }}" class="sidenav-link">Portfolio</a>
-        <a href="{{ path('articles_index') }}" class="sidenav-link">Articles</a>
-        <a href="{{ path('blog_index') }}" class="sidenav-link">Blog</a>
-        <a href="{{ path('about_index') }}" class="sidenav-link">A propos</a>
-        <a href="{{ path('contact_index') }}" class="sidenav-link">Contact</a>
-    </div>
-
-    {# menu latéral portfolio #}
-
-    <div id="portfolio-sidenav" data-ax="sidenav" class="sidenav-color-portfolio sidenav md white">
-        <div class="sidenav-header">
-            <button data-target="portfolio-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-        </div>
-        <a href="{{ path('portfolio_index') }}" class="btn rounded-1 press orange sidenav-menu-trigger">
-            <span>
-                <i class="icon-portfolio sidenav-menu-icon"></i>
-            </span>
-        </a>
-        <hr />
-
-        <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <a href="/portfolio?categorie=symfony" class="sidenav-link">Symfony</a>
-        <a href="/portfolio?categorie=php-sql" class="sidenav-link">PHP/SQL</a>
-        <a href="/portfolio?categorie=php" class="sidenav-link">PHP</a>
-        <a href="/portfolio?categorie=html-css" class="sidenav-link">HTML/CSS</a>
-        <a href="/portfolio?categorie=projet" class="sidenav-link">Projet</a>
-
-    </div>
-
-    {# menu latéral articles #}
-
-    <div id="articles-sidenav" data-ax="sidenav" class="sidenav-color-articles sidenav md white">
-        <div class="sidenav-header">
-            <button data-target="articles-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-        </div>
-        <a href="{{ path('articles_index') }}" class="btn rounded-1 press blue light-1 sidenav-menu-trigger">
-            <span>
-                <i class="icon-services sidenav-menu-icon"></i>
-            </span>
-        </a>
-        <hr />
-
-        <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <a href="/articles?categorie=code" class="sidenav-link">Code</a>
-        <a href="/articles?categorie=techno" class="sidenav-link">Techno</a>
-        <a href="/articles?categorie=tuto" class="sidenav-link">Tuto</a>
-        <a href="/articles?categorie=divers" class="sidenav-link">Divers</a>
-    </div>
-
-    {# menu latéral blog #}
-
-    <div id="blog-sidenav" data-ax="sidenav" class="sidenav-color-blog sidenav md white">
-        <div class="sidenav-header">
-            <button data-target="blog-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-        </div>
-        <a href="{{ path('blog_index') }}" class="btn rounded-1 press blue dark-2 sidenav-menu-trigger">
-            <span>
-                <i class="icon-blog sidenav-menu-icon"></i>
-            </span>
-        </a>
-        <hr />
-
-        <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <a href="/blog?categorie=info" class="sidenav-link">Info</a>
-        <a href="/blog?categorie=pro" class="sidenav-link">Pro</a>
-        <a href="/blog?categorie=non-pro" class="sidenav-link">Non-pro</a>
-    </div>
-
-    {# menu latéral a propos #}
-
-    <div id="about-sidenav" data-ax="sidenav" class="sidenav-color-about sidenav md white">
-        <div class="sidenav-header">
-            <button data-target="about-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-        </div>
-        <a href="{{ path('about_index') }}" class="btn rounded-1 press airforce dark-3 sidenav-menu-trigger">
-            <span>
-                <i class="icon-team sidenav-menu-icon"></i>
-            </span>
-        </a>
-        <hr />
-
-        <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <a href="#" class="sidenav-link">Mes compétences</a>
-        <a href="#" class="sidenav-link">Mon expérience</a>
-        <a href="#" class="sidenav-link">Ma formation</a>
-        <a href="#" class="sidenav-link">Mon profil</a>
-    </div>
-
-    {# menu latéral contact #}
-
-    <div id="contact-sidenav" data-ax="sidenav" class="sidenav-color-contact sidenav md white">
-        <div class="sidenav-header">
-            <button data-target="contact-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
-        </div>
-        <a href="{{ path('contact_index') }}" class="btn rounded-1 press airforce dark-5 sidenav-menu-trigger">
-            <span>
-                <i class="icon-contact sidenav-menu-icon"></i>
-            </span>
-        </a>
-        <hr />
-
-        <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-        <a href="#" class="sidenav-link">Coordonnées</a>
-        <a href="#" class="sidenav-link">Formulaire de contact</a>
-        <a href="#" class="sidenav-link">Autres</a>
-    </div>
-
-    <main>
-        {# bouton latéral pour accès menu admin #}
-        {% if is_granted('ROLE_ADMIN') %}
-        <button data-target="admin-sidenav" class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-admin">
-            <span>
-                <i class="fas fa-user-cog sidenav-role-icon"></i>
-            </span>
-        </button>
-
-        <button class="btn rounded-1 press red sidenav-trigger sidenav-contact-length-admin">
-            <a href="{{ path('contact_manage') }}">
-                <span>{{ count }}</span>
+        <div id="admin-sidenav" data-ax="sidenav" class="sidenav-color-users sidenav large white">
+            <div class="sidenav-header">
+                <button data-target="admin-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+            </div>
+            <a href="{{ path('users') }}" class="btn rounded-1 press green dark-4 sidenav-menu-trigger">
+                <span>
+                    <i class="fas fa-user-cog sidenav-menu-role-icon"></i>
+                </span>
             </a>
-        </button>
+            <hr />
 
-        {% elseif is_granted('ROLE_USER') %}
-        {# bouton latéral pour accès menu registered #}
-        <button data-target="registered-sidenav"
-            class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-registered">
-            <span>
-                <i class="fas fa-user-check sidenav-role-icon"></i>
-            </span>
-        </button>
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <hr />
+            <a href="{{ path('portfolio_add') }}" class="sidenav-link">Ajout dans la page Portfolio</a>
+            <a href="{{ path('articles_add') }}" class="sidenav-link">Ajout dans la page Articles</a>
+            <a href="{{ path('blog_add') }}" class="sidenav-link">Ajout dans la page Blog</a>
+            <hr />
+            <a href="{{ path('portfolio_manage') }}" class="sidenav-link">Gestion de la page Portfolio</a>
+            <a href="{{ path('articles_manage') }}" class="sidenav-link">Gestion de la page Articles</a>
+            <a href="{{ path('blog_manage') }}" class="sidenav-link">Gestion de la page Blog</a>
+            <hr />
+            <a href="{{ path('contact_manage') }}" class="sidenav-link">Gestion des Messages ({{ count }})</a>
+            <a href="{{ path('update_index') }}" class="sidenav-link">Gestion des Maj</a>
+            <a href="{{ path('categories_index') }}" class="sidenav-link">Gestion des Catégories</a>
+            <a href="{{ path('users_manage') }}" class="sidenav-link">Gestion des Utilisateurs
+                ({{ users | length }})</a>
+            <hr />
+            <a href="{{ path('users') }}" class="sidenav-link">Mon profil</a>
+            <a href="{{ path('app_logout') }}" class="sidenav-link">Se déconnecter</a>
+        </div>
 
-        {% else %}
-        {# bouton latéral pour accès menu visitor #}
-        <button data-target="visitor-sidenav" class="btn rounded-1 press red sidenav-trigger sidenav-registered">
-            <span>
-                <i class="fas fa-user-lock sidenav-role-icon"></i>
-            </span>
-        </button>
-        {% endif %}
+        {# menu latéral registered #}
 
-        {# bouton latéral pour accès menu général #}
+        <div id="registered-sidenav" data-ax="sidenav" class="sidenav-color-users sidenav mf white">
+            <div class="sidenav-header">
+                <button data-target="registered-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+            </div>
+            <a href="{{ path('users') }}" class="btn rounded-1 press green dark-4 sidenav-menu-trigger">
+                <span>
+                    <i class="fas fa-user-check sidenav-menu-role-icon"></i>
+                </span>
+            </a>
+            <hr />
 
-        <button data-target="menu-sidenav" class="btn rounded-1 press orange dark-2 sidenav-trigger sidenav-menu">
-            <span class="icon">
-                <i class="icon-home sidenav-icon"></i>
-            </span>
-        </button>
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <hr />
+            <a href="{{ path('users') }}" class="sidenav-link">Mon profil</a>
+            <a href="{{ path('app_logout') }}" class="sidenav-link">Se déconnecter</a>
+        </div>
 
-        {# bouton latéral pour accès menu portfolio #}
+        {# menu latéral visitor #}
 
-        <button data-target="portfolio-sidenav" class="btn rounded-1 press orange sidenav-trigger sidenav-portfolio">
-            <span class="icon">
-                <i class="icon-portfolio sidenav-icon"></i>
-            </span>
-        </button>
+        <div id="visitor-sidenav" data-ax="sidenav" class="sidenav-color-visitors sidenav md white">
+            <div class="sidenav-header">
+                <button data-target="visitor-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+            </div>
+            <a href="{{ path('users') }}" class="btn rounded-1 press red sidenav-menu-trigger">
+                <span>
+                    <i class="fas fa-user-lock sidenav-menu-role-icon"></i>
+                </span>
+            </a>
+            <hr />
 
-        {# bouton latéral pour accès menu articles #}
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <hr />
+            <a href="{{ path('users') }}" class="sidenav-link">Se connecter</a>
+            <a href="{{ path('app_register') }}" class="sidenav-link">S'inscrire</a>
+        </div>
 
-        <button data-target="articles-sidenav"
-            class="btn rounded-1 press blue light-1 sidenav-trigger sidenav-articles">
-            <span class="icon">
-                <i class="icon-services sidenav-icon"></i>
-            </span>
-        </button>
+        {# menu latéral général #}
 
-        {# bouton latéral pour accès menu blog #}
+        <div id="menu-sidenav" data-ax="sidenav" class="sidenav-color-home sidenav md white">
+            <div class="sidenav-header">
+                <button data-target="menu-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+            </div>
+            <a href="{{ path('app_home') }}" class="btn rounded-1 press orange dark-2 sidenav-menu-trigger">
+                <span>
+                    <i class="icon-home sidenav-menu-icon"></i>
+                </span>
+            </a>
+            <hr />
 
-        <button data-target="blog-sidenav" class="btn rounded-1 press blue dark-2 sidenav-trigger sidenav-blog">
-            <span class="icon">
-                <i class="icon-blog sidenav-icon"></i>
-            </span>
-        </button>
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <a href="{{ path('portfolio_index') }}" class="sidenav-link">Portfolio</a>
+            <a href="{{ path('articles_index') }}" class="sidenav-link">Articles</a>
+            <a href="{{ path('blog_index') }}" class="sidenav-link">Blog</a>
+            <a href="{{ path('about_index') }}" class="sidenav-link">A propos</a>
+            <a href="{{ path('contact_index') }}" class="sidenav-link">Contact</a>
+        </div>
 
-        {# bouton latéral pour accès menu a propos #}
+        {# menu latéral portfolio #}
 
-        <button data-target="about-sidenav" class="btn rounded-1 press airforce dark-3 sidenav-trigger sidenav-about">
-            <span class="icon">
-                <i class="icon-team sidenav-icon"></i>
-            </span>
-        </button>
+        <div id="portfolio-sidenav" data-ax="sidenav" class="sidenav-color-portfolio sidenav md white">
+            <div class="sidenav-header">
+                <button data-target="portfolio-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+            </div>
+            <a href="{{ path('portfolio_index') }}" class="btn rounded-1 press orange sidenav-menu-trigger">
+                <span>
+                    <i class="icon-portfolio sidenav-menu-icon"></i>
+                </span>
+            </a>
+            <hr />
 
-        {# bouton latéral pour accès menu contact #}
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <a href="/portfolio?categorie=symfony" class="sidenav-link">Symfony</a>
+            <a href="/portfolio?categorie=php-sql" class="sidenav-link">PHP/SQL</a>
+            <a href="/portfolio?categorie=php" class="sidenav-link">PHP</a>
+            <a href="/portfolio?categorie=html-css" class="sidenav-link">HTML/CSS</a>
+            <a href="/portfolio?categorie=projet" class="sidenav-link">Projet</a>
 
-        <button data-target="contact-sidenav"
-            class="btn rounded-1 press airforce dark-5 sidenav-trigger sidenav-contact">
-            <span class="icon">
-                <i class="icon-contact sidenav-icon"></i>
-            </span>
-        </button>
+        </div>
 
-        <div class="container-fluid">{% block body %}{% endblock %}</div>
-    </main>
+        {# menu latéral articles #}
+
+        <div id="articles-sidenav" data-ax="sidenav" class="sidenav-color-articles sidenav md white">
+            <div class="sidenav-header">
+                <button data-target="articles-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+            </div>
+            <a href="{{ path('articles_index') }}" class="btn rounded-1 press blue light-1 sidenav-menu-trigger">
+                <span>
+                    <i class="icon-services sidenav-menu-icon"></i>
+                </span>
+            </a>
+            <hr />
+
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <a href="/articles?categorie=code" class="sidenav-link">Code</a>
+            <a href="/articles?categorie=techno" class="sidenav-link">Techno</a>
+            <a href="/articles?categorie=tuto" class="sidenav-link">Tuto</a>
+            <a href="/articles?categorie=divers" class="sidenav-link">Divers</a>
+        </div>
+
+        {# menu latéral blog #}
+
+        <div id="blog-sidenav" data-ax="sidenav" class="sidenav-color-blog sidenav md white">
+            <div class="sidenav-header">
+                <button data-target="blog-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+            </div>
+            <a href="{{ path('blog_index') }}" class="btn rounded-1 press blue dark-2 sidenav-menu-trigger">
+                <span>
+                    <i class="icon-blog sidenav-menu-icon"></i>
+                </span>
+            </a>
+            <hr />
+
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <a href="/blog?categorie=info" class="sidenav-link">Info</a>
+            <a href="/blog?categorie=pro" class="sidenav-link">Pro</a>
+            <a href="/blog?categorie=non-pro" class="sidenav-link">Non-pro</a>
+        </div>
+
+        {# menu latéral a propos #}
+
+        <div id="about-sidenav" data-ax="sidenav" class="sidenav-color-about sidenav md white">
+            <div class="sidenav-header">
+                <button data-target="about-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+            </div>
+            <a href="{{ path('about_index') }}" class="btn rounded-1 press airforce dark-3 sidenav-menu-trigger">
+                <span>
+                    <i class="icon-team sidenav-menu-icon"></i>
+                </span>
+            </a>
+            <hr />
+
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <a href="#" class="sidenav-link">Mes compétences</a>
+            <a href="#" class="sidenav-link">Mon expérience</a>
+            <a href="#" class="sidenav-link">Ma formation</a>
+            <a href="#" class="sidenav-link">Mon profil</a>
+        </div>
+
+        {# menu latéral contact #}
+
+        <div id="contact-sidenav" data-ax="sidenav" class="sidenav-color-contact sidenav md white">
+            <div class="sidenav-header">
+                <button data-target="contact-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+            </div>
+            <a href="{{ path('contact_index') }}" class="btn rounded-1 press airforce dark-5 sidenav-menu-trigger">
+                <span>
+                    <i class="icon-contact sidenav-menu-icon"></i>
+                </span>
+            </a>
+            <hr />
+
+            <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
+            <a href="#" class="sidenav-link">Coordonnées</a>
+            <a href="#" class="sidenav-link">Formulaire de contact</a>
+            <a href="#" class="sidenav-link">Autres</a>
+        </div>
+
+        <main>
+            {# bouton latéral pour accès menu admin #}
+            {% if is_granted('ROLE_ADMIN') %}
+            <button data-target="admin-sidenav" class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-admin">
+                <span>
+                    <i class="fas fa-user-cog sidenav-role-icon"></i>
+                </span>
+            </button>
+
+            <button class="btn rounded-1 press red sidenav-trigger sidenav-contact-length-admin">
+                <a href="{{ path('contact_manage') }}">
+                    <span>{{ count }}</span>
+                </a>
+            </button>
+
+            {% elseif is_granted('ROLE_USER') %}
+            {# bouton latéral pour accès menu registered #}
+            <button data-target="registered-sidenav"
+                class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-registered">
+                <span>
+                    <i class="fas fa-user-check sidenav-role-icon"></i>
+                </span>
+            </button>
+
+            {% else %}
+            {# bouton latéral pour accès menu visitor #}
+            <button data-target="visitor-sidenav" class="btn rounded-1 press red sidenav-trigger sidenav-registered">
+                <span>
+                    <i class="fas fa-user-lock sidenav-role-icon"></i>
+                </span>
+            </button>
+            {% endif %}
+
+            {# bouton latéral pour accès menu général #}
+
+            <button data-target="menu-sidenav" class="btn rounded-1 press orange dark-2 sidenav-trigger sidenav-menu">
+                <span class="icon">
+                    <i class="icon-home sidenav-icon"></i>
+                </span>
+            </button>
+
+            {# bouton latéral pour accès menu portfolio #}
+
+            <button data-target="portfolio-sidenav"
+                class="btn rounded-1 press orange sidenav-trigger sidenav-portfolio">
+                <span class="icon">
+                    <i class="icon-portfolio sidenav-icon"></i>
+                </span>
+            </button>
+
+            {# bouton latéral pour accès menu articles #}
+
+            <button data-target="articles-sidenav"
+                class="btn rounded-1 press blue light-1 sidenav-trigger sidenav-articles">
+                <span class="icon">
+                    <i class="icon-services sidenav-icon"></i>
+                </span>
+            </button>
+
+            {# bouton latéral pour accès menu blog #}
+
+            <button data-target="blog-sidenav" class="btn rounded-1 press blue dark-2 sidenav-trigger sidenav-blog">
+                <span class="icon">
+                    <i class="icon-blog sidenav-icon"></i>
+                </span>
+            </button>
+
+            {# bouton latéral pour accès menu a propos #}
+
+            <button data-target="about-sidenav"
+                class="btn rounded-1 press airforce dark-3 sidenav-trigger sidenav-about">
+                <span class="icon">
+                    <i class="icon-team sidenav-icon"></i>
+                </span>
+            </button>
+
+            {# bouton latéral pour accès menu contact #}
+
+            <button data-target="contact-sidenav"
+                class="btn rounded-1 press airforce dark-5 sidenav-trigger sidenav-contact">
+                <span class="icon">
+                    <i class="icon-contact sidenav-icon"></i>
+                </span>
+            </button>
+
+            <div class="container-fluid">{% block body %}{% endblock %}</div>
+        </main>
+    </div>
 
     <footer class="container-fluid">
         <nav class="nav nav-footer">
