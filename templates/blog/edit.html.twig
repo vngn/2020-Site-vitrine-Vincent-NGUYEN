@@ -16,6 +16,7 @@
         <table class="table striped">
             <thead>
                 <tr>
+                    <th>Avatar</th>
                     <th>Auteur</th>
                     <th>Date</th>
                     <th>Contenu</th>
@@ -25,6 +26,7 @@
             <tbody>
                 {% for blogComment in blog.blogComment %}
                 <tr>
+                    <td><img src="{{ asset('uploads/photos/'~ blogComment.users.photo) }}" alt="avatar" class="photo-form"></td>
                     <td>{{ blogComment.users.firstname }} {{ blogComment.users.name }}</td>
                     <td>{{ blogComment.createdAt | date ('d/m/Y (H:i)') }}</td>
                     <td>{{ blogComment.content | raw }}</td>
