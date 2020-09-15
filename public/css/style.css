@@ -301,7 +301,8 @@ hr {
 /* blocs de page de base */
 .main-background {
   background-color: orange;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
+  margin-bottom: -145px;
 }
 
 .example-wrapper {
@@ -577,8 +578,8 @@ hr {
 
 /* Texte titre sauf page d'accueil */
 .color-block-video-title {
-  height: 630px;
-  padding-top: 330px;
+  height: 540px;
+  padding-top: 230px;
   background: white;
 }
 
@@ -999,7 +1000,7 @@ hr {
 
 .block-portfolio-button-menu {
   text-align: center;
-  margin: -100px auto 115px;
+  margin: -110px auto 115px;
 }
 
 .block-portfolio-index {
@@ -1215,7 +1216,7 @@ hr {
 
 .block-articles-button-menu {
   text-align: center;
-  margin: -100px auto 115px;
+  margin: -110px auto 115px;
 }
 
 .block-articles-index {
@@ -1332,7 +1333,7 @@ hr {
 
 .block-blog-button-menu {
   text-align: center;
-  margin: -100px auto 115px;
+  margin: -110px auto 115px;
 }
 
 .block-blog-index {
