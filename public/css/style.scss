@@ -185,9 +185,14 @@ body {
     @include basic-form;
 }
 
+.photo-form-edit {
+    @include basic-form;
+    width: 100%;
+}
+
 .photo-form {
     @include basic-form;
-    width: 75px;
+    width: 100px;
 }
 
 .post-form {

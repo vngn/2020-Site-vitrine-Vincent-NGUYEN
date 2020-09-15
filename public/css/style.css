@@ -188,13 +188,22 @@ body {
   padding: 4px;
 }
 
+.photo-form-edit {
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 5px;
+  padding: 4px;
+  width: 100%;
+}
+
 .photo-form {
   background: #ebebeb;
   width: 100%;
   border: 1px solid #e1e1e1;
   margin-bottom: 5px;
   padding: 4px;
-  width: 75px;
+  width: 100px;
 }
 
 .post-form {
