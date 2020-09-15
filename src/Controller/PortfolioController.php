@@ -80,9 +80,9 @@ class PortfolioController extends AbstractController
                         $this->getParameter('photos_directory'),
                         $newFilename
                     );
-                } catch (FileException $e) {
-                    $portfolio->setbackground($newFilename);
-                }
+                } catch (FileException $e) {}
+                
+                $portfolio->setbackground($newFilename);
 
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($portfolio);

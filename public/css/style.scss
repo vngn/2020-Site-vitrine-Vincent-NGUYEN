@@ -185,6 +185,10 @@ body {
     @include basic-form;
 }
 
+.photo-form {
+    @include basic-form;
+}
+
 .post-form {
     @include basic-form;
 }

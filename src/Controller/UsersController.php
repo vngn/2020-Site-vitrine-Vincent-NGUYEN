@@ -13,9 +13,12 @@ use App\Form\EditProfileType;
 use App\Repository\UsersRepository;
 use App\Repository\ContactRepository;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UsersController extends AbstractController
@@ -34,7 +37,7 @@ class UsersController extends AbstractController
     /**
      * @Route("/users/profil/edit", name="users_profil_edit")
      */
-    public function editProfile(Request $request, UsersRepository $usersRepo, ContactRepository $contactRepo)
+    public function editProfile(Request $request, UsersRepository $usersRepo, ContactRepository $contactRepo, SluggerInterface $slugger): Response
     {
         $user = $this->getUser();
         $form = $this->createForm(editProfileType::class, $user);
@@ -43,11 +46,29 @@ class UsersController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($user);
-            $em->flush();
+            $photo = $form->get('photo')->getData();
 
-            $this->addFlash('message', 'Profil mis à jour');
-            return $this->redirectToRoute('users');
+            if ($photo) {
+                $originalFilename = pathinfo($photo->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $photo->guessExtension();
+
+                try {
+                    $photo->move(
+                        $this->getParameter('photos_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {}
+                
+                $user->setphoto($newFilename);
+
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($user);
+                $em->flush();
+
+                // $this->addFlash('message', 'Profil mis à jour');
+                return $this->redirectToRoute('users');
+            }
         }
 
         return $this->render('users/editprofile.html.twig', [
