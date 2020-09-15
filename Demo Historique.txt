@@ -35,7 +35,7 @@ général :
 - choisir la police (roboto) grosse police
 - tarte au citron
 - virer la validation d'incription par email
-- régler pb... retrouver le pb... :/
+- régler pb avec ckeditor et la police // ce qui s'affichent
 - revenir vers la page d'avant connexion quand connexion ?
 
 pages portfolio :
