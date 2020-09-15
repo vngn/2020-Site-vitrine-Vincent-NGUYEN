@@ -38,8 +38,8 @@ général :
 - régler pb... retrouver le pb... :/
 - revenir vers la page d'avant connexion quand connexion ?
 
-pages portfolio, articles et blog :
-- classer les articles du plus récent au plus ancien
+pages portfolio :
+- régler pb de flou au survol des blocks site
 
 page about :
 - remplir page about
