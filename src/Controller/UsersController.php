@@ -61,7 +61,6 @@ class UsersController extends AbstractController
                 } catch (FileException $e) {}
                 
                 $user->setphoto($newFilename);
-
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($user);
                 $em->flush();
