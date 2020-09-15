@@ -43,6 +43,7 @@
         <table class="table striped">
             <thead>
                 <tr>
+                    <th>Avatar</th>
                     <th>Auteur</th>
                     <th>Date</th>
                     <th>Contenu</th>
@@ -51,6 +52,7 @@
             <tbody>
                 {% for portfolioComment in portfolio.portfolioComment %}
                 <tr>
+                                    <td><img src="{{ asset('uploads/photos/'~ portfolioComment.users.photo) }}" alt="avatar"></td>
                     <td>{{ portfolioComment.users.firstname }} {{ portfolioComment.users.name }}</td>
                     <td>{{ portfolioComment.createdAt | date ('d/m/Y (H:i)') }}</td>
                     <td>{{ portfolioComment.content | raw }}</td>
