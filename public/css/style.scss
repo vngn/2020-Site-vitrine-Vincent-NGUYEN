@@ -718,7 +718,7 @@ hr {
         transition: opacity 1s ease-in-out;
     }
 
-    li iframe {
+    li iframe, img {
         width: 100%;
         height: 100%;
         border-radius: 0;
@@ -741,7 +741,7 @@ hr {
     height: 340px;
 }
 
-.block-portfolio-index li:hover iframe {
+.block-portfolio-index li:hover img {
     left: 0px;
     top: 0px;
     opacity: 1;
