@@ -11,8 +11,7 @@ style.scss :
     - .block-portfolio                      z-index: 0
     - .block-portfolio li iframe            z-index: 1
     - .video-title                          z-index: 2
-    - .video-title-rext                     z-index: 4
-    // - .bg00                                 z-index: 900
+    - .video-title-text                     z-index: 4
     - @mixin button-sidebar-position        z-index: 998
     - @mixin sidenav                        z-index: 999
     
