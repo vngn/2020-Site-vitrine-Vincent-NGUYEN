@@ -28,6 +28,8 @@ pinterest
 
 ++++++ reste à faire ++++++
 
+input renseignés sauf avatar ?
+
 général :
 - pot de miel - ajout input fantôme / captcha
 - s'occuper du responsive (navbar, sidebar, pages en général)
