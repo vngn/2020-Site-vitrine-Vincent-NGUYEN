@@ -242,7 +242,7 @@ a, button {
     height: 6.5em;
   }
   .nav-footer a {
-    height: 1.5em;
+    height: 3em;
   }
   .no-touch .nav a:hover,
   .nav a:active,
@@ -255,7 +255,7 @@ a, button {
     transition: margin .5s;
   }
   .no-touch .nav-footer li:hover {
-    margin-top: -1em;
+    margin-top: 0.5em;
     -webkit-transition: margin .5s;
     transition: margin .5s;
   }
