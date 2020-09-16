@@ -3,20 +3,22 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-<div class="example-wrapper block-users visitors-color">
-    <form method="post">
-        {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-        {% endif %}
+<form method="post">
+    {% if error %}
+    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
 
-        {% if app.user %}
-        <div class="mb-3">
-            Vous êtes connecté(e) avec l'Email {{ app.user.username }}. <a href="{{ path('app_logout') }}"
-                class="btn rounded-1 press amaranth dark-1">Déconnexion ici</a>
-        </div>
-        {% endif %}
+    {% if app.user %}
+    <div class="mb-3">
+        Vous êtes connecté(e) avec l'Email {{ app.user.username }}. <a href="{{ path('app_logout') }}"
+            class="btn rounded-1 press amaranth dark-1">Déconnexion ici</a>
+    </div>
+    {% endif %}
 
-        <h1 class="h3 mb-3 font-weight-normal ">Connexion :</h1>
+    <div class="example-wrapper-title">
+        <h1>Connexion :</h1>
+    </div>
+    <div class="example-wrapper block-users visitors-color block">
         <label for="inputEmail">Email</label>
         <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required
             autofocus>
@@ -41,6 +43,6 @@
         <a href="{{ path('app_forgot_password_request') }}" class="btn rounded-1 press amaranth dark-1">Mot de passe
             oublié</a>
         <a href="{{ path('app_register') }}" class="btn rounded-1 press green dark-2">Créer un compte</a>
-    </form>
-</div>
+    </div>
+</form>
 {% endblock %}
