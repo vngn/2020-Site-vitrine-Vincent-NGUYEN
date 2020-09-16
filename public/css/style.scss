@@ -870,9 +870,20 @@ hr {
 /* ============================== 6. PAGE CONTACT ============================== */
 
 .block-contact {
+    border: 1px solid $background-color-border-bis;
+    margin: 0;
+    padding: 20px;
+}
+
+.individual-block-contact-index {
     @include block-shape-light;
-    width: 25%;
-    min-width: 480px;
+    background: $background-color;
+    width: 50%;
+    min-width: 400px;
+
+    li {
+        list-style: none;
+    }
 }
 
 /* ============================== 7. PAGE CATEGORIES ============================== */
@@ -880,10 +891,10 @@ hr {
 .block-categories {
     @include block-shape-light;
     width: 25%;
-    min-width: 480px;
+    min-width: 450px;
 }
 
-/* ============================== 8. PAGE USERS ============================== */
+/* ============================== 8. PAGES USERS ============================== */
 
 .block-users {
     @include block-shape-light;

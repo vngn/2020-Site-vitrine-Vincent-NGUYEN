@@ -1413,12 +1413,23 @@ hr {
 /* ============================== 6. PAGE CONTACT ============================== */
 .block-contact {
   border: 1px solid #e1e1e1;
+  margin: 0;
+  padding: 20px;
+}
+
+.individual-block-contact-index {
+  border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
   padding: 20px;
   position: relative;
-  width: 25%;
-  min-width: 480px;
+  background: white;
+  width: 50%;
+  min-width: 400px;
+}
+
+.individual-block-contact-index li {
+  list-style: none;
 }
 
 /* ============================== 7. PAGE CATEGORIES ============================== */
@@ -1429,10 +1440,10 @@ hr {
   padding: 20px;
   position: relative;
   width: 25%;
-  min-width: 480px;
+  min-width: 450px;
 }
 
-/* ============================== 8. PAGE USERS ============================== */
+/* ============================== 8. PAGES USERS ============================== */
 .block-users {
   border: 1px solid #e1e1e1;
   border-radius: 20px;
