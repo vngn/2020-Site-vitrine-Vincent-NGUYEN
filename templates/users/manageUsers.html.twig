@@ -21,7 +21,7 @@
         <tbody>
             {% for user in users %}
             <tr>
-                <td>{{ user.photo }}</td>
+                <td><img src="{{ asset('uploads/photos/'~ user.photo) }}" alt="avatar" class="photo-form"></td>
                 <td>{{ user.name }}</td>
                 <td>{{ user.firstname }}</td>
                 <td>{{ user.email }}</td>
