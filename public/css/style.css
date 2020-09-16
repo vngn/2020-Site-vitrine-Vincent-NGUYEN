@@ -1417,7 +1417,8 @@ hr {
   margin: 10px auto;
   padding: 20px;
   position: relative;
-  width: 84%;
+  width: 60%;
+  min-width: 480px;
 }
 
 /* ============================== 7. PAGE CATEGORIES ============================== */
@@ -1427,7 +1428,8 @@ hr {
   margin: 10px auto;
   padding: 20px;
   position: relative;
-  width: 84%;
+  width: 60%;
+  min-width: 480px;
 }
 
 /* ============================== 8. PAGE USERS ============================== */

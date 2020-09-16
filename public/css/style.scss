@@ -871,14 +871,16 @@ hr {
 
 .block-contact {
     @include block-shape-light;
-    width: 84%;
+    width: 60%;
+    min-width: 480px;
 }
 
 /* ============================== 7. PAGE CATEGORIES ============================== */
 
 .block-categories {
     @include block-shape-light;
-    width: 84%;
+    width: 60%;
+    min-width: 480px;
 }
 
 /* ============================== 8. PAGE USERS ============================== */
