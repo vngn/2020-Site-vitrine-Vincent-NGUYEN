@@ -255,7 +255,7 @@ a, button {
     transition: margin .5s;
   }
   .no-touch .nav-footer li:hover {
-    margin-top: 0.5em;
+    margin-top: 1em;
     -webkit-transition: margin .5s;
     transition: margin .5s;
   }
