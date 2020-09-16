@@ -870,6 +870,12 @@ hr {
 /* ============================== 6. PAGE CONTACT ============================== */
 
 .block-contact {
+    @include block-shape-light;
+    width: 25%;
+    min-width: 480px;
+}
+
+.block-manage-contact {
     border: 1px solid $background-color-border-bis;
     margin: 0;
     padding: 20px;
