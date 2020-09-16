@@ -12,6 +12,11 @@
 </div>
 
 <div class="example-wrapper block-users users-color">
-    {{ form(form) }}
+    {{ form_start(form) }}
+    <img src="{{ asset('uploads/photos/'~ app.user.photo) }}" alt="avatar" class="photo-form">
+    {{ form_row(form.photo) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.firstname) }}
+    {{ form_end(form) }}
 </div>
 {% endblock %}
