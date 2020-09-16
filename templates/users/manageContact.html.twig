@@ -19,11 +19,11 @@
                 <span>{{ contact.createdAt | date ('d/m/Y (H:i)') }}<br /></span>
                 <span>{{ contact.title }}</span>
                 <span>{{ contact.content | raw }}</span>
-                <span><label class="form-switch mt-2">Traité
+                <span><label class="form-switch mt-2">Message traité
                         <input type="checkbox" {{ (contact.active) ? 'checked' : '' }} data-id="{{ contact.id }}" />
                         <span class="slider"></span>A traiter
                     </label><br /></span>
-                <span><a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
+                <span><a href="#" class="btn shadow-1 rounded-1 red modal-trigger btn-manage-contact" data-target="modal-delete"
                         data-id="{{ contact.id }}" data-nom="{{ contact.name }}">Supprimer</a></span>
             </li>
         </ul>

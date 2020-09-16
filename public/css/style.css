@@ -1442,6 +1442,10 @@ hr {
   list-style: none;
 }
 
+.btn-manage-contact {
+  margin: 10px auto -10px;
+}
+
 /* ============================== 7. PAGE CATEGORIES ============================== */
 .block-categories {
   border: 1px solid #e1e1e1;
