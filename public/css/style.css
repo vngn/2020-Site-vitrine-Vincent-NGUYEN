@@ -1425,6 +1425,7 @@ hr {
   border: 1px solid #e1e1e1;
   margin: 0;
   padding: 20px;
+  padding-bottom: 80px;
 }
 
 .individual-block-contact-index {
@@ -1443,7 +1444,9 @@ hr {
 }
 
 .btn-manage-contact {
-  margin: 10px auto -10px;
+  float: right;
+  position: relative;
+  bottom: -12px;
 }
 
 /* ============================== 7. PAGE CATEGORIES ============================== */
