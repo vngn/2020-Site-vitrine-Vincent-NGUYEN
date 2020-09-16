@@ -13,16 +13,16 @@
     <div class="individual-block-users-index">
         <ul class="block-users-index users-color">
             <li>
-                <span>{{ contact.firstname }} {{ contact.name }}</span>
-                <span>{{ contact.post }} {{ contact.society }}</span>
-                <span>{{ contact.email }} {{ contact.phone }}</span>
-                <span>{{ contact.createdAt | date ('d/m/Y (H:i)') }}</span>
+                <span>{{ contact.firstname }} {{ contact.name }}<br /></span>
+                <span>{{ contact.post }} - {{ contact.society }}<br /></span>
+                <span>{{ contact.email }} - 0{{ contact.phone }}<br /></span>
+                <span>{{ contact.createdAt | date ('d/m/Y (H:i)') }}<br /></span>
                 <span>{{ contact.title }}</span>
                 <span>{{ contact.content | raw }}</span>
-                <span><label class="form-switch mt-2">
+                <span><label class="form-switch mt-2">Traité
                         <input type="checkbox" {{ (contact.active) ? 'checked' : '' }} data-id="{{ contact.id }}" />
-                        <span class="slider"></span>
-                    </label></span>
+                        <span class="slider"></span>A traiter
+                    </label><br /></span>
                 <span><a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
                         data-id="{{ contact.id }}" data-nom="{{ contact.name }}">Supprimer</a></span>
             </li>
