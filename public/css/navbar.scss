@@ -316,6 +316,12 @@ a, button {
 	}
 
 	.nav-footer a {
+		padding-top: 12px;
+		height: 6.5em;
+	}
+
+	.nav-footer a:hover {
+		padding-top: 8px;
 		height: 6.5em;
 	}
 
@@ -326,16 +332,21 @@ a, button {
 	}
 	
 	.no-touch .nav-footer li {
-		margin-top: 5em;
+		margin-top: 5.5em;
 		@include kit-transition-margin;
 	}
 
 	.no-touch .nav-footer li:hover {
-		margin-top: 1em;
+		margin-top: 4.5em;
 		@include kit-transition-margin;
 	}
 
 	/* Making the text follow the height animation */
+	.no-touch .nav a:hover .icon + span {
+		margin-top: 1.5em;
+		@include kit-transition-margin;
+	}
+
 	.no-touch .nav a:hover .icon + span {
 		margin-top: 1.5em;
 		@include kit-transition-margin;
