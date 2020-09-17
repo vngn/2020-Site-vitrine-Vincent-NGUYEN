@@ -46,11 +46,8 @@ page about :
 page contact :
 - finir page contact 
 
-page rgpd :
--créer page rgpd et mentions légales
-
 footer :
-- rendre utile le footer
+- complèter le footer
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
