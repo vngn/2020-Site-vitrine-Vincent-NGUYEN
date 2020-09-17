@@ -65,6 +65,11 @@ class Blog
      */
     private $users;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $firstContent;
+
     public function __construct()
     {
         $this->blogComment = new ArrayCollection();
@@ -186,6 +191,18 @@ class Blog
     public function setUsers(?Users $users): self
     {
         $this->users = $users;
+
+        return $this;
+    }
+
+    public function getFirstContent(): ?string
+    {
+        return $this->firstContent;
+    }
+
+    public function setFirstContent(string $firstContent): self
+    {
+        $this->firstContent = $firstContent;
 
         return $this;
     }

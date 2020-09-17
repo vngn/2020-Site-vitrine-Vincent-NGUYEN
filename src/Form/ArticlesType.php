@@ -27,6 +27,7 @@ class ArticlesType extends AbstractType
                 'label' => 'Catégorie :',
                 'attr' => ['class' => 'categories-form']
             ])
+            ->add('firstcontent', CKEditorType::class, ['label' => 'Amorce de contenu :'])
             ->add('content', CKEditorType::class, ['label' => 'Contenu :'])
             ->add('Valider', SubmitType::class, ['attr' => ['class' => 'btn-submit-form']]);
     }

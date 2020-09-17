@@ -64,6 +64,11 @@ class Articles
      */
     private $users;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $FirstContent;
+
     public function __construct()
     {
         $this->articleComment = new ArrayCollection();
@@ -171,6 +176,18 @@ class Articles
     public function setUsers(?Users $users): self
     {
         $this->users = $users;
+
+        return $this;
+    }
+
+    public function getFirstContent(): ?string
+    {
+        return $this->FirstContent;
+    }
+
+    public function setFirstContent(string $FirstContent): self
+    {
+        $this->FirstContent = $FirstContent;
 
         return $this;
     }
