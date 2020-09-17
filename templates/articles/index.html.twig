@@ -3,6 +3,15 @@
 {% block title %}Page Articles{% endblock %}
 
 {% block body %}
+
+{% set count = 0 %}
+{% set countProjet = 0 %}
+{% for articles in articles %}
+{% if articles.active == 1 %}
+{% set count = count + 1 %}
+{% endif %}
+{% endfor %}
+
 <div class="color-block-video-title">
     <video class="video-title" height="360" autoplay="true" loop muted>
         <source src="{{asset('bgvideo/background-video.mp4')}}" type="video/mp4" />
@@ -11,11 +20,17 @@
 </div>
 
 <div class="block-articles-button-menu articles-color">
-    <button id="allProject" class="buttonFilter">Tous<br />({{ articles | length }})</button>
+    <button id="allProject" class="buttonFilter">Tous<br />({{ count }})</button>
     {% for categories in categoriesButton %}
     {%  if  categories.articles | length != NULL %}
     <button id="{{ categories.slug }}" class="buttonFilter">{{ categories.name }}<br />
-        ({{ categories.articles | length }})</button>
+        {% set countProjet = 0 %}
+        {% for articles in categories.articles %}
+        {% if articles.active == 1 %}
+        {% set countProjet = countProjet + 1 %}
+        {% endif %}
+        {% endfor %}
+        ({{ countProjet  }})</button>
     {% endif %}
     {% endfor %}
 </div>

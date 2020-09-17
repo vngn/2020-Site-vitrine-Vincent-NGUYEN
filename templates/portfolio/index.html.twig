@@ -4,6 +4,14 @@
 
 {% block body %}
 
+{% set count = 0 %}
+{% set countProjet = 0 %}
+{% for portfolios in portfolio %}
+{% if portfolios.active == 1 %}
+{% set count = count + 1 %}
+{% endif %}
+{% endfor %}
+
 <div class="color-block-video-title">
     <video class="video-title" height="360" autoplay="true" loop muted>
         <source src="{{asset('bgvideo/background-video.mp4')}}" type="video/mp4" />
@@ -12,11 +20,17 @@
 </div>
 
 <div class="block-portfolio-button-menu portfolio-color">
-    <button id="allProject" class="buttonFilter">Tous<br />({{ portfolio | length }})</button>
+    <button id="allProject" class="buttonFilter">Tous<br />({{ count }})</button>
     {% for categories in categoriesButton %}
     {%  if  categories.portfolio | length != NULL %}
     <button id="{{ categories.slug }}" class="buttonFilter">{{ categories.name }}<br />
-        ({{ categories.portfolio | length }})</button>
+        {% set countProjet = 0 %}
+        {% for portfolio in categories.portfolio %}
+        {% if portfolio.active == 1 %}
+        {% set countProjet = countProjet + 1 %}
+        {% endif %}
+        {% endfor %}
+        ({{ countProjet  }})</button>
     {% endif %}
     {% endfor %}
 </div>
@@ -38,7 +52,8 @@
                         <span>{{ articlePortfolio.categories }}</span>
                         {# <span>{{ articlePortfolio.content | raw }}</span> #}
                     </div>
-                    <img src="{{ asset('uploads/images/'~ articlePortfolio.background) }}" alt="image du site" class="site-image">
+                    <img src="{{ asset('uploads/images/'~ articlePortfolio.background) }}" alt="image du site"
+                        class="site-image">
                     {# <iframe src="{{ articlePortfolio.image }}" class="site-iframe"></iframe> #}
                 </li>
             </ul>
