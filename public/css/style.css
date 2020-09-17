@@ -1495,19 +1495,24 @@ hr {
   width: 50%;
 }
 
-.block-legal-notice h2, .block-legal-notice h3, .block-legal-notice h4, .block-legal-notice p {
-  line-height: 1em;
-  margin: 0;
-}
-
 .block-legal-notice h2 {
-  margin-top: 10px;
+  margin: 10px 0;
   font-size: 1.2em;
 }
 
 .block-legal-notice h3 {
+  margin: 10px 0;
   font-size: 1em;
   text-decoration: underline;
   font-weight: normal;
+}
+
+.block-legal-notice p {
+  line-height: 1em;
+  margin: 0;
+}
+
+.block-legal-notice ul {
+  margin: 0.5em 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -932,20 +932,25 @@ hr {
 .block-legal-notice {
     @include block-shape-light;
     width: 50%;
-
-    h2, h3, h4, p {
-        line-height: 1em;
-        margin: 0;
-    }
-
+    
     h2 {
-        margin-top: 10px;
+        margin: 10px 0;
         font-size: 1.2em;
     }
 
     h3 {
+        margin: 10px 0;
         font-size: 1em;
         text-decoration: underline;
         font-weight: normal;
     }
+
+    p {
+        line-height: 1em;
+        margin: 0;
+    }
+
+    ul {
+        margin: 0.5em 0;
+    } 
 }
