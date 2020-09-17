@@ -47,7 +47,7 @@ page contact :
 - finir page contact 
 
 footer :
-- complèter le footer
+- compléter le footer
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
