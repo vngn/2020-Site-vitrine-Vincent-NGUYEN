@@ -928,3 +928,24 @@ hr {
     padding: 20px;
     border: 5px dashed red;
 }
+
+.block-legal-notice {
+    @include block-shape-light;
+    width: 50%;
+
+    h2, h3, h4, p {
+        line-height: 1em;
+        margin: 0;
+    }
+
+    h2 {
+        margin-top: 10px;
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1em;
+        text-decoration: underline;
+        font-weight: normal;
+    }
+}

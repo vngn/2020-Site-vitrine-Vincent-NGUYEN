@@ -1485,4 +1485,29 @@ hr {
   padding: 20px;
   border: 5px dashed red;
 }
+
+.block-legal-notice {
+  border: 1px solid #e1e1e1;
+  border-radius: 20px;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+  width: 50%;
+}
+
+.block-legal-notice h2, .block-legal-notice h3, .block-legal-notice h4, .block-legal-notice p {
+  line-height: 1em;
+  margin: 0;
+}
+
+.block-legal-notice h2 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.block-legal-notice h3 {
+  font-size: 1em;
+  text-decoration: underline;
+  font-weight: normal;
+}
 /*# sourceMappingURL=style.css.map */
