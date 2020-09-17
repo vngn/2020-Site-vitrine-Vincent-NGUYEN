@@ -32,4 +32,15 @@ class MainController extends AbstractController
             'users' => $usersRepo->findAll()
         ]);
     }
+
+    /**
+     * @Route("/legal_notice", name="legal_notice")
+     */
+    public function legalNotice(UsersRepository $usersRepo, ContactRepository $contactRepo)
+    {
+        return $this->render('legal_notice.html.twig', [
+            'users' => $usersRepo->findAll(),
+            'contact' => $contactRepo->findAll()
+        ]);
+    }
 }
