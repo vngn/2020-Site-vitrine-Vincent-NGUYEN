@@ -55,7 +55,7 @@ class RegistrationController extends AbstractController
                 'app_verify_email',
                 $user,
                 (new TemplatedEmail())
-                    ->from(new Address('vngn@laposte.net', 'VincentNguyen'))
+                    ->from(new Address('vincent-nguyen@developpeur-de-site-web.fr', 'VincentNguyen'))
                     ->to($user->getEmail())
                     ->subject('Please Confirm your Email')
                     ->htmlTemplate('registration/confirmation_email.html.twig')

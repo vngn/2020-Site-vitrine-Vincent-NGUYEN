@@ -63,7 +63,7 @@ class ResetPasswordController extends AbstractController
      *
      * @Route("/check-email", name="app_check_email")
      */
-    public function checkEmail(): Response
+    public function checkEmail(UsersRepository $usersRepo, ContactRepository $contactRepo): Response
     {
         // We prevent users from directly accessing this page
         if (!$this->canCheckEmail()) {
@@ -72,6 +72,8 @@ class ResetPasswordController extends AbstractController
 
         return $this->render('reset_password/check_email.html.twig', [
             'tokenLifetime' => $this->resetPasswordHelper->getTokenLifetime(),
+            'users' => $usersRepo->findAll(),
+            'contact' => $contactRepo->findAll()
         ]);
     }
 

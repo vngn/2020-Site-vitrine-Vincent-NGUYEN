@@ -31,7 +31,7 @@ pinterest
 input renseignés sauf avatar ?
 
 général :
-- pot de miel - ajout input fantôme / captcha
+- pot de miel - ajout input fantôme
 - s'occuper du responsive (navbar, sidebar, pages en général)
 - virer la validation d'incription par email
 - régler pb avec ckeditor et la police // ce qui s'affichent
