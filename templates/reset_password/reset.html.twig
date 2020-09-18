@@ -7,10 +7,10 @@
     <h1>Réinitialiser votre mot de passe</h1>
 </div>
 
-<div class="example-wrapper visitors-color">
+<div class="example-wrapper block-users visitors-color">
     {{ form_start(resetForm) }}
     {{ form_row(resetForm.plainPassword) }}
     <button class="btn shadow-1 rounded-1 green dark-2">Réinitialiser votre mot de passe</button>
-    {{ form_end(resetForm }}
+    {{ form_end(resetForm) }}
 </div>
 {% endblock %}
