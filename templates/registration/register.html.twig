@@ -7,8 +7,11 @@
 <div class="alert alert-danger" role="alert">{{ flashError }}</div>
 {% endfor %}
 
-<div class="example-wrapper block-users visitors-color">
+<div class="example-wrapper-title">
     <h1>Inscription :</h1>
+</div>
+
+<div class="example-wrapper block-users visitors-color">
     {{ form_start(registrationForm) }}
     {{ form_row(registrationForm.name) }}
     {{ form_row(registrationForm.firstname) }}
