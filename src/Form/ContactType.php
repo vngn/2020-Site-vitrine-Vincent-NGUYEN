@@ -17,11 +17,11 @@ class ContactType extends AbstractType
     {
         $builder
             ->add('name', TextType::class, [
-                'label' => 'Nom* :',
+                'label' => 'Nom (obligatoire) :',
                 'attr' => ['class' => 'name-form']
             ])
             ->add('firstname', TextType::class, [
-                'label' => 'Prénom* :',
+                'label' => 'Prénom (obligatoire) :',
                 'attr' => ['class' => 'firstname-form']
             ])
             ->add('society', TextType::class, [
@@ -35,7 +35,7 @@ class ContactType extends AbstractType
                 'attr' => ['class' => 'post-form']
             ])
             ->add('email', TextType::class, [
-                'label' => 'Email* :',
+                'label' => 'Email (obligatoire) :',
                 'attr' => ['class' => 'email-form']
             ])
             ->add('phone', TelType::class, [
@@ -44,12 +44,12 @@ class ContactType extends AbstractType
                 'attr' => ['class' => 'phone-form']
             ])
             ->add('title', TextType::class, [
-                'label' => 'Sujet* :',
+                'label' => 'Sujet (obligatoire) :',
                 'attr' => ['class' => 'subject-form']
             ])
             ->add('content', CKEditorType::class, [
                 'required' => false,
-                'label' => 'Votre message* :'
+                'label' => 'Votre message (obligatoire) :'
                 ])
             ->add('Valider', SubmitType::class, ['attr' => ['class' => 'btn-submit-form']]);
     }

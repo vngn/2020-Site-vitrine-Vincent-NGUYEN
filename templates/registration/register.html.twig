@@ -19,8 +19,8 @@
     {{ form_row(registrationForm.plainPassword, {
             label: 'Mot de passe : '
         }) }}
-    <p>En renseignant vos informations personnelles, vous acceptez d'être contacté(e) pour la gestion de votre compte et vous acceptez les termes de notre politique de confidentialité</p>
-    <p>Vous pouvez retirer votre consentement à tout moment en nous contactant à l’adresse suivante : vngn@laposte.net</p>
+    <p>En renseignant vos informations personnelles, vous acceptez d'être contacté(e) pour la gestion de votre compte et vous acceptez les termes de notre <a href="{{ path('legal_notice') }}"><span class="link" >politique de confidentialité<span></a></p>
+    <p>Vous pouvez retirer votre consentement à tout moment depuis le <a href="{{ path('contact_index') }}"><span class="link" >formulaire de contact<span></a> ou en nous contactant à l’adresse suivante : vngn@laposte.net</p>
     {{ form_row(registrationForm.agreeTerms) }}
     <button type="submit" class="p-3 my-2 rounded-2 success">Inscription</button>
     {{ form_end(registrationForm) }}

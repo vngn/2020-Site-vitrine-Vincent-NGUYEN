@@ -31,7 +31,7 @@ class RegistrationFormType extends AbstractType
                 'attr' => ['class' => 'email-form']
             ])
             ->add('agreeTerms', CheckboxType::class, [
-                'label' => 'Accepter les conditions : ',
+                'label' => 'J’accepte les conditions mentionnées ci-dessus et la politique de confidentialité : ',
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([
