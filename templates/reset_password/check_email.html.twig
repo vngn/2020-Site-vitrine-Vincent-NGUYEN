@@ -3,8 +3,14 @@
 {% block title %}Email de réinitialisation de mot de passe envoyé{% endblock %}
 
 {% block body %}
-<p>Un Email contenant un lien que vous pouvez cliquer pour réinitialiser votre mot de passe a été envoyé. Ce lien expirera dans
-    {{ tokenLifetime|date('g') }} heure(s).</p>
-<p>Si vous ne recevez pas d'Email, vérifiez vos spam ou <a
-        href="{{ path('app_forgot_password_request') }}">Réessayez</a>.</p>
+<div class="example-wrapper-title">
+    <h1>Email de réinitialisation de mot de passe envoyé</h1>
+</div>
+
+<div class="example-wrapper block-users visitors-color">
+    <p>Un Email contenant un lien que vous pouvez cliquer pour réinitialiser votre mot de passe a été envoyé. Ce lien
+        expirera dans {{ tokenLifetime|date('g') }} heure(s).</p>
+    <p>Si vous ne recevez pas d'Email, vérifiez vos spam ou <a
+            href="{{ path('app_forgot_password_request') }}">réessayez</a>.</p>
+</div>
 {% endblock %}
