@@ -28,13 +28,13 @@ pinterest
 
 ++++++ reste à faire ++++++
 
-input renseignés sauf avatar ?
+- revenir vers la page d'avant connexion quand connexion ?
+- input renseignés sauf avatar ?
 
 général :
 - pot de miel - ajout input fantôme
 - s'occuper du responsive (navbar, sidebar, pages en général)
 - régler pb avec ckeditor et la police // ce qui s'affichent
-- revenir vers la page d'avant connexion quand connexion ?
 
 pages portfolio :
 - régler pb de flou au survol des blocks site
