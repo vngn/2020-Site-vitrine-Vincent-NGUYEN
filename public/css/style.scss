@@ -239,8 +239,6 @@ body {
     margin-top: 10px;
 }
 
-/* paramétrages divers */
-
 /* boutons généraux (modifier, gérer, supprimer...) */
 .btn {
     display: inline-block;
@@ -254,13 +252,7 @@ body {
     text-align: center;
 }
 
-/* boutons mdp oublié et créer un compte de la page connexion */
-.btn-login {
-    margin: 10px auto 40px;
-    text-align: center;
-    margin-top: 20px;
-    margin-right: 20px;
-}
+/* paramétrages divers */
 
 h1 {
     text-align: center;
@@ -923,6 +915,28 @@ hr {
     width: 84%;
 }
 
+.block-login {
+    @include block-shape-light;
+    width: 50%;
+    min-width: 450px;
+}
+
+/* boutons mdp oublié et créer un compte de la page connexion */
+@mixin btn-login {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: -10px;
+}
+
+.btn-login-forgot-password {
+    @include btn-login;
+}
+
+.btn-login-create-account {
+    @include btn-login;
+    float: right;
+}
+
 /* ============================== 9. MAJ ============================== */
 
 /* ============================== x. FOOTER ============================== */
@@ -930,7 +944,7 @@ hr {
 .block-legal-notice {
     @include block-shape-light;
     width: 50%;
-    
+
     h2 {
         margin: 10px 0;
         font-size: 1.2em;
@@ -950,5 +964,5 @@ hr {
 
     ul {
         margin: 0.5em 0;
-    } 
+    }
 }

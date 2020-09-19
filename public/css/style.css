@@ -265,7 +265,6 @@ body {
   margin-top: 10px;
 }
 
-/* paramétrages divers */
 /* boutons généraux (modifier, gérer, supprimer...) */
 .btn {
   display: inline-block;
@@ -279,14 +278,7 @@ body {
   text-align: center;
 }
 
-/* boutons mdp oublié et créer un compte de la page connexion */
-.btn-login {
-  margin: 10px auto 40px;
-  text-align: center;
-  margin-top: 20px;
-  margin-right: 20px;
-}
-
+/* paramétrages divers */
 h1 {
   text-align: center;
 }
@@ -1476,6 +1468,30 @@ hr {
   padding: 20px;
   position: relative;
   width: 84%;
+}
+
+.block-login {
+  border: 1px solid #e1e1e1;
+  border-radius: 20px;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+  width: 50%;
+  min-width: 450px;
+}
+
+/* boutons mdp oublié et créer un compte de la page connexion */
+.btn-login-forgot-password {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: -10px;
+}
+
+.btn-login-create-account {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: -10px;
+  float: right;
 }
 
 /* ============================== 9. MAJ ============================== */
