@@ -48,6 +48,9 @@ page contact :
 footer :
 - compléter le footer
 
+login :
+- revoir le bouton valider
+
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 01 août 2020 
