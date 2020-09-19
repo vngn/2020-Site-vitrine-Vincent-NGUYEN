@@ -5,7 +5,6 @@
     - Auteur: Vincent NGUYEN- 01/08/2020
 
 /* Z-INDEX
-
 style.scss :
     - .block-portfolio                      z-index: 0
     - .block-portfolio li iframe            z-index: 1
@@ -13,13 +12,10 @@ style.scss :
     - .video-title-text                     z-index: 4
     - @mixin button-sidebar-position        z-index: 998
     - @mixin sidenav                        z-index: 999
-    
-
 nasbar.scss :
     - .navtoogle i                          z-index: -1
-
 nextbutton.scss :
-    - .wrapper-link-site                    z-index: 99               (nextbuttonstyle.scss)     
+    - .wrapper-link-site                    z-index: 99
 
 /* COLORS
     - default body text     black
@@ -43,29 +39,17 @@ nextbutton.scss :
     - Default:              ''
 
 /* CSS DIRECTORY
-
     0. GLOBAL
-
     0. TOUTES LES PAGES
-
     1. PAGE ACCUEIL
-
     2. PAGE PORTFOLIO
-
     3. PAGE ARTICLES
-
     4. PAGE BLOG
-
     5. PAGE A PROPOS
-
     6. PAGE CONTACT
-
     7. PAGE CATEGORIES
-
     8. PAGE USERS
-
     9. PAGE MAJ
-
     X. FOOTER
 
 /* ============================== 0. GLOBAL ============================== */

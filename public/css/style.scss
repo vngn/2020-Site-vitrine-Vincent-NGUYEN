@@ -6,7 +6,6 @@
     - Auteur: Vincent NGUYEN- 01/08/2020
 
 /* Z-INDEX
-
 style.scss :
     - .block-portfolio                      z-index: 0
     - .block-portfolio li iframe            z-index: 1
@@ -14,13 +13,10 @@ style.scss :
     - .video-title-text                     z-index: 4
     - @mixin button-sidebar-position        z-index: 998
     - @mixin sidenav                        z-index: 999
-    
-
 nasbar.scss :
     - .navtoogle i                          z-index: -1
-
 nextbutton.scss :
-    - .wrapper-link-site                    z-index: 99               (nextbuttonstyle.scss)     
+    - .wrapper-link-site                    z-index: 99
 
 /* COLORS
     - default body text     black
@@ -44,35 +40,22 @@ nextbutton.scss :
     - Default:              ''
 
 /* CSS DIRECTORY
-
     0. GLOBAL
-
     0. TOUTES LES PAGES
-
     1. PAGE ACCUEIL
-
     2. PAGE PORTFOLIO
-
     3. PAGE ARTICLES
-
     4. PAGE BLOG
-
     5. PAGE A PROPOS
-
     6. PAGE CONTACT
-
     7. PAGE CATEGORIES
-
     8. PAGE USERS
-
     9. PAGE MAJ
-
     X. FOOTER
 
 /* ============================== 0. GLOBAL ============================== */
 
 /* couleurs */
-
 $background-color: white;
 
 $background-color-bis: rgb(235, 235, 235);
@@ -137,7 +120,6 @@ body {
 }
 
 /* formulaires */
-
 @mixin basic-form {
     background: rgb(235, 235, 235);
     width: 100%;
@@ -211,7 +193,6 @@ body {
 }
 
 /* boutons "valider" des formulaires */
-
 .btn-submit-form {
     background: green;
     color: white;
@@ -253,7 +234,6 @@ body {
 }
 
 /* paramétrages divers */
-
 h1 {
     text-align: center;
 }
@@ -270,13 +250,11 @@ a {
 hr {
     width: 100%;
     margin: 0;
-
 }
 
 /* ============================== 0. TOUTES LES PAGES ============================== */
 
 /* blocs de page de base */
-
 .main-background {
     background-color: $background-color-border-bis;
     padding-bottom: 150px;
@@ -343,7 +321,6 @@ hr {
 }
 
 /* barres de navigation verticales (Axentix) */
-
 @mixin sidenav {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 220px;
@@ -356,7 +333,6 @@ hr {
 
 /* sidenav-overlay (dans axentis.min.css):  pour un effet sur l'ensemble de l'écran quand ouverture de la sidenav */
 // .sidenav-overlay {}
-
 @mixin gradient-for-all ($color) {
     color: white;
     background-color: $color;
@@ -407,7 +383,6 @@ hr {
 }
 
 /* boutons de navigation des barres de navigation verticales */
-
 .sidenav-role-icon {
     font-size: 22px;
     margin-left: -8px;
@@ -487,7 +462,6 @@ hr {
 }
 
 /* icones des boutons des barres de navigation verticales */
-
 .sidenav-menu-trigger {
     opacity: 0.6;
     transition: 0.5s;
@@ -515,12 +489,9 @@ hr {
 }
 
 /* Texte titre sauf page d'accueil */
-
 .color-block-video-title {
     height: 540px;
     padding-top: 230px;
-    // margin-top: -100px;
-    // margin-bottom: 100px;
     background: $background-color;
 }
 
@@ -549,14 +520,12 @@ hr {
 }
 
 /* menu boutons pour tri pages portfolio, articles et blog */
-
 @mixin block-button-menu {
     text-align: center;
     margin: -110px auto 115px;
 }
 
 /* barres de boutons de tri par catégorie des pages portfolio,articles et blog */
-
 .buttonFilter {
 
     background: rgb(176, 76, 52);
@@ -595,12 +564,10 @@ hr {
 }
 
 /* Texte titre */
-
 .text-title {
     width: 100%;
     height: 750px;
     padding-top: 200px;
-    // margin-top: -100px;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
@@ -644,7 +611,6 @@ hr {
 }
 
 /* blocks thèmes de la page d'accueil */
-
 @mixin menu-home-for-all ($color) {
     width: 450px;
     height: 450px;
@@ -718,11 +684,8 @@ hr {
     border-radius: 0;
     z-index: 0;
     text-shadow: 0 0 2px white;
-    // box-shadow: 600px 0 300px rgba(255, 255, 255, 0.9925) inset;
-    // background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    // background-attachment: fixed;
 
     &:hover a {
         opacity: 0;
@@ -894,7 +857,6 @@ hr {
 }
 
 .btn-manage-contact {
-    // margin: 10px auto -10px;
     float: right;
     position: relative;
     bottom: -12px;
