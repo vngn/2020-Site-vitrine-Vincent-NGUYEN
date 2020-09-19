@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* DOCUMENT INFORMATION
     - Document: Site Vincent NGUYEN
     - Version : 1.0.1 du 01/08/2020
@@ -53,7 +52,7 @@ nextbutton.scss :
     X. FOOTER
 
 /* ============================== 0. GLOBAL ============================== */
-/* couleurs */
+/* COULEURS */
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
 .users-color {
   background-color: white;
@@ -96,7 +95,7 @@ body {
   overflow-y: scroll;
 }
 
-/* formulaires */
+/* FORMULAIRES */
 .background-form {
   background: #ebebeb;
   width: 100%;
@@ -221,7 +220,7 @@ body {
   padding: 4px;
 }
 
-/* boutons "valider" des formulaires */
+/* BOUTONS "VALIDER" DES FORMULAIRES */
 .btn-submit-form {
   background: green;
   color: white;
@@ -249,20 +248,20 @@ body {
   margin-top: 10px;
 }
 
-/* boutons généraux (modifier, gérer, supprimer...) */
+/* BOUTONS GENERAUX (MODIFIER, GERER, SUPPRIMER...) */
 .btn {
   display: inline-block;
   margin: 0;
 }
 
-/* boutons type next-btn (page du site, lire la suite...) */
+/* BOUTONS TYPE NEXT-BTN (PAGE DU SITE, LIRE LA SUITE...) */
 .btn-site {
   width: 84%;
   margin: 10px auto 40px;
   text-align: center;
 }
 
-/* paramétrages divers */
+/* PARAMETRAGES DIVERS */
 h1 {
   text-align: center;
 }
@@ -271,7 +270,7 @@ a {
   text-decoration: none;
 }
 
-/* couleur des liens */
+/* COULEUR DES LIENS */
 .link {
   color: blue;
 }
@@ -282,7 +281,7 @@ hr {
 }
 
 /* ============================== 0. TOUTES LES PAGES ============================== */
-/* blocs de page de base */
+/* BLOC DE PAGE DE BASE */
 .main-background {
   background-color: #e1e1e1;
   padding-bottom: 150px;
@@ -308,14 +307,14 @@ hr {
   padding: 2px 6px;
 }
 
-/* barres de navigation verticales (Axentix) */
+/* BARRES DE NAVIGATION VERTICALES (AXENTIX */
 .sidenav {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 220px;
   z-index: 999;
 }
 
-/* sidenav-overlay (dans axentis.min.css):  pour un effet sur l'ensemble de l'écran quand ouverture de la sidenav */
+/* SIDENAV-OVERLAY (DANS AXENTIX.MIN.CSS) :  POUR UN EFFET SUR L'ENSEMBLE DE L'ECRAN QUAND OUVERTURE DE LA SIDENAV */
 .sidenav-color-users {
   color: white;
   background-color: green;
@@ -416,7 +415,7 @@ hr {
   transition: 0.5s;
 }
 
-/* boutons de navigation des barres de navigation verticales */
+/* BOUTONS DE NAVIGATION DES BARRES DE NAVIGATION VERTICALES */
 .sidenav-role-icon {
   font-size: 22px;
   margin-left: -8px;
@@ -531,7 +530,7 @@ hr {
   top: 38em;
 }
 
-/* icones des boutons des barres de navigation verticales */
+/* ICONES DES BOUTONS DES BARRES DE NAVIGATION VERTICALES */
 .sidenav-menu-trigger {
   opacity: 0.6;
   -webkit-transition: 0.5s;
@@ -560,7 +559,7 @@ hr {
   margin-left: -8px;
 }
 
-/* Texte titre sauf page d'accueil */
+/* TEXTE TITRE SAUF LA PAGE D'ACCUEIL */
 .color-block-video-title {
   height: 540px;
   padding-top: 230px;
@@ -592,8 +591,8 @@ hr {
   letter-spacing: -2px;
 }
 
-/* menu boutons pour tri pages portfolio, articles et blog */
-/* barres de boutons de tri par catégorie des pages portfolio,articles et blog */
+/* MENU BOUTONS POUR TRI PAGES PORTFOLIO, ARTICLES ET BLOG */
+/* BARRES DE BOUTONS DE TRI PAR CATEGORIE DES PAGES PORTFOLIO, ARTICLES ET BLOG */
 .buttonFilter {
   background: #b04c34;
   text-transform: uppercase;
@@ -665,7 +664,7 @@ hr {
   font-size: 20px;
 }
 
-/* Texte titre */
+/* TEXTE TITRE */
 .text-title {
   width: 100%;
   height: 750px;
@@ -710,7 +709,7 @@ hr {
   padding-right: 12%;
 }
 
-/* blocks thèmes de la page d'accueil */
+/* BLOCKS THEMES DE LA PAGE D'ACCUEIL */
 .block-menu-home {
   width: 450px;
   height: 450px;
@@ -1464,7 +1463,7 @@ hr {
   min-width: 450px;
 }
 
-/* boutons mdp oublié et créer un compte de la page connexion */
+/* BOUTONS MDP OUBLIE ET CREER UN COMPTE DE LA PAGE CONNEXION */
 .btn-login-forgot-password {
   text-align: center;
   margin-top: 50px;
