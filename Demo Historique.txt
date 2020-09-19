@@ -33,7 +33,6 @@ pinterest
 
 général :
 - s'occuper du responsive (navbar, sidebar, pages en général)
-- régler pb avec ckeditor et la police // ce qui s'affichent
 
 pages portfolio :
 - régler pb de flou au survol des blocks site
