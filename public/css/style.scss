@@ -901,7 +901,7 @@ hr {
     width: 84%;
 }
 
-.block-login {
+.block-login, .block-register {
     @include block-shape-light;
     width: 50%;
     min-width: 450px;

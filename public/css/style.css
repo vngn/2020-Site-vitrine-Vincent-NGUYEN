@@ -1485,7 +1485,7 @@ hr {
   width: 84%;
 }
 
-.block-login {
+.block-login, .block-register {
   border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
