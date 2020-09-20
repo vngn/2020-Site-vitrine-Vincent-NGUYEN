@@ -1548,6 +1548,26 @@ hr {
   background: #b04c34;
 }
 
+/* BOUTON SUPPRIMER ET TEXTES DE LA PAGE MANAGE USERS */
+.block-manage-users {
+  border: 1px solid #e1e1e1;
+  margin: 0;
+  padding: 20px;
+}
+
+.btn-users-delete {
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  padding: 5px;
+  color: white;
+  background: #b04c34;
+  margin-top: 10px;
+}
+
+.text-manage-users {
+  float: right;
+}
+
 /* BOUTONS MODIFIER LE PROFIL ET MODIFIER LE MOT DE PASSE DE LA PAGE PROFIL USERS */
 .btn-profile-edit {
   border: 1px solid #e1e1e1;

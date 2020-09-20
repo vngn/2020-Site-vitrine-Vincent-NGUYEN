@@ -954,6 +954,24 @@ hr {
     background:rgb(176, 76, 52);
 }
 
+/* BOUTON SUPPRIMER ET TEXTES DE LA PAGE MANAGE USERS */
+
+.block-manage-users {
+    border: 1px solid $background-color-border-bis;
+    margin: 0;
+    padding: 20px;
+}
+
+.btn-users-delete {
+    @include specific-button;
+    background:rgb(176, 76, 52);
+    margin-top: 10px;
+}
+
+.text-manage-users {
+    float: right;
+}
+
 /* BOUTONS MODIFIER LE PROFIL ET MODIFIER LE MOT DE PASSE DE LA PAGE PROFIL USERS */
 
 .btn-profile-edit {

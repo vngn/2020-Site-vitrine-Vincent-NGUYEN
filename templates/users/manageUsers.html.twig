@@ -7,34 +7,23 @@
     <h1>Gérer les utilisateurs</h1>
 </div>
 
-<div class="example-wrapper block-users users-color">
-    <table class="table striped">
-        <thead>
-            <tr>
-                <th>Avatar</th>
-                <th>Nom</th>
-                <th>Prénom</th>
-                <th>Email</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for user in users %}
-            <tr>
-                <td><img src="{{ asset('uploads/photos/'~ user.photo) }}" alt="avatar" class="photo-form"></td>
-                <td>{{ user.name }}</td>
-                <td>{{ user.firstname }}</td>
-                <td>{{ user.email }}</td>
-                <td>
-                    <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
-                        data-id="{{ user.id }}" data-prenom="{{ user.firstname }}" data-nom="{{ user.name }}">Supprimer
+<div class="example-wrapper">
+    {% for user in users %}
+    <div class="individual-block-contact-index">
+        <div class="block-manage-users users-color">
+            <span><img src="{{ asset('uploads/photos/'~ user.photo) }}" alt="avatar" class="photo-form"></span>
+            <span class="text-manage-users">{{ user.firstname }} {{ user.name }}<br />{{ user.email }}</span>
+            <span>
+                <button class="btn-users-delete" type="submit">
+                    <a href="#" class="modal-trigger" data-target="modal-delete" data-id="{{ user.id }}"
+                        data-prenom="{{ user.firstname }}" data-nom="{{ user.name }}">Supprimer
                         l'utilisateur</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    
+                </button>
+            </span>
+        </div>
+    </div>
+    {% endfor %}
+
     <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
         <div class="modal-header">Supprimer l'utilisateur</div>
         <div class="divider"></div>
