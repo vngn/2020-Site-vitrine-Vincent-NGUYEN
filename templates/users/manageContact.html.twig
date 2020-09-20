@@ -11,9 +11,8 @@
 
     {% for contact in contact %}
     <div class="individual-block-contact-index">
-        <ul class="block-manage-contact users-color">
-            <li>
-                <span>{{ contact.firstname }} {{ contact.name }}<br /></span>
+        <div class="block-manage-contact users-color">
+                <span>{{ contact.name }}<br /></span>
                 <span>{{ contact.post }} - {{ contact.society }}<br /></span>
                 <span>{{ contact.email }} - 0{{ contact.phone }}<br /></span>
                 <span>{{ contact.createdAt | date ('d/m/Y (H:i)') }}<br /></span>
@@ -25,8 +24,7 @@
                     </label><br /></span>
                 <span><a href="#" class="btn shadow-1 rounded-1 red modal-trigger btn-manage-contact" data-target="modal-delete"
                         data-id="{{ contact.id }}" data-nom="{{ contact.name }}">Supprimer</a></span>
-            </li>
-        </ul>
+        </div>
     </div>
     {% endfor %}
 
@@ -45,6 +43,7 @@
 {% endblock %}
 
 {% block javascripts %}
+<!-- JS Modal -->
 <script>
     window.onload = () => {
         let activer_message_forum = document.querySelectorAll("[type=checkbox]")

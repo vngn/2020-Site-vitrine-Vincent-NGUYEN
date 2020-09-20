@@ -1495,6 +1495,22 @@ hr {
   min-width: 450px;
 }
 
+.block-manage {
+  border: 1px solid #e1e1e1;
+  border-radius: 20px;
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+  width: 50%;
+  min-width: 450px;
+}
+
+.block-manage-bis {
+  border: 1px solid #e1e1e1;
+  margin: 0;
+  padding: 20px;
+}
+
 /* MIXIN DES BOUTONS SPECIFIQUES */
 /* BOUTONS MDP OUBLIE ET CREER UN COMPTE DE LA PAGE CONNEXION */
 .btn-login-forgot-password {
@@ -1514,7 +1530,7 @@ hr {
   margin-top: 30px;
 }
 
-/* BOUTONS MODIFIER LE PROFIL ET MODIFIER LE MOT DE PASSE */
+/* BOUTONS MODIFIER LE PROFIL ET MODIFIER LE MOT DE PASSE DE LA PAGE PROFIL USERS */
 .btn-profile-edit {
   border: 1px solid #e1e1e1;
   width: 100%;
@@ -1530,6 +1546,29 @@ hr {
   padding: 5px;
   color: white;
   background: #24415b;
+  margin-top: 30px;
+}
+
+/* BOUTONS MODIFIER L'ARTICLE... ET SUPPRIMER L'ARTICLE... DES PAGES MANAGE */
+.check-box-line {
+  float: right;
+}
+
+.btn-manage-edit {
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  padding: 5px;
+  color: white;
+  background: #24415b;
+  margin-top: 30px;
+}
+
+.btn-manage-delete {
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  padding: 5px;
+  color: white;
+  background: #b04c34;
   margin-top: 30px;
 }
 

@@ -7,45 +7,31 @@
     <h1 class="portfolio-color">Gérer les {{ app.user.portfolio | length }} productions<br />de la page Portfolio</h1>
 </div>
 
-<div class="example-wrapper block-users users-color">
-    <table class="table striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Titre</th>
-                <th>catégorie</th>
-                <th>Date</th>
-                <th>Active</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for portfolio in portfolio %}
-            <tr>
-                <td>{{ portfolio.id }}</td>
-                <td><a href="{{ path('portfolio_show', {'id': portfolio.id}) }}" class="link">{{ portfolio.title }}</a>
-                </td>
-                <td>{{ portfolio.categories }}</td>
-                <td>{{ portfolio.createdAt | date ('d/m/Y') }}</td>
-                <td>
-                    <label class="form-switch mt-2">
-                        <input type="checkbox" {{ (portfolio.active) ? 'checked' : '' }} data-id="{{ portfolio.id }}" />
-                        <span class="slider"></span>
-                    </label>
-                </td>
-                <td>
-                    <a href="{{ path('portfolio_edit', {'id': portfolio.id}) }}"
-                        class="btn shadow-1 rounded-1 red modal-trigger">Modifier l'article<br />Gérer les commentaires
-                        ({{ portfolio.portfolioComment | length }})</a>
+<div class="example-wrapper">
 
-                    <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
-                        data-id="{{ portfolio.id }}" data-titre="{{ portfolio.title }}">Supprimer l'article<br />et ses
-                        commentaires</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    {% for portfolio in portfolio %}
+    <div class="block-manage users-color">
+        <div class="block-manage-bis users-color">
+
+            <span>{{ portfolio.id }} - <a href="{{ path('portfolio_show', {'id': portfolio.id}) }}"
+                    class="link">{{ portfolio.title }}</a><br /></span>
+            <span>{{ portfolio.categories }} - {{ portfolio.createdAt | date ('d/m/Y') }}<br /></span>
+            <br />
+            <span class="check-box-line"><label class="form-switch mt-2">Article désactivé
+                    <input type="checkbox" {{ (portfolio.active) ? 'checked' : '' }} data-id="{{ portfolio.id }}" />
+                    <span class="slider"></span>Article visible
+                </label><br /></span>
+            <span><button class="btn-manage-edit" type="submit">
+                    <a href="{{ path('portfolio_edit', {'id': portfolio.id}) }}">Modifier l'article / Gérer les
+                        commentaires ({{ portfolio.portfolioComment | length }})</a>
+                </button></span>
+            <span><button class="btn-manage-delete" type="submit">
+                    <a href="#" class="modal-trigger" data-target="modal-delete" data-id="{{ portfolio.id }}"
+                        data-titre="{{ portfolio.title }}">Supprimer l'article et ses commentaires</a>
+                </button></span>
+        </div>
+    </div>
+    {% endfor %}
 
     <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
         <div class="modal-header">Supprimer un article</div>
