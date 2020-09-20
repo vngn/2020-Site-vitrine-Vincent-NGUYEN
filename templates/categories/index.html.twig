@@ -7,36 +7,37 @@
     <h1>Gérer les catégories</h1>
 </div>
 
-<div class="example-wrapper block-categories users-color">
-    <a href="{{ path("categories_add") }}" class="btn shadow-1 rounded-1 blue">Ajouter une catégorie</a>
-    <table class="table striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nom</th>
-                {# <th>Parent</th> #}
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for categorie in categories %}
-            <tr>
-                <td>{{ categorie.id }}</td>
-                <td>{{ categorie.name }}</td>
-                {# <td>{{ categorie.parent }}</td> #}
-                <td>
-                    <a href="{{ path("categories_edit", {id: categorie.id}) }}"
-                        class="btn shadow-1 rounded-1 blue">Modifier</a>
-                    <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
-                        data-id="{{ categorie.id }}" data-nom="{{ categorie.name }}">Supprimer</a>
-                    {# data-id="{{ categorie.id }}" data-nom="{{ categorie.name }}"
-                    data-parent="{{ categorie.parent }}">Supprimer</a> #}
+<div class="example-wrapper">
+    <div class="block-manage users-color">
+        <div class="block-manage-bis users-color">
+            <span>
+                <button class="btn-update-add" type="submit">
+                    <a href="{{ path("categories_add") }}">Ajouter une catégorie</a>
+                </button>
+            </span>
+        </div>
+    </div>
+</div>
 
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+<div class="example-wrapper">
+    {% for categorie in categories %}
+    <div class="block-manage users-color">
+        <div class="block-manage-bis users-color">
+            <span>{{ categorie.id }} - {{ categorie.name }}</a></span>
+            <span>
+                <button class="btn-manage-edit" type="submit">
+                    <a href="{{ path("categories_edit", {id: categorie.id}) }}">Modifier</a>
+                </button>
+            </span>
+            <span>
+                <button class="btn-manage-delete" type="submit">
+                    <a href="#" class="modal-trigger" data-target="modal-delete" data-id="{{ categorie.id }}"
+                        data-nom="{{ categorie.name }}">Supprimer</a>
+                </button>
+            </span>
+        </div>
+    </div>
+    {% endfor %}
 </div>
 
 <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
