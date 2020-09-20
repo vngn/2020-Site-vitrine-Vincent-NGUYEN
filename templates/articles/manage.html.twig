@@ -7,44 +7,31 @@
     <h1 class="articles-color">Gérer les {{ app.user.articles| length }} articles<br />de la page Articles</h1>
 </div>
 
-<div class="example-wrapper block-users users-color">
-    <table class="table striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Titre</th>
-                {# <th>catégorie</th> #}
-                <th>Date</th>
-                <th>Active</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for article in articles %}
-            <tr>
-                <td>{{ article.id }}</td>
-                <td><a href="{{ path('articles_show', {'id': article.id}) }}" class="link">{{ article.title }}</a></td>
-                {# <td>{{ article.categories }}</td> #}
-                <td>{{ article.createdAt | date ('d/m/Y') }}</td>
-                <td>
-                    <label class="form-switch mt-2">
-                        <input type="checkbox" {{ (article.active) ? 'checked' : '' }} data-id="{{ article.id }}" />
-                        <span class="slider"></span>
-                    </label>
-                </td>
-                <td>
-                    <a href="{{ path('articles_edit', {'id': article.id}) }}"
-                        class="btn shadow-1 rounded-1 red modal-trigger">Modifier l'article<br />Gérer les commentaires
-                        ({{ article.articleComment | length }})</a>
+<div class="example-wrapper">
 
-                    <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
-                        data-id="{{ article.id }}" data-titre="{{ article.title }}">Supprimer l'article<br />et ses
-                        commentaires</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    {% for article in articles %}
+    <div class="block-manage users-color">
+        <div class="block-manage-bis users-color">
+
+            <span>{{ article.id }} - <a href="{{ path('articles_show', {'id': article.id}) }}"
+                    class="link">{{ article.title }}</a><br /></span>
+            <span>{{ article.categories }} - {{ article.createdAt | date ('d/m/Y') }}<br /></span>
+            <br />
+            <span class="check-box-line"><label class="form-switch mt-2">Article désactivé
+                    <input type="checkbox" {{ (article.active) ? 'checked' : '' }} data-id="{{ article.id }}" />
+                    <span class="slider"></span>Article visible
+                </label><br /></span>
+            <span><button class="btn-manage-edit" type="submit">
+                    <a href="{{ path('articles_edit', {'id': article.id}) }}">Modifier l'article / Gérer les
+                        commentaires ({{ article.articleComment | length }})</a>
+                </button></span>
+            <span><button class="btn-manage-delete" type="submit">
+                    <a href="#" class="modal-trigger" data-target="modal-delete" data-id="{{ article.id }}"
+                        data-titre="{{ article.title }}">Supprimer l'article et ses commentaires</a>
+                </button></span>
+        </div>
+    </div>
+    {% endfor %}
 
     <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
         <div class="modal-header">Supprimer un article</div>

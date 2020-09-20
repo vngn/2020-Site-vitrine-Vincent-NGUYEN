@@ -7,80 +7,67 @@
     <h1 class="blog-color">Gérer les {{ app.user.blog| length }} articles<br />de la page Blog</h1>
 </div>
 
-<div class="example-wrapper block-users users-color">
-    <table class="table striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Titre</th>
-                {# <th>catégorie</th> #}
-                <th>Date</th>
-                <th>Active</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for blog in blog %}
-            <tr>
-                <td>{{ blog.id }}</td>
-                <td><a href="{{ path('blog_show', {'id': blog.id}) }}" class="link">{{ blog.title }}</a></td>
-                {# <td>{{ blog.categories }}</td> #}
-                <td>{{ blog.createdAt | date ('d/m/Y') }}</td>
-                <td>
-                    <label class="form-switch mt-2">
-                        <input type="checkbox" {{ (blog.active) ? 'checked' : '' }} data-id="{{ blog.id }}" />
-                        <span class="slider"></span>
-                    </label>
-                </td>
-                <td>
-                    <a href="{{ path('blog_edit', {'id': blog.id}) }}"
-                        class="btn shadow-1 rounded-1 red modal-trigger">Modifier l'article<br />Gérer les commentaires
-                        ({{ blog.blogComment | length }})</a>
+<div class="example-wrapper">
 
-                    <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
-                        data-id="{{ blog.id }}" data-titre="{{ blog.title }}">Supprimer l'article<br />et ses
-                        commentaires</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    {% for blog in blog %}
+    <div class="block-manage users-color">
+        <div class="block-manage-bis users-color">
 
-    <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
-        <div class="modal-header">Supprimer un article</div>
-        <div class="divider"></div>
-        <div class="modal-content"></div>
-        <div class="divider"></div>
-        <div class="modal-footer">
-            <a href="" class="btn red">valider</a>
-            <button data-target="modal-delete"
-                class="ml-auto btn shadow-1 rounded-1 small primary modal-trigger">Fermer</button>
+            <span>{{ blog.id }} - <a href="{{ path('blog_show', {'id': blog.id}) }}"
+                    class="link">{{ blog.title }}</a><br /></span>
+            <span>{{ blog.categories }} - {{ blog.createdAt | date ('d/m/Y') }}<br /></span>
+            <br />
+            <span class="check-box-line"><label class="form-switch mt-2">Article désactivé
+                    <input type="checkbox" {{ (blog.active) ? 'checked' : '' }} data-id="{{ blog.id }}" />
+                    <span class="slider"></span>Article visible
+                </label><br /></span>
+            <span><button class="btn-manage-edit" type="submit">
+                    <a href="{{ path('blog_edit', {'id': blog.id}) }}">Modifier l'article / Gérer les
+                        commentaires ({{ blog.blogComment | length }})</a>
+                </button></span>
+            <span><button class="btn-manage-delete" type="submit">
+                    <a href="#" class="modal-trigger" data-target="modal-delete" data-id="{{ blog.id }}"
+                        data-titre="{{ blog.title }}">Supprimer l'article et ses commentaires</a>
+                </button></span>
         </div>
     </div>
-</div>
-{% endblock %}
+    {% endfor %}
 
-{% block javascripts %}
-<!-- JS Modal -->
-<script>
-    window.onload = () => {
-        let activer_message_forum = document.querySelectorAll("[type=checkbox]")
-        for (let bouton of activer_message_forum) {
-            bouton.addEventListener("click", function () {
-                let xmlhttp = new XMLHttpRequest;
-                xmlhttp.open("get", `/blog/activate/${this.dataset.id}`)
-                xmlhttp.send()
+        <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
+            <div class="modal-header">Supprimer un article</div>
+            <div class="divider"></div>
+            <div class="modal-content"></div>
+            <div class="divider"></div>
+            <div class="modal-footer">
+                <a href="" class="btn red">valider</a>
+                <button data-target="modal-delete"
+                    class="ml-auto btn shadow-1 rounded-1 small primary modal-trigger">Fermer</button>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
 
-            })
+    {% block javascripts %}
+    <!-- JS Modal -->
+    <script>
+        window.onload = () => {
+            let activer_message_forum = document.querySelectorAll("[type=checkbox]")
+            for (let bouton of activer_message_forum) {
+                bouton.addEventListener("click", function () {
+                    let xmlhttp = new XMLHttpRequest;
+                    xmlhttp.open("get", `/blog/activate/${this.dataset.id}`)
+                    xmlhttp.send()
+
+                })
+            }
+            let supprimer = document.querySelectorAll(".modal-trigger")
+            for (let bouton of supprimer) {
+                bouton.addEventListener("click", function () {
+                    document.querySelector(".modal-footer a").href = `/blog/delete/${this.dataset.id}`
+                    document.querySelector(".modal-content").innerText =
+                        `Êtes-vous sûr(e) de vouloir supprimer l'article "${this.dataset.titre}" ?`
+                })
+            }
         }
-        let supprimer = document.querySelectorAll(".modal-trigger")
-        for (let bouton of supprimer) {
-            bouton.addEventListener("click", function () {
-                document.querySelector(".modal-footer a").href = `/blog/delete/${this.dataset.id}`
-                document.querySelector(".modal-content").innerText =
-                    `Êtes-vous sûr(e) de vouloir supprimer l'article "${this.dataset.titre}" ?`
-            })
-        }
-    }
-</script>
-{% endblock %}
+    </script>
+    {% endblock %}
