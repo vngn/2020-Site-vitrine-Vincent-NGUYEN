@@ -18,39 +18,60 @@ class ContactType extends AbstractType
         $builder
             ->add('name', TextType::class, [
                 'label' => 'Nom (obligatoire) :',
-                'attr' => ['class' => 'name-form']
+                'attr' => [
+                    'class' => 'name-form',
+                    'placeholder' => 'votre nom...'
+                ]
             ])
             ->add('firstname', TextType::class, [
                 'label' => 'Prénom (obligatoire) :',
-                'attr' => ['class' => 'firstname-form']
+                'attr' => [
+                    'class' => 'firstname-form',
+                    'placeholder' => 'votre prénom...'
+                    ]
             ])
             ->add('society', TextType::class, [
                 'required' => false,
                 'label' => 'Société :',
-                'attr' => ['class' => 'society-form']
+                'attr' => [
+                    'class' => 'society-form',
+                    'placeholder' => 'le nom de votre entreprise, si votre démarche est professionnelle...'
+                    ]
             ])
             ->add('post', TextType::class, [
                 'required' => false,
                 'label' => 'Fonction :',
-                'attr' => ['class' => 'post-form']
+                'attr' => [
+                    'class' => 'post-form',
+                    'placeholder' => 'votre fonction, si votre démarche est professionnelle...'
+                    ]
             ])
             ->add('email', TextType::class, [
                 'label' => 'Email (obligatoire) :',
-                'attr' => ['class' => 'email-form']
+                'attr' => [
+                    'class' => 'email-form',
+                    'placeholder' => 'votre Email...'
+                    ]
             ])
             ->add('phone', TelType::class, [
                 'required' => false,
                 'label' => 'Téléphone :',
-                'attr' => ['class' => 'phone-form']
+                'attr' => [
+                    'class' => 'phone-form',
+                    'placeholder' => 'votre numéro de téléphone...'
+                    ]
             ])
             ->add('title', TextType::class, [
                 'label' => 'Sujet (obligatoire) :',
-                'attr' => ['class' => 'subject-form']
+                'attr' => [
+                    'class' => 'subject-form',
+                    'placeholder' => 'le sujet de votre message...'
+                    ]
             ])
             ->add('content', CKEditorType::class, [
                 'required' => false,
                 'label' => 'Votre message (obligatoire) :'
-                ])
+            ])
             ->add('Valider', SubmitType::class, ['attr' => ['class' => 'btn-submit-form']]);
     }
 
