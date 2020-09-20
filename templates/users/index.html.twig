@@ -30,8 +30,14 @@
             </tr>
         </tbody>
     </table>
-    <a href="{{ path('users_profil_edit') }}" class="btn shadow-1 rounded-1 blue">Modifier le profil</a>
-    <a href="{{ path('users_pass_edit') }}" class="btn shadow-1 rounded-1 blue">Modifier le mot de passe</a>
+
+    <button class="btn-profile-edit" type="submit">
+        <a href="{{ path('users_profil_edit') }}">Modifier le profil</a>
+    </button>
+
+    <button class="btn-password-edit" type="submit">
+        <a href="{{ path('users_pass_edit') }}">Modifier le mot de passe</a>
+    </button>
 </div>
 
 <div class="example-wrapper block-users users-color">

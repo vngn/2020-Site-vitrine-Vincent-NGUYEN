@@ -901,34 +901,46 @@ hr {
     width: 84%;
 }
 
-.block-login, .block-register {
+.block-login, .block-register, .block-profile {
     @include block-shape-light;
     width: 50%;
     min-width: 450px;
 }
 
-/* BOUTONS MDP OUBLIE ET CREER UN COMPTE DE LA PAGE CONNEXION */
-@mixin btn-login {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: -10px;
-}
+/* MIXIN DES BOUTONS SPECIFIQUES */
 
-.btn-login-forgot-password {
-    background:rgb(176, 76, 52);
-    color: white;
+@mixin specific-button {
     border: 1px solid $background-color-border-bis;
     width: 100%;
     padding: 5px;
+    color: white;
+}
+
+/* BOUTONS MDP OUBLIE ET CREER UN COMPTE DE LA PAGE CONNEXION */
+
+.btn-login-forgot-password {
+    @include specific-button;
+    background:rgb(176, 76, 52);
 }
 
 .btn-login-create-account {
+    @include specific-button;
     background: rgb(36,65,91);
     margin-top: 30px;
-    color: white;
-    border: 1px solid $background-color-border-bis;
-    width: 100%;
-    padding: 5px;
+}
+
+/* BOUTONS MODIFIER LE PROFIL ET MODIFIER LE MOT DE PASSE */
+
+.btn-profile-edit {
+    @include specific-button;
+    background:rgb(176, 76, 52);
+    margin-top: 30px;
+}
+
+.btn-password-edit {
+    @include specific-button;
+    background: rgb(36,65,91);
+    margin-top: 30px;
 }
 
 /* ============================== 9. MAJ ============================== */
