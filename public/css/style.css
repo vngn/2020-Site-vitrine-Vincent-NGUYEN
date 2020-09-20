@@ -1482,7 +1482,8 @@ hr {
   margin: 10px auto;
   padding: 20px;
   position: relative;
-  width: 84%;
+  width: 50%;
+  min-width: 450px;
 }
 
 .block-login, .block-register, .block-profile {
@@ -1549,7 +1550,7 @@ hr {
   margin-top: 30px;
 }
 
-/* BOUTONS MODIFIER L'ARTICLE... ET SUPPRIMER L'ARTICLE... DES PAGES MANAGE */
+/* CHECK-BOX ET BOUTONS MODIFIER L'ARTICLE... ET SUPPRIMER L'ARTICLE... DES PAGES MANAGE */
 .check-box-line {
   float: right;
 }

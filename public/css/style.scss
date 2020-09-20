@@ -898,7 +898,8 @@ hr {
 
 .block-users {
     @include block-shape-light;
-    width: 84%;
+    width: 50%;
+    min-width: 450px;
 }
 
 .block-login, .block-register, .block-profile {
