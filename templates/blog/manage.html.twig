@@ -8,66 +8,70 @@
 </div>
 
 <div class="example-wrapper">
-
     {% for blog in blog %}
     <div class="block-manage users-color">
         <div class="block-manage-bis users-color">
-
-            <span>{{ blog.id }} - <a href="{{ path('blog_show', {'id': blog.id}) }}"
-                    class="link">{{ blog.title }}</a><br /></span>
-            <span>{{ blog.categories }} - {{ blog.createdAt | date ('d/m/Y') }}<br /></span>
+            <span>{{ blog.id }} - <a href="{{ path('blog_show', {'id': blog.id}) }}" class="link">{{ blog.title }}</a>
+            </span>
             <br />
-            <span class="check-box-line"><label class="form-switch mt-2">Article désactivé
+            <span>{{ blog.categories }} - {{ blog.createdAt | date ('d/m/Y') }}</span>
+            <br />
+            <span class="check-box-line">
+                <label class="form-switch mt-2">Article désactivé
                     <input type="checkbox" {{ (blog.active) ? 'checked' : '' }} data-id="{{ blog.id }}" />
                     <span class="slider"></span>Article visible
-                </label><br /></span>
-            <span><button class="btn-manage-edit" type="submit">
+                </label>
+            </span>
+            <br />
+            <span>
+                <button class="btn-manage-edit" type="submit">
                     <a href="{{ path('blog_edit', {'id': blog.id}) }}">Modifier l'article / Gérer les
                         commentaires ({{ blog.blogComment | length }})</a>
-                </button></span>
-            <span><button class="btn-manage-delete" type="submit">
+                </button>
+            </span>
+            <span>
+                <button class="btn-manage-delete" type="submit">
                     <a href="#" class="modal-trigger" data-target="modal-delete" data-id="{{ blog.id }}"
                         data-titre="{{ blog.title }}">Supprimer l'article et ses commentaires</a>
-                </button></span>
+                </button>
+            </span>
         </div>
     </div>
     {% endfor %}
-
-        <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
-            <div class="modal-header">Supprimer un article</div>
-            <div class="divider"></div>
-            <div class="modal-content"></div>
-            <div class="divider"></div>
-            <div class="modal-footer">
-                <a href="" class="btn red">valider</a>
-                <button data-target="modal-delete"
-                    class="ml-auto btn shadow-1 rounded-1 small primary modal-trigger">Fermer</button>
-            </div>
+    <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
+        <div class="modal-header">Supprimer un article</div>
+        <div class="divider"></div>
+        <div class="modal-content"></div>
+        <div class="divider"></div>
+        <div class="modal-footer">
+            <a href="" class="btn red">valider</a>
+            <button data-target="modal-delete"
+                class="ml-auto btn shadow-1 rounded-1 small primary modal-trigger">Fermer</button>
         </div>
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
 
-    {% block javascripts %}
-    <!-- JS Modal -->
-    <script>
-        window.onload = () => {
-            let activer_message_forum = document.querySelectorAll("[type=checkbox]")
-            for (let bouton of activer_message_forum) {
-                bouton.addEventListener("click", function () {
-                    let xmlhttp = new XMLHttpRequest;
-                    xmlhttp.open("get", `/blog/activate/${this.dataset.id}`)
-                    xmlhttp.send()
-
-                })
-            }
-            let supprimer = document.querySelectorAll(".modal-trigger")
-            for (let bouton of supprimer) {
-                bouton.addEventListener("click", function () {
-                    document.querySelector(".modal-footer a").href = `/blog/delete/${this.dataset.id}`
-                    document.querySelector(".modal-content").innerText =
-                        `Êtes-vous sûr(e) de vouloir supprimer l'article "${this.dataset.titre}" ?`
-                })
-            }
+{% block javascripts %}
+<!-- JS Modal -->
+<script>
+    window.onload = () => {
+        let activer_message_forum = document.querySelectorAll("[type=checkbox]")
+        for (let bouton of activer_message_forum) {
+            bouton.addEventListener("click", function () {
+                let xmlhttp = new XMLHttpRequest;
+                xmlhttp.open("get", `/blog/activate/${this.dataset.id}`)
+                xmlhttp.send()
+            })
         }
-    </script>
-    {% endblock %}
+        let supprimer = document.querySelectorAll(".modal-trigger")
+        for (let bouton of supprimer) {
+            bouton.addEventListener("click", function () {
+                document.querySelector(".modal-footer a").href = `/blog/delete/${this.dataset.id}`
+                document.querySelector(".modal-content").innerText =
+                    `Êtes-vous sûr(e) de vouloir supprimer l'article "${this.dataset.titre}" ?`
+            })
+        }
+    }
+</script>
+{% endblock %}

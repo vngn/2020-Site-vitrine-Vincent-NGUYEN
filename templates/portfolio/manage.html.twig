@@ -8,31 +8,37 @@
 </div>
 
 <div class="example-wrapper">
-
     {% for portfolio in portfolio %}
     <div class="block-manage users-color">
         <div class="block-manage-bis users-color">
-
             <span>{{ portfolio.id }} - <a href="{{ path('portfolio_show', {'id': portfolio.id}) }}"
-                    class="link">{{ portfolio.title }}</a><br /></span>
-            <span>{{ portfolio.categories }} - {{ portfolio.createdAt | date ('d/m/Y') }}<br /></span>
+                    class="link">{{ portfolio.title }}</a>
+            </span>
             <br />
-            <span class="check-box-line"><label class="form-switch mt-2">Article désactivé
+            <span>{{ portfolio.categories }} - {{ portfolio.createdAt | date ('d/m/Y') }}</span>
+            <br />
+            <span class="check-box-line">
+                <label class="form-switch mt-2">Article désactivé
                     <input type="checkbox" {{ (portfolio.active) ? 'checked' : '' }} data-id="{{ portfolio.id }}" />
                     <span class="slider"></span>Article visible
-                </label><br /></span>
-            <span><button class="btn-manage-edit" type="submit">
+                </label>
+            </span>
+            <br />
+            <span>
+                <button class="btn-manage-edit" type="submit">
                     <a href="{{ path('portfolio_edit', {'id': portfolio.id}) }}">Modifier l'article / Gérer les
                         commentaires ({{ portfolio.portfolioComment | length }})</a>
-                </button></span>
-            <span><button class="btn-manage-delete" type="submit">
+                </button>
+            </span>
+            <span>
+                <button class="btn-manage-delete" type="submit">
                     <a href="#" class="modal-trigger" data-target="modal-delete" data-id="{{ portfolio.id }}"
                         data-titre="{{ portfolio.title }}">Supprimer l'article et ses commentaires</a>
-                </button></span>
+                </button>
+            </span>
         </div>
     </div>
     {% endfor %}
-
     <div class="modal shadow-1 white falling" id="modal-delete" data-ax="modal">
         <div class="modal-header">Supprimer un article</div>
         <div class="divider"></div>
@@ -57,7 +63,6 @@
                 let xmlhttp = new XMLHttpRequest;
                 xmlhttp.open("get", `/portfolio/activate/${this.dataset.id}`)
                 xmlhttp.send()
-
             })
         }
         let supprimer = document.querySelectorAll(".modal-trigger")
