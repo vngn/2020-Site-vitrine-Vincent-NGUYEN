@@ -11,39 +11,24 @@
     <div class="video-title-text">Maj</div>
 </div>
 
-{# <div class="example-wrapper-title">
-    <h1>Gérer les Maj</h1>
-</div> #}
-
-<div class="example-wrapper block-users users-color">
+<div class="example-wrapper">
     {% if is_granted('ROLE_ADMIN') %}
     <a href="{{ path("update_add") }}" class="btn shadow-1 rounded-1 blue">Ajouter une Maj</a>
     {% endif %}
-    <table class="table striped">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Contenu</th>
-                {% if is_granted('ROLE_ADMIN') %}
-                <th>Actions</th>
-                {% endif %}
-            </tr>
-        </thead>
-        <tbody>
-            {% for update in update %}
-            <tr>
-                <td>{{ update.createdAt | date ('d/m/Y') }}</td>
-                <td>{{ update.content | raw }}</td>
-                {% if is_granted('ROLE_ADMIN') %}
-                <td>
-                    <a href="{{ path("update_edit", {id: update.id}) }}"
-                        class="btn shadow-1 rounded-1 blue">Modifier</a>
-                </td>
-                {% endif %}
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    {% for update in update %}
+    <div class="block-manage users-color">
+        <div class="block-manage-bis users-color">
+            <span class="update-date">{{ update.createdAt | date ('d/m/Y') }}</span>
+            <span>{{ update.content | raw }}</span>
+            {% if is_granted('ROLE_ADMIN') %}
+            <span>
+                <button class="btn-update-edit" type="submit">
+                    <a href="{{ path("update_edit", {id: update.id}) }}">Modifier</a>
+                </button>
+            </span>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
 </div>
-
 {% endblock %}

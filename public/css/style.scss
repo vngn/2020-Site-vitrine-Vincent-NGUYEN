@@ -942,6 +942,14 @@ hr {
     margin-top: 30px;
 }
 
+/* BOUTON MODIFIER DE LA PAGE UPDATE */
+
+.btn-update-edit {
+    @include specific-button;
+    background:rgb(176, 76, 52);
+    margin-top: 30px;
+}
+
 /* BOUTONS MODIFIER LE PROFIL ET MODIFIER LE MOT DE PASSE DE LA PAGE PROFIL USERS */
 
 .btn-profile-edit {
@@ -975,6 +983,11 @@ hr {
 }
 
 /* ============================== 9. MAJ ============================== */
+
+.update-date {
+    font-weight: 700;
+    float: right;
+}
 
 /* ============================== x. FOOTER ============================== */
 

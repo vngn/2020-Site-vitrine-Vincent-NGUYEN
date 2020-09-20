@@ -1531,6 +1531,16 @@ hr {
   margin-top: 30px;
 }
 
+/* BOUTON MODIFIER DE LA PAGE UPDATE */
+.btn-update-edit {
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  padding: 5px;
+  color: white;
+  background: #b04c34;
+  margin-top: 30px;
+}
+
 /* BOUTONS MODIFIER LE PROFIL ET MODIFIER LE MOT DE PASSE DE LA PAGE PROFIL USERS */
 .btn-profile-edit {
   border: 1px solid #e1e1e1;
@@ -1574,6 +1584,11 @@ hr {
 }
 
 /* ============================== 9. MAJ ============================== */
+.update-date {
+  font-weight: 700;
+  float: right;
+}
+
 /* ============================== x. FOOTER ============================== */
 .block-legal-notice {
   border: 1px solid #e1e1e1;
