@@ -40,9 +40,17 @@
         <button class="btn-submit-form" type="submit">
             Valider
         </button>
-        <a href="{{ path('app_forgot_password_request') }}" class="btn btn-login-forgot-password rounded-1 press amaranth dark-1">Mot de passe
-            oublié</a>
-        <a href="{{ path('app_register') }}" class="btn btn-login-create-account rounded-1 press green dark-2">Créer un compte</a>
     </div>
 </form>
+
+<div class="example-wrapper block-login visitors-color ">
+
+    <button class="btn-login-forgot-password" type="submit">
+        <a href="{{ path('app_forgot_password_request') }}">Mot de passe oublié</a>
+    </button>
+
+    <button class="btn-login-create-account" type="submit">
+    <a href="{{ path('app_register') }}">Créer un compte</a>
+    </button>
+</div>
 {% endblock %}

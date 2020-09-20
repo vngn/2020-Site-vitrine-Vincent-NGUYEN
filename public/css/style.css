@@ -1497,16 +1497,20 @@ hr {
 
 /* BOUTONS MDP OUBLIE ET CREER UN COMPTE DE LA PAGE CONNEXION */
 .btn-login-forgot-password {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: -10px;
+  background: #b04c34;
+  color: white;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  padding: 5px;
 }
 
 .btn-login-create-account {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: -10px;
-  float: right;
+  background: #24415b;
+  margin-top: 30px;
+  color: white;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  padding: 5px;
 }
 
 /* ============================== 9. MAJ ============================== */
