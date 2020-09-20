@@ -12,9 +12,20 @@
 </div>
 
 <div class="example-wrapper">
-    {% if is_granted('ROLE_ADMIN') %}
-    <a href="{{ path("update_add") }}" class="btn shadow-1 rounded-1 blue">Ajouter une Maj</a>
-    {% endif %}
+    <div class="block-manage users-color">
+        <div class="block-manage-bis users-color">
+            {% if is_granted('ROLE_ADMIN') %}
+            <span>
+                <button class="btn-update-add" type="submit">
+                    <a href="{{ path("update_add") }}">Ajouter une Maj</a>
+                </button>
+            </span>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="example-wrapper">
     {% for update in update %}
     <div class="block-manage users-color">
         <div class="block-manage-bis users-color">

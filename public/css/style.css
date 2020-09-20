@@ -1532,6 +1532,14 @@ hr {
 }
 
 /* BOUTON MODIFIER DE LA PAGE UPDATE */
+.btn-update-add {
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  padding: 5px;
+  color: white;
+  background: #24415b;
+}
+
 .btn-update-edit {
   border: 1px solid #e1e1e1;
   width: 100%;
