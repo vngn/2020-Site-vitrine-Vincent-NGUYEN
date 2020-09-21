@@ -1442,7 +1442,7 @@ hr {
   padding: 20px;
 }
 
-.individual-block-contact-index, .individual-block-profile-index {
+.individual-block-contact-index, .individual-block-profile-index, .individual-block-edit-index {
   border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
@@ -1453,7 +1453,7 @@ hr {
   min-width: 400px;
 }
 
-.individual-block-contact-index li, .individual-block-profile-index li {
+.individual-block-contact-index li, .individual-block-profile-index li, .individual-block-edit-index li {
   list-style: none;
 }
 
@@ -1542,7 +1542,7 @@ hr {
 }
 
 /* BOUTON SUPPRIMER ET TEXTES DES PAGES PROFILE ET MANAGE USERS */
-.block-manage-users, .block-profile-users {
+.block-manage-users, .block-profile-users, .block-edit-users {
   border: 1px solid #e1e1e1;
   margin: 0;
   padding: 20px;
@@ -1566,7 +1566,7 @@ hr {
   margin-top: 10px;
 }
 
-.text-manage-users, .text-profile-users {
+.avatar-position {
   float: right;
 }
 

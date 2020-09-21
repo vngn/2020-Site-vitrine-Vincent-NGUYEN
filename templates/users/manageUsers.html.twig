@@ -11,7 +11,7 @@
     {% for user in users %}
     <div class="individual-block-contact-index">
         <div class="block-manage-users users-color">
-            <span class="text-manage-users"><img src="{{ asset('uploads/photos/'~ user.photo) }}" alt="avatar" class="photo-form"></span>
+            <span class="avatar-position"><img src="{{ asset('uploads/photos/'~ user.photo) }}" alt="avatar" class="photo-form"></span>
             <span>{{ user.firstname }} {{ user.name }}<br /><br />{{ user.email }}</span>
             <span>
                 <button class="btn-users-delete" type="submit">

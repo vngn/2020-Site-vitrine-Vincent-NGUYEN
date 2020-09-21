@@ -14,7 +14,7 @@
 <div class="example-wrapper">
     <div class="individual-block-profile-index">
         <div class="block-profile-users users-color">
-            <span class="text-profile-users"><img src="{{ asset('uploads/photos/'~ app.user.photo) }}" alt="avatar"
+            <span class="avatar-position"><img src="{{ asset('uploads/photos/'~ app.user.photo) }}" alt="avatar"
                     class="photo-form"></span>
             <span>{{ app.user.firstname }} {{ app.user.name }}<br /><br />{{ app.user.email }}</span>
             <span>
@@ -34,7 +34,7 @@
         {% for productionComment in app.user.portfolioComments %}
         <div class="block-profile-users users-color">
             <span>{{ productionComment.article.title }}</span>
-            <span class="text-profile-users">{{ productionComment.createdAt | date ('d/m/Y') }}</span>
+            <span class="avatar-position">{{ productionComment.createdAt | date ('d/m/Y') }}</span>
             <span>{{ productionComment.content | raw }}</span>
         </div>
         <br />
@@ -46,7 +46,7 @@
         {% for articlesComment in app.user.articlesComments %}
         <div class="block-profile-users users-color">
             <span>{{ articlesComment.article.title }}</span>
-            <span class="text-profile-users">{{ articlesComment.createdAt | date ('d/m/Y') }}</span>
+            <span class="avatar-position">{{ articlesComment.createdAt | date ('d/m/Y') }}</span>
             <span>{{ articlesComment.content | raw }}</span>
         </div>
         <br />
@@ -58,7 +58,7 @@
         {% for blogComment in app.user.blogComments %}
         <div class="block-profile-users users-color">
             <span>{{ blogComment.article.title }}</span>
-            <span class="text-profile-users">{{ blogComment.createdAt | date ('d/m/Y') }}</span>
+            <span class="avatar-position">{{ blogComment.createdAt | date ('d/m/Y') }}</span>
             <span>{{ blogComment.content | raw }}</span>
         </div>
         <br />

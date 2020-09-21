@@ -7,22 +7,22 @@
     <h1>Modifier l'article<br />"{{ portfolio.title }}"</h1>
 </div>
 <div class="example-wrapper">
-    <div class="individual-block-profile-index">
+    <div class="individual-block-edit-index">
         {{ form(form) }}
     </div>
 </div>
 
 <div id="commentaires">
     <div class="example-wrapper">
-        <div class="individual-block-profile-index">
+        <div class="individual-block-edit-index">
             <h1>Gérer les {{ portfolio.portfolioComment | length }} commentaires</h1>
         </div>
     </div>
     <div class="example-wrapper">
         {% for portfolioComment in portfolio.portfolioComment %}
-        <div class="individual-block-profile-index">
-            <div class="block-manage-users users-color">
-                <span class="text-manage-users"><img src="{{ asset('uploads/photos/'~ portfolioComment.users.photo) }}"
+        <div class="individual-block-edit-index">
+            <div class="block-edit-users users-color">
+                <span class="avatar-position"><img src="{{ asset('uploads/photos/'~ portfolioComment.users.photo) }}"
                         alt="avatar" class="photo-form"></span>
                 <span>{{ portfolioComment.users.firstname }}
                     {{ portfolioComment.users.name }}<br />{{ portfolioComment.createdAt | date ('d/m/Y (H:i)') }}</span>

@@ -6,44 +6,43 @@
 <div class="example-wrapper-title">
     <h1>Modifier l'article<br />"{{ articles.title }}"</h1>
 </div>
-<div class="example-wrapper block-users users-color">
-    {{ form(form) }}
+<div class="example-wrapper">
+    <div class="individual-block-edit-index">
+        {{ form(form) }}
+    </div>
 </div>
 
-<section id="commentaires">
-    <div class="example-wrapper block-users articles-color">
+<div id="commentaires">
+    <div class="example-wrapper">
+        <div class="individual-block-edit-index">
         <h1>Gérer les {{ articles.articleComment | length }} commentaires</h1>
-        <table class="table striped">
-            <thead>
-                <tr>
-                    <th>Avatar</th>
-                    <th>Auteur</th>
-                    <th>Date</th>
-                    <th>Contenu</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for articlesComment in articles.articleComment %}
-                <tr>
-                    <td><img src="{{ asset('uploads/photos/'~ articlesComment.users.photo) }}" alt="avatar"
-                            class="photo-form"></td>
-                    <td>{{ articlesComment.users.firstname }} {{ articlesComment.users.name }}</td>
-                    <td>{{ articlesComment.createdAt | date ('d/m/Y (H:i)') }}</td>
-                    <td>{{ articlesComment.content | raw }}</td>
-                    <td>
-                        <a href="{{ path('articles_comment_edit', {'id': articlesComment.id}) }}"
-                            class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
-                        <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
-                            data-id="{{ articlesComment.id }}" data-prenom="{{ articlesComment.users.firstname }}"
-                            data-nom="{{ articlesComment.users.name }}">Supprimer</a>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+        </div>
     </div>
-</section>
+    <div class="example-wrapper">
+                {% for articlesComment in articles.articleComment %}
+        <div class="individual-block-edit-index">
+            <div class="block-edit-users users-color">
+                <span class="avatar-position"><img src="{{ asset('uploads/photos/'~ articlesComment.users.photo) }}"
+                        alt="avatar" class="photo-form"></span>
+                <span>{{ articlesComment.users.firstname }}
+                    {{ articlesComment.users.name }}<br />{{ articlesComment.createdAt | date ('d/m/Y (H:i)') }}</span>
+                <span>{{ articlesComment.content | raw }}</span>
+                <span>
+                    <button class="btn-users-edit" type="submit">
+                        <a href="{{ path('articles_comment_edit', {'id': articlesComment.id}) }}"
+                            class="modal-trigger">Modifier</a>
+                    </button>
+                    <button class="btn-users-delete" type="submit">
+                        <a href="#" class="modal-trigger" data-target="modal-delete" data-id="{{ articlesComment.id }}"
+                            data-prenom="{{ articlesComment.users.firstname }}"
+                            data-nom="{{ articlesComment.users.name }}">Supprimer</a>
+                    </button>
+                </span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 
 <div class="btn-site wrapper">
     <a class="cta" href="{{ path('articles_manage') }}">
