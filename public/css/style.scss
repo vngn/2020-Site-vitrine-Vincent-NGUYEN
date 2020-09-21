@@ -740,7 +740,7 @@ hr {
 
 .block-portfolio-index {
     @include block-portfolio;
-    width: 690px;
+    width: 100%;
     height: 340px;
 }
 
@@ -756,7 +756,7 @@ hr {
     border-radius: 20px;
     padding: 10px 20px;
     position: relative;
-    width: 732px;
+    width: 100%;
     height: 452px;
     margin-bottom: 50px;
 }
