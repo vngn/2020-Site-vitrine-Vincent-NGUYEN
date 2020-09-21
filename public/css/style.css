@@ -294,6 +294,12 @@ hr {
   font: 18px/1.5 sans-serif;
 }
 
+@media (max-width: 575.98px) {
+  .example-wrapper {
+    width: 100%;
+  }
+}
+
 .example-wrapper-title {
   height: 17.5em;
   margin-top: -2em;
@@ -591,6 +597,12 @@ hr {
   letter-spacing: -2px;
 }
 
+@media (max-width: 575.98px) {
+  .video-title-text {
+    width: 100%;
+  }
+}
+
 /* MENU BOUTONS POUR TRI PAGES PORTFOLIO, ARTICLES ET BLOG */
 /* BARRES DE BOUTONS DE TRI PAR CATEGORIE DES PAGES PORTFOLIO, ARTICLES ET BLOG */
 .buttonFilter {
@@ -662,6 +674,12 @@ hr {
 .block-home li span:nth-child(4) {
   font-weight: 400;
   font-size: 20px;
+}
+
+@media (max-width: 575.98px) {
+  .block-home {
+    width: 100%;
+  }
 }
 
 /* TEXTE TITRE */
@@ -1012,6 +1030,12 @@ hr {
   font-size: 20px;
 }
 
+@media (max-width: 575.98px) {
+  .block-portfolio-light {
+    width: 100%;
+  }
+}
+
 .block-portfolio-button-menu {
   text-align: center;
   margin: -110px auto 115px;
@@ -1228,6 +1252,12 @@ hr {
   font-size: 20px;
 }
 
+@media (max-width: 575.98px) {
+  .block-articles {
+    width: 100%;
+  }
+}
+
 .block-articles-button-menu {
   text-align: center;
   margin: -110px auto 115px;
@@ -1343,6 +1373,12 @@ hr {
 .block-blog li span:nth-child(4) {
   font-weight: 400;
   font-size: 20px;
+}
+
+@media (max-width: 575.98px) {
+  .block-blog {
+    width: 100%;
+  }
 }
 
 .block-blog-button-menu {
