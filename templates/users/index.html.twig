@@ -11,78 +11,56 @@
     <h1>Profil de {{ app.user.firstname }} {{ app.user.name }}</h1>
 </div>
 
-<div class="example-wrapper">
-    <div class="individual-block-contact-index">
-        <div class="block-manage-users users-color">
-            <span class="text-manage-users"><img src="{{ asset('uploads/photos/'~ app.user.photo) }}" alt="avatar" class="photo-form"></span>
-            <span>{{ app.user.firstname }} {{ app.user.name }}<br /><br />{{ app.user.email }}</span>
-            <span>
-                <button class="btn-profile-edit" type="submit">
-        <a href="{{ path('users_profil_edit') }}">Modifier le profil</a>
-    </button>
+<div class="individual-block-contact-index">
+    <div class="block-manage-users users-color">
+        <span class="text-manage-users"><img src="{{ asset('uploads/photos/'~ app.user.photo) }}" alt="avatar"
+                class="photo-form"></span>
+        <span>{{ app.user.firstname }} {{ app.user.name }}<br /><br />{{ app.user.email }}</span>
+        <span>
+            <button class="btn-profile-edit" type="submit">
+                <a href="{{ path('users_profil_edit') }}">Modifier le profil</a>
+            </button>
 
-    <button class="btn-password-edit" type="submit">
-        <a href="{{ path('users_pass_edit') }}">Modifier le mot de passe</a>
-    </button>
-            </span>
-        </div>
+            <button class="btn-password-edit" type="submit">
+                <a href="{{ path('users_pass_edit') }}">Modifier le mot de passe</a>
+            </button>
+        </span>
     </div>
+</div>
 
-    <div class="example-wrapper">
+<div class="individual-block-contact-index">
     <h1>{{ app.user.portfolioComments | length }} commentaire(s) dans la section Portfolio</h1>
-
-            {% for productionComment in app.user.portfolioComments %}
-    <div class="individual-block-contact-index">
-        <div class="block-manage-users users-color">
-            <span>{{ productionComment.article.title }}</span>
-            <span>{{ productionComment.createdAt | date ('d/m/Y') }}</span>
-            <span>{{ productionComment.content | raw }}</span>
-        </div>
+    {% for productionComment in app.user.portfolioComments %}
+    <div class="block-manage-users users-color">
+        <span>{{ productionComment.article.title }}</span>
+        <span class="text-manage-users">{{ productionComment.createdAt | date ('d/m/Y') }}</span>
+        <span>{{ productionComment.content | raw }}</span>
     </div>
+    <br />
     {% endfor %}
- 
-<div class="example-wrapper block-users users-color">
+</div>
+
+<div class="individual-block-contact-index">
     <h1>{{ app.user.articlesComments | length }} commentaire(s) dans la section Articles</h1>
-    <table class="table striped">
-        <thead>
-            <tr>
-                <th>Titre de l'article</th>
-                <th>Contenu du commentaire</th>
-                <th>date</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for articleComment in app.user.articlesComments %}
-            <tr>
-                <td>{{ articleComment.article.title }}</td>
-                <td>{{ articleComment.content | raw }}</td>
-                <td>{{ articleComment.createdAt | date }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    {% for articlesComment in app.user.articlesComments %}
+    <div class="block-manage-users users-color">
+        <span>{{ articlesComment.article.title }}</span>
+        <span class="text-manage-users">{{ articlesComment.createdAt | date ('d/m/Y') }}</span>
+        <span>{{ articlesComment.content | raw }}</span>
+    </div>
+    <br />
+    {% endfor %}
 </div>
 
-<div class="example-wrapper block-users users-color">
-    <h1>{{ app.user.blogComments | length }} commentaire(s) dans section Blog</h1>
-    <table class="table striped">
-        <thead>
-            <tr>
-                <th>Titre de l'article</th>
-                <th>Contenu du commentaire</th>
-                <th>date</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for blogComment in app.user.blogComments %}
-            <tr>
-                <td>{{ blogComment.article.title }}</td>
-                <td>{{ blogComment.content | raw }}</td>
-                <td>{{ blogComment.createdAt | date }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+<div class="individual-block-contact-index">
+    <h1>{{ app.user.blogComments | length }} commentaire(s) dans la section Articles</h1>
+    {% for blogComment in app.user.blogComments %}
+    <div class="block-manage-users users-color">
+        <span>{{ blogComment.article.title }}</span>
+        <span class="text-manage-users">{{ blogComment.createdAt | date ('d/m/Y') }}</span>
+        <span>{{ blogComment.content | raw }}</span>
+    </div>
+    <br />
+    {% endfor %}
 </div>
-
 {% endblock %}
