@@ -955,6 +955,12 @@ hr {
     padding: 20px;
 }
 
+.btn-users-edit {
+    @include specific-button;
+    background:rgb(36,65,91);
+    margin-top: 10px;
+}
+
 .btn-users-delete {
     @include specific-button;
     background:rgb(176, 76, 52);

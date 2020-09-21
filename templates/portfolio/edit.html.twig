@@ -6,44 +6,43 @@
 <div class="example-wrapper-title">
     <h1>Modifier l'article<br />"{{ portfolio.title }}"</h1>
 </div>
-<div class="example-wrapper block-users users-color">
-    {{ form(form) }}
+<div class="example-wrapper">
+    <div class="individual-block-profile-index">
+        {{ form(form) }}
+    </div>
 </div>
 
-<section id="commentaires">
-    <div class="example-wrapper block-users articles-color">
-        <h1>Gérer les {{ portfolio.portfolioComment | length }} commentaires</h1>
-        <table class="table striped">
-            <thead>
-                <tr>
-                    <th>Avatar</th>
-                    <th>Auteur</th>
-                    <th>Date</th>
-                    <th>Contenu</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for portfolioComment in portfolio.portfolioComment %}
-                <tr>
-                <td><img src="{{ asset('uploads/photos/'~ portfolioComment.users.photo) }}" alt="avatar"
-                            class="photo-form"></td>
-                    <td>{{ portfolioComment.users.firstname }} {{ portfolioComment.users.name }}</td>
-                    <td>{{ portfolioComment.createdAt | date ('d/m/Y (H:i)') }}</td>
-                    <td>{{ portfolioComment.content | raw }}</td>
-                    <td>
-                        <a href="{{ path('portfolio_comment_edit', {'id': portfolioComment.id}) }}"
-                            class="btn shadow-1 rounded-1 red modal-trigger">Modifier</a>
-                        <a href="#" class="btn shadow-1 rounded-1 red modal-trigger" data-target="modal-delete"
-                            data-id="{{ portfolioComment.id }}" data-prenom="{{ portfolioComment.users.firstname }}"
-                            data-nom="{{ portfolioComment.users.name }}">Supprimer</a>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+<div id="commentaires">
+    <div class="example-wrapper">
+        <div class="individual-block-profile-index">
+            <h1>Gérer les {{ portfolio.portfolioComment | length }} commentaires</h1>
+        </div>
     </div>
-</section>
+    <div class="example-wrapper">
+        {% for portfolioComment in portfolio.portfolioComment %}
+        <div class="individual-block-profile-index">
+            <div class="block-manage-users users-color">
+                <span class="text-manage-users"><img src="{{ asset('uploads/photos/'~ portfolioComment.users.photo) }}"
+                        alt="avatar" class="photo-form"></span>
+                <span>{{ portfolioComment.users.firstname }}
+                    {{ portfolioComment.users.name }}<br />{{ portfolioComment.createdAt | date ('d/m/Y (H:i)') }}</span>
+                <span>{{ portfolioComment.content | raw }}</span>
+                <span>
+                    <button class="btn-users-edit" type="submit">
+                        <a href="{{ path('portfolio_comment_edit', {'id': portfolioComment.id}) }}"
+                            class="modal-trigger">Modifier</a>
+                    </button>
+                    <button class="btn-users-delete" type="submit">
+                        <a href="#" class="modal-trigger" data-target="modal-delete" data-id="{{ portfolioComment.id }}"
+                            data-prenom="{{ portfolioComment.users.firstname }}"
+                            data-nom="{{ portfolioComment.users.name }}">Supprimer</a>
+                    </button>
+                </span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 
 <div class="btn-site wrapper">
     <a class="cta" href="{{ path('portfolio_manage') }}">

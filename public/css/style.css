@@ -1548,6 +1548,15 @@ hr {
   padding: 20px;
 }
 
+.btn-users-edit {
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  padding: 5px;
+  color: white;
+  background: #24415b;
+  margin-top: 10px;
+}
+
 .btn-users-delete {
   border: 1px solid #e1e1e1;
   width: 100%;
