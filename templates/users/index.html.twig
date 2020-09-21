@@ -11,57 +11,36 @@
     <h1>Profil de {{ app.user.firstname }} {{ app.user.name }}</h1>
 </div>
 
-<div class="example-wrapper block-users users-color">
-    <table class="table striped">
-        <thead>
-            <tr>
-                <th>Avatar</th>
-                <th>Nom</th>
-                <th>Prénom</th>
-                <th>Email</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><img src="{{ asset('uploads/photos/'~ app.user.photo) }}" alt="avatar" class="photo-form"></td>
-                <td>{{ app.user.name }}</td>
-                <td>{{ app.user.firstname }}</td>
-                <td>{{ app.user.email }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <button class="btn-profile-edit" type="submit">
+<div class="example-wrapper">
+    <div class="individual-block-contact-index">
+        <div class="block-manage-users users-color">
+            <span class="text-manage-users"><img src="{{ asset('uploads/photos/'~ app.user.photo) }}" alt="avatar" class="photo-form"></span>
+            <span>{{ app.user.firstname }} {{ app.user.name }}<br /><br />{{ app.user.email }}</span>
+            <span>
+                <button class="btn-profile-edit" type="submit">
         <a href="{{ path('users_profil_edit') }}">Modifier le profil</a>
     </button>
 
     <button class="btn-password-edit" type="submit">
         <a href="{{ path('users_pass_edit') }}">Modifier le mot de passe</a>
     </button>
-</div>
+            </span>
+        </div>
+    </div>
 
-<div class="example-wrapper block-users users-color">
+    <div class="example-wrapper">
     <h1>{{ app.user.portfolioComments | length }} commentaire(s) dans la section Portfolio</h1>
-    <table class="table striped">
-        <thead>
-            <tr>
-                <th>Titre de l'article</th>
-                <th>Contenu du commentaire</th>
-                <th>date</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for productionComment in app.user.portfolioComments %}
-            <tr>
-                <td>{{ productionComment.article.title }}</td>
-                <td>{{ productionComment.content | raw }}</td>
-                <td>{{ productionComment.createdAt | date ('d/m/Y') }}</span>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
 
+            {% for productionComment in app.user.portfolioComments %}
+    <div class="individual-block-contact-index">
+        <div class="block-manage-users users-color">
+            <span>{{ productionComment.article.title }}</span>
+            <span>{{ productionComment.createdAt | date ('d/m/Y') }}</span>
+            <span>{{ productionComment.content | raw }}</span>
+        </div>
+    </div>
+    {% endfor %}
+ 
 <div class="example-wrapper block-users users-color">
     <h1>{{ app.user.articlesComments | length }} commentaire(s) dans la section Articles</h1>
     <table class="table striped">
