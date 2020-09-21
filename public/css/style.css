@@ -1443,7 +1443,7 @@ hr {
   padding-bottom: 80px;
 }
 
-.individual-block-contact-index {
+.individual-block-contact-index, .individual-block-profile-index {
   border: 1px solid #e1e1e1;
   border-radius: 20px;
   margin: 10px auto;
@@ -1454,7 +1454,7 @@ hr {
   min-width: 400px;
 }
 
-.individual-block-contact-index li {
+.individual-block-contact-index li, .individual-block-profile-index li {
   list-style: none;
 }
 
@@ -1548,8 +1548,8 @@ hr {
   background: #b04c34;
 }
 
-/* BOUTON SUPPRIMER ET TEXTES DE LA PAGE MANAGE USERS */
-.block-manage-users {
+/* BOUTON SUPPRIMER ET TEXTES DES PAGES PROFILE ET MANAGE USERS */
+.block-manage-users, .block-profile-users {
   border: 1px solid #e1e1e1;
   margin: 0;
   padding: 20px;
@@ -1564,7 +1564,7 @@ hr {
   margin-top: 10px;
 }
 
-.text-manage-users {
+.text-manage-users, .text-profile-users {
   float: right;
 }
 
@@ -1575,7 +1575,7 @@ hr {
   padding: 5px;
   color: white;
   background: #b04c34;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .btn-password-edit {
@@ -1584,7 +1584,7 @@ hr {
   padding: 5px;
   color: white;
   background: #24415b;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 /* CHECK-BOX ET BOUTONS MODIFIER L'ARTICLE... ET SUPPRIMER L'ARTICLE... DES PAGES MANAGE */
