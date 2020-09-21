@@ -198,7 +198,7 @@ body {
     color: white;
     border: 1px solid $background-color-border-bis;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 5px;
 }
 
@@ -932,7 +932,7 @@ hr {
 .btn-login-create-account {
     @include specific-button;
     background: rgb(36,65,91);
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 /* BOUTON MODIFIER DE LA PAGE UPDATE */
