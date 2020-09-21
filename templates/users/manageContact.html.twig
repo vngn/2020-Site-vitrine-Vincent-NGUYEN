@@ -11,18 +11,24 @@
     {% for contact in contact %}
     <div class="individual-block-contact-index">
         <div class="block-manage-contact users-color">
-                <span>{{ contact.name }}<br /></span>
-                <span>{{ contact.post }} - {{ contact.society }}<br /></span>
-                <span>{{ contact.email }} - 0{{ contact.phone }}<br /></span>
-                <span>{{ contact.createdAt | date ('d/m/Y (H:i)') }}<br /></span>
-                <span>{{ contact.title }}</span>
-                <span>{{ contact.content | raw }}</span>
-                <span><label class="form-switch mt-2">Message traité
-                        <input type="checkbox" {{ (contact.active) ? 'checked' : '' }} data-id="{{ contact.id }}" />
-                        <span class="slider"></span>A traiter
-                    </label><br /></span>
-                <span><a href="#" class="btn shadow-1 rounded-1 red modal-trigger btn-manage-contact" data-target="modal-delete"
-                        data-id="{{ contact.id }}" data-nom="{{ contact.name }}">Supprimer</a></span>
+            <span>{{ contact.name }}<br /></span>
+            <span>{{ contact.post }} - {{ contact.society }}<br /></span>
+            <span>{{ contact.email }} - 0{{ contact.phone }}<br /></span>
+            <span>{{ contact.createdAt | date ('d/m/Y (H:i)') }}<br /></span>
+            <span>{{ contact.title }}</span>
+            <span>{{ contact.content | raw }}</span>
+            <span class="check-box-line">
+                <label class="form-switch mt-2">Message traité
+                    <input type="checkbox" {{ (contact.active) ? 'checked' : '' }} data-id="{{ contact.id }}" />
+                    <span class="slider"></span>A traiter
+                </label>
+                </span>
+            <span>
+                <button class="btn-manage-delete" type="submit">
+                    <a href="#" class="modal-trigger" data-target="modal-delete" data-id="{{ contact.id }}"
+                        data-nom="{{ contact.name }}">Supprimer</a>
+                </button>
+            </span>
         </div>
     </div>
     {% endfor %}

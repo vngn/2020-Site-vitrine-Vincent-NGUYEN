@@ -1440,7 +1440,6 @@ hr {
   border: 1px solid #e1e1e1;
   margin: 0;
   padding: 20px;
-  padding-bottom: 80px;
 }
 
 .individual-block-contact-index, .individual-block-profile-index {
@@ -1456,12 +1455,6 @@ hr {
 
 .individual-block-contact-index li, .individual-block-profile-index li {
   list-style: none;
-}
-
-.btn-manage-contact {
-  float: right;
-  position: relative;
-  bottom: -12px;
 }
 
 /* ============================== 7. PAGE CATEGORIES ============================== */
@@ -1545,7 +1538,7 @@ hr {
   width: 100%;
   padding: 5px;
   color: white;
-  background: #b04c34;
+  background: #24415b;
 }
 
 /* BOUTON SUPPRIMER ET TEXTES DES PAGES PROFILE ET MANAGE USERS */
@@ -1598,7 +1591,7 @@ hr {
   padding: 5px;
   color: white;
   background: #24415b;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .btn-manage-delete {
@@ -1607,7 +1600,7 @@ hr {
   padding: 5px;
   color: white;
   background: #b04c34;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 /* ============================== 9. MAJ ============================== */
