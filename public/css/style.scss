@@ -809,7 +809,7 @@ hr {
 
 .block-articles-index {
     @include block-portfolio;
-    width: 690px;
+    width: 100%;
     height: 340px;
 }
 
@@ -819,7 +819,7 @@ hr {
     border-radius: 20px;
     padding: 10px 20px;
     position: relative;
-    width: 732px;
+    width: 100%;
     height: 452px;
     margin-bottom: 50px;
 }
@@ -837,7 +837,7 @@ hr {
 
 .block-blog-index {
     @include block-portfolio;
-    width: 690px;
+    width: 100%;
     height: 250px;
 }
 
@@ -847,7 +847,7 @@ hr {
     border-radius: 20px;
     padding: 10px 20px;
     position: relative;
-    width: 732px;
+    width: 100%;
     height: 362px;
     margin-bottom: 50px;
 }
