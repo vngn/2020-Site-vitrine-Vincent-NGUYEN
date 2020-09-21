@@ -439,6 +439,11 @@ a, button {
 }
 
 @media (max-width: 32.438em) {
+  #menu {
+    position: fixed;
+    width: 100%;
+    z-index: 6;
+  }
   /* Unhiding the styled menu link */
   .nav .navtoogle {
     margin: 0;

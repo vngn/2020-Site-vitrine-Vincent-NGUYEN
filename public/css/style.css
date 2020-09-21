@@ -13,6 +13,7 @@ style.scss :
     - @mixin sidenav                        z-index: 999
 nasbar.scss :
     - .navtoogle i                          z-index: -1
+    - #menu                                 z-index: 6
 nextbutton.scss :
     - .wrapper-link-site                    z-index: 99
 
@@ -52,6 +53,7 @@ nextbutton.scss :
     X. FOOTER
 
 /* ============================== 0. GLOBAL ============================== */
+/* RESPONSIVE */
 /* COULEURS */
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
 .users-color {
@@ -578,6 +580,12 @@ hr {
   margin: -175px auto;
 }
 
+@media (max-width: 575.98px) {
+  .video-title {
+    margin: 0 auto;
+  }
+}
+
 .video-title-text {
   z-index: 4;
   position: relative;
@@ -597,9 +605,35 @@ hr {
   letter-spacing: -2px;
 }
 
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .video-title-text {
+    font-size: 120px;
+    line-height: 120px;
+    letter-spacing: -5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .video-title-text {
+    font-size: 96px;
+    line-height: 96px;
+    letter-spacing: -4px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .video-title-text {
+    font-size: 64px;
+    line-height: 64px;
+    letter-spacing: -3px;
+  }
+}
+
 @media (max-width: 575.98px) {
   .video-title-text {
-    width: 100%;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -2px;
   }
 }
 
@@ -687,6 +721,13 @@ hr {
   width: 100%;
   height: 750px;
   padding-top: 200px;
+}
+
+@media (max-width: 575.98px) {
+  .text-title {
+    height: 400px;
+    padding-top: 0;
+  }
 }
 
 .pre-title {
@@ -798,6 +839,13 @@ hr {
   color: #f29220;
 }
 
+@media (max-width: 575.98px) {
+  .block-menu-home {
+    width: 84%;
+    height: 100%;
+  }
+}
+
 .block-menu-portfolio {
   width: 450px;
   height: 450px;
@@ -834,6 +882,13 @@ hr {
 
 .block-menu-portfolio:hover .sidenav-menu-icon {
   color: #f29220;
+}
+
+@media (max-width: 575.98px) {
+  .block-menu-portfolio {
+    width: 84%;
+    height: 100%;
+  }
 }
 
 .block-menu-articles {
@@ -874,6 +929,13 @@ hr {
   color: #2a9ad4;
 }
 
+@media (max-width: 575.98px) {
+  .block-menu-articles {
+    width: 84%;
+    height: 100%;
+  }
+}
+
 .block-menu-blog {
   width: 450px;
   height: 450px;
@@ -910,6 +972,13 @@ hr {
 
 .block-menu-blog:hover .sidenav-menu-icon {
   color: #116bab;
+}
+
+@media (max-width: 575.98px) {
+  .block-menu-blog {
+    width: 84%;
+    height: 100%;
+  }
 }
 
 .block-menu-about {
@@ -950,6 +1019,13 @@ hr {
   color: #253f4e;
 }
 
+@media (max-width: 575.98px) {
+  .block-menu-about {
+    width: 84%;
+    height: 100%;
+  }
+}
+
 .block-menu-contact {
   width: 450px;
   height: 450px;
@@ -986,6 +1062,13 @@ hr {
 
 .block-menu-contact:hover .sidenav-menu-icon {
   color: #152530;
+}
+
+@media (max-width: 575.98px) {
+  .block-menu-contact {
+    width: 84%;
+    height: 100%;
+  }
 }
 
 .page-summary {
