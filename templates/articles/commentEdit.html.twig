@@ -7,9 +7,11 @@
     <h1>Modifier le commentaire de<br />{{ app.user.firstname }} {{ app.user.name }}</h1>
 </div>
 
-<div class="example-wrapper block-users articles-color">
-    {{ form(form) }}
-</div>
+<div class="example-wrapper">
+    <div class="individual-block-edit-index">
+        {{ form(form) }}
+    </div>
+</div>>
 
 <div class="btn-site wrapper">
     <a class="cta" href="{{ path('articles_manage') }}">
