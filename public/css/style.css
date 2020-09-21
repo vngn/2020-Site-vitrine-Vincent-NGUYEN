@@ -9,7 +9,8 @@ style.scss :
     - .block-portfolio li iframe            z-index: 1
     - .video-title                          z-index: 2
     - .video-title-text                     z-index: 4
-    - @mixin button-sidebar-position        z-index: 998
+    - @mixin button-sidebar-position        z-index: 998 (-998 en responsive mobile)
+    - sidenav-contact-length-admin          z-index: 998 (-998 en responsive mobile)
     - @mixin sidenav                        z-index: 999
 nasbar.scss :
     - .navtoogle i                          z-index: -1
@@ -444,6 +445,13 @@ hr {
   top: 19em;
 }
 
+@media (max-width: 575.98px) {
+  .sidenav-admin {
+    opacity: 0;
+    z-index: -998;
+  }
+}
+
 .sidenav-contact-length-admin {
   position: fixed;
   z-index: 998;
@@ -458,6 +466,13 @@ hr {
   text-align: center;
 }
 
+@media (max-width: 575.98px) {
+  .sidenav-contact-length-admin {
+    opacity: 0;
+    z-index: -998;
+  }
+}
+
 .sidenav-registered {
   position: fixed;
   z-index: 998;
@@ -466,6 +481,13 @@ hr {
   width: 50px;
   opacity: 0.4;
   top: 19em;
+}
+
+@media (max-width: 575.98px) {
+  .sidenav-registered {
+    opacity: 0;
+    z-index: -998;
+  }
 }
 
 .sidenav-visitor {
@@ -478,6 +500,13 @@ hr {
   top: 19em;
 }
 
+@media (max-width: 575.98px) {
+  .sidenav-visitor {
+    opacity: 0;
+    z-index: -998;
+  }
+}
+
 .sidenav-menu {
   position: fixed;
   z-index: 998;
@@ -486,6 +515,13 @@ hr {
   width: 50px;
   opacity: 0.4;
   top: 23em;
+}
+
+@media (max-width: 575.98px) {
+  .sidenav-menu {
+    opacity: 0;
+    z-index: -998;
+  }
 }
 
 .sidenav-portfolio {
@@ -498,6 +534,13 @@ hr {
   top: 26em;
 }
 
+@media (max-width: 575.98px) {
+  .sidenav-portfolio {
+    opacity: 0;
+    z-index: -998;
+  }
+}
+
 .sidenav-articles {
   position: fixed;
   z-index: 998;
@@ -506,6 +549,13 @@ hr {
   width: 50px;
   opacity: 0.4;
   top: 29em;
+}
+
+@media (max-width: 575.98px) {
+  .sidenav-articles {
+    opacity: 0;
+    z-index: -998;
+  }
 }
 
 .sidenav-blog {
@@ -518,6 +568,13 @@ hr {
   top: 32em;
 }
 
+@media (max-width: 575.98px) {
+  .sidenav-blog {
+    opacity: 0;
+    z-index: -998;
+  }
+}
+
 .sidenav-about {
   position: fixed;
   z-index: 998;
@@ -528,6 +585,13 @@ hr {
   top: 35em;
 }
 
+@media (max-width: 575.98px) {
+  .sidenav-about {
+    opacity: 0;
+    z-index: -998;
+  }
+}
+
 .sidenav-contact {
   position: fixed;
   z-index: 998;
@@ -536,6 +600,13 @@ hr {
   width: 50px;
   opacity: 0.4;
   top: 38em;
+}
+
+@media (max-width: 575.98px) {
+  .sidenav-contact {
+    opacity: 0;
+    z-index: -998;
+  }
 }
 
 /* ICONES DES BOUTONS DES BARRES DE NAVIGATION VERTICALES */
