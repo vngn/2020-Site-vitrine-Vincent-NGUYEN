@@ -79,7 +79,8 @@ body, html {
 }
 
 .icon-menu:before {
-  content: "\f0c9";
+  content: "\e9be";
+  color: black;
 }
 
 a, li {
@@ -417,7 +418,7 @@ a, button {
 .nav .navtoogle {
   display: none;
   width: 100%;
-  padding: 0.5em 0.5em 0.8em;
+  padding: 0.5em 0.5em 0.5em;
   font-weight: normal;
   text-align: left;
   font-size: 1.2em;
@@ -433,7 +434,7 @@ a, button {
 
 .icon-menu {
   position: relative;
-  top: 3px;
+  top: 6px;
   line-height: 0;
   font-size: 1.6em;
 }
@@ -476,7 +477,7 @@ a, button {
     padding: 0.5em;
   }
   .icon + span {
-    margin-left: 1em;
+    margin-left: -1.5em;
     font-size: 0.8em;
   }
   /* Adding a left border of 8 px with a different color for each menu item*/

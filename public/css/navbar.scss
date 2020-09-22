@@ -134,8 +134,9 @@ body, html { font-size: 15px; padding: 0; margin: 0;}
 }
 
 .icon-menu:before {
-	content: "\f0c9";
-}
+	content: "\e9be";
+	color: black;
+  }
 
 a, li {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -503,7 +504,7 @@ a, button {
 .nav .navtoogle{
 	display: none;	
 	width: 100%;
-	padding: 0.5em 0.5em 0.8em;
+	padding: 0.5em 0.5em 0.5em;
 	font-weight: normal;
 	text-align: left;
 	font-size: 1.2em;
@@ -519,7 +520,7 @@ a, button {
 
 .icon-menu {
 	position: relative;
-	top: 3px;
+	top: 6px;
 	line-height: 0;
 	font-size: 1.6em;
 }
@@ -571,7 +572,7 @@ a, button {
 	}
 	
 	.icon + span {
-		margin-left: 1em;
+		margin-left: -1.5em;
 		font-size: 0.8em;
 	}
 	
