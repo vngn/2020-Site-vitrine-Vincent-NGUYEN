@@ -707,10 +707,10 @@ hr {
     line-height: 72px;
     letter-spacing: -2px;
     position: relative;
-    left: -140px;
     top: -60px;
     -webkit-box-shadow: none;
             box-shadow: none;
+    width: 100%;
   }
 }
 
@@ -1278,6 +1278,7 @@ hr {
 @media (max-width: 575.98px) {
   .individual-block-portfolio-index {
     width: 97.2%;
+    height: 482px;
   }
 }
 
@@ -1486,6 +1487,12 @@ hr {
   transition: opacity 1s ease-in-out;
 }
 
+@media (max-width: 575.98px) {
+  .block-articles-index {
+    height: 100%;
+  }
+}
+
 .individual-block-articles-index {
   border: 1px solid #e1e1e1;
   background: white;
@@ -1495,6 +1502,12 @@ hr {
   width: 100%;
   height: 452px;
   margin-bottom: 50px;
+}
+
+@media (max-width: 575.98px) {
+  .individual-block-articles-index {
+    height: 100%;
+  }
 }
 
 /* ============================== 4. PAGE BLOG ============================== */
@@ -1609,6 +1622,12 @@ hr {
   transition: opacity 1s ease-in-out;
 }
 
+@media (max-width: 575.98px) {
+  .block-blog-index {
+    height: 100%;
+  }
+}
+
 .individual-block-blog-index {
   border: 1px solid #e1e1e1;
   background: white;
@@ -1623,6 +1642,7 @@ hr {
 @media (max-width: 575.98px) {
   .individual-block-blog-index {
     width: 85%;
+    height: 100%;
     margin: auto;
     margin-top: 100px;
   }
