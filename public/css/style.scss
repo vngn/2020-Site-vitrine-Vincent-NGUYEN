@@ -62,7 +62,6 @@ nextbutton.scss :
 // @mixin responsive {
 // }
 
-
 /* COULEURS */
 $background-color: white;
 
@@ -517,7 +516,7 @@ hr {
     background: $background-color;
 
     @media (max-width: 575.98px) {
-        height: 400px;
+        height: 320px;
         padding-top: 0;
     }
 }
@@ -528,7 +527,7 @@ hr {
     margin: -175px auto;
 
     @media (max-width: 575.98px) {
-        margin: 0 auto;
+        margin: -150px auto;
     }
 }
 
@@ -568,12 +567,12 @@ hr {
     }
 
     @media (max-width: 575.98px) {
-        font-size: 48px;
-        line-height: 48px;
+        font-size: 72px;
+        line-height: 72px;
         letter-spacing: -2px;
         position: relative;
-        left: -150px;
-        top: -210px;
+        left: -140px;
+        top: -60px;
         box-shadow: none;
         
     }
@@ -583,6 +582,10 @@ hr {
 @mixin block-button-menu {
     text-align: center;
     margin: -110px auto 115px;
+
+    @media (max-width: 575.98px) {
+        margin: -140px auto 40px;
+    }
 }
 
 /* BARRES DE BOUTONS DE TRI PAR CATEGORIE DES PAGES PORTFOLIO, ARTICLES ET BLOG */
