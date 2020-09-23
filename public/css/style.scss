@@ -11,8 +11,8 @@ style.scss :
     - .block-portfolio li iframe            z-index: 1
     - .video-title                          z-index: 2
     - .video-title-text                     z-index: 4
-    - @mixin button-sidebar-position        z-index: 998 (-998 en responsive mobile)
-    - sidenav-contact-length-admin          z-index: 998 (-998 en responsive mobile)
+    - @mixin button-sidebar-position        z-index: 998 (display: none en responsive mobile)
+    - sidenav-contact-length-admin          z-index: 998 (z-index: 5 en responsive)
     - @mixin sidenav                        z-index: 999
 nasbar.scss :
     - .navtoogle i                          z-index: -1
@@ -418,8 +418,19 @@ hr {
 }
 
 .sidenav-admin {
-    @include button-sidebar-position;
+    position: fixed;
+    z-index: 998;
     top: 19em;
+    left: 0.6em;
+    border: 1px solid white;
+    width: 50px;
+    opacity: 0.6;
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {
+        top: 2.75em;
+        z-index: 5;
+    }
 }
 
 .sidenav-contact-length-admin {
@@ -440,13 +451,14 @@ hr {
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
-        display: none;
+        top: 2.75em;
+        z-index: 5;
     }
 }
 
 .sidenav-registered {
     @include button-sidebar-position;
-    top: 19em;
+    top: 18.5em;
 }
 
 .sidenav-visitor {
@@ -518,7 +530,10 @@ hr {
     background: $background-color;
 
     // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {}
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        height: 605px;
+
+    }
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
@@ -594,10 +609,14 @@ hr {
 /* MENU BOUTONS POUR TRI PAGES PORTFOLIO, ARTICLES ET BLOG */
 @mixin block-button-menu {
     text-align: center;
+    width: 100%;
     margin: -110px auto 115px;
 
     // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {}
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        width: 84%;
+        margin: -190px auto 115px;
+    }
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
@@ -629,6 +648,11 @@ hr {
 
     &:focus {
         outline: $background-color-border-bis;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        margin: 15px 30px;
     }
 }
 
@@ -928,8 +952,7 @@ hr {
     height: 340px;
 
     // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {
-    }
+    @media (min-width: 768px) and (max-width: 991.98px) {}
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
@@ -976,8 +999,7 @@ hr {
     height: 250px;
 
     // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {
-    }
+    @media (min-width: 768px) and (max-width: 991.98px) {}
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {

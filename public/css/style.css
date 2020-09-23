@@ -9,8 +9,8 @@ style.scss :
     - .block-portfolio li iframe            z-index: 1
     - .video-title                          z-index: 2
     - .video-title-text                     z-index: 4
-    - @mixin button-sidebar-position        z-index: 998 (-998 en responsive mobile)
-    - sidenav-contact-length-admin          z-index: 998 (-998 en responsive mobile)
+    - @mixin button-sidebar-position        z-index: 998 (display: none en responsive mobile)
+    - sidenav-contact-length-admin          z-index: 998 (z-index: 5 en responsive)
     - @mixin sidenav                        z-index: 999
 nasbar.scss :
     - .navtoogle i                          z-index: -1
@@ -432,16 +432,17 @@ hr {
 .sidenav-admin {
   position: fixed;
   z-index: 998;
+  top: 19em;
   left: 0.6em;
   border: 1px solid white;
   width: 50px;
   opacity: 0.6;
-  top: 19em;
 }
 
 @media (max-width: 575.98px) {
   .sidenav-admin {
-    display: none;
+    top: 2.75em;
+    z-index: 5;
   }
 }
 
@@ -461,7 +462,8 @@ hr {
 
 @media (max-width: 575.98px) {
   .sidenav-contact-length-admin {
-    display: none;
+    top: 2.75em;
+    z-index: 5;
   }
 }
 
@@ -472,7 +474,7 @@ hr {
   border: 1px solid white;
   width: 50px;
   opacity: 0.6;
-  top: 19em;
+  top: 18.5em;
 }
 
 @media (max-width: 575.98px) {
@@ -629,6 +631,12 @@ hr {
   background: white;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .color-block-video-title {
+    height: 605px;
+  }
+}
+
 @media (max-width: 575.98px) {
   .color-block-video-title {
     height: 320px;
@@ -733,6 +741,12 @@ hr {
 
 .buttonFilter:focus {
   outline: #e1e1e1;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .buttonFilter {
+    margin: 15px 30px;
+  }
 }
 
 .activeButton {
@@ -1177,7 +1191,15 @@ hr {
 
 .block-portfolio-button-menu {
   text-align: center;
+  width: 100%;
   margin: -110px auto 115px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .block-portfolio-button-menu {
+    width: 84%;
+    margin: -190px auto 115px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -1413,7 +1435,15 @@ hr {
 
 .block-articles-button-menu {
   text-align: center;
+  width: 100%;
   margin: -110px auto 115px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .block-articles-button-menu {
+    width: 84%;
+    margin: -190px auto 115px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -1555,7 +1585,15 @@ hr {
 
 .block-blog-button-menu {
   text-align: center;
+  width: 100%;
   margin: -110px auto 115px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .block-blog-button-menu {
+    width: 84%;
+    margin: -190px auto 115px;
+  }
 }
 
 @media (max-width: 575.98px) {
