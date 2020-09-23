@@ -441,8 +441,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .sidenav-admin {
-    opacity: 0;
-    z-index: -998;
+    display: none;
   }
 }
 
@@ -462,8 +461,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .sidenav-contact-length-admin {
-    opacity: 0;
-    z-index: -998;
+    display: none;
   }
 }
 
@@ -479,8 +477,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .sidenav-registered {
-    opacity: 0;
-    z-index: -998;
+    display: none;
   }
 }
 
@@ -496,8 +493,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .sidenav-visitor {
-    opacity: 0;
-    z-index: -998;
+    display: none;
   }
 }
 
@@ -513,8 +509,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .sidenav-menu {
-    opacity: 0;
-    z-index: -998;
+    display: none;
   }
 }
 
@@ -530,8 +525,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .sidenav-portfolio {
-    opacity: 0;
-    z-index: -998;
+    display: none;
   }
 }
 
@@ -547,8 +541,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .sidenav-articles {
-    opacity: 0;
-    z-index: -998;
+    display: none;
   }
 }
 
@@ -564,8 +557,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .sidenav-blog {
-    opacity: 0;
-    z-index: -998;
+    display: none;
   }
 }
 
@@ -581,8 +573,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .sidenav-about {
-    opacity: 0;
-    z-index: -998;
+    display: none;
   }
 }
 
@@ -598,8 +589,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .sidenav-contact {
-    opacity: 0;
-    z-index: -998;
+    display: none;
   }
 }
 

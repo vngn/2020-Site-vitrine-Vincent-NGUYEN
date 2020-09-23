@@ -409,8 +409,7 @@ hr {
     opacity: 0.6;
 
     @media (max-width: 575.98px) {
-        opacity: 0;
-        z-index: -998;
+        display:none;
     }
 }
 
@@ -433,8 +432,7 @@ hr {
     text-align: center;
 
     @media (max-width: 575.98px) {
-        opacity: 0;
-        z-index: -998;
+        display: none;
     }
 }
 
