@@ -1249,6 +1249,20 @@ hr {
   font-size: 20px;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .block-portfolio-light {
+    width: 81.25%;
+    margin: 80px auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .block-portfolio-light {
+    width: 97.2%;
+    height: 482px;
+  }
+}
+
 .block-portfolio-button-menu {
   text-align: center;
   width: 100%;
@@ -1493,6 +1507,13 @@ hr {
   font-size: 20px;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .block-articles {
+    width: 81.25%;
+    margin: 80px auto;
+  }
+}
+
 .block-articles-button-menu {
   text-align: center;
   width: 100%;
@@ -1641,6 +1662,13 @@ hr {
 .block-blog li span:nth-child(4) {
   font-weight: 400;
   font-size: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .block-blog {
+    width: 81.25%;
+    margin: 80px auto;
+  }
 }
 
 .block-blog-button-menu {

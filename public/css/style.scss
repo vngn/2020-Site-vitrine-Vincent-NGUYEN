@@ -836,6 +836,18 @@ hr {
 .block-portfolio-light {
     @include block-shape;
     width: 84%;
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        width: 81.25%;
+        margin: 80px auto;
+    }
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {
+        width: 97.2%;
+        height: 482px;
+    }
 }
 
 .block-portfolio-button-menu {
@@ -952,6 +964,15 @@ hr {
 .block-articles {
     @include block-shape;
     width: 84%;
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        width: 81.25%;
+        margin: 80px auto;
+    }
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {}
 }
 
 .block-articles-button-menu {
@@ -999,6 +1020,16 @@ hr {
 .block-blog {
     @include block-shape;
     width: 84%;
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        width: 81.25%;
+        margin: 80px auto;
+    }
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {}
+
 }
 
 .block-blog-button-menu {
