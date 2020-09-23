@@ -731,7 +731,7 @@ hr {
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .video-title-text {
-    font-size: 64px;
+    font-size: 97px;
     letter-spacing: -3px;
     width: 75%;
   }
@@ -739,7 +739,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .video-title-text {
-    font-size: 72px;
+    font-size: 56px;
     letter-spacing: -2px;
     width: 75%;
     -webkit-box-shadow: none;
