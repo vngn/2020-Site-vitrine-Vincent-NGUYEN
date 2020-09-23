@@ -75,17 +75,6 @@
     <!-- JS reCAPTCHA / https://www.google.com/recaptcha/about/)-->
     <script src="https://www.google.com/recaptcha/api.js?render=6LdKuM0ZAAAAAEmquK_DLg9Ksh0PSHp0YXY8Jc04"></script>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178755019-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-178755019-1');
-    </script>
 </head>
 
 <body>
@@ -538,6 +527,16 @@
                 });
             });
         }
+    </script>
+
+    <!-- ============================== xx. JS Tarte au citron ============================== -->
+
+    <script type="text/javascript">
+        tarteaucitron.user.gtagUa = 'UA-178755019-1';
+        tarteaucitron.user.gtagMore = function () {
+            /* add here your optionnal gtag() */
+        };
+        (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
     </script>
 </body>
 
