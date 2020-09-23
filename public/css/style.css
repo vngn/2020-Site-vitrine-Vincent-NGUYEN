@@ -1799,6 +1799,12 @@ hr {
   }
 }
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .block-contact {
+    width: 75%;
+  }
+}
+
 @media (max-width: 575.98px) {
   .block-contact {
     width: 93%;
