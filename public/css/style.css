@@ -706,7 +706,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .video-title {
-    margin: -150px auto;
+    margin: -90px auto;
   }
 }
 
@@ -1273,7 +1273,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .block-portfolio-button-menu {
-    margin: -140px auto 40px;
+    margin: -136px auto 40px;
   }
 }
 
@@ -1524,7 +1524,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .block-articles-button-menu {
-    margin: -140px auto 40px;
+    margin: -136px auto 40px;
   }
 }
 
@@ -1681,7 +1681,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .block-blog-button-menu {
-    margin: -140px auto 40px;
+    margin: -136px auto 40px;
   }
 }
 
@@ -1857,6 +1857,12 @@ hr {
   min-width: 450px;
 }
 
+@media (max-width: 575.98px) {
+  .block-categories {
+    min-width: 250px;
+  }
+}
+
 /* ============================== 8. PAGES USERS ============================== */
 .block-users {
   border: 1px solid #e1e1e1;
@@ -1878,6 +1884,7 @@ hr {
 @media (max-width: 575.98px) {
   .block-users {
     width: 93%;
+    min-width: 250px;
   }
 }
 
@@ -1907,6 +1914,7 @@ hr {
   .block-register,
   .block-profile {
     width: 93%;
+    min-width: 250px;
   }
 }
 
@@ -1930,6 +1938,7 @@ hr {
 @media (max-width: 575.98px) {
   .block-manage {
     width: 93%;
+    min-width: 250px;
   }
 }
 
