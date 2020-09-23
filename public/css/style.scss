@@ -409,7 +409,7 @@ hr {
     opacity: 0.6;
 
     @media (max-width: 575.98px) {
-        display:none;
+        display: none;
     }
 }
 
@@ -550,7 +550,7 @@ hr {
 
     @media (min-width: 768px) and (max-width: 991.98px) {
         font-size: 96px;
-        line-height: 96px;
+        line-height: 295px;
         letter-spacing: -4px;
     }
 
@@ -569,7 +569,7 @@ hr {
         box-shadow: none;
         width: 100%;
 
-        
+
     }
 }
 
@@ -627,9 +627,11 @@ hr {
     height: 750px;
     padding-top: 200px;
 
+    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         height: 400px;
         padding-top: 0;
+        margin: auto;
     }
 }
 
@@ -661,24 +663,28 @@ hr {
     line-height: 140px;
     letter-spacing: -6px;
 
+    // Large devices (desktops, 992px and up)
     @media (min-width: 992px) and (max-width: 1199.98px) {
         font-size: 120px;
         line-height: 120px;
         letter-spacing: -5px;
     }
 
+    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
-        font-size: 96px;
-        line-height: 96px;
+        font-size: 89px;
+        line-height: 89px;
         letter-spacing: -4px;
     }
 
+    // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
         font-size: 64px;
         line-height: 64px;
         letter-spacing: -3px;
     }
 
+    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         font-size: 48px;
         line-height: 48px;
