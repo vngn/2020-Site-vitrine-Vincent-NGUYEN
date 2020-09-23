@@ -360,7 +360,7 @@ a, button {
 }
 
 /* CSS specific to the 2x4 columns version */
-@media (min-width: 32.5em) and (max-width: 49.938em) {
+@media (min-width: 577px) and (max-width: 49.938em) {
   /* Creating the 2 column layout using floating elements once again */
   .nav li {
     display: block;
@@ -409,7 +409,7 @@ a, button {
 }
 
 /* Adapting the font size and width for smaller screns*/
-@media (min-width: 32.5em) and (max-width: 38.688em) {
+@media (min-width: 577px) and (max-width: 38.688em) {
   .nav li span.icon {
     width: 50%;
   }
@@ -443,7 +443,7 @@ a, button {
   font-size: 1.6em;
 }
 
-@media (max-width: 32.438em) {
+@media (max-width: 576px) {
   #menu {
     position: fixed;
     width: 100%;

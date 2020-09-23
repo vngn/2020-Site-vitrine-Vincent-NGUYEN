@@ -569,7 +569,7 @@ hr {
     top: -165px;
     text-shadow: 0 0 2px black;
     border-radius: 20px;
-    box-shadow: 25px 50px white, 25px -50px white, -25px -50px white, -25px 50px white;
+    box-shadow: 100px 50px white, 100px -50px white, -100px -50px white, -100px 50px white;
     width: 630px;
     margin: auto;
     font-size: 140px;
@@ -582,34 +582,26 @@ hr {
 
     // Large devices (desktops, 992px and up)
     @media (min-width: 992px) and (max-width: 1199.98px) {
-        font-size: 120px;
-        line-height: 120px;
-        letter-spacing: -5px;
     }
 
     // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
-        font-size: 96px;
-        line-height: 295px;
-        letter-spacing: -4px;
+
     }
 
     // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
         font-size: 64px;
-        line-height: 64px;
         letter-spacing: -3px;
+        width: 75%;
     }
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         font-size: 72px;
-        line-height: 72px;
         letter-spacing: -2px;
-        position: relative;
-        top: -60px;
+        width: 75%;
         box-shadow: none;
-        width: 100%;
     }
 }
 
@@ -681,7 +673,9 @@ hr {
     padding-top: 200px;
 
     // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {}
+    @media (min-width: 768px) and (max-width: 991.98px) {
+
+    }
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
@@ -706,6 +700,7 @@ hr {
 .title {
     width: 90%;
     margin: auto;
+    padding-left: 60px;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     color: transparent;
@@ -721,27 +716,28 @@ hr {
 
     // Large devices (desktops, 992px and up)
     @media (min-width: 992px) and (max-width: 1199.98px) {
-        font-size: 120px;
-        line-height: 120px;
+        font-size: 140px;
+        line-height: 140px;
         letter-spacing: -5px;
     }
 
     // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
-        font-size: 89px;
-        line-height: 89px;
+        font-size: 107px;
+        line-height: 107px;
         letter-spacing: -4px;
     }
 
     // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
-        font-size: 64px;
-        line-height: 64px;
+        font-size: 76px;
+        line-height: 76px;
         letter-spacing: -3px;
     }
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
+        padding-left: 0;
         font-size: 48px;
         line-height: 48px;
         letter-spacing: -2px;
