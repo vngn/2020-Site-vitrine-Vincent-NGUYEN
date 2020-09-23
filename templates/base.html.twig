@@ -25,7 +25,6 @@
     {% block stylesheets %}{% endblock %}
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/responsivestyle.css') }}">
     <link rel="stylesheet" href="{{ asset('css/nextbuttonstyle.css') }}">
     <script src="{{ asset('js/modernizr.custom.js') }}"></script>
 
@@ -75,6 +74,18 @@
 
     <!-- JS reCAPTCHA / https://www.google.com/recaptcha/about/)-->
     <script src="https://www.google.com/recaptcha/api.js?render=6LdKuM0ZAAAAAEmquK_DLg9Ksh0PSHp0YXY8Jc04"></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178755019-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-178755019-1');
+    </script>
 </head>
 
 <body>
@@ -514,16 +525,8 @@
 
     <script src="{{ asset('js/scripts.js') }}"></script>
 
-    <!-- JS pour tarte au citron (gestion des cookies / https://tarteaucitron.io/fr/install/)-->
-    <script>
-        tarteaucitron.user.gajsUa = 'UA-XXXXXXXX-X';
-        tarteaucitron.user.gajsMore = function () {
-            /* add here your optionnal _ga.push() */
-        };
-        (tarteaucitron.job = tarteaucitron.job || []).push('gajs');
-    </script>
+    <!-- ============================== xx. JS reCAPTCHA / https://www.google.com/recaptcha/about/) ============================== -->
 
-    <!-- JS reCAPTCHA / https://www.google.com/recaptcha/about/)-->
     <script>
         function onClick(e) {
             e.preventDefault();
@@ -536,7 +539,6 @@
             });
         }
     </script>
-
 </body>
 
 </html>
