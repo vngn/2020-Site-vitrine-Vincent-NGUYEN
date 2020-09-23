@@ -432,11 +432,17 @@ hr {
 .sidenav-admin {
   position: fixed;
   z-index: 998;
-  top: 19em;
+  top: 18.5em;
   left: 0.6em;
   border: 1px solid white;
   width: 50px;
   opacity: 0.6;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .sidenav-admin {
+    opacity: 0.9;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -453,8 +459,8 @@ hr {
   padding: 0;
   width: 30px;
   height: 30px;
-  opacity: 0.6;
-  top: 19em;
+  opacity: 0.9;
+  top: 18.5em;
   left: 3.4em;
   border-radius: 50%;
   text-align: center;
@@ -477,6 +483,12 @@ hr {
   top: 18.5em;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .sidenav-registered {
+    opacity: 0.9;
+  }
+}
+
 @media (max-width: 575.98px) {
   .sidenav-registered {
     display: none;
@@ -491,6 +503,12 @@ hr {
   width: 50px;
   opacity: 0.6;
   top: 19em;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .sidenav-visitor {
+    opacity: 0.9;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -509,6 +527,12 @@ hr {
   top: 23em;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .sidenav-menu {
+    opacity: 0.9;
+  }
+}
+
 @media (max-width: 575.98px) {
   .sidenav-menu {
     display: none;
@@ -523,6 +547,12 @@ hr {
   width: 50px;
   opacity: 0.6;
   top: 26em;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .sidenav-portfolio {
+    opacity: 0.9;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -541,6 +571,12 @@ hr {
   top: 29em;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .sidenav-articles {
+    opacity: 0.9;
+  }
+}
+
 @media (max-width: 575.98px) {
   .sidenav-articles {
     display: none;
@@ -555,6 +591,12 @@ hr {
   width: 50px;
   opacity: 0.6;
   top: 32em;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .sidenav-blog {
+    opacity: 0.9;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -573,6 +615,12 @@ hr {
   top: 35em;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .sidenav-about {
+    opacity: 0.9;
+  }
+}
+
 @media (max-width: 575.98px) {
   .sidenav-about {
     display: none;
@@ -587,6 +635,12 @@ hr {
   width: 50px;
   opacity: 0.6;
   top: 38em;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .sidenav-contact {
+    opacity: 0.9;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -1144,6 +1198,12 @@ hr {
   .block-menu-contact {
     width: 100%;
     height: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .block-menu-contact {
+    margin-bottom: 60px;
   }
 }
 
@@ -1746,6 +1806,23 @@ hr {
   list-style: none;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .individual-block-contact-index,
+  .individual-block-profile-index,
+  .individual-block-edit-index {
+    width: 97%;
+    margin: 80px auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .individual-block-contact-index,
+  .individual-block-profile-index,
+  .individual-block-edit-index {
+    width: 93%;
+  }
+}
+
 /* ============================== 7. PAGE CATEGORIES ============================== */
 .block-categories {
   border: 1px solid #e1e1e1;
@@ -1768,6 +1845,19 @@ hr {
   min-width: 450px;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .block-users {
+    width: 81.25%;
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .block-users {
+    width: 93%;
+  }
+}
+
 .block-login,
 .block-register,
 .block-profile {
@@ -1780,6 +1870,23 @@ hr {
   min-width: 450px;
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .block-login,
+  .block-register,
+  .block-profile {
+    width: 81.25%;
+    margin: 80px auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .block-login,
+  .block-register,
+  .block-profile {
+    width: 93%;
+  }
+}
+
 .block-manage {
   border: 1px solid #e1e1e1;
   border-radius: 20px;
@@ -1788,6 +1895,19 @@ hr {
   position: relative;
   width: 50%;
   min-width: 450px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .block-manage {
+    width: 97%;
+    margin: 80px auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .block-manage {
+    width: 93%;
+  }
 }
 
 .block-manage-bis {

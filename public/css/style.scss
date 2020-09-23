@@ -409,7 +409,9 @@ hr {
     opacity: 0.6;
 
     // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {}
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        opacity: 0.9;
+    }
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
@@ -420,11 +422,16 @@ hr {
 .sidenav-admin {
     position: fixed;
     z-index: 998;
-    top: 19em;
+    top: 18.5em;
     left: 0.6em;
     border: 1px solid white;
     width: 50px;
     opacity: 0.6;
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        opacity: 0.9;
+    }
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
@@ -440,8 +447,8 @@ hr {
     padding: 0;
     width: 30px;
     height: 30px;
-    opacity: 0.6;
-    top: 19em;
+    opacity: 0.9;
+    top: 18.5em;
     left: 3.4em;
     border-radius: 50%;
     text-align: center;
@@ -813,6 +820,11 @@ hr {
 
 .block-menu-contact {
     @include menu-home-for-all ($color-contact);
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        margin-bottom: 60px;
+    }
 }
 
 .page-summary {
@@ -1068,6 +1080,17 @@ hr {
     li {
         list-style: none;
     }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        width: 97%;
+        margin: 80px auto;
+    }
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {
+        width: 93%;
+    }
 }
 
 /* ============================== 7. PAGE CATEGORIES ============================== */
@@ -1084,6 +1107,17 @@ hr {
     @include block-shape-light;
     width: 50%;
     min-width: 450px;
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        width: 81.25%;
+        margin-bottom: 80px;
+    }
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {
+        width: 93%;
+    }
 }
 
 .block-login,
@@ -1092,12 +1126,34 @@ hr {
     @include block-shape-light;
     width: 50%;
     min-width: 450px;
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        width: 81.25%;
+        margin: 80px auto;
+    }
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {
+        width: 93%;
+    }
 }
 
 .block-manage {
     @include block-shape-light;
     width: 50%;
     min-width: 450px;
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        width: 97%;
+        margin: 80px auto;
+    }
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {
+        width: 93%;
+    }
 }
 
 .block-manage-bis {
