@@ -30,6 +30,7 @@ pinterest
 
 - revenir vers la page d'avant connexion quand connexion ?
 - input renseignés sauf avatar ?
+- copie du message envoyé par mail ?
 
 général :
 - s'occuper du responsive (navbar, sidebar, pages en général)
