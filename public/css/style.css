@@ -932,7 +932,8 @@ hr {
 
 /* BLOCKS THEMES DE LA PAGE D'ACCUEIL */
 .block-menu-home {
-  width: 450px;
+  width: 88%;
+  min-width: 450px;
   height: 450px;
   margin: auto;
   margin-top: 60px;
@@ -972,12 +973,14 @@ hr {
 @media (max-width: 575.98px) {
   .block-menu-home {
     width: 100%;
+    min-width: 88%;
     height: 100%;
   }
 }
 
 .block-menu-portfolio {
-  width: 450px;
+  width: 88%;
+  min-width: 450px;
   height: 450px;
   margin: auto;
   margin-top: 60px;
@@ -1017,12 +1020,14 @@ hr {
 @media (max-width: 575.98px) {
   .block-menu-portfolio {
     width: 100%;
+    min-width: 88%;
     height: 100%;
   }
 }
 
 .block-menu-articles {
-  width: 450px;
+  width: 88%;
+  min-width: 450px;
   height: 450px;
   margin: auto;
   margin-top: 60px;
@@ -1062,12 +1067,14 @@ hr {
 @media (max-width: 575.98px) {
   .block-menu-articles {
     width: 100%;
+    min-width: 88%;
     height: 100%;
   }
 }
 
 .block-menu-blog {
-  width: 450px;
+  width: 88%;
+  min-width: 450px;
   height: 450px;
   margin: auto;
   margin-top: 60px;
@@ -1107,12 +1114,14 @@ hr {
 @media (max-width: 575.98px) {
   .block-menu-blog {
     width: 100%;
+    min-width: 88%;
     height: 100%;
   }
 }
 
 .block-menu-about {
-  width: 450px;
+  width: 88%;
+  min-width: 450px;
   height: 450px;
   margin: auto;
   margin-top: 60px;
@@ -1152,12 +1161,14 @@ hr {
 @media (max-width: 575.98px) {
   .block-menu-about {
     width: 100%;
+    min-width: 88%;
     height: 100%;
   }
 }
 
 .block-menu-contact {
-  width: 450px;
+  width: 88%;
+  min-width: 450px;
   height: 450px;
   margin: auto;
   margin-top: 60px;
@@ -1197,6 +1208,7 @@ hr {
 @media (max-width: 575.98px) {
   .block-menu-contact {
     width: 100%;
+    min-width: 88%;
     height: 100%;
   }
 }

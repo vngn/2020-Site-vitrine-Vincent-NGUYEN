@@ -761,7 +761,8 @@ hr {
 
 /* BLOCKS THEMES DE LA PAGE D'ACCUEIL */
 @mixin menu-home-for-all ($color) {
-    width: 450px;
+    width: 88%;
+    min-width: 450px;
     height: 450px;
     margin: auto;
     margin-top: 60px;
@@ -794,6 +795,7 @@ hr {
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         width: 100%;
+        min-width: 88%;
         height: 100%;
     }
 }
