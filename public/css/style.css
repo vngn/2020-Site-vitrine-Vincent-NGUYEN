@@ -363,89 +363,41 @@ hr {
 .sidenav-color-users {
   color: white;
   background-color: green;
-  -webkit-box-shadow: 0 0 100px -100px white inset;
-          box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-visitors {
   color: white;
   background-color: red;
-  -webkit-box-shadow: 0 0 100px -100px white inset;
-          box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-home {
   color: white;
   background-color: #f29220;
-  -webkit-box-shadow: 0 0 100px -100px white inset;
-          box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-portfolio {
   color: white;
   background-color: #f29220;
-  -webkit-box-shadow: 0 0 100px -100px white inset;
-          box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-articles {
   color: white;
   background-color: #2a9ad4;
-  -webkit-box-shadow: 0 0 100px -100px white inset;
-          box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-blog {
   color: white;
   background-color: #116bab;
-  -webkit-box-shadow: 0 0 100px -100px white inset;
-          box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-about {
   color: white;
   background-color: #253f4e;
-  -webkit-box-shadow: 0 0 100px -100px white inset;
-          box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-color-contact {
   color: white;
   background-color: #152530;
-  -webkit-box-shadow: 0 0 100px -100px white inset;
-          box-shadow: 0 0 100px -100px white inset;
-  -webkit-transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, -webkit-box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s;
-  transition: background-color 2.5s, box-shadow 2.5s, -webkit-box-shadow 2.5s;
 }
 
 .sidenav-trigger {

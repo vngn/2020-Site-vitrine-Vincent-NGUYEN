@@ -354,8 +354,6 @@ hr {
 @mixin sidenav-content ($color) {
     color: white;
     background-color: $color;
-    box-shadow: 0 0 100px -100px white inset;
-    transition: background-color 2.5s, box-shadow 2.5s;
 }
 
 .sidenav-color-users {
