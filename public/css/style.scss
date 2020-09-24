@@ -1102,6 +1102,10 @@ hr {
     }
 }
 
+.block-contact-menu {
+    @include block-button-menu;
+}
+
 .block-manage-contact {
     border: 1px solid $background-color-border-bis;
     margin: 0;
