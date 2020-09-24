@@ -674,27 +674,26 @@ hr {
 
 /* TEXTE TITRE SAUF LA PAGE D'ACCUEIL */
 .color-block-video-title {
-  height: 550px;
+  height: 640px;
   padding-top: 220px;
   background: white;
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 590px) and (max-width: 650.98px) {
   .color-block-video-title {
-    height: 605px;
+    height: 730px;
   }
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (max-width: 589.98px) {
   .color-block-video-title {
-    height: 565px;
+    height: 730px;
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
   .color-block-video-title {
-    height: 410px;
-    padding-top: 0;
+    height: 805px;
   }
 }
 
@@ -754,9 +753,9 @@ hr {
   text-transform: uppercase;
   color: white;
   padding: 10px;
-  margin: 3px;
-  width: 97px;
-  font-size: 16px;
+  margin: 15px;
+  width: 130px;
+  font-size: 20px;
   overflow: hidden;
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
@@ -778,9 +777,9 @@ hr {
   outline: #e1e1e1;
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (max-width: 575.98px) {
   .buttonFilter {
-    margin: 15px 30px;
+    margin: 10px;
   }
 }
 
@@ -1260,33 +1259,41 @@ hr {
 
 .block-portfolio-button-menu {
   text-align: center;
-  width: 100%;
-  margin: -110px auto 115px;
+  width: 630px;
+  margin: -230px auto 90px;
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 651px) and (max-width: 767.98px) {
   .block-portfolio-button-menu {
-    width: 81%;
+    width: 85%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 590px) and (max-width: 650.98px) {
   .block-portfolio-button-menu {
-    width: 81%;
-    margin: -190px auto 115px;
+    width: 75%;
+    margin: -325px auto 90px;
   }
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (max-width: 589.98px) {
   .block-portfolio-button-menu {
-    width: 79%;
-    margin: -150px auto 115px;
+    width: 75%;
+    margin: -325px auto 90px;
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
   .block-portfolio-button-menu {
-    margin: -140px auto 40px;
+    width: 75%;
+    margin: -300px auto 90px;
+  }
+}
+
+@media (max-width: 412px) {
+  .block-portfolio-button-menu {
+    width: 100%;
+    margin: -300px auto 90px;
   }
 }
 
@@ -1524,33 +1531,41 @@ hr {
 
 .block-articles-button-menu {
   text-align: center;
-  width: 100%;
-  margin: -110px auto 115px;
+  width: 630px;
+  margin: -230px auto 90px;
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 651px) and (max-width: 767.98px) {
   .block-articles-button-menu {
-    width: 81%;
+    width: 85%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 590px) and (max-width: 650.98px) {
   .block-articles-button-menu {
-    width: 81%;
-    margin: -190px auto 115px;
+    width: 75%;
+    margin: -325px auto 90px;
   }
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (max-width: 589.98px) {
   .block-articles-button-menu {
-    width: 79%;
-    margin: -150px auto 115px;
+    width: 75%;
+    margin: -325px auto 90px;
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
   .block-articles-button-menu {
-    margin: -140px auto 40px;
+    width: 75%;
+    margin: -300px auto 90px;
+  }
+}
+
+@media (max-width: 412px) {
+  .block-articles-button-menu {
+    width: 100%;
+    margin: -300px auto 90px;
   }
 }
 
@@ -1694,33 +1709,41 @@ hr {
 
 .block-blog-button-menu {
   text-align: center;
-  width: 100%;
-  margin: -110px auto 115px;
+  width: 630px;
+  margin: -230px auto 90px;
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 651px) and (max-width: 767.98px) {
   .block-blog-button-menu {
-    width: 81%;
+    width: 85%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 590px) and (max-width: 650.98px) {
   .block-blog-button-menu {
-    width: 81%;
-    margin: -190px auto 115px;
+    width: 75%;
+    margin: -325px auto 90px;
   }
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (max-width: 589.98px) {
   .block-blog-button-menu {
-    width: 79%;
-    margin: -150px auto 115px;
+    width: 75%;
+    margin: -325px auto 90px;
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
   .block-blog-button-menu {
-    margin: -140px auto 40px;
+    width: 75%;
+    margin: -300px auto 90px;
+  }
+}
+
+@media (max-width: 412px) {
+  .block-blog-button-menu {
+    width: 100%;
+    margin: -300px auto 90px;
   }
 }
 

@@ -541,24 +541,30 @@ hr {
 
 /* TEXTE TITRE SAUF LA PAGE D'ACCUEIL */
 .color-block-video-title {
-    height: 550px;
+    height: 640px;
     padding-top: 220px;
     background: $background-color;
 
     // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
-        height: 605px;
     }
 
-    // Small devices (landscape phones, 576px and up)
-    @media (min-width: 576px) and (max-width: 767.98px) {
-        height: 565px;
+    // Small devices (landscape phones, 590px and up)
+    @media (min-width: 651px) and (max-width: 767.98px) {
+    }
+
+    @media (min-width: 590px) and (max-width: 650.98px) {
+        height: 730px;
+    }
+
+    // Extra small devices (portrait phones, less than 590px)
+    @media (max-width: 589.98px) {
+        height: 730px;
     }
 
     // Extra small devices (portrait phones, less than 576px)
-    @media (max-width: 575.98px) {
-        height: 410px;
-        padding-top: 0;
+    @media (max-width: 576px) {
+        height: 805px;
     }
 }
 
@@ -618,30 +624,44 @@ hr {
 /* MENU BOUTONS POUR TRI PAGES PORTFOLIO, ARTICLES ET BLOG */
 @mixin block-button-menu {
     text-align: center;
-    width: 100%;
-    margin: -110px auto 115px;
+    width: 630px;
+    margin: -230px auto 90px;
 
     
     // Large devices (desktops, 992px and up)
     @media (min-width: 992px) and (max-width: 1199.98px) {
-        width: 81%;  
     }
       
     // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
-        width: 81%;
-        margin: -190px auto 115px;
     }
 
-     // Small devices (landscape phones, 576px and up)
-     @media (min-width: 576px) and (max-width: 767.98px) {
-        width: 79%;
-        margin: -150px auto 115px;
+     // Small devices (landscape phones, 590px and up)
+     @media (min-width: 651px) and (max-width: 767.98px) {
+        width: 85%;
+    }
+
+    @media (min-width: 590px) and (max-width: 650.98px) {
+        width: 75%;
+        margin: -325px auto 90px;
+
+    }
+
+    // Extra small devices (portrait phones, less than 590px)
+    @media (max-width: 589.98px) {
+        width: 75%;
+        margin: -325px auto 90px;
     }
 
     // Extra small devices (portrait phones, less than 576px)
-    @media (max-width: 575.98px) {
-        margin: -140px auto 40px;
+    @media (max-width: 576px) {
+        width: 75%;
+        margin: -300px auto 90px;
+    }
+
+    @media (max-width: 412px) {
+        width: 100%;
+        margin: -300px auto 90px;
     }
 }
 
@@ -652,9 +672,9 @@ hr {
     text-transform: uppercase;
     color: white;
     padding: 10px;
-    margin: 3px;
-    width: 97px;
-    font-size: 16px;
+    margin: 15px;
+    width: 130px;
+    font-size: 20px;
     overflow: hidden;
     transition: .5s ease-in-out;
     border: $background-color-border-bis;
@@ -671,9 +691,12 @@ hr {
         outline: $background-color-border-bis;
     }
 
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {
-        margin: 15px 30px;
+    @media (min-width: 576px) and (max-width: 650.98px) {
+    }
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {
+        margin: 10px;
     }
 }
 
