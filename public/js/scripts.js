@@ -14,51 +14,61 @@ $(document).ready(function () {
       "background-position": traX + "%" + traY + "%"
     });
   });
-
-  // With options
-  let adminSidenav = new Axentix.Sidenav('#admin-sidenav', {
-    bodyScrolling: true,
-    animationDuration: 500
-  });
-
-  let registeredSidenav = new Axentix.Sidenav('#registered-sidenav', {
-    bodyScrolling: true,
-    animationDuration: 500
-  });
-
-  let visitorSidenav = new Axentix.Sidenav('#visitor-sidenav', {
-    bodyScrolling: true,
-    animationDuration: 500
-  });
-
-  let menuSidenav = new Axentix.Sidenav('#menu-sidenav', {
-    bodyScrolling: true,
-    animationDuration: 500
-  });
-
-  let portfolioSidenav = new Axentix.Sidenav('#portfolio-sidenav', {
-    bodyScrolling: true,
-    animationDuration: 500
-  });
-
-  let articlesSidenav = new Axentix.Sidenav('#articles-sidenav', {
-    bodyScrolling: true,
-    animationDuration: 500
-  });
-
-  let blogSidenav = new Axentix.Sidenav('#blog-sidenav', {
-    bodyScrolling: true,
-    animationDuration: 500
-  });
-
-  let aboutSidenav = new Axentix.Sidenav('#about-sidenav', {
-    bodyScrolling: true,
-    animationDuration: 500
-  });
-
-  let contactSidenav = new Axentix.Sidenav('#contact-sidenav', {
-    bodyScrolling: true,
-    animationDuration: 500
-  });
-
 });
+
+
+// js pour sidenav Axentix
+
+let adminSidenav = new Axentix.Sidenav('#admin-sidenav', {
+  bodyScrolling: true,
+  animationDuration: 500
+});
+
+let registeredSidenav = new Axentix.Sidenav('#registered-sidenav', {
+  bodyScrolling: true,
+  animationDuration: 500
+});
+
+let visitorSidenav = new Axentix.Sidenav('#visitor-sidenav', {
+  bodyScrolling: true,
+  animationDuration: 500
+});
+
+let menuSidenav = new Axentix.Sidenav('#menu-sidenav', {
+  bodyScrolling: true,
+  animationDuration: 500
+});
+
+let portfolioSidenav = new Axentix.Sidenav('#portfolio-sidenav', {
+  bodyScrolling: true,
+  animationDuration: 500
+});
+
+let articlesSidenav = new Axentix.Sidenav('#articles-sidenav', {
+  bodyScrolling: true,
+  animationDuration: 500
+});
+
+let blogSidenav = new Axentix.Sidenav('#blog-sidenav', {
+  bodyScrolling: true,
+  animationDuration: 500
+});
+
+let aboutSidenav = new Axentix.Sidenav('#about-sidenav', {
+  bodyScrolling: true,
+  animationDuration: 500
+});
+
+let contactSidenav = new Axentix.Sidenav('#contact-sidenav', {
+  bodyScrolling: true,
+  animationDuration: 500
+});
+
+// js pour sidenav Axentix
+
+$(".button").click(function () {
+  $(".social.email").toggleClass("clicked");
+  $(".social.github").toggleClass("clicked");
+  $(".social.linkedin").toggleClass("clicked");
+  $(".social.cvsite").toggleClass("clicked");
+})

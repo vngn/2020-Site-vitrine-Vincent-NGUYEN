@@ -1776,6 +1776,89 @@ hr {
 }
 
 /* ============================== 5. PAGE A PROPOS ============================== */
+.plop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-filter: url("#goo");
+          filter: url("#goo");
+  margin-top: -119px;
+  padding-bottom: 63px;
+}
+
+.button {
+  z-index: 99;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(45deg, #B388EB, #8093F1);
+  border-radius: 20px;
+  color: #FFF;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
+.social {
+  opacity: 0;
+  position: relative;
+  margin: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: inline-block;
+  color: #FFF;
+  font-size: 20px;
+  text-align: center;
+}
+
+.social i {
+  margin-top: 10px;
+}
+
+.social a {
+  color: #FFF;
+}
+
+.email {
+  background: #00aced;
+}
+
+.github {
+  background: #3b5998;
+}
+
+.linkedin {
+  background: #dd4b39;
+}
+
+.cvsite {
+  background: #bb0000;
+}
+
+.clicked {
+  opacity: 1;
+  -webkit-transition: 1.2s all ease;
+  transition: 1.2s all ease;
+  -webkit-transform: translateY(56px);
+          transform: translateY(56px);
+}
+
 /* ============================== 6. PAGE CONTACT ============================== */
 .block-contact {
   border: 1px solid #e1e1e1;

@@ -1079,6 +1079,77 @@ hr {
 
 /* ============================== 5. PAGE A PROPOS ============================== */
 
+// BLOCK CONTACT
+
+.plop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: url('#goo');
+    margin-top: -119px;
+    padding-bottom: 63px;
+}
+
+.button {
+    z-index: 99;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    background: linear-gradient(45deg, #B388EB, #8093F1);
+    border-radius: 20px;
+    color: #FFF;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+
+.social {
+    opacity: 0;
+    position: relative;
+    margin: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: inline-block;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+
+    i {
+        margin-top: 10px;
+    }
+
+    a {
+        color: #FFF;
+    }
+}
+
+.email {
+    background: #00aced;
+}
+
+.github {
+    background: #3b5998;
+}
+
+.linkedin {
+    background: #dd4b39;
+}
+
+.cvsite {
+    background: #bb0000;
+}
+
+.clicked {
+    opacity: 1;
+    transition: 1.2s all ease;
+    transform: translateY(56px);
+}
+
+
 /* ============================== 6. PAGE CONTACT ============================== */
 
 .block-contact {
@@ -1103,7 +1174,20 @@ hr {
 }
 
 .block-contact-menu {
-    @include block-button-menu;
+    text-align: center;
+    width: 100%;
+    margin: -110px auto 115px;
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        width: 84%;
+        margin: -190px auto 115px;
+    }
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {
+        margin: -136px auto 40px;
+    }
 }
 
 .block-manage-contact {
