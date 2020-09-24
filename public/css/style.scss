@@ -327,6 +327,20 @@ hr {
     }
 }
 
+.block-comment {
+    @include block-shape;
+    width: 100%;
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        width: 81.25%;
+        margin: 80px auto;
+    }
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {}
+}
+
 /* BARRES DE NAVIGATION VERTICALES (AXENTIX */
 @mixin sidenav {
     border-top-right-radius: 20px;

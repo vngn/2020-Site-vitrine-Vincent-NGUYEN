@@ -22,26 +22,16 @@
     <h1 class="example-wrapper block-articles articles-color">{{ articles.articleComment | length }} commentaire(s) :
     </h1>
     <div class="comment example-wrapper block-articles articles-color">
-        <table class="table striped">
-            <thead>
-                <tr>
-                    <th>Avatar</th>
-                    <th>Auteur</th>
-                    <th>Date</th>
-                    <th>Contenu</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for articleComment in articles.articleComment %}
-                <tr>
-                    <td><img src="{{ asset('uploads/photos/'~ articleComment.users.photo) }}" alt="avatar" class="photo-form"></td>
-                    <td>{{ articleComment.users.firstname }} {{ articleComment.users.name }}</td>
-                    <td>{{ articleComment.createdAt | date ('d/m/Y (H:i)') }}</td>
-                    <td>{{ articleComment.content | raw }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+        {% for articleComment in articles.articleComment %}
+        <div class=" block-comment users-color">
+            <span class="avatar-position"><img src="{{ asset('uploads/photos/'~ articleComment.users.photo) }}"
+                    alt="avatar" class="photo-form"></span>
+            <span>{{ articleComment.users.firstname }} {{ articleComment.users.name }}</span>
+            <br />
+            <span>{{ articleComment.createdAt | date ('d/m/Y (H:i)') }}</span>
+            <span>{{ articleComment.content | raw }}</span>
+        </div>
+        {% endfor %}
     </div>
 </section>
 

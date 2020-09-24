@@ -40,27 +40,17 @@
     </div>
 
     <div class="comment example-wrapper block-portfolio-light portfolio-color">
-        <table class="table striped">
-            <thead>
-                <tr>
-                    <th>Avatar</th>
-                    <th>Auteur</th>
-                    <th>Date</th>
-                    <th>Contenu</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for portfolioComment in portfolio.portfolioComment %}
-                <tr>
-                    <td><img src="{{ asset('uploads/photos/'~ portfolioComment.users.photo) }}" alt="avatar"
-                            class="photo-form"></td>
-                    <td>{{ portfolioComment.users.firstname }} {{ portfolioComment.users.name }}</td>
-                    <td>{{ portfolioComment.createdAt | date ('d/m/Y (H:i)') }}</td>
-                    <td>{{ portfolioComment.content | raw }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+
+        {% for portfolioComment in portfolio.portfolioComment %}
+        <div class=" block-comment users-color">
+            <span class="avatar-position"><img src="{{ asset('uploads/photos/'~ portfolioComment.users.photo) }}"
+                    alt="avatar" class="photo-form"></span>
+            <span>{{ portfolioComment.users.firstname }} {{ portfolioComment.users.name }}</span>
+            <br />
+            <span>{{ portfolioComment.createdAt | date ('d/m/Y (H:i)') }}</span>
+            <span>{{ portfolioComment.content | raw }}</span>
+        </div>
+        {% endfor %}
     </div>
 </section>
 
