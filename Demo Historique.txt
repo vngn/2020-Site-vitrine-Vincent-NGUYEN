@@ -30,7 +30,9 @@ pinterest
 
 - revenir vers la page d'avant connexion quand connexion ?
 - input renseignés sauf avatar ?
-- copie du message envoyé par mail ?
+
+lazy load
+cloudfare
 
 général :
 - s'occuper du responsive (navbar, sidebar, pages en général)
