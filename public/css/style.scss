@@ -351,7 +351,6 @@ hr {
 }
 
 /* SIDENAV-OVERLAY (DANS AXENTIX.MIN.CSS) :  POUR UN EFFET SUR L'ENSEMBLE DE L'ECRAN QUAND OUVERTURE DE LA SIDENAV */
-// .sidenav-overlay {}
 @mixin sidenav-content ($color) {
     color: white;
     background-color: $color;
