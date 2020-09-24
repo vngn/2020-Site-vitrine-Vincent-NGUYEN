@@ -356,8 +356,6 @@ hr {
 
 /* BARRES DE NAVIGATION VERTICALES (AXENTIX */
 .sidenav {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 220px;
   z-index: 999;
 }
 

@@ -343,8 +343,6 @@ hr {
 
 /* BARRES DE NAVIGATION VERTICALES (AXENTIX */
 @mixin sidenav {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 220px;
     z-index: 999;
 }
 
@@ -354,7 +352,7 @@ hr {
 
 /* SIDENAV-OVERLAY (DANS AXENTIX.MIN.CSS) :  POUR UN EFFET SUR L'ENSEMBLE DE L'ECRAN QUAND OUVERTURE DE LA SIDENAV */
 // .sidenav-overlay {}
-@mixin gradient-for-all ($color) {
+@mixin sidenav-content ($color) {
     color: white;
     background-color: $color;
     box-shadow: 0 0 100px -100px white inset;
@@ -362,35 +360,35 @@ hr {
 }
 
 .sidenav-color-users {
-    @include gradient-for-all ($color-users);
+    @include sidenav-content ($color-users);
 }
 
 .sidenav-color-visitors {
-    @include gradient-for-all ($color-visitors);
+    @include sidenav-content ($color-visitors);
 }
 
 .sidenav-color-home {
-    @include gradient-for-all ($color-home);
+    @include sidenav-content ($color-home);
 }
 
 .sidenav-color-portfolio {
-    @include gradient-for-all ($color-portfolio);
+    @include sidenav-content ($color-portfolio);
 }
 
 .sidenav-color-articles {
-    @include gradient-for-all ($color-articles);
+    @include sidenav-content ($color-articles);
 }
 
 .sidenav-color-blog {
-    @include gradient-for-all ($color-blog);
+    @include sidenav-content ($color-blog);
 }
 
 .sidenav-color-about {
-    @include gradient-for-all ($color-about);
+    @include sidenav-content ($color-about);
 }
 
 .sidenav-color-contact {
-    @include gradient-for-all ($color-contact);
+    @include sidenav-content ($color-contact);
 }
 
 .sidenav-trigger {
