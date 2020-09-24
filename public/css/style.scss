@@ -1096,7 +1096,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 210px;
+    width: 220px;
     height: 40px;
     background: linear-gradient(50deg,rgb(36,65,91),rgb(176, 76, 52));
     border-radius: 20px;
@@ -1104,6 +1104,11 @@ hr {
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 1px;
+}
+
+.more-about {
+    margin: 10px;
+    padding-bottom: 5px;
 }
 
 .social {
@@ -1138,12 +1143,12 @@ hr {
 }
 
 .cvsite {
-    background: rgb(176, 76, 52);
+    background: rgb(36,65,91);
     padding-left: 1px;
 }
 
 .email {
-    background: rgb(36,65,91);
+    background: rgb(176, 76, 52);
     padding-top: 7px;
     padding-left: 9.5px;
 }

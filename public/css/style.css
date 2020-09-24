@@ -1804,7 +1804,7 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 210px;
+  width: 220px;
   height: 40px;
   background: linear-gradient(50deg, #24415b, #b04c34);
   border-radius: 20px;
@@ -1812,6 +1812,11 @@ hr {
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 1px;
+}
+
+.more-about {
+  margin: 10px;
+  padding-bottom: 5px;
 }
 
 .social {
@@ -1846,12 +1851,12 @@ hr {
 }
 
 .cvsite {
-  background: #b04c34;
+  background: #24415b;
   padding-left: 1px;
 }
 
 .email {
-  background: #24415b;
+  background: #b04c34;
   padding-top: 7px;
   padding-left: 9.5px;
 }
