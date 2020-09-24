@@ -1096,14 +1096,14 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    width: 210px;
     height: 40px;
-    background: linear-gradient(45deg, #B388EB, #8093F1);
+    background: linear-gradient(50deg,rgb(36,65,91),rgb(176, 76, 52));
     border-radius: 20px;
     color: #FFF;
     font-size: 20px;
+    font-weight: 500;
     letter-spacing: 1px;
-    font-weight: 200;
 }
 
 .social {
@@ -1127,20 +1127,25 @@ hr {
     }
 }
 
-.email {
-    background: #00aced;
-}
-
 .github {
-    background: #3b5998;
+    background: #24292e;
+    padding-left: 1px;
 }
 
 .linkedin {
-    background: #dd4b39;
+    background: #0077b5;
+    padding-left: 1px;
 }
 
 .cvsite {
-    background: #bb0000;
+    background: rgb(176, 76, 52);
+    padding-left: 1px;
+}
+
+.email {
+    background: rgb(36,65,91);
+    padding-top: 7px;
+    padding-left: 9.5px;
 }
 
 .clicked {
