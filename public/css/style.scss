@@ -541,19 +541,23 @@ hr {
 
 /* TEXTE TITRE SAUF LA PAGE D'ACCUEIL */
 .color-block-video-title {
-    height: 540px;
-    padding-top: 230px;
+    height: 550px;
+    padding-top: 220px;
     background: $background-color;
 
     // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         height: 605px;
+    }
 
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        height: 565px;
     }
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
-        height: 320px;
+        height: 410px;
         padding-top: 0;
     }
 }
@@ -617,28 +621,40 @@ hr {
     width: 100%;
     margin: -110px auto 115px;
 
+    
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        width: 81%;  
+    }
+      
     // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
-        width: 84%;
+        width: 81%;
         margin: -190px auto 115px;
+    }
+
+     // Small devices (landscape phones, 576px and up)
+     @media (min-width: 576px) and (max-width: 767.98px) {
+        width: 79%;
+        margin: -150px auto 115px;
     }
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
-        margin: -136px auto 40px;
+        margin: -140px auto 40px;
     }
 }
 
 /* BARRES DE BOUTONS DE TRI PAR CATEGORIE DES PAGES PORTFOLIO, ARTICLES ET BLOG */
-.buttonFilter {
 
+.buttonFilter {
     background: rgb(176, 76, 52);
     text-transform: uppercase;
     color: white;
     padding: 10px;
     margin: 3px;
-    width: 100px;
-    letter-spacing: .05rem;
+    width: 97px;
+    font-size: 16px;
     overflow: hidden;
     transition: .5s ease-in-out;
     border: $background-color-border-bis;
@@ -1096,14 +1112,13 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 225px;
+    width: 240px;
     height: 40px;
     background: linear-gradient(50deg,rgb(36,65,91),rgb(176, 76, 52));
     border-radius: 20px;
     color: #FFF;
     font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .more-about {
