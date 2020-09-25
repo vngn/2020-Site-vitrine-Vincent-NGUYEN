@@ -959,6 +959,11 @@ hr {
     margin: auto;
     margin-bottom: 50px;
 
+    // Large devices (desktops, 960px and up)
+    @media (min-width: 960px) and (max-width: 1199.98px) {
+        height: 482px;
+    }
+
     // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 96.5%;

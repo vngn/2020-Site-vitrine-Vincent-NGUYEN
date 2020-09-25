@@ -32,9 +32,27 @@
     left: -35px;
     bottom: 80px;
 
+    @media (min-width: 1450px) and (max-width: 1800px) {
+        left: -25px;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1449.98px) {
+        left: -18px;
+    }
+
+    // Large devices (desktops, 960px and up)
+    @media (min-width: 960px) and (max-width: 1199.98px) {
+        left: -10px;
+    }
+
     // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {
-        left: -20px;
+    @media (min-width: 768px) and (max-width: 959.98px) {
+        left: -25px;
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        left: -10px;
     }
 
     // Extra small devices (portrait phones, less than 576px)
@@ -76,7 +94,7 @@
 
 .cta:hover {
     transition: 0.5s;
-    box-shadow: 10px 10px 2px rgb(36,65,91);
+    box-shadow: 10px 10px 2px rgb(36, 65, 91);
 }
 
 .cta .next-button:nth-child(2) {
@@ -134,7 +152,7 @@ path.two {
     }
 
     50% {
-        fill: rgb(36,65,91);
+        fill: rgb(36, 65, 91);
     }
 
     100% {
