@@ -693,7 +693,8 @@ hr {
 
 @media (max-width: 576px) {
   .color-block-video-title {
-    height: 805px;
+    height: 585px;
+    padding-top: 0;
   }
 }
 

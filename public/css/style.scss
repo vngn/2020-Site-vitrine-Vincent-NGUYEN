@@ -562,7 +562,8 @@ hr {
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 576px) {
-        height: 805px;
+        height: 585px;
+        padding-top: 0;
     }
 }
 
