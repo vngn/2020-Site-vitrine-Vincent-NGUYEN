@@ -1555,13 +1555,18 @@ hr {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .block-articles {
     width: 81.25%;
-    margin: 80px auto;
   }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .block-articles {
     width: 75%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .block-articles {
+    width: 97.2%;
   }
 }
 
@@ -1694,7 +1699,7 @@ hr {
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .individual-block-articles-index {
-    width: 75%;
+    width: 89%;
   }
 }
 
@@ -1878,7 +1883,7 @@ hr {
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .individual-block-blog-index {
-    width: 75%;
+    width: 89%;
   }
 }
 
