@@ -743,6 +743,7 @@ hr {
     width: 75%;
     -webkit-box-shadow: none;
             box-shadow: none;
+    top: -240px;
   }
 }
 
