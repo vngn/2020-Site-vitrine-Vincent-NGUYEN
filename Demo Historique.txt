@@ -33,6 +33,7 @@ pinterest
 
 lazy load
 cloudfare
+faire un test et le récupérer pour le dossier
 
 général :
 - s'occuper du responsive (navbar, sidebar, pages en général)
