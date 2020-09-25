@@ -738,12 +738,26 @@ hr {
 
 @media (max-width: 575.98px) {
   .video-title-text {
-    font-size: 56px;
+    font-size: 105px;
     letter-spacing: -2px;
-    width: 75%;
+    width: 100%;
     -webkit-box-shadow: none;
             box-shadow: none;
     top: -240px;
+  }
+}
+
+@media (max-width: 450px) {
+  .video-title-text {
+    font-size: 82px;
+    letter-spacing: -1px;
+  }
+}
+
+@media (max-width: 380px) {
+  .video-title-text {
+    font-size: 70px;
+    letter-spacing: -1px;
   }
 }
 
