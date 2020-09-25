@@ -1399,6 +1399,12 @@ hr {
   }
 }
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .individual-block-portfolio-index {
+    width: 75%;
+  }
+}
+
 @media (max-width: 575.98px) {
   .individual-block-portfolio-index {
     width: 97.2%;
@@ -1671,6 +1677,12 @@ hr {
   }
 }
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .individual-block-articles-index {
+    width: 75%;
+  }
+}
+
 @media (max-width: 575.98px) {
   .individual-block-articles-index {
     height: 100%;
@@ -1846,6 +1858,12 @@ hr {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .individual-block-blog-index {
     width: 96.5%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .individual-block-blog-index {
+    width: 75%;
   }
 }
 

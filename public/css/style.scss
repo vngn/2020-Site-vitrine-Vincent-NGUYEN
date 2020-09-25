@@ -546,12 +546,10 @@ hr {
     background: $background-color;
 
     // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {
-    }
+    @media (min-width: 768px) and (max-width: 991.98px) {}
 
     // Small devices (landscape phones, 590px and up)
-    @media (min-width: 651px) and (max-width: 767.98px) {
-    }
+    @media (min-width: 651px) and (max-width: 767.98px) {}
 
     @media (min-width: 590px) and (max-width: 650.98px) {
         height: 730px;
@@ -638,17 +636,15 @@ hr {
     width: 630px;
     margin: -230px auto 90px;
 
-    
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) and (max-width: 1199.98px) {
-    }
-      
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {
-    }
 
-     // Small devices (landscape phones, 590px and up)
-     @media (min-width: 651px) and (max-width: 767.98px) {
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199.98px) {}
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991.98px) {}
+
+    // Small devices (landscape phones, 590px and up)
+    @media (min-width: 651px) and (max-width: 767.98px) {
         width: 85%;
     }
 
@@ -702,8 +698,7 @@ hr {
         outline: $background-color-border-bis;
     }
 
-    @media (min-width: 576px) and (max-width: 650.98px) {
-    }
+    @media (min-width: 576px) and (max-width: 650.98px) {}
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
@@ -969,6 +964,11 @@ hr {
         width: 96.5%;
     }
 
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        width: 75%;
+    }
+
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         width: 97.2%;
@@ -1023,6 +1023,11 @@ hr {
         margin: 80px auto;
     }
 
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        // width: 75%;
+    }
+
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {}
 }
@@ -1061,6 +1066,11 @@ hr {
         width: 96.5%;
     }
 
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        width: 75%;
+    }
+
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         height: 100%;
@@ -1077,6 +1087,11 @@ hr {
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 81.25%;
         margin: 80px auto;
+    }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        // width: 75%;
     }
 
     // Extra small devices (portrait phones, less than 576px)
@@ -1118,6 +1133,11 @@ hr {
         width: 96.5%;
     }
 
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        width: 75%;
+    }
+
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         width: 85%;
@@ -1148,7 +1168,7 @@ hr {
     align-items: center;
     width: 240px;
     height: 40px;
-    background: linear-gradient(50deg,rgb(36,65,91),rgb(176, 76, 52));
+    background: linear-gradient(50deg, rgb(36, 65, 91), rgb(176, 76, 52));
     border-radius: 20px;
     color: #FFF;
     font-size: 20px;
@@ -1192,7 +1212,7 @@ hr {
 }
 
 .cvsite {
-    background: rgb(36,65,91);
+    background: rgb(36, 65, 91);
     padding-left: 1px;
 }
 
