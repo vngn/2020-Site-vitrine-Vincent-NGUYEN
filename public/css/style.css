@@ -1261,14 +1261,18 @@ hr {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .block-portfolio-light {
     width: 81.25%;
-    margin: 80px auto;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .block-portfolio-light {
+    width: 75%;
   }
 }
 
 @media (max-width: 575.98px) {
   .block-portfolio-light {
     width: 97.2%;
-    height: 482px;
   }
 }
 
@@ -1407,7 +1411,7 @@ hr {
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .individual-block-portfolio-index {
-    width: 75%;
+    width: 89%;
   }
 }
 
@@ -1552,6 +1556,12 @@ hr {
   .block-articles {
     width: 81.25%;
     margin: 80px auto;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .block-articles {
+    width: 75%;
   }
 }
 
