@@ -36,6 +36,7 @@ cloudfare
 faire un test et le récupérer pour le dossier
 
 général :
+- bouton fixed pour retour haut de page
 - s'occuper du responsive (navbar, sidebar, pages en général)
 
                     // Extra small devices (portrait phones, less than 576px)
