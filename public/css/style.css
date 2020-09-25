@@ -297,6 +297,13 @@ hr {
   font: 18px/1.5 sans-serif;
 }
 
+@media (max-width: 575.98px) {
+  .example-wrapper {
+    margin: 2em 0;
+    width: 100%;
+  }
+}
+
 .example-wrapper-title {
   height: 17.5em;
   margin-top: -2em;

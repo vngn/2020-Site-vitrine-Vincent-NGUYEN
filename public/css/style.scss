@@ -272,6 +272,12 @@ hr {
     margin: 2em auto;
     width: 84%;
     font: 18px/1.5 sans-serif;
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {
+        margin: 2em 0;
+        width: 100%;
+    }
 }
 
 .example-wrapper-title {
