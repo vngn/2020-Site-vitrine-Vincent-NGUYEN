@@ -1229,6 +1229,10 @@ hr {
 }
 
 /* ============================== 2. PAGE PORTFOLIO ============================== */
+.comment-length-portfolio-show {
+  margin-top: 82px;
+}
+
 .block-portfolio-light {
   border: 1px solid #e1e1e1;
   border-radius: 20px;
