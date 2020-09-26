@@ -34,13 +34,9 @@
 </div>
 
 <section id="commentaires">
-    <div class="example-wrapper block-portfolio-light portfolio-color">
+    <div class="comment example-wrapper block-portfolio-light portfolio-color">
         <h1>{{ portfolio.portfolioComment | length }}
             commentaire(s) :</h1>
-    </div>
-
-    <div class="comment example-wrapper block-portfolio-light portfolio-color">
-
         {% for portfolioComment in portfolio.portfolioComment %}
         <div class=" block-comment users-color">
             <span class="avatar-position"><img src="{{ asset('uploads/photos/'~ portfolioComment.users.photo) }}"

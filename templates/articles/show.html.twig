@@ -19,9 +19,9 @@
 </ul>
 
 <section id="commentaires">
-    <h1 class="example-wrapper block-articles articles-color">{{ articles.articleComment | length }} commentaire(s) :
-    </h1>
+    
     <div class="comment example-wrapper block-articles articles-color">
+    <h1>{{ articles.articleComment | length }} commentaire(s) :</h1>
         {% for articleComment in articles.articleComment %}
         <div class=" block-comment users-color">
             <span class="avatar-position"><img src="{{ asset('uploads/photos/'~ articleComment.users.photo) }}"
