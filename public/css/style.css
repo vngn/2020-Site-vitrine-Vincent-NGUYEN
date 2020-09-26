@@ -1229,10 +1229,6 @@ hr {
 }
 
 /* ============================== 2. PAGE PORTFOLIO ============================== */
-.comment-length-portfolio-show {
-  margin-top: 82px;
-}
-
 .block-portfolio-light {
   border: 1px solid #e1e1e1;
   border-radius: 20px;
@@ -1518,6 +1514,8 @@ hr {
 .block-portfolio-insert-show {
   padding: 0 20px 10px;
   text-align: left;
+  margin: 2%;
+  margin-bottom: 70px;
   border: 1px solid #e1e1e1;
   border-radius: 20px;
   -webkit-box-shadow: 4px 4px 2px black;

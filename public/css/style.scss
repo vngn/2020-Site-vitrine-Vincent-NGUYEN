@@ -887,10 +887,6 @@ hr {
 
 /* ============================== 2. PAGE PORTFOLIO ============================== */
 
-.comment-length-portfolio-show {
-    margin-top: 82px;
-}
-
 .block-portfolio-light {
     @include block-shape;
     width: 84%;
@@ -1023,6 +1019,8 @@ hr {
 .block-portfolio-insert-show {
     padding: 0 20px 10px;
     text-align: left;
+    margin: 2%;
+    margin-bottom: 70px;
     border: 1px solid $background-color-border-bis;
     border-radius: 20px;
     box-shadow: 4px 4px 2px black;
