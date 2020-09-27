@@ -37,6 +37,12 @@ faire un test et le récupérer pour le dossier
 
 général :
 - bouton fixed pour retour haut de page
+- footer pour version mobile
+-responsive vertical
+- travail sur performance :
+                    - poids des photos
+                    - regroupement sass
+
 - s'occuper du responsive (navbar, sidebar, pages en général)
 
                     // Extra small devices (portrait phones, less than 576px)
