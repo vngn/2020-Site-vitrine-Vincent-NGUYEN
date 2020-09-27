@@ -1443,6 +1443,7 @@ hr {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
+  min-height: 680px;
   margin-top: 0;
   margin-bottom: -100px;
 }
@@ -1522,6 +1523,8 @@ hr {
   -webkit-box-shadow: 4px 4px 2px black;
           box-shadow: 4px 4px 2px black;
   background: white;
+  max-width: 710px;
+  float: right;
 }
 
 /* ============================== 3. PAGE ARTICLES ============================== */
