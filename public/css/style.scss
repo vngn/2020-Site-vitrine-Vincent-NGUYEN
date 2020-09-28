@@ -1254,7 +1254,7 @@ hr {
 .block-contact {
     @include block-shape-light;
     width: 84%;
-    margin: 0 auto 65px;
+    margin: 0 auto;
 
     // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
