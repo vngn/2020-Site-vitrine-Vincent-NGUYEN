@@ -240,6 +240,29 @@ body {
     text-align: center;
 }
 
+/* BOUTONS RETOUR HAUT DE PAGE */
+
+.cRetour {
+    border-radius:3px;
+    padding: 10px 20px 15px;
+    font-size:30px;
+    text-align:center;
+    color:#fff;
+    background: rgba(176, 76, 52, 0.75);
+    z-index:99999;
+    transition:all ease-in 0.2s;
+    position: fixed;
+    cursor: pointer;
+    top: 0.6em;
+    right: 20px;
+    display: none;
+  }
+  .cRetour:before{ content: "\25b2"; }
+  .cRetour:hover{
+    background:rgba(176, 76, 52, 1);
+    transition:all ease-in 0.2s;
+  }
+
 /* PARAMETRAGES DIVERS */
 h1 {
     text-align: center;
@@ -1027,7 +1050,7 @@ hr {
     box-shadow: 4px 4px 2px black;
     background: $background-color;
     max-width: 710px;
-    float:right;
+    float: right;
 }
 
 /* ============================== 3. PAGE ARTICLES ============================== */
@@ -1400,7 +1423,7 @@ hr {
 }
 
 .phone {
-    background:rgb(176, 76, 52);
+    background: rgb(176, 76, 52);
     padding-left: 1px;
 }
 
