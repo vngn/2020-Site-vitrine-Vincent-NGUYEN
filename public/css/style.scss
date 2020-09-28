@@ -1176,7 +1176,7 @@ hr {
     justify-content: center;
     align-items: center;
     filter: url('#goo');
-    margin-top: -119px;
+    margin-top: -190px;
     padding-bottom: 63px;
 }
 
@@ -1254,7 +1254,7 @@ hr {
 .block-contact {
     @include block-shape-light;
     width: 84%;
-    margin: 65px auto;
+    margin: 0 auto 65px;
 
     // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
@@ -1317,6 +1317,97 @@ hr {
     @media (max-width: 575.98px) {
         width: 93%;
     }
+}
+
+// BLOCK CONTACT
+
+.contact-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: url('#goo');
+    margin-top: -190px;
+    padding-bottom: 63px;
+}
+
+.contactbutton {
+    z-index: 99;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 40px;
+    background: linear-gradient(50deg, rgb(36, 65, 91), rgb(176, 76, 52));
+    border-radius: 20px;
+    color: #FFF;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.more-about {
+    margin: 10px;
+    padding-bottom: 5px;
+}
+
+.contactsocial1 {
+    opacity: 0;
+    position: relative;
+    margin: 8px;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    display: inline-block;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 6px;
+
+    i {
+        margin-top: 10px;
+    }
+
+    a {
+        color: #FFF;
+    }
+}
+
+.contactsocial2 {
+    opacity: 0;
+    position: relative;
+    margin: 8px;
+    width: 160px;
+    height: 40px;
+    border-radius: 20px;
+    display: inline-block;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 6px;
+
+    i {
+        margin-top: 10px;
+    }
+
+    a {
+        color: #FFF;
+    }
+}
+
+.mail {
+    background: rgb(36, 65, 91);
+    padding-left: 1px;
+}
+
+.phone {
+    background:rgb(176, 76, 52);
+    padding-left: 1px;
+}
+
+.clicked {
+    opacity: 1;
+    transition: 1.2s all ease;
+    transform: translateY(56px);
 }
 
 /* ============================== 7. PAGE CATEGORIES ============================== */

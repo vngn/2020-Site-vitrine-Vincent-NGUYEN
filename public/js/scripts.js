@@ -64,11 +64,19 @@ let contactSidenav = new Axentix.Sidenav('#contact-sidenav', {
   animationDuration: 500
 });
 
-// js pour sidenav Axentix
+// js pour menu A propos
 
 $(".button").click(function () {
   $(".social.email").toggleClass("clicked");
   $(".social.github").toggleClass("clicked");
   $(".social.linkedin").toggleClass("clicked");
   $(".social.cvsite").toggleClass("clicked");
+})
+
+// js pour menu Contact
+
+$(".contactbutton").click(function () {
+  $(".contactsocial1.mail").toggleClass("clicked");
+  $(".contactsocial2.phone").toggleClass("clicked");
+  
 })

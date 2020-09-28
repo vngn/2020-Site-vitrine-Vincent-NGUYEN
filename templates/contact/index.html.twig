@@ -10,6 +10,22 @@
     <div class="video-title-text">Contact</div>
 </div>
 
+<div class="contact-menu">
+    <div class="contactbutton"><i class="far fa-hand-point-right"></i><span class="more-about">Mes coordonnées</span><i class="far fa-hand-point-left"></i></div>
+    <div class="contactsocial1 mail">vngn@laposte.net</div>
+    <div class="contactsocial2 phone">06 11 43 14 86</div>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+    </defs>
+</svg>
+
 <div class="example-wrapper block-contact contact-color">
     <h1>Formulaire de contact</h1>
     {{ form(form) }}

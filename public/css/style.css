@@ -1922,7 +1922,7 @@ hr {
           align-items: center;
   -webkit-filter: url("#goo");
           filter: url("#goo");
-  margin-top: -119px;
+  margin-top: -190px;
   padding-bottom: 63px;
 }
 
@@ -2010,7 +2010,7 @@ hr {
   padding: 20px;
   position: relative;
   width: 84%;
-  margin: 65px auto;
+  margin: 0 auto 65px;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -2090,6 +2090,110 @@ hr {
   .individual-block-edit-index {
     width: 93%;
   }
+}
+
+.contact-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-filter: url("#goo");
+          filter: url("#goo");
+  margin-top: -190px;
+  padding-bottom: 63px;
+}
+
+.contactbutton {
+  z-index: 99;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 280px;
+  height: 40px;
+  background: linear-gradient(50deg, #24415b, #b04c34);
+  border-radius: 20px;
+  color: #FFF;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.more-about {
+  margin: 10px;
+  padding-bottom: 5px;
+}
+
+.contactsocial1 {
+  opacity: 0;
+  position: relative;
+  margin: 8px;
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  display: inline-block;
+  color: #FFF;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 6px;
+}
+
+.contactsocial1 i {
+  margin-top: 10px;
+}
+
+.contactsocial1 a {
+  color: #FFF;
+}
+
+.contactsocial2 {
+  opacity: 0;
+  position: relative;
+  margin: 8px;
+  width: 160px;
+  height: 40px;
+  border-radius: 20px;
+  display: inline-block;
+  color: #FFF;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 6px;
+}
+
+.contactsocial2 i {
+  margin-top: 10px;
+}
+
+.contactsocial2 a {
+  color: #FFF;
+}
+
+.mail {
+  background: #24415b;
+  padding-left: 1px;
+}
+
+.phone {
+  background: #b04c34;
+  padding-left: 1px;
+}
+
+.clicked {
+  opacity: 1;
+  -webkit-transition: 1.2s all ease;
+  transition: 1.2s all ease;
+  -webkit-transform: translateY(56px);
+          transform: translateY(56px);
 }
 
 /* ============================== 7. PAGE CATEGORIES ============================== */
