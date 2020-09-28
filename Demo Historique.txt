@@ -36,7 +36,6 @@ cloudfare
 faire un test et le récupérer pour le dossier
 
 général :
-- bouton fixed pour retour haut de page
 - footer pour version mobile
 - responsive vertical
 - travail sur performance :
