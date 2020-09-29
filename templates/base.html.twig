@@ -312,10 +312,11 @@
             <hr />
 
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-            <a href="#" class="sidenav-link">Mes compétences</a>
+            <a href="{{ path('about_index') }}" class="sidenav-link">En savoir plus</a>
+            {# <a href="#" class="sidenav-link">Mes compétences</a>
             <a href="#" class="sidenav-link">Mon expérience</a>
             <a href="#" class="sidenav-link">Ma formation</a>
-            <a href="#" class="sidenav-link">Mon profil</a>
+            <a href="#" class="sidenav-link">Mon profil</a> #}
         </div>
 
         {# menu latéral contact #}
@@ -332,9 +333,9 @@
             <hr />
 
             <a href="{{ path('app_home') }}" class="sidenav-link active">Accueil</a>
-            <a href="{{ path('contact_index') }}" class="sidenav-link">Formulaire de contact</a>
             <a href="{{ path('contact_index') }}" class="sidenav-link">Coordonnées</a>
-            <a href="{{ path('contact_index') }}" class="sidenav-link">Autres</a>
+            <a href="{{ path('contact_index') }}" class="sidenav-link">Formulaire de contact</a>
+            {# <a href="{{ path('contact_index') }}" class="sidenav-link">Autres</a> #}
         </div>
 
         <main>
