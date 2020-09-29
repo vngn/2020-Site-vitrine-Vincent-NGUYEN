@@ -35,7 +35,6 @@ cloudfare
 faire un test et le récupérer pour le dossier
 
 général :
-- footer pour version mobile
 - responsive vertical
 - travail sur performance :
                     - poids des photos
