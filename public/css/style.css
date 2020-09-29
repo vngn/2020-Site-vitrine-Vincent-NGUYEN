@@ -2037,6 +2037,7 @@ hr {
   margin: 10px auto;
   padding: 20px;
   position: relative;
+  max-width: 1054px;
   width: 84%;
   margin: 0 auto;
 }
@@ -2450,7 +2451,14 @@ hr {
   margin: 10px auto;
   padding: 20px;
   position: relative;
-  width: 50%;
+  max-width: 1054px;
+  width: 76%;
+}
+
+@media (max-width: 575.98px) {
+  .block-legal-notice {
+    width: 84%;
+  }
 }
 
 .block-legal-notice h2 {

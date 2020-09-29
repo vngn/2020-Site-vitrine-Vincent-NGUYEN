@@ -1276,6 +1276,7 @@ hr {
 
 .block-contact {
     @include block-shape-light;
+    max-width: 1054px;
     width: 84%;
     margin: 0 auto;
 
@@ -1619,7 +1620,13 @@ hr {
 
 .block-legal-notice {
     @include block-shape-light;
-    width: 50%;
+    max-width: 1054px;
+    width: 76%;
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {
+        width: 84%;
+    }
 
     h2 {
         margin: 10px 0;
