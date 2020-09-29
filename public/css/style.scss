@@ -266,7 +266,29 @@ body {
 /* PARAMETRAGES DIVERS */
 h1 {
     text-align: center;
-    margin: 0;
+    margin: 0 8%;
+    
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {  }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) and (max-width: 1199.98px) {  }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) and (max-width: 991.98px) { 
+        font-size: 2.5rem;
+     }
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767.98px) { 
+        font-size: 2.25rem;
+        margin: 0 12%;
+     }
+
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) { 
+        font-size: 1.5rem;
+     }
 }
 
 a {
