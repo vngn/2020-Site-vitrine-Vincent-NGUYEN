@@ -281,7 +281,7 @@ h1 {
 
     // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) { 
-        font-size: 2.25rem;
+        font-size: 2.2rem;
         margin: 0 12%;
      }
 
@@ -380,13 +380,14 @@ hr {
 }
 
 .block-comment {
-    @include block-shape;
+    border: 1px solid $background-color-border-bis;
+    margin: 20px auto 0;
+    padding: 20px 20px 10px;
     width: 100%;
 
     // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
-        width: 81.25%;
-        margin: 80px auto;
+        width: 99%;
     }
 
     // Extra small devices (portrait phones, less than 576px)
