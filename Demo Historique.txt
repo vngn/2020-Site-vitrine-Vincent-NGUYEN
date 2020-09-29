@@ -62,9 +62,6 @@ général :
 pages portfolio :
 - régler pb de flou au survol des blocks site
 
-page about :
-- remplir page about
-
 footer :
 - compléter le footer
 
