@@ -238,12 +238,22 @@ body {
     width: 84%;
     margin: 10px auto 40px;
     text-align: center;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        margin: 20px auto 15px;
+    }
 }
 
 .btn-articles, .btn-blog {
     width: 84%;
     margin: 20px auto 30px;
     text-align: center;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        margin: 20px auto 15px;
+    }
 }
 
 /* BOUTONS RETOUR HAUT DE PAGE */
@@ -1113,8 +1123,10 @@ hr {
     width: 100%;
     height: 340px;
 
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {}
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        height: 100%;
+    }
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
@@ -1141,6 +1153,7 @@ hr {
     // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
         width: 89%;
+        height: 100%;
     }
 
     // Extra small devices (portrait phones, less than 576px)
@@ -1180,8 +1193,10 @@ hr {
     width: 100%;
     height: 250px;
 
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {}
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        height: 100%;
+    }
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
@@ -1208,6 +1223,7 @@ hr {
     // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
         width: 89%;
+        height: 100%;
     }
 
     // Extra small devices (portrait phones, less than 576px)

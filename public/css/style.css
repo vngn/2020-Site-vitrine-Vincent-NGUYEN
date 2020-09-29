@@ -264,10 +264,22 @@ body {
   text-align: center;
 }
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .btn-site {
+    margin: 20px auto 15px;
+  }
+}
+
 .btn-articles, .btn-blog {
   width: 84%;
   margin: 20px auto 30px;
   text-align: center;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .btn-articles, .btn-blog {
+    margin: 20px auto 15px;
+  }
 }
 
 /* BOUTONS RETOUR HAUT DE PAGE */
@@ -1708,6 +1720,12 @@ hr {
   transition: opacity 1s ease-in-out;
 }
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .block-articles-index {
+    height: 100%;
+  }
+}
+
 @media (max-width: 575.98px) {
   .block-articles-index {
     height: 100%;
@@ -1735,6 +1753,7 @@ hr {
 @media (min-width: 576px) and (max-width: 767.98px) {
   .individual-block-articles-index {
     width: 89%;
+    height: 100%;
   }
 }
 
@@ -1892,6 +1911,12 @@ hr {
   transition: opacity 1s ease-in-out;
 }
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .block-blog-index {
+    height: 100%;
+  }
+}
+
 @media (max-width: 575.98px) {
   .block-blog-index {
     height: 100%;
@@ -1919,6 +1944,7 @@ hr {
 @media (min-width: 576px) and (max-width: 767.98px) {
   .individual-block-blog-index {
     width: 89%;
+    height: 100%;
   }
 }
 
