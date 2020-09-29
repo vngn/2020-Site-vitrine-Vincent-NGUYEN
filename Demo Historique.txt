@@ -62,9 +62,6 @@ général :
 pages portfolio :
 - régler pb de flou au survol des blocks site
 
-footer :
-- compléter le footer
-
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 01 août 2020 
