@@ -28,9 +28,6 @@ pinterest
 
 ++++++ reste à faire ++++++
 
-- revenir vers la page d'avant connexion quand connexion ?
-- input renseignés sauf avatar ?
-
 lazy load
 cloudfare
 faire un test et le récupérer pour le dossier
