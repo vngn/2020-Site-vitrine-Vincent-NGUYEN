@@ -460,7 +460,7 @@ a, button {
     overflow: hidden;
   }
   /* When JavaScript is enabled, we hide the menu */
-  .js .nav ul {
+  .js .nav-head ul {
     max-height: 0em;
     overflow: hidden;
   }

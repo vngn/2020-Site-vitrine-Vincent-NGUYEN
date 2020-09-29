@@ -551,11 +551,11 @@ a, button {
 	}
 	
 	/* When JavaScript is enabled, we hide the menu */
-	.js .nav ul {
+	.js .nav-head ul {
 		max-height: 0em;
 		overflow: hidden;
 	}
-	
+		
 	/* Displaying the menu when the user has clicked on the button*/
 	.js .nav .active + ul {		
 		max-height: 30em;
