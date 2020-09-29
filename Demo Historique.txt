@@ -21,9 +21,11 @@ pour accéder a l'ensemble des pages du site, mmettre le htaccess de symfony dan
 dans cpanel, ajouter la redirection = url + ajouter ^/$ à la fin
 
 
+
 web 3.0 maquette
 web design inspiration
 pinterest
+
 
 
 ++++++ reste à faire ++++++

@@ -11,19 +11,19 @@
     <div class="video-title-text">Maj</div>
 </div>
 
+{% if is_granted('ROLE_ADMIN') %}
 <div class="example-wrapper">
     <div class="block-manage users-color">
         <div class="block-manage-bis users-color">
-            {% if is_granted('ROLE_ADMIN') %}
             <span>
                 <button class="btn-update-add" type="submit">
                     <a href="{{ path("update_add") }}">Ajouter une Maj</a>
                 </button>
             </span>
-            {% endif %}
         </div>
     </div>
 </div>
+{% endif %}
 
 <div class="example-wrapper">
     {% for update in update %}
