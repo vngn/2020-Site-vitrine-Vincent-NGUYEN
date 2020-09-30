@@ -245,7 +245,8 @@ body {
     }
 }
 
-.btn-articles, .btn-blog {
+.btn-articles,
+.btn-blog {
     width: 84%;
     margin: 20px auto 30px;
     text-align: center;
@@ -259,52 +260,56 @@ body {
 /* BOUTONS RETOUR HAUT DE PAGE */
 
 .cRetour {
-    border-radius:3px;
+    border-radius: 3px;
     padding: 10px;
-    font-size:15px;
-    text-align:center;
-    color:#fff;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
     background: rgba(176, 76, 52, 0.6);
-    z-index:99999;
-    transition:all ease-in 0.2s;
+    z-index: 99999;
+    transition: all ease-in 0.2s;
     position: fixed;
     cursor: pointer;
     bottom: 5.75em;
     right: 20px;
     display: none;
-  }
-  .cRetour:before{ content: "\25b2"; }
-  .cRetour:hover{
-    background:rgba(176, 76, 52, 1);
-    transition:all ease-in 0.2s;
-  }
+}
+
+.cRetour:before {
+    content: "\25b2";
+}
+
+.cRetour:hover {
+    background: rgba(176, 76, 52, 1);
+    transition: all ease-in 0.2s;
+}
 
 /* PARAMETRAGES DIVERS */
 h1 {
     text-align: center;
     margin: 0 8%;
-    
+
     // Extra large devices (large desktops, 1200px and up)
-    @media (min-width: 1200px) {  }
+    @media (min-width: 1200px) {}
 
     // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) and (max-width: 1199.98px) {  }
+    @media (min-width: 992px) and (max-width: 1199.98px) {}
 
     // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) { 
+    @media (min-width: 768px) and (max-width: 991.98px) {
         font-size: 2.5rem;
-     }
+    }
 
     // Small devices (landscape phones, 576px and up)
-    @media (min-width: 576px) and (max-width: 767.98px) { 
+    @media (min-width: 576px) and (max-width: 767.98px) {
         font-size: 2.2rem;
         margin: 0 12%;
-     }
+    }
 
     // Extra small devices (portrait phones, less than 576px)
-    @media (max-width: 575.98px) { 
+    @media (max-width: 575.98px) {
         font-size: 1.5rem;
-     }
+    }
 }
 
 a {
@@ -490,22 +495,12 @@ hr {
     @media (min-width: 768px) and (max-width: 991.98px) {
         opacity: 0.9;
     }
-
-    // Extra small devices (portrait phones, less than 576px)
-    @media (max-width: 575.98px) {
-        display: none;
-    }
-
-    // Extra small devices (landscape phones, less than 750px)
-    @media (max-height: 750px) {
-        display: none;
-    }
 }
 
 .sidenav-admin {
     position: fixed;
     z-index: 998;
-    top: 18.5em;
+    bottom: 0.5em;
     left: 0.6em;
     border: 1px solid white;
     width: 50px;
@@ -531,8 +526,8 @@ hr {
     width: 30px;
     height: 30px;
     opacity: 0.9;
-    top: 18.5em;
-    left: 3.4em;
+    bottom: 1.35em;
+    left: 3.6em;
     border-radius: 50%;
     text-align: center;
 
@@ -546,44 +541,58 @@ hr {
     }
 }
 
-.sidenav-registered {
-    @include button-sidebar-position;
-    top: 18.5em;
+@mixin vertical-responsive {
+    
+    // Extra small devices (portrait phones, less than 576px)
+    @media (max-width: 575.98px) {
+        display: none;
+    }
+
+    // Extra small devices (landscape phones, less than 750px)
+    @media (max-height: 750px) {
+        display: none;
+    }
 }
 
-.sidenav-visitor {
+.sidenav-registered {
     @include button-sidebar-position;
-    top: 19em;
+    bottom: 0.5em;
 }
 
 .sidenav-menu {
     @include button-sidebar-position;
-    top: 23em;
+    @include vertical-responsive;
+    top: 20em;
 }
 
 .sidenav-portfolio {
     @include button-sidebar-position;
-    top: 26em;
+    @include vertical-responsive;
+    top: 23em;
 }
 
 .sidenav-articles {
     @include button-sidebar-position;
-    top: 29em;
+    @include vertical-responsive;
+    top: 26em;
 }
 
 .sidenav-blog {
     @include button-sidebar-position;
-    top: 32em;
+    @include vertical-responsive;
+    top: 29em;
 }
 
 .sidenav-about {
     @include button-sidebar-position;
-    top: 35em;
+    @include vertical-responsive;
+    top: 32em;
 }
 
 .sidenav-contact {
     @include button-sidebar-position;
-    top: 38em;
+    @include vertical-responsive;
+    top: 35em;
 }
 
 /* ICONES DES BOUTONS DES BARRES DE NAVIGATION VERTICALES */

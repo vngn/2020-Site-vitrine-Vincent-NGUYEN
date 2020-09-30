@@ -270,14 +270,16 @@ body {
   }
 }
 
-.btn-articles, .btn-blog {
+.btn-articles,
+.btn-blog {
   width: 84%;
   margin: 20px auto 30px;
   text-align: center;
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .btn-articles, .btn-blog {
+  .btn-articles,
+  .btn-blog {
     margin: 20px auto 15px;
   }
 }
@@ -468,7 +470,7 @@ hr {
 .sidenav-admin {
   position: fixed;
   z-index: 998;
-  top: 18.5em;
+  bottom: 0.5em;
   left: 0.6em;
   border: 1px solid white;
   width: 50px;
@@ -496,8 +498,8 @@ hr {
   width: 30px;
   height: 30px;
   opacity: 0.9;
-  top: 18.5em;
-  left: 3.4em;
+  bottom: 1.35em;
+  left: 3.6em;
   border-radius: 50%;
   text-align: center;
 }
@@ -516,52 +518,12 @@ hr {
   border: 1px solid white;
   width: 50px;
   opacity: 0.6;
-  top: 18.5em;
+  bottom: 0.5em;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .sidenav-registered {
     opacity: 0.9;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .sidenav-registered {
-    display: none;
-  }
-}
-
-@media (max-height: 750px) {
-  .sidenav-registered {
-    display: none;
-  }
-}
-
-.sidenav-visitor {
-  position: fixed;
-  z-index: 998;
-  left: 0.6em;
-  border: 1px solid white;
-  width: 50px;
-  opacity: 0.6;
-  top: 19em;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .sidenav-visitor {
-    opacity: 0.9;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .sidenav-visitor {
-    display: none;
-  }
-}
-
-@media (max-height: 750px) {
-  .sidenav-visitor {
-    display: none;
   }
 }
 
@@ -572,7 +534,7 @@ hr {
   border: 1px solid white;
   width: 50px;
   opacity: 0.6;
-  top: 23em;
+  top: 20em;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -600,7 +562,7 @@ hr {
   border: 1px solid white;
   width: 50px;
   opacity: 0.6;
-  top: 26em;
+  top: 23em;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -628,7 +590,7 @@ hr {
   border: 1px solid white;
   width: 50px;
   opacity: 0.6;
-  top: 29em;
+  top: 26em;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -656,7 +618,7 @@ hr {
   border: 1px solid white;
   width: 50px;
   opacity: 0.6;
-  top: 32em;
+  top: 29em;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -684,7 +646,7 @@ hr {
   border: 1px solid white;
   width: 50px;
   opacity: 0.6;
-  top: 35em;
+  top: 32em;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -712,7 +674,7 @@ hr {
   border: 1px solid white;
   width: 50px;
   opacity: 0.6;
-  top: 38em;
+  top: 35em;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
