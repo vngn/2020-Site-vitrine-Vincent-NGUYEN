@@ -531,6 +531,12 @@ hr {
   }
 }
 
+@media (max-height: 750px) {
+  .sidenav-registered {
+    display: none;
+  }
+}
+
 .sidenav-visitor {
   position: fixed;
   z-index: 998;
@@ -548,6 +554,12 @@ hr {
 }
 
 @media (max-width: 575.98px) {
+  .sidenav-visitor {
+    display: none;
+  }
+}
+
+@media (max-height: 750px) {
   .sidenav-visitor {
     display: none;
   }
@@ -575,6 +587,12 @@ hr {
   }
 }
 
+@media (max-height: 750px) {
+  .sidenav-menu {
+    display: none;
+  }
+}
+
 .sidenav-portfolio {
   position: fixed;
   z-index: 998;
@@ -592,6 +610,12 @@ hr {
 }
 
 @media (max-width: 575.98px) {
+  .sidenav-portfolio {
+    display: none;
+  }
+}
+
+@media (max-height: 750px) {
   .sidenav-portfolio {
     display: none;
   }
@@ -619,6 +643,12 @@ hr {
   }
 }
 
+@media (max-height: 750px) {
+  .sidenav-articles {
+    display: none;
+  }
+}
+
 .sidenav-blog {
   position: fixed;
   z-index: 998;
@@ -636,6 +666,12 @@ hr {
 }
 
 @media (max-width: 575.98px) {
+  .sidenav-blog {
+    display: none;
+  }
+}
+
+@media (max-height: 750px) {
   .sidenav-blog {
     display: none;
   }
@@ -663,6 +699,12 @@ hr {
   }
 }
 
+@media (max-height: 750px) {
+  .sidenav-about {
+    display: none;
+  }
+}
+
 .sidenav-contact {
   position: fixed;
   z-index: 998;
@@ -680,6 +722,12 @@ hr {
 }
 
 @media (max-width: 575.98px) {
+  .sidenav-contact {
+    display: none;
+  }
+}
+
+@media (max-height: 750px) {
   .sidenav-contact {
     display: none;
   }
