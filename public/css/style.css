@@ -485,7 +485,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .sidenav-admin {
-    top: 2.75em;
+    bottom: 0.5em;
     z-index: 5;
   }
 }
@@ -506,7 +506,7 @@ hr {
 
 @media (max-width: 575.98px) {
   .sidenav-contact-length-admin {
-    top: 2.75em;
+    bottom: 1.4em;
     z-index: 5;
   }
 }
@@ -731,19 +731,13 @@ hr {
   background: white;
 }
 
-@media (min-width: 590px) and (max-width: 650.98px) {
+@media (min-width: 576px) and (max-width: 650.98px) {
   .color-block-video-title {
     height: 730px;
   }
 }
 
-@media (max-width: 589.98px) {
-  .color-block-video-title {
-    height: 730px;
-  }
-}
-
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
   .color-block-video-title {
     height: 585px;
     padding-top: 0;
@@ -1341,14 +1335,7 @@ hr {
   }
 }
 
-@media (min-width: 590px) and (max-width: 650.98px) {
-  .block-portfolio-button-menu {
-    width: 75%;
-    margin: -325px auto 90px;
-  }
-}
-
-@media (max-width: 589.98px) {
+@media (max-width: 650.98px) {
   .block-portfolio-button-menu {
     width: 75%;
     margin: -325px auto 90px;
@@ -1639,14 +1626,7 @@ hr {
   }
 }
 
-@media (min-width: 590px) and (max-width: 650.98px) {
-  .block-articles-button-menu {
-    width: 75%;
-    margin: -325px auto 90px;
-  }
-}
-
-@media (max-width: 589.98px) {
+@media (max-width: 650.98px) {
   .block-articles-button-menu {
     width: 75%;
     margin: -325px auto 90px;
@@ -1730,13 +1710,7 @@ hr {
   transition: opacity 1s ease-in-out;
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .block-articles-index {
-    height: 100%;
-  }
-}
-
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .block-articles-index {
     height: 100%;
   }
@@ -1830,14 +1804,7 @@ hr {
   }
 }
 
-@media (min-width: 590px) and (max-width: 650.98px) {
-  .block-blog-button-menu {
-    width: 75%;
-    margin: -325px auto 90px;
-  }
-}
-
-@media (max-width: 589.98px) {
+@media (max-width: 650.98px) {
   .block-blog-button-menu {
     width: 75%;
     margin: -325px auto 90px;
@@ -1921,13 +1888,7 @@ hr {
   transition: opacity 1s ease-in-out;
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .block-blog-index {
-    height: 100%;
-  }
-}
-
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .block-blog-index {
     height: 100%;
   }

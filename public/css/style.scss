@@ -504,7 +504,7 @@ hr {
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
-        top: 2.75em;
+        bottom: 0.5em;
         z-index: 5;
     }
 }
@@ -524,7 +524,7 @@ hr {
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
-        top: 2.75em;
+        bottom: 1.4em;
         z-index: 5;
     }
 }
