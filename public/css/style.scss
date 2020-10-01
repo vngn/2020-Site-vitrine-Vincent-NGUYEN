@@ -404,7 +404,6 @@ hr {
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 99%;
     }
-    
 }
 
 /* BARRES DE NAVIGATION VERTICALES (AXENTIX */
@@ -523,9 +522,6 @@ hr {
     border-radius: 50%;
     text-align: center;
 
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {}
-
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         top: 2.75em;
@@ -620,17 +616,12 @@ hr {
     padding-top: 220px;
     background: $background-color;
 
-    @media (min-width: 590px) and (max-width: 650.98px) {
-        height: 730px;
-    }
-
-    // Extra small devices (portrait phones, less than 590px)
-    @media (max-width: 589.98px) {
+    @media (min-width: 576px) and (max-width: 650.98px) {
         height: 730px;
     }
 
     // Extra small devices (portrait phones, less than 576px)
-    @media (max-width: 576px) {
+    @media (max-width: 575.98px) {
         height: 585px;
         padding-top: 0;
     }
@@ -702,13 +693,7 @@ hr {
         width: 85%;
     }
 
-    @media (min-width: 590px) and (max-width: 650.98px) {
-        width: 75%;
-        margin: -325px auto 90px;
-    }
-
-    // Extra small devices (portrait phones, less than 590px)
-    @media (max-width: 589.98px) {
+    @media (max-width: 650.98px) {
         width: 75%;
         margin: -325px auto 90px;
     }
@@ -1101,12 +1086,7 @@ hr {
     height: 340px;
 
     // Small devices (landscape phones, 576px and up)
-    @media (min-width: 576px) and (max-width: 767.98px) {
-        height: 100%;
-    }
-
-    // Extra small devices (portrait phones, less than 576px)
-    @media (max-width: 575.98px) {
+    @media (max-width: 767.98px) {
         height: 100%;
     }
 }
@@ -1150,7 +1130,6 @@ hr {
         width: 81.25%;
         margin: 80px auto;
     }
-
 }
 
 .block-blog-button-menu {
@@ -1163,12 +1142,7 @@ hr {
     height: 250px;
 
     // Small devices (landscape phones, 576px and up)
-    @media (min-width: 576px) and (max-width: 767.98px) {
-        height: 100%;
-    }
-
-    // Extra small devices (portrait phones, less than 576px)
-    @media (max-width: 575.98px) {
+    @media (max-width: 767.98px) {
         height: 100%;
     }
 }
@@ -1284,7 +1258,6 @@ hr {
     transition: 1.2s all ease;
     transform: translateY(56px);
 }
-
 
 /* ============================== 6. PAGE CONTACT ============================== */
 
