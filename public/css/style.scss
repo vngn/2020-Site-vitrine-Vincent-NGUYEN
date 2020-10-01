@@ -289,12 +289,6 @@ h1 {
     text-align: center;
     margin: 0 8%;
 
-    // Extra large devices (large desktops, 1200px and up)
-    @media (min-width: 1200px) {}
-
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) and (max-width: 1199.98px) {}
-
     // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         font-size: 2.5rem;
@@ -410,9 +404,7 @@ hr {
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 99%;
     }
-
-    // Extra small devices (portrait phones, less than 576px)
-    @media (max-width: 575.98px) {}
+    
 }
 
 /* BARRES DE NAVIGATION VERTICALES (AXENTIX */
@@ -628,12 +620,6 @@ hr {
     padding-top: 220px;
     background: $background-color;
 
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {}
-
-    // Small devices (landscape phones, 590px and up)
-    @media (min-width: 651px) and (max-width: 767.98px) {}
-
     @media (min-width: 590px) and (max-width: 650.98px) {
         height: 730px;
     }
@@ -654,9 +640,6 @@ hr {
     z-index: 2;
     width: 100%;
     margin: -175px auto;
-
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {}
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
@@ -680,12 +663,6 @@ hr {
     font-weight: 800;
     text-align: center;
     letter-spacing: -2px;
-
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) and (max-width: 1199.98px) {}
-
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {}
 
     // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
@@ -720,13 +697,6 @@ hr {
     width: 630px;
     margin: -230px auto 90px;
 
-
-    // Large devices (desktops, 992px and up)
-    @media (min-width: 992px) and (max-width: 1199.98px) {}
-
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {}
-
     // Small devices (landscape phones, 590px and up)
     @media (min-width: 651px) and (max-width: 767.98px) {
         width: 85%;
@@ -735,7 +705,6 @@ hr {
     @media (min-width: 590px) and (max-width: 650.98px) {
         width: 75%;
         margin: -325px auto 90px;
-
     }
 
     // Extra small devices (portrait phones, less than 590px)
@@ -806,9 +775,6 @@ hr {
     width: 100%;
     height: 750px;
     padding-top: 200px;
-
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {}
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
@@ -917,9 +883,6 @@ hr {
             color: $color;
         }
     }
-
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {}
 
     // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
@@ -1187,14 +1150,6 @@ hr {
         width: 81.25%;
         margin: 80px auto;
     }
-
-    // Small devices (landscape phones, 576px and up)
-    @media (min-width: 576px) and (max-width: 767.98px) {
-        // width: 75%;
-    }
-
-    // Extra small devices (portrait phones, less than 576px)
-    @media (max-width: 575.98px) {}
 
 }
 
@@ -1505,7 +1460,6 @@ hr {
         width: 97%;
         max-width: 450px;
         min-width: 250px;
-
     }
 }
 
@@ -1526,7 +1480,6 @@ hr {
     @media (max-width: 575.98px) {
         width: 93%;
         min-width: 250px;
-
     }
 }
 
@@ -1547,7 +1500,6 @@ hr {
     @media (max-width: 575.98px) {
         width: 93%;
         min-width: 250px;
-
     }
 }
 
@@ -1566,7 +1518,6 @@ hr {
     @media (max-width: 575.98px) {
         width: 93%;
         min-width: 250px;
-
     }
 }
 
