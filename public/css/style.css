@@ -392,12 +392,6 @@ hr {
   width: 100%;
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .block-comment {
-    width: 99%;
-  }
-}
-
 /* BARRES DE NAVIGATION VERTICALES (AXENTIX */
 .sidenav {
   z-index: 999;
@@ -470,22 +464,15 @@ hr {
 .sidenav-admin {
   position: fixed;
   z-index: 998;
-  bottom: 0.5em;
   left: 0.6em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .sidenav-admin {
-    opacity: 0.9;
-  }
+  opacity: 0.9;
+  bottom: 0.5em;
 }
 
 @media (max-width: 575.98px) {
   .sidenav-admin {
-    bottom: 0.5em;
     z-index: 5;
   }
 }
@@ -504,27 +491,14 @@ hr {
   text-align: center;
 }
 
-@media (max-width: 575.98px) {
-  .sidenav-contact-length-admin {
-    bottom: 1.4em;
-    z-index: 5;
-  }
-}
-
 .sidenav-registered {
   position: fixed;
   z-index: 998;
   left: 0.6em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.9;
   bottom: 0.5em;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .sidenav-registered {
-    opacity: 0.9;
-  }
 }
 
 .sidenav-menu {
@@ -533,14 +507,8 @@ hr {
   left: 0.6em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.9;
   top: 20em;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .sidenav-menu {
-    opacity: 0.9;
-  }
 }
 
 @media (max-width: 575.98px) {
@@ -561,14 +529,8 @@ hr {
   left: 0.6em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.9;
   top: 23em;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .sidenav-portfolio {
-    opacity: 0.9;
-  }
 }
 
 @media (max-width: 575.98px) {
@@ -589,14 +551,8 @@ hr {
   left: 0.6em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.9;
   top: 26em;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .sidenav-articles {
-    opacity: 0.9;
-  }
 }
 
 @media (max-width: 575.98px) {
@@ -617,14 +573,8 @@ hr {
   left: 0.6em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.9;
   top: 29em;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .sidenav-blog {
-    opacity: 0.9;
-  }
 }
 
 @media (max-width: 575.98px) {
@@ -645,14 +595,8 @@ hr {
   left: 0.6em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.9;
   top: 32em;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .sidenav-about {
-    opacity: 0.9;
-  }
 }
 
 @media (max-width: 575.98px) {
@@ -673,14 +617,8 @@ hr {
   left: 0.6em;
   border: 1px solid white;
   width: 50px;
-  opacity: 0.6;
+  opacity: 0.9;
   top: 35em;
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .sidenav-contact {
-    opacity: 0.9;
-  }
 }
 
 @media (max-width: 575.98px) {

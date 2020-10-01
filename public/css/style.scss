@@ -239,7 +239,6 @@ body {
     margin: 10px auto 40px;
     text-align: center;
 
-    // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
         margin: 20px auto 15px;
     }
@@ -251,7 +250,6 @@ body {
     margin: 20px auto 30px;
     text-align: center;
 
-    // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
         margin: 20px auto 15px;
     }
@@ -289,18 +287,15 @@ h1 {
     text-align: center;
     margin: 0 8%;
 
-    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         font-size: 2.5rem;
     }
 
-    // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
         font-size: 2.2rem;
         margin: 0 12%;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         font-size: 1.5rem;
     }
@@ -334,7 +329,6 @@ hr {
     width: 84%;
     font: 18px/1.5 sans-serif;
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         margin: 2em 0;
         width: 100%;
@@ -399,11 +393,6 @@ hr {
     margin: 20px auto 0;
     padding: 20px 20px 10px;
     width: 100%;
-
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {
-        width: 99%;
-    }
 }
 
 /* BARRES DE NAVIGATION VERTICALES (AXENTIX */
@@ -480,31 +469,14 @@ hr {
     left: 0.6em;
     border: 1px solid white;
     width: 50px;
-    opacity: 0.6;
-
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {
-        opacity: 0.9;
-    }
+    opacity: 0.9;
 }
 
 .sidenav-admin {
-    position: fixed;
-    z-index: 998;
+    @include button-sidebar-position;
     bottom: 0.5em;
-    left: 0.6em;
-    border: 1px solid white;
-    width: 50px;
-    opacity: 0.6;
 
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) and (max-width: 991.98px) {
-        opacity: 0.9;
-    }
-
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
-        bottom: 0.5em;
         z-index: 5;
     }
 }
@@ -521,22 +493,14 @@ hr {
     left: 3.6em;
     border-radius: 50%;
     text-align: center;
-
-    // Extra small devices (portrait phones, less than 576px)
-    @media (max-width: 575.98px) {
-        bottom: 1.4em;
-        z-index: 5;
-    }
 }
 
 @mixin vertical-responsive {
-    
-    // Extra small devices (portrait phones, less than 576px)
+
     @media (max-width: 575.98px) {
         display: none;
     }
 
-    // Extra small devices (landscape phones, less than 750px)
     @media (max-height: 750px) {
         display: none;
     }
@@ -620,7 +584,6 @@ hr {
         height: 730px;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         height: 585px;
         padding-top: 0;
@@ -632,7 +595,6 @@ hr {
     width: 100%;
     margin: -175px auto;
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         margin: -90px auto;
     }
@@ -655,14 +617,12 @@ hr {
     text-align: center;
     letter-spacing: -2px;
 
-    // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
         font-size: 97px;
         letter-spacing: -3px;
         width: 75%;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         font-size: 105px;
         letter-spacing: -2px;
@@ -688,7 +648,6 @@ hr {
     width: 630px;
     margin: -230px auto 90px;
 
-    // Small devices (landscape phones, 590px and up)
     @media (min-width: 651px) and (max-width: 767.98px) {
         width: 85%;
     }
@@ -698,7 +657,6 @@ hr {
         margin: -325px auto 90px;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 576px) {
         width: 75%;
         margin: -300px auto 90px;
@@ -736,9 +694,6 @@ hr {
         outline: $background-color-border-bis;
     }
 
-    @media (min-width: 576px) and (max-width: 650.98px) {}
-
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         margin: 10px;
     }
@@ -761,7 +716,6 @@ hr {
     height: 750px;
     padding-top: 200px;
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         height: 400px;
         padding-top: 0;
@@ -798,28 +752,24 @@ hr {
     line-height: 140px;
     letter-spacing: -6px;
 
-    // Large devices (desktops, 992px and up)
     @media (min-width: 992px) and (max-width: 1199.98px) {
         font-size: 140px;
         line-height: 140px;
         letter-spacing: -5px;
     }
 
-    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         font-size: 107px;
         line-height: 107px;
         letter-spacing: -4px;
     }
 
-    // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
         font-size: 76px;
         line-height: 76px;
         letter-spacing: -3px;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         padding-left: 0;
         font-size: 48px;
@@ -869,7 +819,6 @@ hr {
         }
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         width: 100%;
         min-width: 88%;
@@ -900,7 +849,6 @@ hr {
 .block-menu-contact {
     @include menu-home-for-all ($color-contact);
 
-    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         margin-bottom: 60px;
     }
@@ -916,17 +864,14 @@ hr {
     @include block-shape;
     width: 84%;
 
-    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 81.25%;
     }
 
-    // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
         width: 75%;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         width: 97.2%;
     }
@@ -994,22 +939,18 @@ hr {
     margin: auto;
     margin-bottom: 50px;
 
-    // Large devices (desktops, 960px and up)
     @media (min-width: 960px) and (max-width: 1199.98px) {
         height: 482px;
     }
 
-    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 96.5%;
     }
 
-    // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
         width: 89%;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         width: 97.2%;
         height: 482px;
@@ -1060,17 +1001,14 @@ hr {
     @include block-shape;
     width: 84%;
 
-    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 81.25%;
     }
 
-    // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
         width: 75%;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         width: 97.2%;
     }
@@ -1085,7 +1023,6 @@ hr {
     width: 100%;
     height: 340px;
 
-    // Small devices (landscape phones, 576px and up)
     @media (max-width: 767.98px) {
         height: 100%;
     }
@@ -1102,18 +1039,15 @@ hr {
     margin: auto;
     margin-bottom: 50px;
 
-    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 96.5%;
     }
 
-    // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
         width: 89%;
         height: 100%;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         height: 100%;
     }
@@ -1125,7 +1059,6 @@ hr {
     @include block-shape;
     width: 84%;
 
-    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 81.25%;
         margin: 80px auto;
@@ -1141,7 +1074,6 @@ hr {
     width: 100%;
     height: 250px;
 
-    // Small devices (landscape phones, 576px and up)
     @media (max-width: 767.98px) {
         height: 100%;
     }
@@ -1158,18 +1090,15 @@ hr {
     margin: auto;
     margin-bottom: 50px;
 
-    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 96.5%;
     }
 
-    // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
         width: 89%;
         height: 100%;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         width: 85%;
         height: 100%;
@@ -1267,17 +1196,14 @@ hr {
     width: 84%;
     margin: 0 auto;
 
-    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 81.25%;
     }
 
-    // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) and (max-width: 767.98px) {
         width: 75%;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         width: 93%;
     }
@@ -1288,13 +1214,11 @@ hr {
     width: 100%;
     margin: -110px auto 115px;
 
-    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 84%;
         margin: -190px auto 115px;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         margin: -136px auto 40px;
     }
@@ -1318,13 +1242,11 @@ hr {
         list-style: none;
     }
 
-    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 97%;
         margin: 80px auto;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         width: 93%;
     }
@@ -1428,7 +1350,6 @@ hr {
     width: 25%;
     min-width: 450px;
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         width: 97%;
         max-width: 450px;
@@ -1443,13 +1364,11 @@ hr {
     width: 50%;
     min-width: 450px;
 
-    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 81.25%;
         margin-bottom: 80px;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         width: 93%;
         min-width: 250px;
@@ -1463,13 +1382,11 @@ hr {
     width: 50%;
     min-width: 450px;
 
-    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 81.25%;
         margin: 80px auto;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         width: 93%;
         min-width: 250px;
@@ -1481,13 +1398,11 @@ hr {
     width: 50%;
     min-width: 450px;
 
-    // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) and (max-width: 991.98px) {
         width: 81.25%;
         margin: 80px auto;
     }
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         width: 93%;
         min-width: 250px;
@@ -1606,7 +1521,6 @@ hr {
     max-width: 1054px;
     width: 76%;
 
-    // Extra small devices (portrait phones, less than 576px)
     @media (max-width: 575.98px) {
         width: 84%;
     }
