@@ -410,32 +410,32 @@ hr {
 
 .sidenav-color-home {
   color: white;
-  background-color: #f29220;
+  background-color: #d06503;
 }
 
 .sidenav-color-portfolio {
   color: white;
-  background-color: #f29220;
+  background-color: #e9931a;
 }
 
 .sidenav-color-articles {
   color: white;
-  background-color: #2a9ad4;
+  background-color: #1691be;
 }
 
 .sidenav-color-blog {
   color: white;
-  background-color: #116bab;
+  background-color: #166ba2;
 }
 
 .sidenav-color-about {
   color: white;
-  background-color: #253f4e;
+  background-color: #1b3647;
 }
 
 .sidenav-color-contact {
   color: white;
-  background-color: #152530;
+  background-color: #152836;
 }
 
 .sidenav-trigger {
@@ -923,7 +923,7 @@ hr {
   text-align: center;
   border-radius: 20px;
   color: white;
-  background-color: #f29220;
+  background-color: #d06503;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
@@ -943,13 +943,13 @@ hr {
   transition: background-color 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s;
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
-  border: 1px solid #f29220;
-  -webkit-box-shadow: 0 0 50px #f29220 inset;
-          box-shadow: 0 0 50px #f29220 inset;
+  border: 1px solid #d06503;
+  -webkit-box-shadow: 0 0 50px #d06503 inset;
+          box-shadow: 0 0 50px #d06503 inset;
 }
 
 .block-menu-home:hover .sidenav-menu-icon {
-  color: #f29220;
+  color: #d06503;
 }
 
 @media (max-width: 575.98px) {
@@ -970,7 +970,7 @@ hr {
   text-align: center;
   border-radius: 20px;
   color: white;
-  background-color: #f29220;
+  background-color: #e9931a;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
@@ -990,13 +990,13 @@ hr {
   transition: background-color 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s;
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
-  border: 1px solid #f29220;
-  -webkit-box-shadow: 0 0 50px #f29220 inset;
-          box-shadow: 0 0 50px #f29220 inset;
+  border: 1px solid #e9931a;
+  -webkit-box-shadow: 0 0 50px #e9931a inset;
+          box-shadow: 0 0 50px #e9931a inset;
 }
 
 .block-menu-portfolio:hover .sidenav-menu-icon {
-  color: #f29220;
+  color: #e9931a;
 }
 
 @media (max-width: 575.98px) {
@@ -1017,7 +1017,7 @@ hr {
   text-align: center;
   border-radius: 20px;
   color: white;
-  background-color: #2a9ad4;
+  background-color: #1691be;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
@@ -1037,13 +1037,13 @@ hr {
   transition: background-color 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s;
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
-  border: 1px solid #2a9ad4;
-  -webkit-box-shadow: 0 0 50px #2a9ad4 inset;
-          box-shadow: 0 0 50px #2a9ad4 inset;
+  border: 1px solid #1691be;
+  -webkit-box-shadow: 0 0 50px #1691be inset;
+          box-shadow: 0 0 50px #1691be inset;
 }
 
 .block-menu-articles:hover .sidenav-menu-icon {
-  color: #2a9ad4;
+  color: #1691be;
 }
 
 @media (max-width: 575.98px) {
@@ -1064,7 +1064,7 @@ hr {
   text-align: center;
   border-radius: 20px;
   color: white;
-  background-color: #116bab;
+  background-color: #166ba2;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
@@ -1084,13 +1084,13 @@ hr {
   transition: background-color 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s;
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
-  border: 1px solid #116bab;
-  -webkit-box-shadow: 0 0 50px #116bab inset;
-          box-shadow: 0 0 50px #116bab inset;
+  border: 1px solid #166ba2;
+  -webkit-box-shadow: 0 0 50px #166ba2 inset;
+          box-shadow: 0 0 50px #166ba2 inset;
 }
 
 .block-menu-blog:hover .sidenav-menu-icon {
-  color: #116bab;
+  color: #166ba2;
 }
 
 @media (max-width: 575.98px) {
@@ -1111,7 +1111,7 @@ hr {
   text-align: center;
   border-radius: 20px;
   color: white;
-  background-color: #253f4e;
+  background-color: #1b3647;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
@@ -1131,13 +1131,13 @@ hr {
   transition: background-color 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s;
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
-  border: 1px solid #253f4e;
-  -webkit-box-shadow: 0 0 50px #253f4e inset;
-          box-shadow: 0 0 50px #253f4e inset;
+  border: 1px solid #1b3647;
+  -webkit-box-shadow: 0 0 50px #1b3647 inset;
+          box-shadow: 0 0 50px #1b3647 inset;
 }
 
 .block-menu-about:hover .sidenav-menu-icon {
-  color: #253f4e;
+  color: #1b3647;
 }
 
 @media (max-width: 575.98px) {
@@ -1158,7 +1158,7 @@ hr {
   text-align: center;
   border-radius: 20px;
   color: white;
-  background-color: #152530;
+  background-color: #152836;
   -webkit-box-shadow: 0 0 100px -100px white inset;
           box-shadow: 0 0 100px -100px white inset;
   -webkit-transition: background-color 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
@@ -1178,13 +1178,13 @@ hr {
   transition: background-color 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s;
   transition: background-color 0.5s, box-shadow 0.5s, font-size 0.5s, color 0.5s, padding 0.5s, -webkit-box-shadow 0.5s;
-  border: 1px solid #152530;
-  -webkit-box-shadow: 0 0 50px #152530 inset;
-          box-shadow: 0 0 50px #152530 inset;
+  border: 1px solid #152836;
+  -webkit-box-shadow: 0 0 50px #152836 inset;
+          box-shadow: 0 0 50px #152836 inset;
 }
 
 .block-menu-contact:hover .sidenav-menu-icon {
-  color: #152530;
+  color: #152836;
 }
 
 @media (max-width: 575.98px) {
