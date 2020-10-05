@@ -16,7 +16,6 @@ $(document).ready(function () {
   });
 });
 
-
 // js pour sidenav Axentix
 
 let adminSidenav = new Axentix.Sidenav('#admin-sidenav', {
@@ -64,7 +63,7 @@ let contactSidenav = new Axentix.Sidenav('#contact-sidenav', {
   animationDuration: 500
 });
 
-// js pour menu A propos
+// js pour menu "effet gluant" A propos
 
 $(".button").click(function () {
   $(".social.email").toggleClass("clicked");
@@ -73,7 +72,7 @@ $(".button").click(function () {
   $(".social.cvsite").toggleClass("clicked");
 })
 
-// js pour menu Contact
+// js pour menu "effet gluant" Contact
 
 $(".contactbutton").click(function () {
   $(".contactsocial1.mail").toggleClass("clicked");

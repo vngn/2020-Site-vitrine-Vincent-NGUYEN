@@ -1,3 +1,5 @@
+// js pour Bootstrap (effet au survol) Navbar
+
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
  * Build: http://modernizr.com/download/#-touch-shiv-cssclasses-teststyles-prefixes-load
  */
