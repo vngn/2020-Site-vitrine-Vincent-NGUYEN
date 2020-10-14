@@ -22,7 +22,7 @@
                     <input type="checkbox" {{ (contact.active) ? 'checked' : '' }} data-id="{{ contact.id }}" />
                     <span class="slider"></span>A traiter
                 </label>
-                </span>
+            </span>
             <span>
                 <button class="btn-manage-delete" type="submit">
                     <a href="#" class="modal-trigger" data-target="modal-delete" data-id="{{ contact.id }}"
@@ -60,11 +60,11 @@
 
             })
         }
+        let modal = new Axentix.Modal('#modal-delete');
         let supprimer = document.querySelectorAll(".modal-trigger")
         for (let bouton of supprimer) {
             bouton.addEventListener("click", function () {
-                document.querySelector(".modal-footer a").href =
-                    `/contact/delete/${this.dataset.id}`
+                document.querySelector(".modal-footer a").href = `/contact/delete/${this.dataset.id}`
                 document.querySelector(".modal-content").innerText =
                     `Êtes-vous sûr(e) de vouloir supprimer le message de ${this.dataset.nom} ?`
             })

@@ -65,6 +65,7 @@
                 xmlhttp.send()
             })
         }
+        let modal = new Axentix.Modal('#modal-delete');
         let supprimer = document.querySelectorAll(".modal-trigger")
         for (let bouton of supprimer) {
             bouton.addEventListener("click", function () {
