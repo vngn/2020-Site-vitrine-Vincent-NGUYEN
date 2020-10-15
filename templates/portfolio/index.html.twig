@@ -51,8 +51,8 @@
                         <span>{{ articlePortfolio.categories }}</span>
                         {# <span>{{ articlePortfolio.content | raw }}</span> #}
                     </div>
-                    <img src="{{ asset('uploads/images/'~ articlePortfolio.background) }}" alt="image du site"
-                        class="site-image">
+                    <img data-src="{{ asset('uploads/images/'~ articlePortfolio.background) }}" alt="image du site"
+                        class="lazy site-image">
                     {# <iframe src="{{ articlePortfolio.image }}" class="site-iframe"></iframe> #}
                 </li>
             </ul>
