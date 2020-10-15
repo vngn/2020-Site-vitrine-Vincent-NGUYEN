@@ -26,8 +26,23 @@
     </defs>
 </svg>
 
+<div class="example-wrapper-title">
+        <h1>Formulaire de contact</h1>
+</div>
+
 <div class="example-wrapper block-contact contact-color">
-    <h1>Formulaire de contact</h1>
-    {{ form(form) }}
+    {{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.firstname) }}
+    {{ form_row(form.society) }}
+    {{ form_row(form.post) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.phone) }}
+    {{ form_row(form.title) }}
+    {{ form_row(form.content) }}
+    <p>En renseignant vos informations personnelles, vous acceptez d'être contacté(e) pour la gestion de votre compte et vous acceptez les termes de notre <a href="{{ path('legal_notice') }}"><span class="link" >politique de confidentialité<span></a></p>
+    <p>Vous pouvez retirer votre consentement à tout moment depuis ce formulaire de contact<span></a> ou en nous contactant à l’adresse suivante : vngn@laposte.net</p>
+    {{ form_row(form.agreeTerms) }}
+    {{ form_end(form) }}
 </div>
 {% endblock %}

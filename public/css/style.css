@@ -215,6 +215,16 @@ body {
   padding: 4px;
 }
 
+.textarea-form {
+  background: #ebebeb;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 5px;
+  padding: 4px;
+  min-width: 100%;
+  max-width: 100%;
+}
+
 .title-form {
   background: #ebebeb;
   width: 100%;

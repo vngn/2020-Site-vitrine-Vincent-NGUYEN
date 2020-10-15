@@ -6,10 +6,13 @@ use App\Entity\Contact;
 use Symfony\Component\Form\AbstractType;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ContactType extends AbstractType
 {
@@ -68,9 +71,22 @@ class ContactType extends AbstractType
                     'placeholder' => 'le sujet de votre message...'
                     ]
             ])
-            ->add('content', CKEditorType::class, [
+            ->add('content', TextareaType::class, [
                 'required' => false,
-                'label' => 'Votre message (obligatoire) :'
+                'label' => 'Votre message (obligatoire) :',
+                'attr' => [
+                    'class' => 'textarea-form',
+                    'placeholder' => 'votre message...'
+                ]
+            ])
+            ->add('agreeTerms', CheckboxType::class, [
+                'label' => 'J’accepte les conditions mentionnées ci-dessus et la politique de confidentialité : ',
+                'mapped' => false,
+                'constraints' => [
+                    new IsTrue([
+                        'message' => 'Vous devez accepter nos conditions.',
+                    ]),
+                ],
             ])
             ->add('Valider', SubmitType::class, ['attr' => ['class' => 'btn-submit-form']]);
     }

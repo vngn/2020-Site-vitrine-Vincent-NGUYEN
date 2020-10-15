@@ -195,6 +195,12 @@ body {
     @include basic-form;
 }
 
+.textarea-form {
+    @include basic-form;
+    min-width: 100%;
+    max-width: 100%;
+}
+
 .title-form {
     @include basic-form;
 }
