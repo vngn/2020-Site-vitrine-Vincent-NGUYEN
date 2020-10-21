@@ -1,5 +1,91 @@
 {% extends 'base.html.twig' %}
 
+{% block head %}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="responsive menu, retina-ready, icon font, media queries, css3, transition, mobile" />
+    <meta name="description"
+        content="Site vitrine de Vincent NGUYEN, Développeur de site Web (Symfony 5). Localisé à Saint-Nazaire, en Loire Atlantique. Surfez, commentez, contactez-moi !" />
+
+    <!-- fontawesome -->
+    <script src=" https://kit.fontawesome.com/dc423ef783.js" crossorigin="anonymous">
+    </script>
+
+    <!-- effet gluant du block contact -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Favico / mini-icone dans onglet (64px par 64px) -->
+    <link rel="shortcut icon" type="image/jpg" href="{{ asset('uploads/images/favico.jpg')}}" />
+
+    <!-- Bootstrap Background Vidéo-->
+    <link href="{{ asset('bgvideo/css/style.css') }}" rel="stylesheet">
+
+    <!-- Axentix CSS minified version -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@0.5.3/dist/css/axentix.min.css">
+
+    <!-- Bootstrap Navbar-->
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/navbar.css') }}" />
+
+    {% block stylesheets %}{% endblock %}
+
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/nextbuttonstyle.css') }}">
+
+    <!-- Bootstrap (effet au survol) Navbar-->
+    <script src="{{ asset('js/modernizr.custom.js') }}"></script>
+
+    <!-- JS pour texte titre-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- JS pour tarte au citron (gestion des cookies / https://tarteaucitron.io/fr/install/)-->
+    <script src="{{ asset('js/tarteaucitron/tarteaucitron.js') }}"></script>
+    <script>
+        tarteaucitron.init({
+            "privacyUrl": "",
+            /* URL de la page de la politique de vie privée */
+
+            "hashtag": "#tarteaucitron",
+            /* Ouvrir le panneau contenant ce hashtag */
+            "cookieName": "tarteaucitron",
+            /* Nom du Cookie */
+
+            "orientation": "bottom",
+            /* Position de la bannière (top - bottom) */
+            "showAlertSmall": false,
+            /* Voir la bannière réduite en bas à droite */
+            "cookieslist": true,
+            /* Voir la liste des cookies */
+
+            "adblocker": false,
+            /* Voir une alerte si un bloqueur de publicités est détecté */
+            "AcceptAllCta": true,
+            /* Voir le bouton accepter tout (quand highPrivacy est à true) */
+            "highPrivacy": true,
+            /* Désactiver le consentement automatique */
+            "handleBrowserDNTRequest": false,
+            /* Si la protection du suivi du navigateur est activée, tout interdire */
+
+            "removeCredit": false,
+            /* Retirer le lien vers tarteaucitron.js */
+            "moreInfoLink": true,
+            /* Afficher le lien "voir plus d'infos" */
+            "useExternalCss": false,
+            /* Si false, tarteaucitron.css sera chargé */
+
+            //"cookieDomain": ".my-multisite-domaine.fr", /* Cookie multisite */
+
+            "readmoreLink": "/cookiespolicy" /* Lien vers la page "Lire plus" */
+        });
+    </script>
+
+    <!-- JS reCAPTCHA / https://www.google.com/recaptcha/about/)-->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdKuM0ZAAAAAEmquK_DLg9Ksh0PSHp0YXY8Jc04"></script>
+</head>
+{% endblock %}
+
 {% block title %}Inscription{% endblock %}
 
 {% block body %}
@@ -19,10 +105,32 @@
     {{ form_row(registrationForm.plainPassword, {
             label: 'Mot de passe : '
         }) }}
-    <p>En renseignant vos informations personnelles, vous acceptez d'être contacté(e) pour la gestion de votre compte et vous acceptez les termes de notre <a href="{{ path('legal_notice') }}"><span class="link" >politique de confidentialité<span></a></p>
-    <p>Vous pouvez retirer votre consentement à tout moment depuis le <a href="{{ path('contact_index') }}"><span class="link" >formulaire de contact<span></a> ou en nous contactant à l’adresse suivante : vngn@laposte.net</p>
+    <p>En renseignant vos informations personnelles, vous acceptez d'être contacté(e) pour la gestion de votre compte et
+        vous acceptez les termes de notre <a href="{{ path('legal_notice') }}"><span class="link">politique de
+                confidentialité<span></a></p>
+    <p>Vous pouvez retirer votre consentement à tout moment depuis le <a href="{{ path('contact_index') }}"><span
+                class="link">formulaire de contact<span></a> ou en nous contactant à l’adresse suivante :
+        vngn@laposte.net</p>
     {{ form_row(registrationForm.agreeTerms) }}
     <button type="submit" class="btn-submit-form">Inscription</button>
     {{ form_end(registrationForm) }}
 </div>
+
+{% block javascripts %}
+<!-- ============================== xx. JS reCAPTCHA / https://www.google.com/recaptcha/about/) ============================== -->
+
+<script>
+    function onClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LdKuM0ZAAAAAEmquK_DLg9Ksh0PSHp0YXY8Jc04', {
+                action: 'submit'
+            }).then(function (token) {
+                console.log('captacha');
+            });
+        });
+    }
+</script>
+{% endblock %}
+
 {% endblock %}

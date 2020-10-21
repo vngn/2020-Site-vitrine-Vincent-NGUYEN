@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
+{% block head %}
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="responsive menu, retina-ready, icon font, media queries, css3, transition, mobile" />
+    <meta name="description"
+        content="Site vitrine de Vincent NGUYEN, Développeur de site Web (Symfony 5). Localisé à Saint-Nazaire, en Loire Atlantique. Surfez, commentez, contactez-moi !" />
+
     <title>{% block title %}Welcome!{% endblock %}</title>
 
     <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/dc423ef783.js" crossorigin="anonymous"></script>
+    <script src=" https://kit.fontawesome.com/dc423ef783.js" crossorigin="anonymous">
+    </script>
 
     <!-- effet gluant du block contact -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -34,7 +40,7 @@
     <script src="{{ asset('js/modernizr.custom.js') }}"></script>
 
     <!-- JS pour texte titre-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    {# <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> #}
 
     <!-- JS pour tarte au citron (gestion des cookies / https://tarteaucitron.io/fr/install/)-->
     <script src="{{ asset('js/tarteaucitron/tarteaucitron.js') }}"></script>
@@ -76,11 +82,8 @@
             "readmoreLink": "/cookiespolicy" /* Lien vers la page "Lire plus" */
         });
     </script>
-
-    <!-- JS reCAPTCHA / https://www.google.com/recaptcha/about/)-->
-    <script src="https://www.google.com/recaptcha/api.js?render=6LdKuM0ZAAAAAEmquK_DLg9Ksh0PSHp0YXY8Jc04"></script>
-
 </head>
+{% endblock %}
 
 <body>
     {# système de comptage en tenant compte des éléments désactivés #}
@@ -151,7 +154,8 @@
 
         <div id="admin-sidenav" data-ax="sidenav" class="sidenav-color-users sidenav large white">
             <div class="sidenav-header">
-                <button data-target="admin-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <button data-target="admin-sidenav" class="sidenav-trigger" aria-label="btn-admin"><i
+                        class="fas fa-times"></i></button>
             </div>
             <a href="{{ path('users') }}" class="btn rounded-1 press green dark-4 sidenav-menu-trigger">
                 <span>
@@ -184,7 +188,8 @@
 
         <div id="registered-sidenav" data-ax="sidenav" class="sidenav-color-users sidenav mf white">
             <div class="sidenav-header">
-                <button data-target="registered-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <button data-target="registered-sidenav" class="sidenav-trigger" aria-label="btn-registered"><i
+                        class="fas fa-times"></i></button>
             </div>
             <a href="{{ path('users') }}" class="btn rounded-1 press green dark-4 sidenav-menu-trigger">
                 <span>
@@ -203,7 +208,8 @@
 
         <div id="visitor-sidenav" data-ax="sidenav" class="sidenav-color-visitors sidenav md white">
             <div class="sidenav-header">
-                <button data-target="visitor-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <button data-target="visitor-sidenav" class="sidenav-trigger" aria-label="btn-visitor"><i
+                        class="fas fa-times"></i></button>
             </div>
             <a href="{{ path('users') }}" class="btn rounded-1 press red sidenav-menu-trigger">
                 <span>
@@ -222,7 +228,8 @@
 
         <div id="menu-sidenav" data-ax="sidenav" class="sidenav-color-home sidenav md white">
             <div class="sidenav-header">
-                <button data-target="menu-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <button data-target="menu-sidenav" class="sidenav-trigger" aria-label="btn-home"><i
+                        class="fas fa-times"></i></button>
             </div>
             <a href="{{ path('app_home') }}" class="btn rounded-1 press orange dark-2 sidenav-menu-trigger">
                 <span>
@@ -243,7 +250,8 @@
 
         <div id="portfolio-sidenav" data-ax="sidenav" class="sidenav-color-portfolio sidenav md white">
             <div class="sidenav-header">
-                <button data-target="portfolio-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <button data-target="portfolio-sidenav" class="sidenav-trigger" aria-label="btn-portfolio"><i
+                        class="fas fa-times"></i></button>
             </div>
             <a href="{{ path('portfolio_index') }}" class="btn rounded-1 press orange sidenav-menu-trigger">
                 <span>
@@ -265,7 +273,8 @@
 
         <div id="articles-sidenav" data-ax="sidenav" class="sidenav-color-articles sidenav md white">
             <div class="sidenav-header">
-                <button data-target="articles-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <button data-target="articles-sidenav" class="sidenav-trigger" aria-label="btn-articles"><i
+                        class="fas fa-times"></i></button>
             </div>
             <a href="{{ path('articles_index') }}" class="btn rounded-1 press blue light-1 sidenav-menu-trigger">
                 <span>
@@ -285,7 +294,8 @@
 
         <div id="blog-sidenav" data-ax="sidenav" class="sidenav-color-blog sidenav md white">
             <div class="sidenav-header">
-                <button data-target="blog-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <button data-target="blog-sidenav" class="sidenav-trigger" aria-label="btn-blog"><i
+                        class="fas fa-times"></i></button>
             </div>
             <a href="{{ path('blog_index') }}" class="btn rounded-1 press blue dark-2 sidenav-menu-trigger">
                 <span>
@@ -304,7 +314,8 @@
 
         <div id="about-sidenav" data-ax="sidenav" class="sidenav-color-about sidenav md white">
             <div class="sidenav-header">
-                <button data-target="about-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <button data-target="about-sidenav" class="sidenav-trigger" aria-label="btn-about"><i
+                        class="fas fa-times"></i></button>
             </div>
             <a href="{{ path('about_index') }}" class="btn rounded-1 press airforce dark-3 sidenav-menu-trigger">
                 <span>
@@ -325,7 +336,8 @@
 
         <div id="contact-sidenav" data-ax="sidenav" class="sidenav-color-contact sidenav md white">
             <div class="sidenav-header">
-                <button data-target="contact-sidenav" class="sidenav-trigger"><i class="fas fa-times"></i></button>
+                <button data-target="contact-sidenav" class="sidenav-trigger" aria-label="btn-contact"><i
+                        class="fas fa-times"></i></button>
             </div>
             <a href="{{ path('contact_index') }}" class="btn rounded-1 press airforce dark-5 sidenav-menu-trigger">
                 <span>
@@ -343,7 +355,8 @@
         <main>
             {# bouton latéral pour accès menu admin #}
             {% if is_granted('ROLE_ADMIN') %}
-            <button data-target="admin-sidenav" class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-admin">
+            <button data-target="admin-sidenav" class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-admin"
+                aria-label="btn-admin">
                 <span>
                     <i class="fas fa-user-cog sidenav-role-icon"></i>
                 </span>
@@ -358,7 +371,7 @@
             {% elseif is_granted('ROLE_USER') %}
             {# bouton latéral pour accès menu registered #}
             <button data-target="registered-sidenav"
-                class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-registered">
+                class="btn rounded-1 press green dark-4 sidenav-trigger sidenav-registered" aria-label="btn-user">
                 <span>
                     <i class="fas fa-user-check sidenav-role-icon"></i>
                 </span>
@@ -366,7 +379,8 @@
 
             {% else %}
             {# bouton latéral pour accès menu visitor #}
-            <button data-target="visitor-sidenav" class="btn rounded-1 press red sidenav-trigger sidenav-registered">
+            <button data-target="visitor-sidenav" class="btn rounded-1 press red sidenav-trigger sidenav-registered"
+                aria-label="btn-visitor">
                 <span>
                     <i class="fas fa-user-lock sidenav-role-icon"></i>
                 </span>
@@ -375,7 +389,8 @@
 
             {# bouton latéral pour accès menu général #}
 
-            <button data-target="menu-sidenav" class="btn rounded-1 press orange dark-2 sidenav-trigger sidenav-menu">
+            <button data-target="menu-sidenav" class="btn rounded-1 press orange dark-2 sidenav-trigger sidenav-menu"
+                aria-label="btn-home">
                 <span class="icon">
                     <i class="icon-home sidenav-icon"></i>
                 </span>
@@ -383,8 +398,8 @@
 
             {# bouton latéral pour accès menu portfolio #}
 
-            <button data-target="portfolio-sidenav"
-                class="btn rounded-1 press orange sidenav-trigger sidenav-portfolio">
+            <button data-target="portfolio-sidenav" class="btn rounded-1 press orange sidenav-trigger sidenav-portfolio"
+                aria-label="btn-portfolio">
                 <span class="icon">
                     <i class="icon-portfolio sidenav-icon"></i>
                 </span>
@@ -393,7 +408,7 @@
             {# bouton latéral pour accès menu articles #}
 
             <button data-target="articles-sidenav"
-                class="btn rounded-1 press blue light-1 sidenav-trigger sidenav-articles">
+                class="btn rounded-1 press blue light-1 sidenav-trigger sidenav-articles" aria-label="btn-articles">
                 <span class="icon">
                     <i class="icon-services sidenav-icon"></i>
                 </span>
@@ -401,7 +416,8 @@
 
             {# bouton latéral pour accès menu blog #}
 
-            <button data-target="blog-sidenav" class="btn rounded-1 press blue dark-2 sidenav-trigger sidenav-blog">
+            <button data-target="blog-sidenav" class="btn rounded-1 press blue dark-2 sidenav-trigger sidenav-blog"
+                aria-label="btn-blog">
                 <span class="icon">
                     <i class="icon-blog sidenav-icon"></i>
                 </span>
@@ -410,7 +426,7 @@
             {# bouton latéral pour accès menu a propos #}
 
             <button data-target="about-sidenav"
-                class="btn rounded-1 press airforce dark-3 sidenav-trigger sidenav-about">
+                class="btn rounded-1 press airforce dark-3 sidenav-trigger sidenav-about" aria-label="btn-about">
                 <span class="icon">
                     <i class="icon-team sidenav-icon"></i>
                 </span>
@@ -419,7 +435,7 @@
             {# bouton latéral pour accès menu contact #}
 
             <button data-target="contact-sidenav"
-                class="btn rounded-1 press airforce dark-5 sidenav-trigger sidenav-contact">
+                class="btn rounded-1 press airforce dark-5 sidenav-trigger sidenav-contact" aria-label="btn-contact">
                 <span class="icon">
                     <i class="icon-contact sidenav-icon"></i>
                 </span>
@@ -494,7 +510,7 @@
         //  Creating our button in JS for smaller screens
         var menuElements = document.getElementById('menu');
         menuElements.insertAdjacentHTML('afterBegin',
-            '<button type="button" id="menutoggle" class="navtoogle icon-menu" aria-hidden="true">Menu</button>'
+            '<button type="button" id="menutoggle" class="navtoogle icon-menu">Menu</button>'
         );
 
         //  Toggle the class on click to show / hide the menu
@@ -524,20 +540,7 @@
 
     <script src="{{ asset('js/scripts.js') }}"></script>
 
-    <!-- ============================== xx. JS reCAPTCHA / https://www.google.com/recaptcha/about/) ============================== -->
 
-    <script>
-        function onClick(e) {
-            e.preventDefault();
-            grecaptcha.ready(function () {
-                grecaptcha.execute('6LdKuM0ZAAAAAEmquK_DLg9Ksh0PSHp0YXY8Jc04', {
-                    action: 'submit'
-                }).then(function (token) {
-                    console.log('captacha');
-                });
-            });
-        }
-    </script>
 
     <!-- ============================== xx. JS Tarte au citron ============================== -->
 

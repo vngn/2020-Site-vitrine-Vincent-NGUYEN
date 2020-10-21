@@ -15,11 +15,11 @@
 <div id="commentaires">
     <div class="example-wrapper">
         <div class="individual-block-edit-index">
-        <h1>Gérer les {{ articles.articleComment | length }} commentaires</h1>
+            <h1>Gérer les {{ articles.articleComment | length }} commentaires</h1>
         </div>
     </div>
     <div class="example-wrapper">
-                {% for articlesComment in articles.articleComment %}
+        {% for articlesComment in articles.articleComment %}
         <div class="individual-block-edit-index">
             <div class="block-edit-users users-color">
                 <span class="avatar-position"><img src="{{ asset('uploads/photos/'~ articlesComment.users.photo) }}"
